@@ -1,0 +1,89 @@
+.breadcrumb {
+
+    background-color: transparent;
+    padding: 0 0 rem(10) 0;
+
+    & ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+
+        -moz-scrollbar-color: transparent transparent;
+        -moz-scrollbar-width: thin !important;
+
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+            border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: transparent;
+            border-radius: 4px;
+        }
+    }
+
+    & li {
+
+        & a,
+        & span {
+            padding: 6px 12px;
+
+            display: inline-flex;
+            font-size: 14px;
+            background-color: var(--color-bg-6);
+
+        }
+
+        & a {
+            color: var(--color-text-01);
+
+            &:hover {
+                background-color: var(--color-bg-7);
+            }
+        }
+
+
+
+
+
+        &::after {
+            content: '-';
+            margin: 0 rem(10);
+            color: #7A808D;
+            display: inline-block;
+            border-radius: 50%;
+            position: relative;
+
+            font-size: 14px;
+            width: 10px;
+            height: 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        &:last-child {
+            &::after {
+                display: none;
+            }
+
+            & span,
+            & a {
+                color: var(--color-text-03);
+            }
+        }
+
+    }
+
+
+
+
+}

@@ -1,0 +1,68 @@
+mixin main-menu(data)
+  .main-menu(data-menu="container")
+    .main-menu__wrp
+      .main-menu__nav
+        .container
+          .main-menu__col
+            .main-menu__title: a(href='services.html') Услуги
+            .main-menu__menu.main-menu__menu--services
+              ul
+                li: a(href='services.html') Эскизный проект
+                li: a(href='services.html') Архитектурный раздел
+                li: a(href='services.html') Конструктивный раздел
+                li: a(href='services.html') Инженерный раздел
+                li: a(href='services.html') Дизайн интерьера
+                li: a(href='services.html') Ландшафтный дизайн
+                li: a(href='services.html') Другие услуги
+            .main-menu__call
+              button.btn.btn-white(data-modal="/parts/_popup-callback.html") Связаться с архитектором
+          .main-menu__col
+            .main-menu__title Портфолио
+            .main-menu__menu
+              ul
+                each item in app.mainMenu[1]
+                  li: a(href=item.href)=item.text
+                    
+
+            .main-menu__title Магазин проектов
+            br
+
+            .main-menu__title О компании
+            .main-menu__menu
+              ul
+                each item in app.mainMenu[3]
+                  li: a(href=item.href)=item.text
+                  
+          .main-menu__col
+            .main-menu__title О компании
+            .main-menu__link
+                .main-menu-link
+                    .main-menu-link__label Москва: 
+                    .main-menu-link__a: a(href='tel:8 (812) 900-08-40')  8 (812) 900-08-40
+            .main-menu__link
+                .main-menu-link
+                    .main-menu-link__label Cанкт-Петербург:
+                    .main-menu-link__a: a(href='tel:8 (812) 900-08-40') 8 (812) 900-08-40
+            .main-menu__link
+                .main-menu-link
+                    .main-menu-link__label Email:
+                    .main-menu-link__a: a(href='mailto:homespro@yandex.ru') homespro@yandex.ru
+
+      .main-menu__bottom
+        .container
+          .main-menu__col
+            .main-menu-link
+              .main-menu-link__label HOMESPRO на Неве:
+              .main-menu-link__a: a(href='https://yandex.by/maps/-/CDbmeJM5' target="_blank") Санкт-Петербург, Литейный пр-т, 41
+          .main-menu__col
+            .main-menu-link
+              .main-menu-link__label HOMESPRO на Бауманке: 
+              .main-menu-link__a: a(href='https://yandex.by/maps/-/CDbmeO09' target="_blank") Москва, БЦ Суперметалл, 2-я Бауманская ул., 9/23с3, офис № 13
+          .main-menu__col
+            .main-menu__msgr
+                  ul
+                      li: a(href='#'): +bgimage('/img/icons/icon-instagram.svg')
+                      li: a(href='#'): +bgimage('/img/icons/icon-zen.svg')
+                      li: a(href='#'): +bgimage('/img/icons/icon-vk.svg')
+                      li: a(href='#'): +bgimage('/img/icons/icon-youtube.svg')
+                      li: a(href='#'): +bgimage('/img/icons/icon-telegram.svg') 

@@ -1,0 +1,113 @@
+/* common styles */
+
+.font-h2 {
+    font-size: 34px;
+    line-height: 1.23;
+    font-weight: 700;
+
+    @media screen and (min-width: $w480) {
+        font-size: 42px;
+    }
+}
+
+.font-h3 {
+    font-size: 28px;
+    line-height: 1.23;
+    font-weight: 700;
+
+    @media screen and (min-width: $w480) {
+        font-size: 42px;
+    }
+}
+
+.page {
+    padding-top: 8px;
+
+
+
+    @media screen and (min-width: $w576) {
+        padding-top: 36px;
+    }
+
+    &--details {
+        @media screen and (min-width: $w1440) {
+            & .page {
+                &__breadcrumb {
+                    padding-bottom: 36px;
+                }
+            }
+        }
+    }
+
+    &__breadcrumb {
+        padding-bottom: 30px;
+
+        @media screen and (min-width: $w1440) {
+            padding-bottom: 10px;
+        }
+    }
+
+    &__title {
+
+        padding-bottom: 16px;
+
+        & h1 {
+            @include font-h1;
+            margin: 0;
+        }
+    }
+
+    &__desc {
+
+        line-height: 155%;
+
+        @media screen and (min-width: $w760) {
+            font-size: 18px;
+            color: var(--color-text-02);
+        }
+    }
+}
+
+.max-width-960 {
+    max-width: 940px;
+}
+
+
+.form-auth {
+    max-width: 480px;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+
+.form-auth__title {
+    margin-bottom: 30px;
+}
+
+.form-auth__fields label {
+    padding-bottom: 26px;
+    display: block;
+}
+
+
+
+.autor {
+    max-width: 563px;
+    padding: 10px;
+
+    @media screen and (min-width: $w576) {
+        padding: 24px;
+    }
+}
+
+.autor__photo {
+    padding-bottom: 32px;
+}
+
+.autor__title {
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+.popup-thanks {
+    padding: 24px;
+}

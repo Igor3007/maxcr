@@ -1,0 +1,84 @@
+.header-top
+    .container
+        .header-top__wrp
+            .header-top__region
+                .header-region
+                    .header-region__label 
+                        span Ваш регион: 
+                        span( class="is-active" style="background-image: url('/img/flags/by.svg')" ) BY
+                    .header-region__list
+                        ul
+                            li: a( href="#by" style="background-image: url('/img/flags/by.svg')" ) BY
+                            li: a( href="#ru" style="background-image: url('/img/flags/ru.svg')" ) RU
+                            li: a( href="#kz" style="background-image: url('/img/flags/kz.svg')" ) KZ
+            .header-top__nav
+                ul
+                    each item in app.topMenu
+                        li
+                            a(href=item.href)= item.text
+
+                            if item.sub
+                                ul.sub-menu
+                                    each sub in item.sub
+                                        li: a(href=sub.href)= sub.text 
+            .header-top__personal
+                .header-top__compare
+                    a(href='compare.html').header-top-btn
+                        .header-top-btn__icon: +icons('#ic_compare', 20)
+                        .header-top-btn__text Сравнение
+                        .header-top-btn__count (2)
+
+                .header-top__profile
+                    a(href='login.html').header-top-btn
+                        .header-top-btn__icon: +icons('#ic_user', 20)
+                        .header-top-btn__text Личный кабинет
+                        
+.header
+    .container
+        .header__wrp
+               
+                .header__logo
+                    a(href='/'): +bgimage('/img/common/logo.svg')
+               
+                .header__links
+                    ul
+                        li
+                            +icons('#ic_catalog')
+                            span Каталог
+                        li
+                            +icons('#ic_clean-rooms')
+                            span Чистые помещения
+                        li
+                            +icons('#ic_cases')
+                            span Объекты
+                        li
+                            +icons('#ic_loupe')
+                            span Поиск по сайту
+
+                .header__contacts 
+                    .header__contact
+                        .header-contact
+                            .header-contact__value: a(href='tel:+375292240765') +375 (29) 224-07-65
+                            .header-contact__label: a(href="mailto:info@maxcr.ru") info@maxcr.ru
+                    .header__contact
+                        .header-callback
+                            a(href='#'): button.btn Обратный звонок
+                   
+
+                .header__burger
+                    .btn-burger(data-menu="open") 
+                        i
+                        i
+                        i
+.header-menu
+    .container
+        .header-menu__wrp
+            ul  
+                each item in app.mainMenu
+                    li
+                        a(href=item.href)= item.text
+
+                        if item.sub
+                            ul.sub-menu
+                                each sub in item.sub
+                                    li: a(href=sub.href)= sub.text

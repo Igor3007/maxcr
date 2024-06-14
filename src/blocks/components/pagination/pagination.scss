@@ -1,0 +1,142 @@
+ .pagination {
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+
+     @media screen and (max-width: $w480) {
+         flex-wrap: wrap;
+         flex-direction: column-reverse;
+     }
+
+     &__page {
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 100%;
+         padding: 24px 0;
+
+         @media screen and (min-width: $w576) {
+             justify-content: flex-start;
+         }
+
+         & ul {
+             display: flex;
+             list-style-type: none;
+
+             & li {
+
+                 margin: 0 2px;
+
+                 & span,
+                 & a {
+                     width: rem(36);
+                     height: rem(36);
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     color: var(--color-text-03);
+                     font-size: 16px;
+                     font-weight: 500;
+                     background-color: var(--color-bg-6);
+
+                     @media screen and (min-width: $w992) {
+                         width: rem(48);
+                         height: rem(40);
+                     }
+
+                     & svg {
+                         fill: var(--color-text-03);
+                         min-width: 24px;
+                         height: 24px;
+                     }
+
+                     &:hover {
+
+                         color: #fff;
+                         background-color: var(--color-bg-7);
+
+                         & svg {
+                             fill: #fff;
+                         }
+                     }
+                 }
+
+                 & span {
+                     pointer-events: none;
+                 }
+
+                 &.active a {
+                     background-color: var(--color-bg-7);
+                     color: #fff;
+
+                     & svg {
+                         fill: #fff;
+
+                     }
+                 }
+
+                 &.next,
+                 &.prev {
+                     & span {
+                         background-color: transparent;
+                     }
+
+                     & a:not(:hover) {
+                         @media screen and (max-width: $w576) {
+                             background-color: transparent;
+                         }
+                     }
+                 }
+
+             }
+         }
+
+     }
+
+     &__more {
+
+
+         @media screen and (max-width: $w480) {
+             padding-bottom: 24px;
+
+         }
+
+         & .btn {
+
+             @media screen and (max-width: $w480) {
+                 width: 100%;
+             }
+
+             & svg {
+                 fill: #fff;
+                 margin-left: 0.5em;
+                 margin-right: -0.5em;
+             }
+
+
+         }
+     }
+
+     &--showmore {
+         & .pagination {
+             &__page {
+                 width: auto;
+             }
+         }
+     }
+
+     &__total {
+         color: var(--color-text-03);
+         white-space: nowrap;
+
+         text-align: center;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+ }
+
+ .card-review__project * {
+     margin: 0;
+ }

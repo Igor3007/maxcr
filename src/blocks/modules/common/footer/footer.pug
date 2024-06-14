@@ -1,0 +1,81 @@
+include ../../common/main-menu/main-menu.pug
+
+.footer  
+    .container 
+        .footer__col.footer__col--left
+            .footer__logo: a(href='#'): +bgimage('/img/common/logo.svg')
+            .footer__link
+                .footer-link
+                    .footer-link__label HOMESPRO на Неве:
+                    .footer-link__a: a(href='#') Санкт-Петербург, Литейный пр-т, 41
+            .footer__link
+                .footer-link
+                    .footer-link__label HOMESPRO на Бауманке: 
+                    .footer-link__a: a(href='#') Москва, БЦ Суперметалл, 2-я Бауманская ул., 9/23с3, офис № 13
+            .footer__msgr
+                ul
+                    li: a(href='#'): +bgimage('/img/icons/icon-instagram.svg')
+                    li: a(href='#'): +bgimage('/img/icons/icon-zen.svg')
+                    li: a(href='#'): +bgimage('/img/icons/icon-vk.svg')
+                    li: a(href='#'): +bgimage('/img/icons/icon-youtube.svg')
+                    li: a(href='#'): +bgimage('/img/icons/icon-telegram.svg')
+
+        .footer__col.footer__col--menu
+            .footer__title Услуги
+            .footer__menu
+                ul
+                    li: a(href='#') Эскизный проект
+                    li: a(href='#') Архитектурный раздел
+                    li: a(href='#') Конструктивный раздел
+                    li: a(href='#') Инженерный раздел
+                    li: a(href='#') Дизайн интерьера
+                    li: a(href='#') Ландшафтный дизайн
+                    li: a(href='#') Другие услуги
+
+            .footer__title Портфолио
+            .footer__menu
+                ul
+                    li: a(href='#') Архитектура
+                    li: a(href='#') Дизайн интерьера
+                    li: a(href='#') Ландшафтный дизайн
+
+        .footer__col.footer__col--contacts
+            .footer__title Магазин проектов
+            .footer__title О компании
+            .footer__link
+                .footer-link
+                    .footer-link__label Москва: 
+                    .footer-link__a: a(href='#')  8 (812) 900-08-40
+            .footer__link
+                .footer-link
+                    .footer-link__label Cанкт-Петербург:
+                    .footer-link__a: a(href='#') 8 (812) 900-08-40
+            .footer__link
+                .footer-link
+                    .footer-link__label Email:
+                    .footer-link__a: a(href='#') homespro@yandex.ru
+                    
+                  
+.footer-bottom
+    .container
+        .footer-bottom__info
+            .footer-bottom__company 
+                strong © HomesPro, 2024
+                | Политика использования персональных данных
+            .footer-bottom__copyright Все материалы, опубликованные на сайте в любом виде, являются объектами авторского и имущественного права. <br> Любое их использование должно быть согласовано с автором. Материалы сайта не являются публичной офертой.
+        .footer-bottom__dev
+            span Поддержка сайта:
+            img(src="/img/icons/promicom.svg" alt="Поддержка сайта: Promicom")
+
+
+.float-bar
+    .float-bar__call(data-modal="/parts/_popup-callback.html")
+        .float-bar__call-icon: +icons('#ic_phone-house')
+        .float-bar__call-text Связаться с архитектором
+    .float-bar__top
+        .float-bar__top-icon: +icons('#ic_arrows-top')
+        .float-bar__top-text Наверх
+
+       
+
++main-menu()
