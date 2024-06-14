@@ -15,9 +15,9 @@
     font-weight: 500;
     font-size: 16px;
     text-align: center;
-    background-color: var(--color-bg-7);
-    outline: 1px solid var(--color-bg-7);
-    border: 3px solid transparent;
+    background-color: var(--color-accent-1);
+
+
 
     @media screen and (min-width: $w1440) {
         font-size: 18px;
@@ -29,8 +29,8 @@
     }
 
     &:hover {
-        outline: 1px solid var(--color-borders-01);
-        border-color: var(--color-bg-6);
+        background-color: var(--color-bg-2);
+        color: var(--color-accent-1);
     }
 
     &:active {
@@ -114,7 +114,7 @@
         height: 40px;
         font-size: 14px;
         padding: 0.7em 2.5em 0.8em 2.5em;
-        font-weight: 400;
+        border-radius: 8px;
     }
 
     &.btn-xsmall {

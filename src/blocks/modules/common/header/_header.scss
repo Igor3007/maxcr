@@ -4,6 +4,7 @@ header {}
 
     &__wrp {
         display: flex;
+        padding: 15px 0;
 
         @media screen and (max-width: $w1200) and (min-width: $w992) {
             flex-wrap: wrap;
@@ -23,8 +24,10 @@ header {}
         padding: 10px;
         margin-top: 1px;
 
+
         @media screen and (min-width: $w992) {
             width: 64px;
+            display: none;
         }
 
         border-right: 1px solid var(--color-borders-01);
@@ -34,15 +37,14 @@ header {}
 
         display: flex;
         align-items: center;
-
         margin-left: auto;
         margin-right: auto;
         padding-left: 0;
 
         @media screen and (min-width: $w992) {
-            padding-left: 24px;
+
             margin-left: 0;
-            margin-right: 0;
+
         }
 
 
@@ -54,9 +56,35 @@ header {}
         }
     }
 
+    &__links {
+        & ul {
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            & li {
+
+                padding: 6px 14px;
+
+                & a {
+                    display: flex;
+                    align-items: center;
+
+                    & span {
+                        padding-left: 8px;
+                    }
+                }
+            }
+        }
+
+        & svg {
+            fill: var(--color-accent-1);
+        }
+    }
+
     &__contacts {
 
-        padding-right: 24px;
+
         padding-top: 8px;
         padding-bottom: 8px;
         margin-left: auto;
@@ -64,8 +92,13 @@ header {}
 
         @media screen and (min-width: $w992) {
             display: flex;
+            align-items: center;
         }
+
+
     }
+
+
 
     &__contact {
         margin-left: 16px;
@@ -80,6 +113,10 @@ header {}
             @media screen and (min-width: $w1440) {
                 display: block;
             }
+        }
+
+        &:first-child {
+            margin-left: 0;
         }
     }
 
@@ -163,11 +200,25 @@ header {}
     }
 }
 
+.header-callback {
+    display: flex;
+    align-items: center;
+
+    & .btn {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    @media screen and (min-width: $w1440) {
+        margin-left: 32px;
+    }
+}
+
 .header-contact {
     &__label {
         font-size: 14px;
         color: var(--color-text-02);
-        text-align: right;
+
     }
 
     &__value {

@@ -2,16 +2,14 @@
     background-color: var(--color-bg-6);
 
     &__wrp {
-        padding-left: 24px;
+
         display: flex;
         align-items: stretch;
         flex-grow: 1;
         display: none;
 
 
-        @media screen and (min-width: $w1440) {
-            padding-left: 20px
-        }
+        @media screen and (min-width: $w1440) {}
 
         @media screen and (min-width: $w992) {
             display: block;

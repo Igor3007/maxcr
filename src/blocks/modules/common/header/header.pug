@@ -14,7 +14,7 @@
             .header-top__nav
                 ul
                     each item in app.topMenu
-                        li
+                        li(class= item.sub ? 'isset-sub' : '')
                             a(href=item.href)= item.text
 
                             if item.sub
@@ -36,22 +36,21 @@
 .header
     .container
         .header__wrp
-               
                 .header__logo
                     a(href='/'): +bgimage('/img/common/logo.svg')
                
                 .header__links
                     ul
-                        li
+                        li: a(href='/catalog.html')
                             +icons('#ic_catalog')
                             span Каталог
-                        li
-                            +icons('#ic_clean-rooms')
+                        li: a(href='/clean-room.html')
+                            +icons('#ic_clean-room')
                             span Чистые помещения
-                        li
+                        li: a(href='/objects.html')
                             +icons('#ic_cases')
                             span Объекты
-                        li
+                        li: a(href='#find')
                             +icons('#ic_loupe')
                             span Поиск по сайту
 
@@ -62,7 +61,7 @@
                             .header-contact__label: a(href="mailto:info@maxcr.ru") info@maxcr.ru
                     .header__contact
                         .header-callback
-                            a(href='#'): button.btn Обратный звонок
+                            a(href='#'): button.btn.btn-small Обратный звонок
                    
 
                 .header__burger
