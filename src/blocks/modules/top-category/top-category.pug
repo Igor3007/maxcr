@@ -1,47 +1,47 @@
 - 
     const cat = [
         {
-            image: '/img/category/img.jpg',
-            title: 'Воздушныедуши',
+            image: '/img/category/img',
+            title: 'Воздушные души',
         },
         {
-            image: '/img/category/img-1.jpg',
+            image: '/img/category/img-1',
             title: 'Ламинарные укрытия',
         },
         {
-            image: '/img/category/img-2.jpg',
-            title: 'Передаточныеокна',
-        },
-        {
-            image: '/img/category/img-3.jpg',
-            title: 'Сэндвич-панели',
-        },
-        {
-            image: '/img/category/img-4.jpg',
-            title: 'Системы вентиляции',
-        },
-        {
-            image: '/img/category/img-5.jpg',
-            title: 'Фармацевтическое оборудование',
-        },
-        {
-            image: '/img/category/img-6.jpg',
-            title: 'Фармацевтическое оборудование',
-        },
-        {
-            image: '/img/category/img-7.jpg',
-            title: 'Системы вентиляции',
-        },
-        {
-            image: '/img/category/img-8.jpg',
-            title: 'Сэндвич-панели',
-        },
-        {
-            image: '/img/category/img-9.jpg',
+            image: '/img/category/img-2',
             title: 'Передаточные окна',
         },
         {
-            image: '/img/category/img-10.jpg',
+            image: '/img/category/img-3',
+            title: 'Сэндвич-панели',
+        },
+        {
+            image: '/img/category/img-4',
+            title: 'Системы вентиляции',
+        },
+        {
+            image: '/img/category/img-5',
+            title: 'Фармацевтическое оборудование',
+        },
+        {
+            image: '/img/category/img-6',
+            title: 'Фармацевтическое оборудование',
+        },
+        {
+            image: '/img/category/img-7',
+            title: 'Системы вентиляции',
+        },
+        {
+            image: '/img/category/img-8',
+            title: 'Сэндвич-панели',
+        },
+        {
+            image: '/img/category/img-9',
+            title: 'Передаточные окна',
+        },
+        {
+            image: '/img/category/img-10',
             title: 'Ламинарные укрытия',
         }
     ]
@@ -49,8 +49,8 @@
 mixin card-image(data)
     .card-image
         .card-image__picture
-            +picture(data.image)
-        .card-image__title= data.title
+            a(href='caregories.html'): +picture(data.image)
+        .card-image__title: a(href='caregories.html')= data.title
 
 mixin top-category
     section.section-top-category
@@ -61,3 +61,8 @@ mixin top-category
                 .top-category__list
                     each item in cat
                         .top-category__item: +card-image(item)
+                    .top-category__item
+                        .all-caregories
+                            a(href='#')
+                                span Все категории
+                                +icons('#ic_to-catalog', 38)

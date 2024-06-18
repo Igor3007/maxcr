@@ -4,7 +4,11 @@
 
 .about-block {
     &__title {
-        @include font-h2;
+        @include font-h4;
+
+        @media screen and (min-width: $w760) {
+            @include font-h2;
+        }
     }
 
     &__link {
@@ -55,8 +59,12 @@
     }
 
     &__text {
-        @include font-h4;
+        @include font-h5;
         padding-bottom: 12px;
+
+        @media screen and (min-width: $w760) {
+            @include font-h4;
+        }
     }
 
     &__desc {

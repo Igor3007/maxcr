@@ -1,0 +1,92 @@
+.section-top-category {
+    padding: 50px 0;
+}
+
+.top-category {
+    &__title {
+        @include font-h4;
+        padding-bottom: 12px;
+
+        @media screen and (min-width: $w760) {
+            @include font-h2;
+        }
+    }
+
+    &__desc {
+        color: #7688AD;
+        padding-bottom: 36px;
+
+        @media screen and (min-width: $w1440) {
+            font-size: 18px;
+        }
+    }
+
+    &__list {
+        margin: -6px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        padding: 6px;
+
+        width: 50%;
+
+        @media screen and (min-width: $w1376) {
+            width: 16.6%;
+        }
+
+        @media screen and (min-width: $w1200) {
+            width: 20%;
+        }
+
+        @media screen and (min-width: $w992) {
+            width: 25%;
+        }
+
+        @media screen and (min-width: $w576) {
+            width: 33.33%;
+        }
+    }
+}
+
+.card-image {
+    padding: 16px;
+    background-color: var(--color-bg-2);
+    border-radius: 12px;
+    height: 100%;
+
+    @media screen and (min-width: $w1440) {
+        padding: 24px;
+    }
+
+    &__picture {
+        padding-bottom: 12px;
+
+        & picture {
+            @include picture(90%, contain);
+
+            & img {
+                mix-blend-mode: multiply;
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 142%;
+        word-break: normal;
+
+        @media screen and (min-width: $w1440) {
+            font-size: 16px;
+        }
+
+        & a {
+            font-size: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+    }
+}
