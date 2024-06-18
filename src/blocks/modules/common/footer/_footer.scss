@@ -12,7 +12,7 @@ footer {
     border-top: 1px solid var(--color-bg-7);
 
     @media screen and (min-width: $w1440) {
-        padding: 92px 0 34px;
+        padding: 92px 0 29px;
     }
 
     @media screen and (min-width: $w1200) {
@@ -35,12 +35,21 @@ footer {
             }
 
             &--menu,
+            &--contacts {
+                margin-top: -16px;
+            }
+
+            &--menu,
             &--left {
                 padding-right: 32px;
 
                 @media screen and (min-width: $w1200) {
                     padding-right: 48px;
                 }
+            }
+
+            &--left {
+                width: 45%;
             }
 
             &--contacts {
@@ -52,7 +61,7 @@ footer {
                 & .footer {
                     &__link {
                         @media screen and (min-width: $w1440) {
-                            padding-bottom: 32px;
+                            padding-bottom: 14px;
                         }
                     }
                 }
@@ -65,18 +74,33 @@ footer {
         padding-bottom: 24px;
 
         @media screen and (min-width: $w1440) {
-            padding-bottom: 46px;
+            padding-bottom: 24px;
         }
 
         & span {
-            width: 156px;
-            height: 20px;
+            width: 160px;
+            height: 40px;
             @include bgimage-contain;
+
+            @media screen and (min-width: $w576) {
+                width: 185px;
+            }
+
+
+        }
+    }
+
+    &__desc {
+        padding-bottom: 36px;
+        color: var(--color-text-2);
+
+        @media screen and (min-width: $w1440) {
+            padding-bottom: 64px;
         }
     }
 
     &__link {
-        padding-bottom: 28px;
+        padding-bottom: 12px;
 
         @media screen and (min-width: $w1440) {
             padding-bottom: 52px;
@@ -90,6 +114,17 @@ footer {
 
         @media screen and (min-width: $w1200) {
             @include font-h4
+        }
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        font-weight: 600;
+        padding-bottom: 24px;
+        padding-top: 10px;
+
+        @media screen and (min-width: $w992) {
+            font-size: 20px;
         }
     }
 
@@ -108,7 +143,7 @@ footer {
                 transform: translateX(0.1px);
 
                 @media screen and (min-width: $w1440) {
-                    padding: 8px 0;
+                    padding: 10px 0;
                 }
 
                 &:hover {
@@ -120,11 +155,25 @@ footer {
                 }
 
                 & a {
-                    color: var(--color-text-02);
+                    color: #fff;
 
                     @media screen and (min-width: $w1440) {
-                        font-size: 18px;
+                        font-size: 16px;
+                        font-weight: 600;
                     }
+                }
+            }
+
+            &.users-docs {
+                padding-top: 12px;
+
+                &::before {
+                    content: '';
+                    width: 160px;
+                    height: 2px;
+                    background-color: #ffffff2a;
+                    display: block;
+                    margin-bottom: 22px;
                 }
             }
         }
@@ -182,7 +231,7 @@ footer {
 .footer-link {
     &__label {
         font-size: 14px;
-        color: var(--color-text-02);
+        color: var(--color-text-2);
 
         @media screen and (min-width: $w1440) {
             font-size: 15px;
@@ -198,6 +247,10 @@ footer {
             @media screen and (min-width: $w1440) {
                 font-size: 18px;
             }
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -206,9 +259,7 @@ footer {
     background-color: var(--color-bg-7);
     padding: 18px 0;
 
-    @media screen and (max-width: $w992) {
-        padding-bottom: 78px;
-    }
+
 
     & .container {
         @media screen and (min-width: $w1200) {
@@ -224,9 +275,13 @@ footer {
     }
 
     &__company {
-        padding-bottom: 12px;
+        padding-bottom: 0;
         font-size: 16px;
         color: var(--color-text-01);
+
+        @media screen and (min-width: $w992) {
+            padding-bottom: 12px;
+        }
 
         & strong {
             display: block;
@@ -241,10 +296,11 @@ footer {
     }
 
     &__copyright {
-        font-size: 14px;
-        color: var(--color-text-02);
+        font-size: 13px;
+        color: var(--color-text-2);
         padding-bottom: 24px;
         line-height: 143%;
+        max-width: 900px;
 
         @media screen and (min-width: $w1200) {
             padding-bottom: 0;
@@ -252,21 +308,28 @@ footer {
     }
 
     &__dev {
-        color: var(--color-text-02);
+        color: var(--color-text-2);
 
         @media screen and (min-width: $w1440) {
             display: flex;
             align-items: center;
+            flex-direction: column;
 
             & span {
-                padding-bottom: 0;
+
                 padding-right: 10px;
             }
         }
 
         & span {
             display: block;
-            padding-bottom: 12px;
+            padding-bottom: 6px;
+            font-size: 13px;
+
+            @media screen and (min-width: $w576) {
+                padding-bottom: 12px;
+                font-size: 16px;
+            }
 
             @media screen and (min-width: $w1440) {
                 display: inline;
@@ -274,7 +337,7 @@ footer {
         }
 
         & img {
-            max-width: 208px;
+            max-width: 180px;
         }
     }
 }

@@ -7,7 +7,21 @@ block variables
 
 block main
    
-  div home
+  include ../blocks/modules/first-block/first-block
+  include ../blocks/modules/about-block/about-block
+  include ../blocks/modules/top-category/top-category
+  include ../blocks/modules/products-slider/products-slider
+  include ../blocks/modules/advantages-block/advantages-block
+  include ../blocks/modules/clients-block/clients-block
+  include ../blocks/modules/contacts-block/contacts-block
+
+  +first-block
+  +about-block
+  +top-category
+  +products-slider
+  +advantages-block
+  +clients-block
+  +contacts-block
 
  
  

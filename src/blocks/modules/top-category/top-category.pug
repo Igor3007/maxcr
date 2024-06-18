@@ -1,0 +1,63 @@
+- 
+    const cat = [
+        {
+            image: '/img/category/img.jpg',
+            title: 'Воздушныедуши',
+        },
+        {
+            image: '/img/category/img-1.jpg',
+            title: 'Ламинарные укрытия',
+        },
+        {
+            image: '/img/category/img-2.jpg',
+            title: 'Передаточныеокна',
+        },
+        {
+            image: '/img/category/img-3.jpg',
+            title: 'Сэндвич-панели',
+        },
+        {
+            image: '/img/category/img-4.jpg',
+            title: 'Системы вентиляции',
+        },
+        {
+            image: '/img/category/img-5.jpg',
+            title: 'Фармацевтическое оборудование',
+        },
+        {
+            image: '/img/category/img-6.jpg',
+            title: 'Фармацевтическое оборудование',
+        },
+        {
+            image: '/img/category/img-7.jpg',
+            title: 'Системы вентиляции',
+        },
+        {
+            image: '/img/category/img-8.jpg',
+            title: 'Сэндвич-панели',
+        },
+        {
+            image: '/img/category/img-9.jpg',
+            title: 'Передаточные окна',
+        },
+        {
+            image: '/img/category/img-10.jpg',
+            title: 'Ламинарные укрытия',
+        }
+    ]
+
+mixin card-image(data)
+    .card-image
+        .card-image__picture
+            +picture(data.image)
+        .card-image__title= data.title
+
+mixin top-category
+    section.section-top-category
+        .container
+            .top-category
+                .top-category__title Популярные категории 
+                .top-category__desc Продукция, которую ищут и заказывают чаще всего
+                .top-category__list
+                    each item in cat
+                        .top-category__item: +card-image(item)
