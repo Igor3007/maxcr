@@ -1,0 +1,60 @@
+.first-block {
+
+
+
+    &__bg {
+        @include layer(1);
+    }
+
+    &__slides {
+
+        background-color: rgba(1, 175, 210, 0.5);
+        position: relative;
+        z-index: 2;
+
+        @media screen and (min-width: $w760) {
+            display: flex;
+        }
+    }
+
+    &__slide {
+
+        padding: 24px;
+
+        @media screen and (min-width: $w760) {
+            width: 33.33%;
+
+            padding: 36px;
+        }
+    }
+}
+
+.fb-slide {
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__image {
+        @media screen and (min-width: $w760) {
+            display: none;
+        }
+    }
+
+    &__title {
+
+        padding-bottom: 0.8em;
+
+        @media screen and (min-width: $w576) {
+            @include font-h2;
+        }
+    }
+
+    &__desc {
+        padding-bottom: 1em;
+    }
+
+    &__content {
+        flex-grow: 1;
+    }
+}

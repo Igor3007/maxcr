@@ -1,4 +1,78 @@
+ 
 mixin first-block
     section.section-first-block
-        .container
-            .first-block first-block
+            .first-block
+                .first-block__wrp
+                    .first-block__bg
+                        picture
+                            source(srcset='/img/slider/img-first-block-base.webp' type='image/webp' media='(min-width: 576px)')
+                            source(srcset='/img/slider/img-first-block-base.jpg' type='image/jpeg' media='(min-width: 576px)')
+                            source(srcset='/img/slider/img-first-block-base-min.webp' type='image/webp')
+                            img(class="lazyload" data-src='/img/slider/img-first-block-base.jpg' alt='')
+                    .first-block__slides
+
+                        //- slide 01
+
+                        .first-block__slide
+                            .fb-slide
+                                .fb-slide__image
+                                    picture
+                                        source(srcset='/img/slider/img-first-block-hover-1.webp' type='image/webp' media='(min-width: 576px)')
+                                        source(srcset='/img/slider/img-first-block-hover-1.jpg' type='image/jpeg' media='(min-width: 576px)')
+                                        source(srcset='/img/slider/img-first-block-hover-1-min.webp' type='image/webp')
+                                        img(src='/img/slider/img-first-block-hover-1.jpg' alt='')
+                                .fb-slide__title Чистые помещения под ключ
+                                .fb-slide__desc Все виды работ и оборудования для чистых помещений от лидеров рынка
+                                .fb-slide__content
+                                    strong Cферы применения:
+                                    ul
+                                        li Машиностроение
+                                        li Медицина
+                                        li Фармацевтика
+                                        li Микроэлектроника
+                                        li И многие другие
+                                .fb-slide__more
+                                    a(href='#'): button.btn.btn-white Узнать подробнее
+
+                        //- slide 02
+
+                        .first-block__slide
+                            .fb-slide
+                                .fb-slide__image
+                                    picture
+                                        source(srcset='/img/slider/img-first-block-hover-2.webp' type='image/webp' media='(min-width: 576px)')
+                                        source(srcset='/img/slider/img-first-block-hover-2.jpg' type='image/jpeg' media='(min-width: 576px)')
+                                        source(srcset='/img/slider/img-first-block-hover-2-min.webp' type='image/webp')
+                                        img(src='/img/slider/img-first-block-hover-2-min.jpg' alt='')
+                                .fb-slide__title Более 600 проектов в 15 странах
+                                .fb-slide__desc Работали с Роскосмос, Рафарма, Samsung, Mercedes-Benz и многими другими крупными компаниями
+                                .fb-slide__content
+                                    strong Некоторые из наших клиентов:
+                                    ul
+                                        li Роскосмос
+                                        li Уралкалий
+                                        li Росатом
+                                        li Samsung
+                                        li Mercedes-Benz
+                                        
+                                .fb-slide__more
+                                    a(href='#'): button.btn.btn-white Узнать подробнее
+
+                        //- slide 03
+
+                        .first-block__slide
+                            .fb-slide
+                                .fb-slide__image
+                                    picture
+                                        source(srcset='/img/slider/img-first-block-hover-3.webp' type='image/webp' media='(min-width: 576px)')
+                                        source(srcset='/img/slider/img-first-block-hover-3.jpg' type='image/jpeg' media='(min-width: 576px)')
+                                        source(srcset='/img/slider/img-first-block-hover-3-min.webp' type='image/webp')
+                                        img(src='/img/slider/img-first-block-hover-3-min.jpg' alt='')
+
+                                .fb-slide__title Нужны работы <br> или оборудование <br> для чистых помещений? Обращайтесь!
+                                .fb-slide__desc Все виды работ и оборудования для чистых помещений от лидеров рынка
+                                .fb-slide__content
+                                    p Пишите, мы проконсультируем и ответим на любые технические вопросы
+                                .fb-slide__more
+                                    a(href='#'): button.btn.btn-white Узнать подробнее
+                                
