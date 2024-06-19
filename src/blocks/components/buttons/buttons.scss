@@ -81,17 +81,17 @@
 
     &.btn-white {
         background-color: #fff;
-        color: #111;
+        color: var(--color-accent-1);
 
         &:hover {
-            color: #000;
-            outline: 1px solid #fff;
+            color: var(--color-accent-2);
+
 
         }
 
         &:disabled {
-            color: var(--blue-medium, #A8AFC9);
-            border-color: var(--blue-medium, #A8AFC9);
+            color: #B8B8B8;
+            border-color: var(--color-bg-1);
         }
     }
 

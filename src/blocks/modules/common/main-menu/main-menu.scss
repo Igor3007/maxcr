@@ -1,6 +1,6 @@
 .main-menu {
     position: fixed;
-    top: var(--hgt-header, 54px);
+    top: calc(var(--hgt-header, 54px) + 41px);
     left: 0;
     right: 0;
     bottom: 0;

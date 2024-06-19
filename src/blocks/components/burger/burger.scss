@@ -4,13 +4,13 @@ $scale: 1;
 
 $burger_w: rem(32/$scale);
 $burger_h: rem(32/$scale);
-$line_w: rem(16/$scale);
+$line_w: rem(22/$scale);
 $line_h: rem(2);
 $line_mrg_1: rem(-(8/$scale));
 $line_mrg_2: rem(-(2/$scale));
 $line_mrg_3: rem((4/$scale));
 $line_offset: rem((6/$scale));
-$left: rem(8/$scale);
+$left: rem(4/$scale);
 
 .btn-burger {
     position: relative;
@@ -48,15 +48,19 @@ $left: rem(8/$scale);
         transition: transform .2s cubic-bezier(.4, 0, .2, 1) .2s, opacity .15s 50ms, -webkit-transform .2s cubic-bezier(.4, 0, .2, 1) .2s;
     }
 
+    & i:first-of-type {
+        max-width: 16px;
+    }
+
     & i:first-of-type,
     & i:nth-of-type(2),
     & i:nth-of-type(3) {
         position: absolute;
-        left: $left;
+        right: $left;
         top: 50%;
         width: $line_w;
         height: $line_h;
-        background: #fff;
+        background: var(--color-accent-1);
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
     }
@@ -69,6 +73,9 @@ $left: rem(8/$scale);
         transition: opacity 0.15s 50ms, -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
         transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s, opacity 0.15s 50ms;
         transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s, opacity 0.15s 50ms, -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+
+
+
     }
 
     & i:nth-of-type(2) {
@@ -78,11 +85,12 @@ $left: rem(8/$scale);
         transition: -webkit-transform .2s cubic-bezier(.4, 0, .2, 1) 50ms;
         transition: transform .2s cubic-bezier(.4, 0, .2, 1) 50ms;
         transition: transform .2s cubic-bezier(.4, 0, .2, 1) 50ms, -webkit-transform .2s cubic-bezier(.4, 0, .2, 1) 50ms;
-        max-width: 12px;
+
     }
 
     & i:nth-of-type(3) {
         margin-top: $line_mrg_3;
+        max-width: 12px;
     }
 
     &.open {
@@ -96,6 +104,7 @@ $left: rem(8/$scale);
             transform: translateY($line_offset);
             -webkit-transition-delay: 0s, .2s;
             transition-delay: 0s, .2s;
+            max-width: none;
         }
 
         & i:nth-of-type(2) {
@@ -112,6 +121,7 @@ $left: rem(8/$scale);
             opacity: 0;
             -webkit-transition-delay: 0s, .15s;
             transition-delay: 0s, .15s;
+            max-width: none;
         }
     }
 

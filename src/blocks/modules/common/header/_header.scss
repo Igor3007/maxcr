@@ -1,13 +1,23 @@
-header {}
+header {
+
+    background-color: #fff;
+}
 
 .header {
 
+    & .container {
+        padding-right: 0;
+    }
+
     &__wrp {
         display: flex;
-        padding: 15px 0;
 
-        @media screen and (max-width: $w1200) and (min-width: $w992) {
-            flex-wrap: wrap;
+        @media screen and (min-width: $w760) {
+            padding: 7px 0;
+        }
+
+        @media screen and (min-width: $w1440) {
+            padding: 15px 0;
         }
     }
 
@@ -18,26 +28,42 @@ header {}
 
     &__burger {
         display: flex;
-        width: 56px;
+        width: 48px;
         align-items: center;
         justify-content: center;
         padding: 10px;
         margin-top: 1px;
+        border-right: 1px solid var(--color-borders-1);
 
+        @media screen and (min-width: $w576) {
+            height: 46px;
+            align-self: center;
+            border: none;
+            background-color: var(--color-bg-2);
+            border-radius: 8px;
+            margin-left: 8px;
+
+            &:hover {
+                background-color: var(--color-bg-3);
+            }
+        }
 
         @media screen and (min-width: $w992) {
             width: 64px;
             display: none;
         }
 
-        border-right: 1px solid var(--color-borders-01);
+        &:hover {
+            background-color: var(--color-bg-2);
+        }
+
     }
 
     &__logo {
 
         display: flex;
         align-items: center;
-        margin-left: auto;
+
         margin-right: auto;
         padding-left: 0;
 
@@ -50,15 +76,65 @@ header {}
 
         & .bgimage {
             display: inline-block;
-            width: 180px;
+            width: 160px;
             height: 68px;
             @include bgimage-contain;
+
+            @media screen and (min-width: $w576) {
+                height: 60px;
+            }
+
+            @media screen and (min-width: $w1440) {
+                width: 180px;
+                height: 68px;
+            }
         }
     }
 
     &__links {
-        & ul {
+
+        display: flex;
+        align-items: center;
+
+        & .header-catalog-button {
+
+            padding: 0 12px;
+            border-left: 1px solid var(--color-borders-2);
             display: flex;
+            align-items: center;
+            height: 100%;
+            cursor: pointer;
+
+
+
+            @media screen and (min-width: $w576) {
+                height: 46px;
+                border: none;
+                background-color: var(--color-bg-2);
+                border-radius: 8px;
+                margin-left: 8px;
+
+                &:hover {
+                    background-color: var(--color-bg-3);
+                }
+            }
+
+            @media screen and (min-width: $w992) {
+                display: none;
+            }
+
+            &:hover {
+                background-color: var(--color-bg-2);
+            }
+        }
+
+        & ul {
+
+            @media screen and (min-width: $w992) {
+                display: flex;
+            }
+
+            display: none;
             align-items: center;
             height: 100%;
 
@@ -69,6 +145,11 @@ header {}
                 & a {
                     display: flex;
                     align-items: center;
+                    font-size: 14px;
+
+                    @media screen and (min-width: $w1440) {
+                        font-size: 15px;
+                    }
 
                     & span {
                         padding-left: 8px;
@@ -84,18 +165,13 @@ header {}
 
     &__contacts {
 
-
-        padding-top: 8px;
-        padding-bottom: 8px;
-        margin-left: auto;
-        display: none;
+        display: flex;
+        align-items: center;
+        position: relative;
 
         @media screen and (min-width: $w992) {
-            display: flex;
-            align-items: center;
+            margin-left: auto;
         }
-
-
     }
 
     &__contact {
@@ -118,13 +194,88 @@ header {}
         }
     }
 
-    &__lang {
-        border-left: 1px solid var(--color-borders-01);
 
-        display: flex;
-        align-items: center;
 
+}
+
+
+
+.header-phone-button {
+
+    padding: 0 12px;
+    border-left: 1px solid var(--color-borders-2);
+    border-right: 1px solid var(--color-borders-2);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @media screen and (min-width: $w576) {
+        height: 46px;
+        border: none;
+        background-color: var(--color-bg-2);
+        border-radius: 8px;
+        margin-left: 8px;
+
+        &:hover {
+            background-color: var(--color-bg-3);
+        }
     }
+
+    @media screen and (min-width: $w1200) {
+        display: none;
+    }
+
+    &:hover {
+        background-color: var(--color-bg-2);
+    }
+}
+
+.header-phone-wrp {
+    display: none;
+
+    @media screen and (min-width: $w1200) {
+        display: flex;
+    }
+
+    @media screen and (max-width: $w1200) {
+        &.is-open {
+            display: flex;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            z-index: 5;
+            background-color: var(--color-bg-2);
+            padding: 12px;
+            flex-direction: column;
+            border-radius: 12px;
+            white-space: nowrap;
+
+            @media screen and (max-width: $w576) {
+                right: -50px;
+                top: calc(100% + 8px);
+            }
+
+            & .header__contact {
+                margin-left: 0;
+
+                &--white {
+                    background-color: #fff;
+                    padding: 6px 12px;
+                    border-radius: 7px;
+                    margin-bottom: 12px;
+                }
+
+                & a,
+                & .btn {
+                    width: 100%;
+                }
+            }
+
+
+        }
+    }
+
 
 }
 

@@ -261,4 +261,26 @@ document.addEventListener('DOMContentLoaded', function (event) {
         })
     }
 
+    /* ============================================
+    phone header
+    ============================================*/
+
+    if (document.querySelector('.header-phone-button')) {
+        document.querySelector('.header-phone-button').addEventListener('click', e => {
+            document.querySelector('.header-phone-wrp').classList.toggle('is-open')
+        })
+    }
+
+    /* =========================================
+    first block
+    =========================================*/
+
+    if (document.querySelector('.first-block__slide')) {
+        document.querySelectorAll('.first-block__slide').forEach(slide => {
+            slide.addEventListener('mouseenter', (e) => {
+                if (document.body.clientWidth > 992) document.querySelector('.first-block__bg').innerHTML = slide.querySelector('.fb-slide__image').innerHTML
+            })
+        })
+    }
+
 }); //dcl

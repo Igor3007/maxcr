@@ -40,6 +40,7 @@
                     a(href='/'): +bgimage('/img/common/logo.svg')
                
                 .header__links
+                    a(href='/catalog.html').header-catalog-button: +icons('#ic_catalog')
                     ul
                         li: a(href='/catalog.html')
                             +icons('#ic_catalog')
@@ -54,15 +55,16 @@
                             +icons('#ic_loupe')
                             span Поиск по сайту
 
-                .header__contacts 
-                    .header__contact
-                        .header-phone-button
-                        .header-contact
-                            .header-contact__value: a(href='tel:+375292240765') +375 (29) 224-07-65
-                            .header-contact__label: a(href="mailto:info@maxcr.ru") info@maxcr.ru
-                    .header__contact
-                        .header-callback
-                            a(href='#'): button.btn.btn-small Обратный звонок
+                .header__contacts
+                    .header-phone-button: +icons('#ic_phone')
+                    .header-phone-wrp
+                        .header__contact.header__contact--white
+                            .header-contact
+                                .header-contact__value: a(href='tel:+375292240765') +375 (29) 224-07-65
+                                .header-contact__label: a(href="mailto:info@maxcr.ru") info@maxcr.ru
+                        .header__contact
+                            .header-callback
+                                a(href='#'): button.btn.btn-small Обратный звонок
                    
 
                 .header__burger
