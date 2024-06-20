@@ -1,4 +1,16 @@
 mixin contacts-block
     section.section-contacts-block
         .container
-            .contacts-block contacts-block
+            .contacts-block
+                .contacts-block__left
+                    .contacts-block__title Свяжитесь с нами
+                    .contacts-block__text
+                        .formated-text
+                            p: strong Есть вопросы? Хотите заказать товар или услугу?
+                            p: strong Пишите — мы свяжемся с Вами в кратчайшие сроки и подробно проконсультируем!
+                            p Запросы на коммерческое предложение, пожалуйста, отправляйте на почту:
+                            p: a(href='mailto:info@maxcr.ru') info@maxcr.ru
+                    .contacts-block__btn
+                        button.btn(data-modal="callback") Связаться с нами
+                .contacts-block__right
+                    +picture('/img/common/big-img-1')

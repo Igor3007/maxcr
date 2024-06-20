@@ -1,0 +1,112 @@
+.section-advantages-block {
+    background-color: var(--color-bg-6);
+    color: #fff;
+    padding: 30px 0 16px 0;
+
+    @media screen and (min-width: $w576) {
+        padding: 60px 0 46px 0;
+    }
+
+}
+
+.advantages-block {
+
+    @media screen and (min-width: $w992) {
+        display: flex;
+        justify-content: space-between;
+
+
+
+        &__left {
+            width: 45%;
+            padding-right: 36px
+        }
+
+        &__right {
+            width: 47%;
+
+        }
+    }
+
+    &__title {
+        @include font-h4;
+        padding-bottom: 12px;
+
+        @media screen and (min-width: $w760) {
+            @include font-h2;
+            padding-bottom: 24px;
+        }
+    }
+
+    &__desc {
+
+
+        padding-bottom: 12px;
+
+        @media screen and (min-width: $w760) {
+            padding-bottom: 36px;
+        }
+
+        @media screen and (min-width: $w1440) {
+            font-size: 18px;
+            line-height: 150%;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--color-borders-4);
+        padding: 20px 0;
+
+        &:last-child {
+            border: none
+        }
+
+
+
+        @media screen and (min-width: $w992) {
+            padding: 23.5px 0;
+
+            &:first-child {
+                padding-top: 0
+            }
+        }
+
+        &:hover {
+            & .advantages-block {
+
+                &__text {
+                    transform: translateX(10px);
+                }
+
+                &__text,
+                &__digit {
+                    color: var(--color-accent-1)
+                }
+            }
+        }
+    }
+
+    &__digit {
+        @include font-h3;
+        width: 45%;
+        transition: 0.3s ease;
+
+        @media screen and (min-width: $w992) {
+            @include font-h2;
+            width: 170px;
+        }
+    }
+
+    &__text {
+        width: 55%;
+        transform: translateX(0.01px);
+        transition: 0.3s ease;
+
+        @media screen and (min-width: $w992) {
+            width: calc(100% - 170px);
+            font-size: 18px;
+        }
+    }
+}

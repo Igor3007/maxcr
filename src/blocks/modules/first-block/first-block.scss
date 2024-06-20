@@ -115,6 +115,16 @@
     color: #fff;
     position: relative;
 
+    &--long-text {
+        & .fb-slide {
+            &__title {
+                @media screen and (min-width: $w1440) {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+
 
     &__image {
 

@@ -1,0 +1,17 @@
+mixin minicard(data)
+    .minicard
+        .minicard__topbar
+            .minicard__compare
+                +icons('#ic_compare', 24)
+                span В сравнение
+
+        .minicard__image: +picture(data.img)
+        .minicard__main
+            .minicard__title= data.title
+            .minicard__prop
+                ul
+                    each item in data.prop
+                        li=item
+            .minicard__stock: span В наличии
+            .minicard__details
+                a(href='single-product.html'): button.btn Перейти к товару

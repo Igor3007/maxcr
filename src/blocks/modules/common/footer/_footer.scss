@@ -302,6 +302,10 @@ footer {
         line-height: 143%;
         max-width: 900px;
 
+        @media screen and (min-width: $w576) {
+            font-size: 14px;
+        }
+
         @media screen and (min-width: $w1200) {
             padding-bottom: 0;
         }

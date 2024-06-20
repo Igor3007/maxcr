@@ -1,0 +1,158 @@
+.section-slider-products {
+
+    padding: 45px 0;
+
+    @media screen and (min-width: $w576) {
+        padding: 34px 0 52px 0;
+    }
+
+}
+
+.slider-products {
+
+    &__top {
+
+        padding-bottom: 16px;
+
+        @media screen and (min-width: $w992) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+    }
+
+    &__button {
+
+
+
+        @media screen and (min-width: $w760) and (max-width: $w992) {
+            padding-top: 24px;
+        }
+
+        & .btn {
+            height: 60px;
+            width: 100%;
+            max-width: 360px;
+
+            @media screen and (min-width: $w480) {
+                width: auto;
+            }
+
+
+        }
+    }
+
+    &__title {
+        @include font-h4;
+        padding-bottom: 5px;
+
+        @media screen and (min-width: $w760) {
+            @include font-h2;
+            padding-bottom: 12px;
+        }
+    }
+
+    &__desc {
+        color: #7688AD;
+        padding-bottom: 14px;
+
+        @media screen and (min-width: $w760) {
+            padding-bottom: 36px;
+        }
+
+        @media screen and (min-width: $w1440) {
+            font-size: 18px;
+            padding-bottom: 20px;
+        }
+    }
+
+    & .minicard {
+        width: 100%;
+    }
+
+    & .splide {
+        &__pagination {
+            position: static;
+            bottom: 0;
+
+            & li {
+                margin-top: -6px;
+            }
+
+            &__page {
+
+                &.is-active {
+                    transform: scale(1);
+                }
+
+            }
+        }
+
+        &__slide {
+            padding-bottom: 80px;
+        }
+    }
+
+    &__nav {
+        @media screen and (min-width: $w992) {
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 24px;
+        }
+    }
+
+    &__arrow {
+        display: flex;
+        justify-content: center;
+
+        & div[aria-hidden] {
+            display: none;
+        }
+
+        & div[disabled] {
+            opacity: 0.5 !important;
+            cursor: default;
+            pointer-events: none;
+            touch-action: none;
+        }
+
+
+        &>div {
+            padding: 0 4px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        & svg {
+            width: 40px;
+            height: 40px;
+        }
+
+
+    }
+
+    &__dots {
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__all {
+
+        padding-top: 12px;
+
+        @media screen and (min-width: $w576) {
+            display: none;
+        }
+
+        & .btn {
+            @media screen and (max-width: $w480) {
+                width: 100%;
+            }
+        }
+    }
+}

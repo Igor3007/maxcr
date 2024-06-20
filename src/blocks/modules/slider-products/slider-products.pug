@@ -1,0 +1,63 @@
+include ../../modules/minicard/minicard.pug
+
+-
+    const sliderProduct = [
+        { img: '/img/products/img',
+            title: 'Вытяжной шкаф MCRBK-FH',
+            prop: [
+                'Оснащены центробежным вентилятором',
+                'Закаленное стекло толщиной 5 мм',
+                'Противовес ручного переднего окна',
+            ]
+        },
+        { img: '/img/products/img-1',
+            title: 'Пассивные боксы с утопленной дверью MCR SB-01e',
+            prop: [
+                'Материал корпуса: сталь с порошковым покрытием RAL 9003 / сталь с порошковым покрытием RAL 9010',
+                'Электронная блокировка дверей',
+                
+            ]
+        },
+        { img: '/img/products/img-2',
+            title: 'Воздушные души SB-1400/2 с двусторонним обдувом для 2 чел',
+            prop: [
+                'Внешний размер: 1400x2000x2180 мм (ШxГxВ)',
+                'Материал корпуса: Сталь с порошковым покрытием RAL 9003',
+                'Сопла из нержавеющей стали: 24 шт.',
+            ]
+        },
+        { img: '/img/products/img-3',
+            title: 'Профили для чистых помещений',
+            prop: [
+                'Направляющий П-профиль (800 м.п)',
+                'Межпанельный профиль для сэндвич-панели (1000 м.п)',
+                'И многие другие (переходите на страницу товара)',
+            ]
+        },
+        { img: '/img/products/img-2',
+            title: 'Воздушные души SB-1400/2 с двусторонним обдувом для 2 чел',
+            prop: [
+                'Внешний размер: 1400x2000x2180 мм (ШxГxВ)',
+                'Материал корпуса: Сталь с порошковым покрытием RAL 9003',
+                'Сопла из нержавеющей стали: 24 шт.',
+            ]
+        },
+    ]
+
+mixin slider-products
+    section.section-slider-products
+        .container
+            .slider-products 
+                .slider-products__top
+                    .slider-products__head
+                        .slider-products__title Продукция в наличии
+                        .slider-products__desc Можете заказать прямо сейчас, придёт к вам в кратчайшие сроки
+                     
+                .slider-products__list
+                    .splide(data-slider="product")
+                        .splide__track
+                            .splide__list
+                                each item in sliderProduct
+                                    .splide__slide: +minicard(item)
+                .slider-products__all
+                    a(href='/catalog.html'): button.btn Больше товаров

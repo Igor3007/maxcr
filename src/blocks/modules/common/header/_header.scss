@@ -6,7 +6,9 @@ header {
 .header {
 
     & .container {
-        padding-right: 0;
+        @media screen and (max-width: $w576) {
+            padding-right: 0;
+        }
     }
 
     &__wrp {
@@ -126,6 +128,10 @@ header {
             &:hover {
                 background-color: var(--color-bg-2);
             }
+
+            & svg {
+                fill: var(--color-accent-1);
+            }
         }
 
         & ul {
@@ -154,13 +160,24 @@ header {
                     & span {
                         padding-left: 8px;
                     }
+
+                    & svg {
+                        fill: var(--color-accent-1);
+                    }
+
+                    &:hover {
+                        color: var(--color-accent-2);
+
+                        & svg {
+                            fill: var(--color-accent-2);
+
+                        }
+                    }
                 }
             }
         }
 
-        & svg {
-            fill: var(--color-accent-1);
-        }
+
     }
 
     &__contacts {
@@ -176,6 +193,8 @@ header {
 
     &__contact {
         margin-left: 16px;
+        display: flex;
+        align-items: center;
 
         @media screen and (min-width: $w1440) {
             margin-left: 32px;

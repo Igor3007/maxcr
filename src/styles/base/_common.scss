@@ -20,6 +20,56 @@
     }
 }
 
+.splide {
+    &__arrow {
+        width: 52px;
+        height: 52px;
+        background-color: #fff;
+        border: 2px solid var(--color-borders-2);
+        opacity: 1;
+        transition: 0.3s ease;
+
+        &--prev {
+            left: -26px;
+        }
+
+        &--next {
+            right: -26px;
+        }
+
+        & svg {
+            width: 16px;
+            height: 16px;
+
+            fill: var(--color-accent-1);
+        }
+
+
+
+        &:hover {
+            border-color: var(--color-accent-2);
+            background-color: var(--color-accent-2);
+            opacity: 1 !important;
+
+            & path {
+                fill: #fff;
+            }
+        }
+
+        &:disabled {
+            opacity: 1;
+            border-color: #eee;
+            background-color: #fff;
+            cursor: default;
+
+            & path {
+                fill: #ccc;
+
+            }
+        }
+    }
+}
+
 .page {
     padding-top: 8px;
 

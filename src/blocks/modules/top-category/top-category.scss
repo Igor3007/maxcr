@@ -1,5 +1,9 @@
 .section-top-category {
     padding: 2px 0 50px 0;
+
+    @media screen and (min-width: $w576) {
+        padding: 50px 0 50px 0;
+    }
 }
 
 .top-category {
@@ -9,6 +13,7 @@
 
         @media screen and (min-width: $w760) {
             @include font-h2;
+            padding-bottom: 12px;
         }
     }
 
@@ -98,7 +103,7 @@
             @include picture(112%, contain);
 
             @media screen and (min-width: $w576) {
-                padding-top: 90%;
+                padding-top: 86%;
             }
 
             & img {
@@ -170,13 +175,13 @@
     }
 
     &:hover {
-        background-color: var(--color-bg-3);
+        background-color: var(--color-accent-2);
 
         & a {
-            color: var(--color-accent-2);
+            color: #fff;
 
             & svg {
-                fill: var(--color-accent-2);
+                fill: #fff;
             }
         }
     }

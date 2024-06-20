@@ -8,9 +8,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
     function css_variable() {
         let vh = window.innerHeight * 0.01;
         let hgtheader = document.querySelector('.header') ? document.querySelector('.header').clientHeight : 64
+        let hgtheadertop = document.querySelector('.header-top') ? document.querySelector('.header-top').clientHeight : 41
 
         document.documentElement.style.setProperty('--vh', vh + 'px');
         document.documentElement.style.setProperty('--hgt-header', hgtheader + 'px');
+        document.documentElement.style.setProperty('--hgt-header-top', hgtheadertop + 'px');
     }
 
     window.addEventListener('load', css_variable)
@@ -226,15 +228,28 @@ document.addEventListener('DOMContentLoaded', function (event) {
             this.btns = this.$el.querySelectorAll('.btn-burger')
             this.container = this.$el.querySelector('[data-menu="container"]')
 
+            this.containerLinks = this.$el.querySelector('[data-menu="links"]')
+            this.containerTop = this.$el.querySelector('[data-menu="top"]')
+            this.containerContacts = this.$el.querySelector('[data-menu="contacts"]')
+
             this.addEvent()
         }
 
         toggleMenu(item) {
             item.classList.toggle('open')
+
+            if (!item.classList.contains('open')) {
+                this.closeMenu()
+            } else {
+                this.openMenu()
+            }
+        }
+
+        openMenu() {
             this.container.classList.toggle('is-open')
             this.$el.body.classList.toggle('page-hidden')
 
-            if (!item.classList.contains('open')) this.$el.body.classList.remove('page-hidden')
+            this.renderMenu()
         }
 
         closeMenu() {
@@ -244,6 +259,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
             !this.container.classList.contains('is-open') || this.container.classList.remove('is-open');
             !this.$el.body.classList.contains('page-hidden') || this.$el.body.classList.remove('page-hidden');
+        }
+
+        renderMenu() {
+            this.containerLinks.innerHTML = document.querySelector('.header__links').outerHTML
+            this.containerTop.innerHTML = document.querySelector('.header-top').outerHTML
+            this.containerContacts.innerHTML = document.querySelector('.header-phone-wrp').outerHTML
         }
 
         addEvent() {
@@ -256,9 +277,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     if (document.querySelector('.btn-burger')) {
         window.MainMenu = new MainMenu(document)
 
-        document.querySelectorAll('.main-menu__menu').forEach(menu => {
-            menu.querySelectorAll('a').forEach(a => a.addEventListener('click', e => window.MainMenu.closeMenu()))
-        })
+
     }
 
     /* ============================================
@@ -283,6 +302,122 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 }
             })
         })
+    }
+
+    /* ========================================
+    slider
+    ========================================*/
+
+
+    if (document.querySelector('[data-slider="product"]')) {
+        var splide = new Splide('[data-slider="product"]', {
+
+            arrows: true,
+            pagination: false,
+            gap: 24,
+            start: 0,
+            perPage: 4,
+
+
+            breakpoints: {
+                1200: {
+                    perPage: 3,
+                    gap: 24,
+                },
+                992: {
+                    perPage: 2,
+                    gap: 12,
+                },
+                576: {
+                    destroy: true,
+                },
+
+            },
+
+        });
+
+
+
+
+        splide.mount();
+    }
+
+    /* ===========================================
+    marquee 
+    ===========================================*/
+
+    class Marquee {
+        constructor(el) {
+            this.$el = el
+            this.containerWidth = this.$el.clientWidth
+            this.trackWidth = 0
+            this.deltaWidth = 0
+            this.currentPosition = 0
+            this.shift = 10
+            this.scrollDirection = '-'
+
+            this.init()
+
+        }
+
+
+        init() {
+
+            this.getTrackWidth()
+            this.deltaWidth = this.trackWidth - this.containerWidth
+            this.run()
+            this.scrollHandler()
+
+
+        }
+
+        getTrackWidth() {
+            this.$el.querySelectorAll('li').forEach(li => {
+                this.trackWidth += li.clientWidth
+            })
+        }
+
+        run() {
+            setInterval(() => {
+
+                if (this.currentPosition < this.deltaWidth && this.scrollDirection == '-') {
+                    this.currentPosition = this.currentPosition + this.shift;
+                } else {
+                    this.scrollDirection = '+'
+                    this.currentPosition = this.currentPosition - this.shift;
+
+                    if (this.currentPosition <= 0) {
+                        this.scrollDirection = '-'
+                    }
+                }
+
+                this.$el.querySelector('ul').style.transform = 'translateX(-' + this.currentPosition + 'px)'
+            }, 290)
+        }
+
+        scrollHandler() {
+
+            const checkScrollDirection = (event) => {
+                this.scrollDirection = checkScrollDirectionIsUp(event) ? '+' : '-'
+            }
+
+            const checkScrollDirectionIsUp = (event) => {
+                if (event.wheelDelta) {
+                    return event.wheelDelta > 0;
+                }
+                return event.deltaY < 0;
+            }
+
+            document.body.addEventListener('wheel', checkScrollDirection);
+
+        }
+
+
+    }
+
+    if (document.querySelector('[data-marquee]')) {
+        const items = document.querySelectorAll('[data-marquee="container"]')
+        items.forEach(item => new Marquee(item))
     }
 
 }); //dcl

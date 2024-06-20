@@ -1,0 +1,75 @@
+.section-contacts-block {
+    padding: 20px 0 50px 0;
+
+    @media screen and (min-width: $w576) {
+        padding: 20px 0 100px 0;
+    }
+}
+
+.contacts-block {
+
+    @media screen and (min-width: $w992) {
+        display: flex;
+        justify-content: space-between;
+
+        &__left {
+            width: 60%;
+            max-width: 640px;
+        }
+
+        &__right {
+            width: 40%
+        }
+    }
+
+    &__right {
+
+        padding-top: 24px;
+
+        @media screen and (min-width: $w992) {
+            padding-top: 0;
+        }
+
+        & picture {
+            @include picture(61%, contain);
+        }
+    }
+
+    &__title {
+        @include font-h4;
+        padding-bottom: 6px;
+
+        @media screen and (min-width: $w760) {
+            @include font-h2;
+            padding-bottom: 0px;
+        }
+    }
+
+    &__text {
+        & a {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--color-accent-1);
+        }
+
+        & p {
+            font-size: 16px;
+        }
+
+        & strong {
+            @media screen and (min-width: $w1440) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__btn {
+        padding-top: 10px;
+
+        & .btn {
+            @media screen and (max-width: $w480) {
+                width: 100%;
+            }
+        }
+    }
+}
