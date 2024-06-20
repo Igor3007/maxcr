@@ -1,10 +1,41 @@
 .section-about-block {
-    padding: 50px 0;
+
+    padding: 45px 0;
+
+    @media screen and (min-width: $w760) {
+        padding: 50px 0;
+    }
+
+    @media screen and (min-width: $w1440) {
+        padding: 90px 0 40px 0;
+    }
 }
 
 .about-block {
+
+    &__top {
+        @media screen and (min-width: $w1200) {
+            display: flex;
+            padding-bottom: 12px;
+        }
+    }
+
+    &__left {
+        @media screen and (min-width: $w1200) {
+            width: 32%;
+        }
+    }
+
+    &__right {
+        @media screen and (min-width: $w1200) {
+            width: 68%;
+            padding-left: 36px;
+        }
+    }
+
     &__title {
         @include font-h4;
+        padding-bottom: 0.7em;
 
         @media screen and (min-width: $w760) {
             @include font-h2;
@@ -12,63 +43,159 @@
     }
 
     &__link {
+
+        padding-bottom: 10px;
+
         & a {
             color: var(--color-accent-1);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+
+            & svg {
+                margin-left: 12px;
+                fill: var(--color-accent-1);
+            }
         }
     }
 
     &__list {
 
-        margin: -12px;
+        margin: -4px;
 
         @media screen and (min-width: $w576) {
             display: flex;
             flex-wrap: wrap;
+            margin: -12px;
         }
     }
 
     &__item {
 
-        padding: 12px;
+        padding: 4px;
+        width: 100%;
 
         @media screen and (min-width: $w992) {
             width: 33.33%;
+            padding: 12px;
+        }
+
+        @media screen and (min-width: $w760) {
+            width: 50%;
+        }
+    }
+
+    &__right {
+        font-size: 18px;
+        line-height: 156%;
+
+        @media screen and (min-width: $w1440) {
+            margin-top: -8px;
+        }
+
+        & p {
+            margin-top: 15px;
+            margin-bottom: 15px;
         }
     }
 }
 
 .card-icon {
     background-color: var(--color-bg-2);
-    padding: 12px;
+    padding: 20px;
     border-radius: 8px;
     color: var(--color-text-1);
     height: 100%;
+    display: flex;
+
+    @media screen and (min-width: $w760) {
+        display: block;
+    }
 
     @media screen and (min-width: $w576) {
         padding: 24px;
     }
 
+    @media screen and (min-width: $w1440) {
+        padding: 30px 40px;
+    }
+
+
+
+    &__main {
+        padding-left: 18px;
+
+        @media screen and (min-width: $w760) {
+            padding-left: 0;
+        }
+    }
+
     &__img {
         padding-bottom: 12px;
 
+        @media screen and (min-width: $w1440) {
+            padding-bottom: 18px;
+        }
+
         & .bgimage {
-            width: 80px;
-            height: 80px;
-            @include bgimage-contain;
+            width: 64px;
+            height: 64px;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40px 40px;
+            display: block;
+            background-color: #fff;
+            border-radius: 50%;
+
+            @media screen and (min-width: $w576) {
+                width: 80px;
+                height: 80px;
+                background-size: 50px 50px;
+            }
+
+
         }
     }
 
     &__text {
         @include font-h5;
-        padding-bottom: 12px;
+        padding-bottom: 6px;
 
         @media screen and (min-width: $w760) {
             @include font-h4;
+        }
+
+        @media screen and (min-width: $w1440) {
+            padding-bottom: 10px;
         }
     }
 
     &__desc {
         font-size: 14px;
+        line-height: 140%;
+        padding-bottom: 3px;
+
+        @media screen and (min-width: $w1440) {
+            font-size: 16px;
+        }
+    }
+
+    &:hover {
+
+        background-color: var(--color-bg-3);
+
+        & .card-icon {
+            &__text {
+                color: var(--color-accent-2);
+            }
+
+            &__img {
+                & .bgimage {
+                    filter: brightness(-25%);
+                }
+            }
+        }
     }
 
 }

@@ -1,11 +1,11 @@
 .section-top-category {
-    padding: 50px 0;
+    padding: 2px 0 50px 0;
 }
 
 .top-category {
     &__title {
         @include font-h4;
-        padding-bottom: 12px;
+        padding-bottom: 5px;
 
         @media screen and (min-width: $w760) {
             @include font-h2;
@@ -14,7 +14,12 @@
 
     &__desc {
         color: #7688AD;
-        padding-bottom: 36px;
+
+        padding-bottom: 14px;
+
+        @media screen and (min-width: $w760) {
+            padding-bottom: 36px;
+        }
 
         @media screen and (min-width: $w1440) {
             font-size: 18px;
@@ -29,23 +34,47 @@
 
     &__item {
         padding: 6px;
-
         width: 50%;
+        display: none;
+
+        &:nth-child(-n+5) {
+            display: block;
+        }
 
         @media screen and (min-width: $w1376) {
             width: 16.6%;
+
+            &:nth-child(-n+11) {
+                display: block;
+            }
         }
 
         @media screen and (min-width: $w1200) {
             width: 20%;
+
+            &:nth-child(-n+9) {
+                display: block;
+            }
         }
 
         @media screen and (min-width: $w992) {
             width: 25%;
+
+            &:nth-child(-n+11) {
+                display: block;
+            }
         }
 
         @media screen and (min-width: $w576) {
             width: 33.33%;
+
+            &:nth-child(-n+11) {
+                display: block;
+            }
+        }
+
+        &:last-child {
+            display: block;
         }
     }
 }
@@ -55,6 +84,8 @@
     background-color: var(--color-bg-2);
     border-radius: 12px;
     height: 100%;
+    transition: 0.3s ease;
+
 
     @media screen and (min-width: $w1440) {
         padding: 24px;
@@ -64,7 +95,11 @@
         padding-bottom: 12px;
 
         & picture {
-            @include picture(90%, contain);
+            @include picture(112%, contain);
+
+            @media screen and (min-width: $w576) {
+                padding-top: 90%;
+            }
 
             & img {
                 mix-blend-mode: multiply;
@@ -79,6 +114,7 @@
         line-height: 142%;
         word-break: normal;
 
+
         @media screen and (min-width: $w1440) {
             font-size: 16px;
         }
@@ -87,6 +123,62 @@
             font-size: inherit;
             font-weight: inherit;
             line-height: inherit;
+            transition: 0.3s ease;
         }
     }
+
+    &:hover {
+        background-color: var(--color-bg-3);
+
+        & .card-image {
+            &__title {
+                color: var(--color-accent-2);
+
+                & a {
+                    color: var(--color-accent-2);
+                }
+            }
+        }
+    }
+}
+
+.all-caregories {
+    height: 100%;
+    background-color: var(--color-bg-2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+
+    & a {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-accent-1);
+        font-weight: 600;
+        transition: 0.3s ease;
+
+        & svg {
+            fill: var(--color-accent-1);
+            margin-top: 12px;
+            transition: 0.3s ease;
+        }
+
+
+    }
+
+    &:hover {
+        background-color: var(--color-bg-3);
+
+        & a {
+            color: var(--color-accent-2);
+
+            & svg {
+                fill: var(--color-accent-2);
+            }
+        }
+    }
+
 }

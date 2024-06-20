@@ -278,7 +278,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
     if (document.querySelector('.first-block__slide')) {
         document.querySelectorAll('.first-block__slide').forEach(slide => {
             slide.addEventListener('mouseenter', (e) => {
-                if (document.body.clientWidth > 992) document.querySelector('.first-block__bg').innerHTML = slide.querySelector('.fb-slide__image').innerHTML
+                if (document.body.clientWidth > 992) {
+                    document.querySelector('.first-block__bg').innerHTML = slide.querySelector('.fb-slide__image').innerHTML
+                }
             })
         })
     }
