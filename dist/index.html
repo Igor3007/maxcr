@@ -132,12 +132,12 @@
         <div class="container">
           <div class="header__wrp">
             <div class="header__logo"><a href="/"><span class="bgimage lazyload" data-bg="/img/common/logo.svg"></span></a></div>
-            <div class="header__links"><a class="header-catalog-button" href="/catalog.html">
+            <div class="header__links"><a class="header-catalog-button" href="#catalog-popup">
                 <svg width="25" height="25">
                   <use xlink:href="/img/sprites/sprite.svg#ic_catalog"></use>
                 </svg></a>
               <ul>
-                <li><a href="/catalog.html">
+                <li><a href="#catalog-popup">
                     <svg width="25" height="25">
                       <use xlink:href="/img/sprites/sprite.svg#ic_catalog"></use>
                     </svg><span>Каталог</span></a></li>
@@ -169,8 +169,9 @@
                   </div>
                 </div>
                 <div class="header__contact">
-                  <div class="header-callback"><a href="#">
-                      <button class="btn btn-small">Обратный звонок</button></a></div>
+                  <div class="header-callback">
+                    <button class="btn btn-small" data-modal="/parts/_popup-callback.html">Обратный звонок</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -855,21 +856,12 @@
         </div>
       </div>
       <div class="float-bar">
-        <div class="float-bar__call" data-modal="/parts/_popup-callback.html">
-          <div class="float-bar__call-icon">
-            <svg width="25" height="25">
-              <use xlink:href="/img/sprites/sprite.svg#ic_phone-house"></use>
-            </svg>
-          </div>
-          <div class="float-bar__call-text">Связаться с архитектором</div>
-        </div>
         <div class="float-bar__top">
           <div class="float-bar__top-icon">
             <svg width="25" height="25">
               <use xlink:href="/img/sprites/sprite.svg#ic_arrows-top"></use>
             </svg>
           </div>
-          <div class="float-bar__top-text">Наверх</div>
         </div>
       </div>
             <div class="main-menu" data-menu="container">
@@ -877,6 +869,168 @@
                 <div class="main-menu__links" data-menu="links"></div>
                 <div class="main-menu__top" data-menu="top"></div>
                 <div class="main-menu__contacts" data-menu="contacts"></div>
+              </div>
+            </div>
+            <div class="catalog-popup">
+              <div class="catalog-popup__wrp">
+                <div class="catalog-popup__content">
+                  <div class="catalog-popup__close" data-catalog-popup="close"><span class="icon-cross"></span></div>
+                  <div class="catalog-popup__aside">
+                    <div class="catalog-popup__title">Каталог товаров</div>
+                    <div class="catalog-popup__nav">
+                      <nav>
+                        <ul>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/01.svg)"></span><span class="category-tree--level1">Оснащение для чистых помещений</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Передаточные боксы</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Активные</a></li>
+                                  <li><a href="category.html">Пассивные</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Воздушные души</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Высокой эффективности</a></li>
+                                  <li><a href="category.html">Автоматические</a></li>
+                                  <li><a href="category.html">Базовые серии SB</a></li>
+                                  <li><a href="category.html">Базовые серии SBN</a></li>
+                                  <li><a href="category.html">Высокоскоростные</a></li>
+                                  <li><a href="category.html">С вертикальным обдувом</a></li>
+                                  <li><a href="category.html">Из нержавеющей стали</a></li>
+                                  <li><a href="category.html">Туннельные</a></li>
+                                  <li><a href="category.html">С раздвижной автоматической дверью</a></li>
+                                  <li><a href="category.html">С роллетной автоматической дверью</a></li>
+                                  <li><a href="category.html">Грузовые</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Вытяжное оборудование</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Вытяжные шкафы</a></li>
+                                  <li><a href="category.html">Мобильная вытяжка</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Боксы биологической безопасности</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Класс I</a></li>
+                                  <li><a href="category.html">Класс II</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Ламинарные шкафы</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Вертикальные</a></li>
+                                  <li><a href="category.html">Горизонтальные</a></li>
+                                  <li><a href="category.html">ПЦР-боксы</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Камеры измерение температуры и дезинфекции персонала</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Камеры дезинфекции</a></li>
+                                  <li><a href="category.html">Камеры измерения температуры</a></li>
+                                  <li><a href="category.html">Камеры измерения температуры и дезинфекции</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="category.html">Ламинарные укрытия</a>
+                              </li>
+                              <li><a href="category.html">Чистые зоны</a>
+                              </li>
+                              <li><a href="category.html">Модульные чистые помещения</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/02.svg)"></span><span class="category-tree--level1">Ограждающие конструкции</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Боксы биологической безопасности</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Боксы биологической безопасности Класса II</a></li>
+                                  <li><a href="category.html">Боксы биологической безопасности Класса I</a></li>
+                                  <li><a href="category.html">Боксы биологической безопасности Класса III</a></li>
+                                  <li><a href="category.html">Боксы цитотоксической безопасности</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="category.html">Ламинарные шкафы</a>
+                              </li>
+                              <li><a href="category.html">Вытяжные шкафы</a>
+                              </li>
+                              <li><a href="category.html">Передаточные окна</a>
+                              </li>
+                              <li><a href="category.html">Ламинарные укрытия</a>
+                              </li>
+                              <li><a href="category.html">Чистые зоны</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/03.svg)"></span><span class="category-tree--level1">Вентиляция</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Меню уровень 2</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/04.svg)"></span><span class="category-tree--level1">Продукция по рентгензащите</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Меню уровень 2</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/05.svg)"></span><span class="category-tree--level1">Стерилизация</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Меню уровень 2</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/06.svg)"></span><span class="category-tree--level1">Фармацевтическое оборудование</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Меню уровень 2</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/07.svg)"></span><span class="category-tree--level1">Оборудование для лабораторий</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Меню уровень 2</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/08.svg)"></span><span class="category-tree--level1">Прочее</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Меню уровень 2</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                  <div class="catalog-popup__main"></div>
+                </div>
               </div>
             </div>
     </footer>

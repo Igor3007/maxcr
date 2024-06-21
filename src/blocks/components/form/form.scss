@@ -7,7 +7,7 @@
      & input[type="email"],
      & input[type="tel"] {
 
-         font-size: 16px;
+         font-size: 14px;
          line-height: 15px;
          padding-left: rem(15);
          padding-right: rem(15);
@@ -16,36 +16,35 @@
          box-sizing: border-box;
          width: auto;
          flex-grow: 1;
-         background-color: var(--color-bg02);
 
          border-radius: 2px;
-         border: 1px solid var(--color-borders-02);
+         border: 1px solid var(--color-borders-2);
          width: 100%;
          color: var(--text-01);
 
          @media screen and (min-width: $w576) {
-             height: 56px;
+             height: 52px;
          }
 
 
 
          &::placeholder {
-             color: var(--color-text-03);
+             color: var(--color-text-2);
              opacity: 1;
              text-shadow: none;
              font-weight: 400;
          }
 
          &:focus {
-             border-color: var(--color-text-03);
+             border-color: var(--color-accent-1);
              outline: 0;
          }
      }
 
      & input[disabled] {
-         background-color: var(--color-bg03);
+         background-color: #eee;
          cursor: not-allowed;
-         color: var(--color-borders-02);
+         color: var(--color-borders-2);
      }
 
      & input[data-mac-mask] {
@@ -99,19 +98,18 @@
          max-width: 100%;
          resize: vertical;
          width: 100%;
-         background-color: var(--color-bg02);
-         font-size: 16px;
+         font-size: 15px;
          padding: rem(15);
          line-height: 140%;
          outline: none !important;
-         border: 1px solid var(--color-borders-02);
+         border: 1px solid var(--color-borders-2);
          border-radius: 0;
          transition: 0.3s ease;
-         color: #fff;
+
 
 
          &::placeholder {
-             color: var(--color-text-03);
+             color: var(--color-text-2);
              opacity: 1;
              text-shadow: none;
              font-weight: 400;
@@ -119,7 +117,7 @@
 
          &:focus {
              outline: none;
-             border-color: var(--color-text-03);
+             border-color: var(--color-accent-1);
          }
      }
 

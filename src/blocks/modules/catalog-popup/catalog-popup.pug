@@ -1,0 +1,27 @@
+mixin catalog-popup
+    .catalog-popup
+        .catalog-popup__wrp
+            .catalog-popup__content
+                .catalog-popup__close(data-catalog-popup="close")
+                    span.icon-cross
+                .catalog-popup__aside
+                    .catalog-popup__title Каталог товаров
+                    .catalog-popup__nav
+                        nav
+                            ul
+                                each item in catalog
+                                    li(class=(item.sub ? 'isset-sub':''))
+                                        span.ic-catalog.lazyload(style="background-image: url("+item.icon+")")
+                                        span.category-tree--level1= item.title
+                                        if(item.sub)
+                                            ul.sub-menu
+                                                each sub1 in item.sub
+                                                    li(class=(sub1.sub ? 'isset-sub':''))
+                                                        a(href='category.html')= sub1.title 
+                                                        if(sub1.sub)
+                                                            ul.sub-menu
+                                                                each sub2 in sub1.sub
+                                                                    li(class=(sub2.sub ? 'isset-sub':''))
+                                                                        a(href='category.html')= sub2.title 
+                                        
+                .catalog-popup__main

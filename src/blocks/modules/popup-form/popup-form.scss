@@ -10,7 +10,7 @@
     &__title {
         @include font-h3;
         padding-bottom: 12px;
-        color: var(--gray-20);
+        color: var(--color-accent-1);
     }
 
     &__desc {
@@ -18,7 +18,7 @@
         padding-bottom: 25px;
         font-size: 16px;
 
-        color: var(--gray-36);
+        color: var(--color-text-2);
     }
 
     &__name {
@@ -54,6 +54,8 @@
         &__note {
             text-align: center;
             margin-top: 10px;
+            color: var(--color-text-2);
+            font-size: 13px;
         }
 
         & input[type=date],
@@ -62,7 +64,7 @@
         & input[type=text],
         & input[type=email] {
             @media screen and (min-width: $w1440) {
-                height: 58px;
+                height: 52px;
             }
         }
     }
@@ -79,7 +81,7 @@
     &__title {
         @include font-h4;
         padding-bottom: 12px;
-        color: var(--gray-20);
+        color: var(--color-text-1);
         text-align: center;
     }
 

@@ -40,9 +40,9 @@
                     a(href='/'): +bgimage('/img/common/logo.svg')
                
                 .header__links
-                    a(href='/catalog.html').header-catalog-button: +icons('#ic_catalog')
+                    a(href='#catalog-popup').header-catalog-button: +icons('#ic_catalog')
                     ul
-                        li: a(href='/catalog.html')
+                        li: a(href='#catalog-popup')
                             +icons('#ic_catalog')
                             span Каталог
                         li: a(href='/clean-room.html')
@@ -64,7 +64,7 @@
                                 .header-contact__label: a(href="mailto:info@maxcr.ru") info@maxcr.ru
                         .header__contact
                             .header-callback
-                                a(href='#'): button.btn.btn-small Обратный звонок
+                                button.btn.btn-small(data-modal="/parts/_popup-callback.html") Обратный звонок
                    
 
                 .header__burger

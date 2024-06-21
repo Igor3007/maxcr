@@ -14,7 +14,7 @@
 @mixin scrollbar() {
 
     @-moz-document url-prefix() {
-        scrollbar-color: #444 var(--color-bg-7);
+        scrollbar-color: rgba(154, 185, 191, 0.5) var(--color-bg-3);
         scrollbar-width: thin !important;
     }
 
@@ -25,12 +25,12 @@
         }
 
         &::-webkit-scrollbar-track {
-            background-color: var(--color-bg-7);
+            background-color: var(--color-bg-2);
             border-radius: 4px;
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: #444;
+            background-color: rgba(154, 185, 191, 0.5);
             border-radius: 4px;
         }
     }

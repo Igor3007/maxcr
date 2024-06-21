@@ -271,7 +271,7 @@ header {
             white-space: nowrap;
 
             @media screen and (max-width: $w576) {
-                right: -50px;
+                right: -38px;
                 top: calc(100% + 8px);
             }
 
@@ -385,7 +385,15 @@ header {
 .header-contact {
     &__label {
         font-size: 14px;
-        color: var(--color-text-02);
+        color: var(--color-accent-1);
+
+        & a {
+            color: var(--color-accent-1);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
 
     }
 

@@ -350,16 +350,19 @@ footer {
     display: flex;
     position: fixed;
     bottom: 0;
-
-    left: 0;
-    right: 0;
+    left: auto;
+    right: 15px;
     cursor: pointer;
     z-index: 50;
     transition: 0.3s ease;
-    transform: translateX(-100%);
+    bottom: 60px;
+    opacity: 0;
+    transform: translateY(50px);
 
     &.is-active {
-        transform: translateX(0);
+
+        opacity: 1;
+        transform: translateY(0);
     }
 
 
@@ -367,7 +370,7 @@ footer {
     @media screen and (min-width: $w760) {
         flex-direction: column;
         max-width: 170px;
-        bottom: 10vh;
+
     }
 
     &__call {
@@ -426,16 +429,13 @@ footer {
         align-items: center;
         justify-content: center;
 
-        background-color: #333;
+        background-color: var(--color-accent-2);
 
         &:hover {
-            background-color: #222;
+            background-color: var(--color-bg-6);
         }
 
-        @media screen and (min-width: $w760) {
-            min-width: 100%;
-            width: 100%;
-        }
+
 
         &-icon {
             display: flex;
@@ -443,11 +443,7 @@ footer {
             justify-content: center;
 
 
-            & svg {
-                @media screen and (min-width: $w760) {
-                    margin-left: -10px;
-                }
-            }
+
 
         }
 

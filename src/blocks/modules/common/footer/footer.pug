@@ -1,4 +1,5 @@
 include ../../common/main-menu/main-menu.pug
+include ../../catalog-popup/catalog-popup.pug
 
 .footer  
     .container 
@@ -85,13 +86,11 @@ include ../../common/main-menu/main-menu.pug
 
 
 .float-bar
-    .float-bar__call(data-modal="/parts/_popup-callback.html")
-        .float-bar__call-icon: +icons('#ic_phone-house')
-        .float-bar__call-text Связаться с архитектором
     .float-bar__top
         .float-bar__top-icon: +icons('#ic_arrows-top')
-        .float-bar__top-text Наверх
+      
 
        
 
 +main-menu()
++catalog-popup()
