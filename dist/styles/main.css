@@ -3308,6 +3308,8 @@ header {
   font-size: 14px;
   height: 41px;
   display: none;
+  position: relative;
+  z-index: 155;
 }
 
 .header-top .container {

@@ -5,6 +5,8 @@
     font-size: 14px;
     height: 41px;
     display: none;
+    position: relative;
+    z-index: 155;
 
     @media screen and (min-width: $w576) {
         display: block;
