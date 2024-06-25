@@ -248,10 +248,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
         openMenu() {
             this.container.classList.toggle('is-open')
             this.$el.body.classList.toggle('page-hidden')
-
+            this.$el.body.classList.toggle('open-modile-menu')
             this.containerLinks.children.length || this.renderMenu()
-
-
         }
 
         closeMenu() {
@@ -259,6 +257,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 !item.classList.contains('open') || item.classList.remove('open')
             });
 
+            !this.$el.body.classList.contains('open-modile-menu') || !this.$el.body.classList.remove('open-modile-menu');
             !this.container.classList.contains('is-open') || this.container.classList.remove('is-open');
             !this.$el.body.classList.contains('page-hidden') || this.$el.body.classList.remove('page-hidden');
         }
@@ -309,7 +308,20 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     if (document.querySelector('.header-phone-button')) {
         document.querySelector('.header-phone-button').addEventListener('click', e => {
-            document.querySelector('.header-phone-wrp').classList.toggle('is-open')
+            if (document.body.clientWidth > 576) {
+                document.querySelector('.header-phone-wrp').classList.toggle('is-open')
+            } else {
+                const instansePopup = new afLightbox({
+                    mobileInBottom: true
+                })
+
+                const html = document.querySelector('.header-phone-wrp').cloneNode(true)
+                instansePopup.open(html.outerHTML, (instanse) => {
+                    initDataModal(instanse)
+
+                    instanse.querySelector('.header-callback').addEventListener('click', (e) => instansePopup.close())
+                })
+            }
         })
     }
 
@@ -546,7 +558,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
                     }
                     //compensate scrollbar
-                    if (this.widthScrollbar > 0) document.body.style.setProperty('margin-right', this.widthScrollbar + 'px')
+                    //if (this.widthScrollbar > 0) document.body.style.setProperty('margin-right', this.widthScrollbar + 'px')
 
                     //page overflow hidden
                     document.body.classList.add('page-hidden')
@@ -564,7 +576,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                     }
 
                     //compensate scrollbar
-                    document.body.style.removeProperty('margin-right', this.widthScrollbar + 'px')
+                    //document.body.style.removeProperty('margin-right', this.widthScrollbar + 'px')
 
                     //page overflow hidden
                     documentBody.classList.remove('page-hidden')
@@ -691,9 +703,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
                 this.liEvents(this.$el.querySelector('.catalog-popup__nav'))
 
-                this.$el.addEventListener('click', e => {
-
-
+                document.addEventListener('click', e => {
                     if (document.body.clientWidth > this.mobileBreakpoint) {
                         if (!e.target.closest('.catalog-popup__wrp') && !e.target.closest('a[href="#catalog-popup"]')) {
                             this.close()
@@ -771,8 +781,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     }
 
-    if (document.querySelector('[data-modal]')) {
-        const items = document.querySelectorAll('[data-modal]')
+    function initDataModal(ctx) {
+        const items = ctx.querySelectorAll('[data-modal]')
 
         items.forEach(item => {
             item.addEventListener('click', e => {
@@ -837,5 +847,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             })
         })
     }
+
+    if (document.querySelector('[data-modal]')) initDataModal(document)
 
 }); //dcl

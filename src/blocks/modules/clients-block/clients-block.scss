@@ -57,6 +57,14 @@
                 margin-left: 12px;
                 fill: var(--color-accent-1);
             }
+
+            &:hover {
+                color: var(--color-accent-2);
+
+                & svg {
+                    fill: var(--color-accent-2);
+                }
+            }
         }
     }
 }

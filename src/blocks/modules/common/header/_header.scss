@@ -5,6 +5,9 @@ header {
 
 .header {
 
+    position: relative;
+    z-index: 150;
+
     & .container {
         @media screen and (max-width: $w576) {
             padding-right: 0;
@@ -34,7 +37,6 @@ header {
         align-items: center;
         justify-content: center;
         padding: 10px;
-        margin-top: 1px;
         border-right: 1px solid var(--color-borders-1);
 
         @media screen and (min-width: $w576) {
@@ -371,10 +373,17 @@ header {
 .header-callback {
     display: flex;
     align-items: center;
+    width: 100%;
 
     & .btn {
         padding-left: 1.5em;
         padding-right: 1.5em;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: var(--color-accent-2);
+            color: #fff;
+        }
     }
 
     @media screen and (min-width: $w1440) {
@@ -392,6 +401,7 @@ header {
 
             &:hover {
                 text-decoration: underline;
+                color: var(--color-accent-2);
             }
         }
 

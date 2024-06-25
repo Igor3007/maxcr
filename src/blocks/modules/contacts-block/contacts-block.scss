@@ -50,6 +50,10 @@
             font-size: 20px;
             font-weight: bold;
             color: var(--color-accent-1);
+
+            &:hover {
+                color: var(--color-accent-2);
+            }
         }
 
         & p {
@@ -61,6 +65,8 @@
                 font-size: 18px;
             }
         }
+
+        & .btn {}
     }
 
     &__btn {

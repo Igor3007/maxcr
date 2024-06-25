@@ -140,6 +140,10 @@
                             background-color: #fff;
                             border-radius: 8px;
                             max-width: 400px;
+                            opacity: 1;
+                            transform: none;
+                            min-width: 220px;
+                            box-shadow: none;
                         }
 
                         & li {
@@ -147,6 +151,15 @@
                             border-radius: 6px;
                             opacity: 1;
                             background-color: #fff;
+                            padding-left: 0;
+                            padding-right: 0;
+
+                            & a {
+                                padding-left: 12px;
+                                padding-right: 12px;
+                                border-radius: 6px;
+                            }
+
                         }
                     }
 
@@ -198,4 +211,14 @@
         color: #000;
     }
 
+}
+
+.open-modile-menu {
+    & .header__burger {
+        background-color: var(--color-accent-2);
+
+        & i {
+            background-color: #fff;
+        }
+    }
 }

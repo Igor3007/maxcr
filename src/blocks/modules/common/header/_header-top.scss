@@ -57,7 +57,9 @@
                             background-position: center;
                             background-repeat: no-repeat;
                             margin-left: 6px;
-                            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTS4yMzEuMmEuODguODggMCAwMTEuMTE3IDBMNSAzLjM1NCA4LjY1Mi4yQS44OC44OCAwIDAxOS43Ny4yYS42MTguNjE4IDAgMDEwIC45NjRMNS41NTkgNC44YS44OC44OCAwIDAxLTEuMTE3IDBMLjIzMiAxLjE2NGEuNjE4LjYxOCAwIDAxMC0uOTY0eiIgZmlsbD0iIzExMSIvPjwvc3ZnPg==);
+                            filter: grayscale(1) brightness(0);
+                            transition: transform 0.3s ease;
+                            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTS4yMzEuMmEuODguODggMCAwMTEuMTE3IDBMNSAzLjM1NCA4LjY1Mi4yQS44OC44OCAwIDAxOS43Ny4yYS42MTguNjE4IDAgMDEwIC45NjRMNS41NTkgNC44YS44OC44OCAwIDAxLTEuMTE3IDBMLjIzMiAxLjE2NGEuNjE4LjYxOCAwIDAxMC0uOTY0eiIgZmlsbD0iIzA0QyIvPjwvc3ZnPg==);
                         }
                     }
                 }
@@ -74,47 +76,26 @@
 
                 &:hover {
 
+                    &>a {
+                        color: var(--color-accent-2);
+
+                        &::after {
+                            filter: none;
+                            transform: rotate(180deg);
+                        }
+                    }
+
                     & .sub-menu {
                         visibility: visible;
-                        z-index: 10;
+
+                        transform: translateY(0);
+                        opacity: 1;
 
                         & li {
-                            transform: translateY(0);
+
                             opacity: 1;
-                            transition-delay: 450ms;
+
                             background-color: #fff;
-
-                            &:nth-child(1) {
-                                transition-delay: 50ms;
-                            }
-
-                            &:nth-child(2) {
-                                transition-delay: 150ms;
-                            }
-
-                            &:nth-child(3) {
-                                transition-delay: 200ms;
-                            }
-
-                            &:nth-child(4) {
-                                transition-delay: 250ms;
-                            }
-
-                            &:nth-child(5) {
-                                transition-delay: 300ms;
-                            }
-
-                            &:nth-child(6) {
-                                transition-delay: 350ms;
-                            }
-
-                            &:nth-child(7) {
-                                transition-delay: 400ms;
-                            }
-
-                            &:nth-child(8) {
-                                transition-delay: 450ms;
-                            }
                         }
                     }
                 }
@@ -125,29 +106,57 @@
             position: absolute;
             left: -2px;
             top: calc(100% + 1px);
-            max-width: 300px;
+            max-width: 420px;
+            min-width: 320px;
             z-index: 5;
+            transform: translateY(15px);
+            transition: 0.3s ease;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.12);
+            padding: 8px 0;
+            overflow: hidden;
+            background-color: #fff;
+            opacity: 0;
+            z-index: 110;
+
 
             &>li {
                 padding-left: 24px;
                 padding-right: 24px;
-                transform: rotateY(80deg);
+
+
                 background-color: var(--color-bg-2);
                 transition: opacity .4s, transform .5s;
                 opacity: 0;
 
-                &:hover {
-
-                    background-color: var(--color-bg-3) !important;
-
+                @media screen and (min-width: $w992) {
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    padding-top: 4px;
+                    padding-bottom: 4px;
                 }
+
+
 
                 &>a {
                     height: 40px;
                     font-size: 14px;
 
                     @media screen and (min-width: $w1440) {
-                        font-size: 14px;
+                        font-size: 16px;
+                    }
+
+                    @media screen and (min-width: $w992) {
+
+                        border-radius: 6px;
+                        padding-left: 12px;
+                        padding-right: 12px;
+
+
+                    }
+
+                    &:hover {
+                        background-color: var(--color-bg-3) !important;
                     }
                 }
             }
@@ -155,11 +164,7 @@
 
         & .sub-menu {
             visibility: hidden;
-            -webkit-perspective: 400px;
-            -moz-perspective: 400px;
-            -ms-perspective: 400px;
-            -o-perspective: 400px;
-            perspective: 400px;
+
         }
     }
 
@@ -170,20 +175,34 @@
         border-right: 1px solid var(--color-borders-2);
         padding-right: 16px;
         padding-left: 16px;
+
+        &:hover {
+            background-color: #fff;
+        }
     }
 
     &__personal {
         display: flex;
         align-items: stretch;
         margin-left: auto;
+
+
     }
 
     &__compare {
         height: 100%;
+
+        &:hover {
+            background-color: #fff;
+        }
     }
 
     &__profile {
         border-right: 1px solid var(--color-borders-2);
+
+        &:hover {
+            background-color: #fff;
+        }
     }
 }
 
@@ -238,6 +257,7 @@
     &__list {
 
         right: -17px;
+        left: -17px;
         top: calc(100%);
         position: absolute;
         padding-top: 12px;
@@ -249,18 +269,22 @@
 
 
         & ul {
-            background-color: rgb(237, 248, 255);
+            background-color: rgb(255, 255, 255);
             border: 1px solid var(--color-borders-2);
             padding: 4px 6px;
             border-radius: 4px;
+            box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+            max-height: 15vh;
+            overflow-y: auto;
         }
 
         & li {
 
-            padding: 2px 2px;
+            padding: 6px 8px;
 
             &:hover {
-                font-weight: bold;
+                background-color: var(--color-bg-3);
+                border-radius: 4px;
             }
 
             & span,
@@ -270,6 +294,8 @@
                 background-repeat: no-repeat;
                 background-size: 18px auto;
                 cursor: pointer;
+                width: 100%;
+                display: block;
             }
         }
     }

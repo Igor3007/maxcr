@@ -249,7 +249,7 @@ footer {
             }
 
             &:hover {
-                text-decoration: underline;
+                color: var(--color-accent-1);
             }
         }
     }
@@ -428,11 +428,11 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
-
-        background-color: var(--color-accent-2);
+        border-radius: 12px;
+        background-color: var(--color-accent-1);
 
         &:hover {
-            background-color: var(--color-bg-6);
+            background-color: var(--color-accent-2);
         }
 
 
