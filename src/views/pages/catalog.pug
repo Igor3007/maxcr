@@ -1,0 +1,34 @@
+extends ../layouts/main
+
+include ../../blocks/components/breadcrumb/breadcrumb.pug
+include ../../blocks/modules/catalog/catalog.pug
+include ../../blocks/modules/clients-block/clients-block
+include ../../blocks/modules/contacts-block/contacts-block
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Max Clean Room"
+ 
+
+block main
+   
+  section.section-page
+    .container
+      .page
+        .page__breadcrumbs
+          +breadcrumb([
+            'Главная',
+            'Каталог'
+          ])
+        .page__title: h1 Каталог продукции для чистых помещений
+
+  +catalog
+  +clients-block
+  +contacts-block
+
+ 
+ 
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 

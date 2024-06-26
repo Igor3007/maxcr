@@ -65,6 +65,9 @@ mixin icons(id, size)
     svg(width="25" height="25")
       use(xlink:href="/img/sprites/sprite.svg"+id)
 
+mixin ic_24(url)
+  span.bgimage.lazyload.ic_24(data-bg=""+url+"")
+
 mixin bgimage(url)
   span.bgimage.lazyload(data-bg=""+url+"")
 

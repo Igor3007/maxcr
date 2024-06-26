@@ -451,9 +451,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             this.getTrackWidth()
             this.deltaWidth = this.trackWidth - this.containerWidth
             this.run()
-            this.scrollHandler()
-
-
+            //this.scrollHandler()
         }
 
         getTrackWidth() {
@@ -626,12 +624,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
                     document.createElement('ul'),
                 ];
 
-                let column = 0;
-
-                Array.from(items).forEach(li => {
-                    result[column].append(li)
-                    column <= 1 ? column++ : column = 0
-                })
+                let array = Array.from(items);
+                let size = result.length;
+                let subarray = []; //массив в который будет выведен результат.
+                for (let i = 0; i < Math.ceil(array.length / size); i++) {
+                    subarray[i] = array.slice((i * size), (i * size) + size);
+                    subarray[i].forEach(li => {
+                        result[i].append(li)
+                    })
+                }
 
                 return result[0].outerHTML + result[1].outerHTML + result[2].outerHTML
             }

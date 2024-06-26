@@ -83,4 +83,11 @@
                         if item.sub
                             ul.sub-menu
                                 each sub in item.sub
-                                    li: a(href=sub.href)= sub.text
+                                    li
+                                        a(href=sub.href)= sub.text
+                                        //- ul.sub-menu
+                                        //-     li: a(href='#') level 3
+                                        //-     li: a(href='#') level 3
+                                        //-     li: a(href='#') level 3
+                                        //-     li: a(href='#') level 3
+                                        //-     li: a(href='#') level 3

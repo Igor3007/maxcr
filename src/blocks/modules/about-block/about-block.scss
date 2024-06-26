@@ -97,8 +97,13 @@
         font-size: 18px;
         line-height: 156%;
 
+        @media screen and (min-width: $w760) {
+            font-size: 16px;
+        }
+
         @media screen and (min-width: $w1440) {
             margin-top: -8px;
+            font-size: 18px;
         }
 
         & p {
@@ -199,9 +204,7 @@
             }
 
             &__img {
-                & .bgimage {
-                    filter: brightness(-25%);
-                }
+                & .bgimage {}
             }
         }
     }

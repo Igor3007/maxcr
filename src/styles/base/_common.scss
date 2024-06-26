@@ -70,13 +70,18 @@
     }
 }
 
+.section-page {
+    background-color: var(--color-bg-2);
+    border-bottom: 2px solid var(--color-borders-2);
+}
+
 .page {
     padding-top: 8px;
 
 
 
     @media screen and (min-width: $w576) {
-        padding-top: 36px;
+        padding-top: 27px;
     }
 
     &--details {
@@ -99,7 +104,7 @@
 
     &__title {
 
-        padding-bottom: 16px;
+        padding-bottom: 35px;
 
         & h1 {
             @include font-h1;

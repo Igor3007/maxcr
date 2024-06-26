@@ -1,0 +1,27 @@
+mixin card-category(data)
+    .card-category
+        .card-category__image
+            a(href='/category.html'): +picture(''+data.image.slice(0, -4)+'')
+        .card-category__name
+            a(href='/category.html')= data.title
+
+
+mixin catalog
+    section.catalog
+        .container
+            .catalog
+                .catalog__nav
+                    ul
+                        each item in catalog
+                            li
+                                +ic_24(item.icon)
+                                a(href='#')=item.title
+
+                .catalog__list
+                    .catalog__categories
+                        each item in catalog
+                            .category-group
+                                .category-group__title= item.title
+                                .category-group__sub
+                                    each cat in item.sub
+                                        .category-group__subitem: +card-category(cat)

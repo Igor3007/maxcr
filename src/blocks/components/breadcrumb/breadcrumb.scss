@@ -1,7 +1,7 @@
 .breadcrumb {
 
     background-color: transparent;
-    padding: 0 0 rem(10) 0;
+    padding: 0 0 rem(5) 0;
 
     & ul {
         display: flex;
@@ -10,6 +10,8 @@
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
+        margin-left: -6px;
+        margin-right: -6px;
 
         -moz-scrollbar-color: transparent transparent;
         -moz-scrollbar-width: thin !important;
@@ -35,19 +37,23 @@
 
         & a,
         & span {
-            padding: 6px 12px;
+            padding: 6px 6px;
 
             display: inline-flex;
             font-size: 14px;
-            background-color: var(--color-bg-6);
+            color: var(--color-text-1);
 
         }
 
+        & span {
+            color: var(--color-text-2);
+        }
+
         & a {
-            color: var(--color-text-01);
+            color: var(--color-text-1);
 
             &:hover {
-                background-color: var(--color-bg-7);
+                color: var(--color-accent-2);
             }
         }
 
@@ -75,10 +81,7 @@
                 display: none;
             }
 
-            & span,
-            & a {
-                color: var(--color-text-03);
-            }
+
         }
 
     }

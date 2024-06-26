@@ -152,6 +152,9 @@ $w991: 991px;
 
 
 .catalog-popup {
+
+
+
     &__title {
         height: 48px;
         display: flex;
@@ -217,9 +220,6 @@ $w991: 991px;
                 display: block;
                 padding: 11px 16px 12px 16px;
                 width: calc(100% - 24px);
-
-
-
             }
 
 
@@ -443,6 +443,10 @@ $w991: 991px;
 
         display: flex;
         flex-wrap: wrap;
+
+        @media screen and (min-width: $w992) {
+            height: calc(100% - 30px);
+        }
 
         &>ul {
             display: flex;
