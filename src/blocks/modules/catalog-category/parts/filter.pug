@@ -1,0 +1,95 @@
+mixin prop-range()
+
+    .filter-properties
+        .filter-properties__head
+            .filter-properties__title Цена, ₽ 
+            .filter-properties__cross
+
+        .filter-properties__list
+            .filter-properties__range
+                .filter-properties__row
+                    .filter-properties__input
+                        span от
+                        input(type="text" placeholder="" data-price-range="min")
+                    .filter-properties__input
+                        span до
+                        input(type="text" placeholder="" data-price-range="max")
+                .filter-properties__slider
+                    #my-slider.slider(se-min='2500' se-step='1' se-min-value='10000' se-max-value='300000' se-max='950000')
+                        .slider-touch-left
+                            span
+                        .slider-touch-right
+                            span
+                        .slider-line
+                            span
+
+                    
+                
+
+mixin prop-checkbox(data)
+    .filter-properties
+        .filter-properties__head
+            .filter-properties__title= data.title
+            .filter-properties__cross
+
+        .filter-properties__list
+            ul
+                each item in data.checkbox
+                    li: +checkbox(item)
+
+
+mixin prop-checkbox-single(data)
+    .filter-properties
+        .filter-properties__single
+            +checkbox(data)
+
+
+mixin prop-color(data)
+    .filter-properties
+        .filter-properties__head
+            .filter-properties__title= data.title
+            .filter-properties__cross
+
+        .filter-properties__colors
+            ul
+                each item in data.colors
+                    li
+                        label
+                            if(item.hex == '#42AAFF')
+                                input(type="checkbox" name="color" disabled)
+                            else
+                                input(type="checkbox" name="color" )
+                            span(data-tooltip=item.name  style='background-color: '+item.hex+'' class=(item.hex == '#ffffff' ? 'color--border':'' ))
+                li
+                    label
+                        input(type="checkbox" name="color" )
+                        span.multi-color(data-tooltip="Красный/Зеленый/Синий")
+                            svg(width='24' height='24' viewBox="0 0 125 125" fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M63.002 63h63C121.502 2.004 62-10.495 32 8l31.002 55z' fill='#E81E1E')
+                                path(d='M62.995 62.998L32.002 117c55.074 26.6 95.008-18.776 93.99-54.005l-62.997.003z' fill='#A71EE8')
+                                path(d='M63 63.001L32 8c-50.776 34.094-30.915 92.083.002 109L63 63.001z' fill='#0CE97F')
+                    
+                            
+                li
+                    label
+                        input(type="checkbox" name="color" )
+                        span.multi-color(data-tooltip="Розовый/Голубой")
+                            svg(width='125' height='125' viewBox="0 0 125 125" fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M106.694 18.306a62.5 62.5 0 10-88.388 88.388l88.388-88.388z' fill='#E31CAC')
+                                path(d='M18.306 106.694a62.5 62.5 0 1088.388-88.388l-88.388 88.388z' fill='#1C9CE3')
+                    
+
+                span.icon-cross.clear-color-filter
+
+
+mixin prop-radio(data)
+    
+    .filter-properties
+        .filter-properties__head
+            .filter-properties__title= data.title
+            .filter-properties__cross
+
+        .filter-properties__list
+            ul
+                each item in data.radio
+                    li: +radio(item) 

@@ -1,5 +1,7 @@
 /* common styles */
 
+
+
 .font-h2 {
     font-size: 34px;
     line-height: 1.23;
@@ -78,8 +80,6 @@
 .page {
     padding-top: 8px;
 
-
-
     @media screen and (min-width: $w576) {
         padding-top: 27px;
     }
@@ -104,11 +104,25 @@
 
     &__title {
 
-        padding-bottom: 35px;
+        padding-bottom: 20px;
+
+        @media screen and (min-width: $w760) {
+            padding-bottom: 35px;
+        }
 
         & h1 {
-            @include font-h1;
+            @include font-h4;
             margin: 0;
+            line-height: 130%;
+
+            @media screen and (min-width: $w992) {
+                @include font-h2;
+            }
+
+            @media screen and (min-width: $w1376) {
+                @include font-h1;
+            }
+
         }
     }
 

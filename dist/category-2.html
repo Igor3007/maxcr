@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Max Clean Room</title>
+    <meta name="theme-color" content="#1EBC61">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="#{title}">
+    <meta name="keywords" content="#{title}">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="prefetch" href="/img/sprites/sprite.svg" as="image" crossorigin>
+    <style>@font-face {
+  font-family: 'Inter';
+  src: url("/fonts/inter/Inter-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url("/fonts/inter/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url("/fonts/inter/Inter-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url("/fonts/inter/subset-Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url("fonts/geometria/subset-Geometria-ExtraBold.woff2") format("woff2"), url("fonts/geometria/subset-Geometria-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url("fonts/geometria/subset-Geometria-Bold.woff2") format("woff2"), url("fonts/geometria/subset-Geometria-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+/*# sourceMappingURL=maps/critical-fonts.css.map */
+
+    </style>
+    <link rel="stylesheet" href="styles/main.css?v=1.0">
+  </head>
+  <body class="perf-no-animation">
+    <header> 
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top__wrp">
+            <div class="header-top__region">
+              <div class="header-region">
+                <div class="header-region__label"> <span>Ваш регион: </span><span class="is-active" style="background-image: url('/img/flags/by.svg')">BY</span></div>
+                <div class="header-region__list">
+                  <ul>
+                    <li><a href="#by" style="background-image: url('/img/flags/by.svg')">Беларусь</a></li>
+                    <li><a href="#ru" style="background-image: url('/img/flags/ru.svg')">Россия</a></li>
+                    <li><a href="#kz" style="background-image: url('/img/flags/kz.svg')">Казахстан</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="header-top__nav">
+              <ul>
+                <li class="isset-sub"><a href="/about.html">О компании</a>
+                  <ul class="sub-menu">
+                    <li><a href="/about.html">История компании</a></li>
+                    <li><a href="/about.html">Отзывы и благодарности</a></li>
+                    <li><a href="/about.html">Лицензии и сертификаты</a></li>
+                    <li><a href="/about.html">Референс-лист</a></li>
+                    <li><a href="/about.html">Работа в компании</a></li>
+                    <li><a href="/about.html">Новости компании</a></li>
+                    <li><a href="/about.html">Полезные статьи</a></li>
+                    <li><a href="/about.html">Сотрудничество</a></li>
+                    <li><a href="/about.html">Служебный контроль</a></li>
+                  </ul>
+                </li>
+                <li><a href="/about.html">Новости</a>
+                </li>
+                <li><a href="/about.html">Вакансии</a>
+                </li>
+                <li><a href="/about.html">Сотрудничество</a>
+                </li>
+                <li><a href="/about.html">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header-top__personal">
+              <div class="header-top__compare"><a class="header-top-btn" href="compare.html">
+                  <div class="header-top-btn__icon">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                    </svg>
+                  </div>
+                  <div class="header-top-btn__text">Сравнение</div>
+                  <div class="header-top-btn__count">(2)</div></a></div>
+              <div class="header-top__profile"><a class="header-top-btn" href="login.html">
+                  <div class="header-top-btn__icon">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_user"></use>
+                    </svg>
+                  </div>
+                  <div class="header-top-btn__text">Личный кабинет</div></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header">
+        <div class="container">
+          <div class="header__wrp">
+            <div class="header__logo"><a href="/"><span class="bgimage lazyload" data-bg="/img/common/logo.svg"></span></a></div>
+            <div class="header__links"><a class="header-catalog-button" href="#catalog-popup">
+                <svg width="25" height="25">
+                  <use xlink:href="/img/sprites/sprite.svg#ic_catalog"></use>
+                </svg></a>
+              <ul>
+                <li><a href="#catalog-popup">
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_catalog"></use>
+                    </svg><span>Каталог</span></a></li>
+                <li><a href="/clean-room.html">
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_clean-room"></use>
+                    </svg><span>Чистые помещения</span></a></li>
+                <li><a href="/objects.html">
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_cases"></use>
+                    </svg><span>Объекты</span></a></li>
+                <li><a href="#find">
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_loupe"></use>
+                    </svg><span>Поиск по сайту</span></a></li>
+              </ul>
+            </div>
+            <div class="header__contacts">
+              <div class="header-phone-button">
+                <svg width="25" height="25">
+                  <use xlink:href="/img/sprites/sprite.svg#ic_phone"></use>
+                </svg>
+              </div>
+              <div class="header-phone-wrp">
+                <div class="header__contact header__contact--white">
+                  <div class="header-contact">
+                    <div class="header-contact__value"><a href="tel:+375292240765">+375 (29) 224-07-65</a></div>
+                    <div class="header-contact__label"><a href="mailto:info@maxcr.ru">info@maxcr.ru</a></div>
+                  </div>
+                </div>
+                <div class="header__contact">
+                  <div class="header-callback">
+                    <button class="btn btn-small" data-modal="/parts/_popup-callback.html">Обратный звонок</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header__burger">
+              <div class="btn-burger" data-menu="open"> <i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-menu">
+        <div class="container">
+          <div class="header-menu__wrp">
+            <ul> 
+              <li><a href="/catalog.html">Передаточные окна</a>
+              </li>
+              <li><a href="/catalog.html">Воздушные души</a>
+                <ul class="sub-menu">
+                  <li><a href="/categoty.html">Высокой эффективности</a></li>
+                  <li><a href="/categoty.html">Автоматические</a></li>
+                  <li><a href="/categoty.html">Базовые серии SB</a></li>
+                  <li><a href="/categoty.html">Базовые серии SBN</a></li>
+                  <li><a href="/categoty.html">Высокоскоростные</a></li>
+                  <li><a href="/categoty.html">С вертикальным обдувом</a></li>
+                  <li><a href="/categoty.html">Из нержавеющей стали</a></li>
+                  <li><a href="/categoty.html">Туннельные</a></li>
+                  <li><a href="/categoty.html">С раздвижной автоматической дверью</a></li>
+                  <li><a href="/categoty.html">С роллетной автоматической дверью</a></li>
+                  <li><a href="/categoty.html">Грузовые</a></li>
+                </ul>
+              </li>
+              <li><a href="/catalog.html">Панели</a>
+              </li>
+              <li><a href="/catalog.html">Чистые зоны</a>
+              </li>
+              <li><a href="/catalog.html">Вентиляция</a>
+              </li>
+              <li><a href="/catalog.html">Потолочные конструкции</a>
+              </li>
+              <li><a href="/catalog.html">Двери</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main> 
+      <section class="section-page">
+        <div class="container">
+          <div class="page">
+            <div class="page__breadcrumbs">
+              <div class="breadcrumb">
+                <ul>
+                  <li><a href="/">Главная</a></li>
+                  <li><a href="#">Каталог</a></li>
+                  <li><a href="#">Оснащение для чистых помещений</a></li>
+                  <li><span>Передаточные боксы</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="page__title">
+              <h1>Передаточные боксы</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-catalog-category">
+        <div class="container">
+          <div class="catalog-category">
+            <div class="catalog-category__content">
+              <div class="catalog-category__aside" style="display:block">
+                <div class="current-category">
+                  <div class="current-category__label">Категории</div>
+                  <div class="current-category__parent"><a href="#">
+                      <svg width="24" height="24">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_arrow-prev"></use>
+                      </svg><span>Компьютеры</span></a></div>
+                  <div class="current-category__link">Ноутбуки (124)</div>
+                </div>
+                <div class="category-filter" data-filter-container="catalog">
+                  <div class="category-filter__head">
+                    <div class="category-filter__head-title">Фильтры</div>
+                    <div class="category-filter__head-close"><span class="icon-cross" data-filter="open" data-elem="catalog"></span></div>
+                  </div>
+                  <div class="category-filter__wrp">
+                    <form action="#" method="POST">
+                      <div class="category-filter__props">
+                        <div class="category-filter__item">
+                          <div class="filter-properties">
+                            <div class="filter-properties__head">
+                              <div class="filter-properties__title">Производитель</div>
+                              <div class="filter-properties__cross"></div>
+                            </div>
+                            <div class="filter-properties__list">
+                              <ul>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">HP</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">ASUS</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Lenovo</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">MSI</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">DELL</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Acer</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Apple</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Fujitsu-Siemens</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">HP</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">ASUS</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Lenovo</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">MSI</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">DELL</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Acer</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Apple</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Fujitsu-Siemens</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="category-filter__item">
+                          <div class="filter-properties">
+                            <div class="filter-properties__head">
+                              <div class="filter-properties__title">Модельный ряд</div>
+                              <div class="filter-properties__cross"></div>
+                            </div>
+                            <div class="filter-properties__list">
+                              <ul>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Dolby Atmos</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Harman Kardon</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Dolby Digital</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Google Pixel 8</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Google Pixel 8 Pro</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Google Pixel Fold</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Nothing Phone (2)</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">OnePlus 11</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Poco M5</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Poco M5s</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Poco X5</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Poco X5 Pro</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Poco X6</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Poco X6 Pro</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Redmi Note 12</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Redmi Note 12 Pro+</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Samsung Galaxy A15</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Samsung Galaxy A34</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Samsung Galaxy A54</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Samsung Galaxy S23</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Samsung Galaxy S23 FE</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Samsung Galaxy S23 Ultra</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Samsung Galaxy S23+</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Poco X5 Pro</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Poco X6</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Poco X6 Pro</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Redmi Note 12</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Redmi Note 12 Pro+</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Samsung Galaxy A15</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Samsung Galaxy A34</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Samsung Galaxy A54</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="category-filter__item">
+                          <div class="filter-properties">
+                            <div class="filter-properties__single">
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Bluetooth</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="category-filter__item">
+                          <div class="filter-properties">
+                            <div class="filter-properties__head">
+                              <div class="filter-properties__title">Цвет</div>
+                              <div class="filter-properties__cross"></div>
+                            </div>
+                            <div class="filter-properties__colors">
+                              <ul>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color"/><span data-tooltip="Черный" style="background-color: #000000"></span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color"/><span data-tooltip="Серый" style="background-color: #808080"></span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color"/><span data-tooltip="Красный" style="background-color: #FF0000"></span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color"/><span data-tooltip="Красный" style="background-color: #FF0000"></span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color"/><span data-tooltip="Зеленый" style="background-color: #008000"></span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color"/><span data-tooltip="Синий" style="background-color: #0000FF"></span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color"/><span data-tooltip="Серый" style="background-color: #C0C0C0"></span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color"/><span class="color--border" data-tooltip="Белый" style="background-color: #ffffff"></span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color"/><span data-tooltip="Оранжевый" style="background-color: #FFA500"></span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color" disabled="disabled"/><span data-tooltip="Голубой" style="background-color: #42AAFF"></span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color" disabled="disabled"/><span data-tooltip="Голубой" style="background-color: #42AAFF"></span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color" disabled="disabled"/><span data-tooltip="Голубой" style="background-color: #42AAFF"></span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color"/><span class="multi-color" data-tooltip="Красный/Зеленый/Синий">
+                                      <svg width="24" height="24" viewBox="0 0 125 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M63.002 63h63C121.502 2.004 62-10.495 32 8l31.002 55z" fill="#E81E1E"></path>
+                                        <path d="M62.995 62.998L32.002 117c55.074 26.6 95.008-18.776 93.99-54.005l-62.997.003z" fill="#A71EE8"></path>
+                                        <path d="M63 63.001L32 8c-50.776 34.094-30.915 92.083.002 109L63 63.001z" fill="#0CE97F"></path>
+                                      </svg></span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label>
+                                    <input type="checkbox" name="color"/><span class="multi-color" data-tooltip="Розовый/Голубой">
+                                      <svg width="125" height="125" viewBox="0 0 125 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M106.694 18.306a62.5 62.5 0 10-88.388 88.388l88.388-88.388z" fill="#E31CAC"></path>
+                                        <path d="M18.306 106.694a62.5 62.5 0 1088.388-88.388l-88.388 88.388z" fill="#1C9CE3"></path>
+                                      </svg></span>
+                                  </label>
+                                </li><span class="icon-cross clear-color-filter"></span>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="category-filter__item">
+                          <div class="filter-properties">
+                            <div class="filter-properties__head">
+                              <div class="filter-properties__title">Рейтинг магазина</div>
+                              <div class="filter-properties__cross"></div>
+                            </div>
+                            <div class="filter-properties__list">
+                              <ul>
+                                <li>
+                                  <label class="radio">
+                                    <input type="radio" name="undefined" value="undefined"/><span class="radio__elem"></span><span class="radio__text">Любой</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="radio">
+                                    <input type="radio" name="undefined" value="undefined"/><span class="radio__elem"></span><span class="radio__text">Высокий: 4.5+</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="radio">
+                                    <input type="radio" name="undefined" value="undefined"/><span class="radio__elem"></span><span class="radio__text">Хороший: 4+</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="radio">
+                                    <input type="radio" name="undefined" value="undefined"/><span class="radio__elem"></span><span class="radio__text">Средний: 3.5+</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="category-filter__item">
+                          <div class="filter-properties">
+                            <div class="filter-properties__head">
+                              <div class="filter-properties__title">Скидки и акции </div>
+                              <div class="filter-properties__cross"></div>
+                            </div>
+                            <div class="filter-properties__list">
+                              <ul>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Скидки</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Промокоды</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Подарки за покупки</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Больше за ту же цену</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="category-filter__item">
+                          <div class="filter-properties">
+                            <div class="filter-properties__head">
+                              <div class="filter-properties__title">Магазины</div>
+                              <div class="filter-properties__cross"></div>
+                            </div>
+                            <div class="filter-properties__list">
+                              <ul>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">PCPuls.ru</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">AMD.ru</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">intel.cpm</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">kst.by</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="category-filter__item">
+                          <div class="filter-properties">
+                            <div class="filter-properties__head">
+                              <div class="filter-properties__title">Способ доставки</div>
+                              <div class="filter-properties__cross"></div>
+                            </div>
+                            <div class="filter-properties__list">
+                              <ul>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Курьером</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Самовывоз</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Транспортная компания</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="category-filter__item">
+                          <div class="filter-properties">
+                            <div class="filter-properties__head">
+                              <div class="filter-properties__title">Способ оплаты</div>
+                              <div class="filter-properties__cross"></div>
+                            </div>
+                            <div class="filter-properties__list">
+                              <ul>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Онлайн</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Курьеру</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="category-filter__item">
+                          <div class="filter-properties">
+                            <div class="filter-properties__head">
+                              <div class="filter-properties__title">Состояние товара</div>
+                              <div class="filter-properties__cross"></div>
+                            </div>
+                            <div class="filter-properties__list">
+                              <ul>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Новый</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Немного БУ</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Восстановленный</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="category-filter__submit">
+                        <div class="category-filter__send" data-filter="submit">
+                          <button class="btn"><span>Посмотреть</span><small>328 предложений </small></button>
+                        </div>
+                        <div class="category-filter__clear" data-filter="clear"><span class="icon-cross"> </span><small>Очистить <span>все фильтры</span></small></div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog-category__main"> 
+                <div class="catalog-category__top">
+                  <div class="catalog-category__help"><a href="#">
+                      <button class="btn">Помощь с подбором</button></a></div>
+                </div>
+                <div class="catalog-category__products">
+                  <div class="catalog-products" data-catalog="container">
+                    <div class="catalog-products__item">
+                      <div class="minicard">
+                        <div class="minicard__topbar">
+                          <div class="minicard__compare">
+                            <svg width="24" height="24">
+                              <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                            </svg><span>В сравнение</span>
+                          </div>
+                        </div>
+                        <div class="minicard__image">
+                          <picture>
+                            <source srcset="/img/products/img.webp" type="image/webp"/><img src="/img/products/img.jpg" loading="lazy" alt="image"/>
+                          </picture>
+                        </div>
+                        <div class="minicard__main">
+                          <div class="minicard__title">Вытяжной шкаф MCRBK-FH</div>
+                          <div class="minicard__prop">
+                            <ul>
+                              <li>Оснащены центробежным вентилятором</li>
+                              <li>Закаленное стекло толщиной 5 мм</li>
+                              <li>Противовес ручного переднего окна</li>
+                            </ul>
+                          </div>
+                          <div class="minicard__stock"><span>В наличии</span></div>
+                          <div class="minicard__details"><a href="single-product.html">
+                              <button class="btn">Перейти к товару</button></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="catalog-products__item">
+                      <div class="minicard">
+                        <div class="minicard__topbar">
+                          <div class="minicard__compare">
+                            <svg width="24" height="24">
+                              <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                            </svg><span>В сравнение</span>
+                          </div>
+                        </div>
+                        <div class="minicard__image">
+                          <picture>
+                            <source srcset="/img/products/img-1.webp" type="image/webp"/><img src="/img/products/img-1.jpg" loading="lazy" alt="image"/>
+                          </picture>
+                        </div>
+                        <div class="minicard__main">
+                          <div class="minicard__title">Пассивные боксы с утопленной дверью MCR SB-01e</div>
+                          <div class="minicard__prop">
+                            <ul>
+                              <li>Материал корпуса: сталь с порошковым покрытием RAL 9003 / сталь с порошковым покрытием RAL 9010</li>
+                              <li>Электронная блокировка дверей</li>
+                            </ul>
+                          </div>
+                          <div class="minicard__stock"><span>В наличии</span></div>
+                          <div class="minicard__details"><a href="single-product.html">
+                              <button class="btn">Перейти к товару</button></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="catalog-products__item">
+                      <div class="minicard">
+                        <div class="minicard__topbar">
+                          <div class="minicard__compare">
+                            <svg width="24" height="24">
+                              <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                            </svg><span>В сравнение</span>
+                          </div>
+                        </div>
+                        <div class="minicard__image">
+                          <picture>
+                            <source srcset="/img/products/img-2.webp" type="image/webp"/><img src="/img/products/img-2.jpg" loading="lazy" alt="image"/>
+                          </picture>
+                        </div>
+                        <div class="minicard__main">
+                          <div class="minicard__title">Воздушные души SB-1400/2 с двусторонним обдувом для 2 чел</div>
+                          <div class="minicard__prop">
+                            <ul>
+                              <li>Внешний размер: 1400x2000x2180 мм (ШxГxВ)</li>
+                              <li>Материал корпуса: Сталь с порошковым покрытием RAL 9003</li>
+                              <li>Сопла из нержавеющей стали: 24 шт.</li>
+                            </ul>
+                          </div>
+                          <div class="minicard__stock"><span>В наличии</span></div>
+                          <div class="minicard__details"><a href="single-product.html">
+                              <button class="btn">Перейти к товару</button></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="catalog-products__item">
+                      <div class="minicard">
+                        <div class="minicard__topbar">
+                          <div class="minicard__compare">
+                            <svg width="24" height="24">
+                              <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                            </svg><span>В сравнение</span>
+                          </div>
+                        </div>
+                        <div class="minicard__image">
+                          <picture>
+                            <source srcset="/img/products/img-3.webp" type="image/webp"/><img src="/img/products/img-3.jpg" loading="lazy" alt="image"/>
+                          </picture>
+                        </div>
+                        <div class="minicard__main">
+                          <div class="minicard__title">Профили для чистых помещений</div>
+                          <div class="minicard__prop">
+                            <ul>
+                              <li>Направляющий П-профиль (800 м.п)</li>
+                              <li>Межпанельный профиль для сэндвич-панели (1000 м.п)</li>
+                              <li>И многие другие (переходите на страницу товара)</li>
+                            </ul>
+                          </div>
+                          <div class="minicard__stock"><span>В наличии</span></div>
+                          <div class="minicard__details"><a href="single-product.html">
+                              <button class="btn">Перейти к товару</button></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="catalog-products__item">
+                      <div class="minicard">
+                        <div class="minicard__topbar">
+                          <div class="minicard__compare">
+                            <svg width="24" height="24">
+                              <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                            </svg><span>В сравнение</span>
+                          </div>
+                        </div>
+                        <div class="minicard__image">
+                          <picture>
+                            <source srcset="/img/products/img-2.webp" type="image/webp"/><img src="/img/products/img-2.jpg" loading="lazy" alt="image"/>
+                          </picture>
+                        </div>
+                        <div class="minicard__main">
+                          <div class="minicard__title">Воздушные души SB-1400/2 с двусторонним обдувом для 2 чел</div>
+                          <div class="minicard__prop">
+                            <ul>
+                              <li>Внешний размер: 1400x2000x2180 мм (ШxГxВ)</li>
+                              <li>Материал корпуса: Сталь с порошковым покрытием RAL 9003</li>
+                              <li>Сопла из нержавеющей стали: 24 шт.</li>
+                            </ul>
+                          </div>
+                          <div class="minicard__stock"><span>В наличии</span></div>
+                          <div class="minicard__details"><a href="single-product.html">
+                              <button class="btn">Перейти к товару</button></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-pagination">
+                    <div class="catalog-pagination__more">
+                      <button>
+                        <svg width="14" height="14">
+                          <use xlink:href="/img/sprites/sprite.svg#ic_more"></use>
+                        </svg><span>Показать ещё</span>
+                      </button>
+                    </div>
+                    <div class="catalog-pagination__page">
+                      <div class="pagination">
+                        <div class="pagination__page">
+                          <ul>
+                            <li class="next"><span>
+                                <svg width="48" height="48">
+                                  <use xlink:href="/img/sprites/sprite.svg#ic_arrow-prev"></use>
+                                </svg></span></li>
+                            <li class="active"><a href="#1">1</a></li>
+                            <li><a href="#2">2</a></li>
+                            <li><a href="#3">3</a></li>
+                            <li><span>...</span></li>
+                            <li><a href="#10">10</a></li>
+                            <li class="next"><a href="#2">
+                                <svg width="48" height="48">
+                                  <use xlink:href="/img/sprites/sprite.svg#ic_arrow-next"></use>
+                                </svg></a></li>
+                          </ul>
+                        </div>
+                        <div class="pagination__total">Показаны проекты: 1-12</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-contacts-block">
+        <div class="container">
+          <div class="contacts-block">
+            <div class="contacts-block__left">
+              <div class="contacts-block__title">Свяжитесь с нами</div>
+              <div class="contacts-block__text">
+                <div class="formated-text">
+                  <p><strong>Есть вопросы? Хотите заказать товар или услугу?</strong></p>
+                  <p><strong>Пишите — мы свяжемся с Вами в кратчайшие сроки и подробно проконсультируем!</strong></p>
+                  <p>Запросы на коммерческое предложение, пожалуйста, отправляйте на почту:</p>
+                  <p><a href="mailto:info@maxcr.ru">info@maxcr.ru</a></p>
+                </div>
+              </div>
+              <div class="contacts-block__btn">
+                <button class="btn" data-modal="callback">Связаться с нами</button>
+              </div>
+            </div>
+            <div class="contacts-block__right">
+              <picture>
+                <source srcset="/img/common/big-img-1.webp" type="image/webp"/><img src="/img/common/big-img-1.jpg" loading="lazy" alt="image"/>
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer"> 
+        <div class="container"> 
+          <div class="footer__col footer__col--left">
+            <div class="footer__logo"><a href="#"><span class="bgimage lazyload" data-bg="/img/common/logo-white.svg"></span></a></div>
+            <div class="footer__desc">Все виды работ в области проектирования и строительства чистых помещений.</div>
+            <div class="footer__title"><a href="#">Каталог</a></div>
+            <div class="footer__menu">
+              <ul>
+                <li><a href="#">Оснащение чистых помещений</a></li>
+                <li><a href="#">Ограждающие конструкции для чистых помещений</a></li>
+                <li><a href="#">Воздухотехника для чистых помещений</a></li>
+                <li><a href="#">Стерилизация</a></li>
+                <li><a href="#">Фармацевтическое оборудование</a></li>
+                <li><a href="#">
+                     Весь каталог<span class="ic-catalog" style="background-image: url('/img/icons/icon-arrow-in-detail.svg')"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col footer__col--menu"> 
+            <div class="footer__title"><a href="#">О компании</a></div>
+            <div class="footer__menu">
+              <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">История</a></li>
+                <li><a href="#">Отзывы и благодарности</a></li>
+                <li><a href="#">Лицензии и сертификаты</a></li>
+                <li><a href="#">Референсы</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Сотрудничество</a></li>
+                <li><a href="#">Служебный контроль</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+              <ul class="users-docs">
+                <li><a href="#">Политика конфиденциаольности</a></li>
+                <li><a href="#">Персональные данные</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col footer__col--contacts">
+            <div class="footer__title"><a href="#">Контакты</a></div>
+            <div class="footer__subtitle">Россия:</div>
+            <div class="footer__link">
+              <div class="footer-link">
+                <div class="footer-link__label">Телефон:</div>
+                <div class="footer-link__a"><a href="tel:+74991135652"> +7 (499) 113-56-52 (единый номер)</a></div>
+              </div>
+            </div>
+            <div class="footer__link">
+              <div class="footer-link">
+                <div class="footer-link__label">Email:</div>
+                <div class="footer-link__a"><a href="mailto:info@maxcr.ru">info@maxcr.ru</a></div>
+              </div>
+            </div>
+            <div class="footer__link">
+              <div class="footer-link">
+                <div class="footer-link__label">Адрес:</div>
+                <div class="footer-link__a"><a href="https://yandex.by/maps/-/CDvIzEPf">Москва, Пресненская набережная, д.12, этаж 45, офис 11/3Д</a></div>
+              </div>
+            </div>
+            <div class="footer__subtitle">Беларусь:</div>
+            <div class="footer__link">
+              <div class="footer-link">
+                <div class="footer-link__label">Телефон:</div>
+                <div class="footer-link__a"><a href="tel:+375292240765"> +375292240765</a></div>
+              </div>
+            </div>
+            <div class="footer__link">
+              <div class="footer-link">
+                <div class="footer-link__label">Адрес:</div>
+                <div class="footer-link__a"><a href="https://yandex.by/maps/-/CDvIz6Je">Минск, ул. Сурганова, д. 57Б, 5 этаж, офис 157</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom__info">
+            <div class="footer-bottom__company"> <strong>2006-2024 © Группа компаний MAX Clean Room | ООО «МаксКлинрум» УНП 192689111</strong></div>
+            <div class="footer-bottom__copyright">Вся информация, цены и технические характеристики, представленные на сайте, имеют справочный характер. Уточняйте наличие, стоимость, актуальные размеры и модификации при общении с инженерами компании.</div>
+          </div>
+          <div class="footer-bottom__dev"><span>Дизайн и разработка:</span><a href="https://promicom.ru" target="_blank"><img src="/img/icons/promicom.svg" alt="Поддержка сайта: Promicom"></a></div>
+        </div>
+      </div>
+      <div class="float-bar">
+        <div class="float-bar__top">
+          <div class="float-bar__top-icon">
+            <svg width="25" height="25">
+              <use xlink:href="/img/sprites/sprite.svg#ic_arrows-top"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+            <div class="main-menu" data-menu="container">
+              <div class="main-menu__wrp">
+                <div class="main-menu__links" data-menu="links"></div>
+                <div class="main-menu__top" data-menu="top"></div>
+                <div class="main-menu__contacts" data-menu="contacts"></div>
+              </div>
+            </div>
+            <div class="catalog-popup">
+              <div class="catalog-popup__wrp">
+                <div class="catalog-popup__content">
+                  <div class="catalog-popup__close" data-catalog-popup="close"><span class="icon-cross"></span></div>
+                  <div class="catalog-popup__aside">
+                    <div class="catalog-popup__title">Каталог товаров</div>
+                    <div class="catalog-popup__nav">
+                      <nav>
+                        <ul>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/01.svg)"></span><span class="category-tree--level1">Оснащение для чистых помещений</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Передаточные боксы</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Активные</a></li>
+                                  <li><a href="category.html">Пассивные</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Воздушные души</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Высокой эффективности</a></li>
+                                  <li><a href="category.html">Автоматические</a></li>
+                                  <li><a href="category.html">Базовые серии SB</a></li>
+                                  <li><a href="category.html">Базовые серии SBN</a></li>
+                                  <li><a href="category.html">Высокоскоростные</a></li>
+                                  <li><a href="category.html">С вертикальным обдувом</a></li>
+                                  <li><a href="category.html">Из нержавеющей стали</a></li>
+                                  <li><a href="category.html">Туннельные</a></li>
+                                  <li><a href="category.html">С раздвижной автоматической дверью</a></li>
+                                  <li><a href="category.html">С роллетной автоматической дверью</a></li>
+                                  <li><a href="category.html">Грузовые</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Вытяжное оборудование</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Вытяжные шкафы</a></li>
+                                  <li><a href="category.html">Мобильная вытяжка</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Боксы биологической безопасности</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Класс I</a></li>
+                                  <li><a href="category.html">Класс II</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Ламинарные шкафы</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Вертикальные</a></li>
+                                  <li><a href="category.html">Горизонтальные</a></li>
+                                  <li><a href="category.html">ПЦР-боксы</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Камеры измерение температуры и дезинфекции персонала</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Камеры дезинфекции</a></li>
+                                  <li><a href="category.html">Камеры измерения температуры</a></li>
+                                  <li><a href="category.html">Камеры измерения температуры и дезинфекции</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="category.html">Ламинарные укрытия</a>
+                              </li>
+                              <li><a href="category.html">Чистые зоны</a>
+                              </li>
+                              <li><a href="category.html">Модульные чистые помещения</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/02.svg)"></span><span class="category-tree--level1">Ограждающие конструкции</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Стеновые панели</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Боксы биологической безопасности Класса II</a></li>
+                                  <li><a href="category.html">Боксы биологической безопасности Класса I</a></li>
+                                  <li><a href="category.html">Боксы биологической безопасности Класса III</a></li>
+                                  <li><a href="category.html">Боксы цитотоксической безопасности</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="category.html">Потолочные конструкции</a>
+                              </li>
+                              <li><a href="category.html">Двери</a>
+                              </li>
+                              <li><a href="category.html">Плинтусы / профили</a>
+                              </li>
+                              <li><a href="category.html">Напольные покрытия</a>
+                              </li>
+                              <li><a href="category.html">Умные окна</a>
+                              </li>
+                              <li><a href="category.html">Пьедесталы</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/03.svg)"></span><span class="category-tree--level1">Вентиляция</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Фильтровентиляционные модули</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Системы вентиляции</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Воздухораспределители</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Фильтры очистки воздуха</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/04.svg)"></span><span class="category-tree--level1">Продукция по рентгензащите</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Рентгенозащитные ширмы</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Рентгенозащитные двери</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Рентгенозащитные окна</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Рентгенозащитные ставни</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/05.svg)"></span><span class="category-tree--level1">Стерилизация</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Стерилизаторы воздуха</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Стерилизаторы инструментов</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Робот-дезинфектор</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/06.svg)"></span><span class="category-tree--level1">Фармацевтическое оборудование</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Оборудование для мягких форм</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Оборудование для твёрдых форм</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Оборудование для жидких форм</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/07.svg)"></span><span class="category-tree--level1">Оборудование для лабораторий</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Лабораторные посудомоечные машины</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Инкубаторы</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Сушильные шкафы</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Центрифуги</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Роторные испарители</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Гомогенизаторы</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Печи для гибридизации</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Лабораторные термостаты</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Водяные (масляные) бани</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Орбитальные шейкеры</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Термошейкеры</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="isset-sub"><span class="ic-catalog lazyload" style="background-image: url(/img/icons-catalog/header-catalog-icon/08.svg)"></span><span class="category-tree--level1">Прочее</span>
+                            <ul class="sub-menu">
+                              <li class="isset-sub"><a href="category.html">Медицинская мебель</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Инструменты для чистых помещений</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Дифференциальные манометры</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Светодиодные светильники</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="isset-sub"><a href="category.html">Медные трубы</a>
+                                <ul class="sub-menu">
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                  <li><a href="category.html">Меню уровень 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                  <div class="catalog-popup__main"></div>
+                </div>
+              </div>
+            </div>
+    </footer>
+    <script src="/js/vendor.js"> </script>
+    <script src="/js/common.js"> </script>
+  </body>
+</html>

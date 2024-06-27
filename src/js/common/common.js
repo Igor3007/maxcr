@@ -25,14 +25,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
     window.scrollToTargetAdjusted = function (params) {
 
         let element = typeof params.elem == 'string' ? document.querySelector(params.elem) : params.elem
-        let headerOffset = 15;
         let elementPosition = element.getBoundingClientRect().top + window.scrollY
 
-        console.log(elementPosition)
-
-        let offsetPosition = elementPosition - headerOffset - params.offset;
-
-
+        let offsetPosition = elementPosition
+        offsetPosition -= (params.offset ? params.offset : 0)
 
         window.scrollTo({
             top: Number(offsetPosition),
@@ -308,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     if (document.querySelector('.header-phone-button')) {
         document.querySelector('.header-phone-button').addEventListener('click', e => {
-            if (document.body.clientWidth > 576) {
+            if (document.body.clientWidth > 481) {
                 document.querySelector('.header-phone-wrp').classList.toggle('is-open')
             } else {
                 const instansePopup = new afLightbox({
@@ -618,23 +614,21 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
             getColumnMenu(menu) {
                 let items = menu.querySelector('.sub-menu').children
-                let result = [
-                    document.createElement('ul'),
-                    document.createElement('ul'),
-                    document.createElement('ul'),
-                ];
+                let result = '';
+                let columns = 3
 
                 let array = Array.from(items);
-                let size = result.length;
-                let subarray = []; //массив в который будет выведен результат.
-                for (let i = 0; i < Math.ceil(array.length / size); i++) {
-                    subarray[i] = array.slice((i * size), (i * size) + size);
-                    subarray[i].forEach(li => {
-                        result[i].append(li)
-                    })
+                var partSize = Math.ceil(array.length / columns);
+
+                for (var i = 0; i < array.length; i += partSize) {
+                    let subarray = array.slice(i, i + partSize)
+                    let ul = document.createElement('ul')
+
+                    subarray.forEach(li => ul.append(li))
+                    result += ul.outerHTML
                 }
 
-                return result[0].outerHTML + result[1].outerHTML + result[2].outerHTML
+                return result
             }
 
 
@@ -850,5 +844,125 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
 
     if (document.querySelector('[data-modal]')) initDataModal(document)
+
+    /* ========================================
+    dfdf
+    ========================================*/
+
+    class FlexTags {
+        constructor(params) {
+            this.params = params
+            this.$el = document.querySelector(params.el) || document
+            this.widthButtonShowMore = 110;
+            this.container = document.querySelector(this.params.container) || document
+            this.showMoreBotton = this.container.querySelector('[data-ft="more"]')
+            this.showMoreBottonText = this.showMoreBotton.querySelector('span').innerText
+            this.liItems = this.$el.querySelectorAll('li')
+            this.init()
+        }
+
+        init() {
+            this.addEvent()
+            this.render()
+        }
+
+        heightItems() {
+            return this.$el.offsetHeight;
+        }
+
+        heightContainer() {
+
+            let el = this.$el.querySelector('li')
+            let heightItem = el.offsetHeight
+            heightItem += parseInt(window.getComputedStyle(el).marginTop)
+            heightItem += parseInt(window.getComputedStyle(el).marginBottom)
+
+            return heightItem * this.params.rows
+
+        }
+
+        render() {
+
+            if (this.$el.closest(this.params.container).classList.contains('is-open')) {
+                return false;
+            }
+
+            this.$el.querySelectorAll('li.is-hide').forEach(li => li.classList.remove('is-hide'))
+            this.showMoreBotton.style.display = (this.heightItems() > this.heightContainer() ? 'flex' : 'none')
+
+            for (let i = 0; i <= this.liItems.length; i++) {
+
+                if (this.heightItems() > this.heightContainer()) {
+                    let visibleElements = this.$el.querySelectorAll('li:not(.is-hide)')
+                    if (visibleElements[(visibleElements.length - 1)]) {
+                        visibleElements[(visibleElements.length - 1)].classList.add('is-hide')
+                    }
+                }
+
+            }
+
+            setTimeout(() => {
+                this.container.classList.add('is-init')
+            }, 0)
+
+        }
+
+        debounce(method, delay, e) {
+            clearTimeout(method._tId);
+            method._tId = setTimeout(function () {
+                method(e);
+            }, delay);
+        }
+
+        addEvent() {
+            const resizeHahdler = (e) => {
+                this.render()
+            }
+
+            const observer = new ResizeObserver((entries) => {
+                this.debounce(resizeHahdler, 30, entries)
+            });
+
+            observer.observe(document.querySelector(this.params.container));
+
+            this.showMoreBotton.addEventListener('click', e => {
+                this.container.classList.toggle('is-open');
+                this.showMoreBotton.querySelector('span').innerText = this.container.classList.contains('is-open') ? 'Свернуть' : this.showMoreBottonText
+            })
+        }
+    }
+
+    if (document.querySelector('.catalog__nav')) {
+        new FlexTags({
+            el: '.catalog__nav ul',
+            container: '.catalog__top',
+            rows: 2
+        })
+
+
+        // scroll to catig
+
+        const items = document.querySelectorAll('.catalog__nav li a')
+        const container = document.querySelector('.catalog__categories')
+        items.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault()
+
+
+
+                if (container.querySelector(item.getAttribute('href'))) {
+
+                    let elem = container.querySelector(item.getAttribute('href'))
+
+                    window.scrollToTargetAdjusted({
+                        elem,
+                        offset: 20
+                    })
+                }
+
+
+            })
+        })
+    }
 
 }); //dcl

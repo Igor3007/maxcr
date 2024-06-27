@@ -8,6 +8,12 @@ header {
     position: relative;
     z-index: 150;
 
+    border-bottom: 1px solid var(--color-borders-2);
+
+    @media screen and (min-width: $w992) {
+        border-bottom: none;
+    }
+
     & .container {
         @media screen and (max-width: $w576) {
             padding-right: 0;
@@ -47,9 +53,7 @@ header {
             border-radius: 8px;
             margin-left: 8px;
 
-            &:hover {
-                background-color: var(--color-bg-3);
-            }
+
         }
 
         @media screen and (min-width: $w992) {
@@ -271,6 +275,7 @@ header {
             flex-direction: column;
             border-radius: 12px;
             white-space: nowrap;
+            box-shadow: 0 0 14px 0 #0000002b;
 
             @media screen and (max-width: $w576) {
                 right: -38px;
