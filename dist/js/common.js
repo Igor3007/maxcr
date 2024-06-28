@@ -965,4 +965,160 @@ document.addEventListener('DOMContentLoaded', function (event) {
         })
     }
 
+    /* ===================================================================================
+    filter catalog
+    ===================================================================================*/
+
+    /* ====================================
+    show-hide properties filter
+    ====================================*/
+
+    if (document.querySelector('.filter-properties')) {
+
+        const container = document.querySelector('.category-filter')
+        const subMenu = container.querySelectorAll('.filter-properties__list ul')
+
+        // console.log(subMenu)
+
+        subMenu.forEach(item => {
+
+            if (item.querySelectorAll('li').length > 5) {
+
+                const elem = document.createElement('div')
+                elem.classList.add('sub-menu-toggle')
+                elem.innerText = 'Ещё'
+
+                //add event
+
+                elem.addEventListener('click', e => {
+                    item.classList.toggle('is-open')
+                    elem.classList.toggle('is-open')
+                    item.closest('.filter-properties').classList.toggle('is-height-auto')
+                    elem.innerText = (item.classList.contains('is-open') ? 'Свернуть' : 'Ещё')
+                })
+
+                item.after(elem)
+
+            }
+
+        })
+
+    }
+
+    /* =========================================
+    show / hide item filter
+    =========================================*/
+
+    class СollapseFilterProperties {
+        constructor(params) {
+            this.$el = params.el
+            this.maxHeightContainer = this.$el.clientHeight;
+            this.head = this.$el.querySelector('.filter-properties__head')
+            this.heightHead = this.head.offsetHeight + 10;
+
+            this.addEvents()
+            this.init()
+
+            /*if(params.el.classList.contains('group_Элементы')) {
+                this.close();
+            }*/
+
+        }
+
+        init() {
+            if (this.maxHeightContainer) {
+                this.$el.style.maxHeight = this.maxHeightContainer + 'px';
+            }
+        }
+
+        reinit(el) {
+            this.maxHeightContainer = el.clientHeight
+            this.heightHead = el.querySelector('.filter-properties__head').offsetHeight + 10;
+            this.init()
+        }
+
+        open() {
+            !this.$el.classList.contains('is-hide') || this.$el.classList.remove('is-hide');
+            this.$el.style.maxHeight = this.maxHeightContainer + 'px'
+
+            if (this.$el.querySelector('.filter-properties__list ul').classList.contains('is-open')) {
+                this.$el.classList.add('is-height-auto');
+            }
+        }
+
+        close() {
+
+            this.$el.classList.add('is-hide')
+            this.$el.style.maxHeight = this.heightHead + 'px';
+            !this.$el.classList.contains('is-height-auto') || this.$el.classList.remove('is-height-auto');
+        }
+
+        addEvents() {
+            this.head.addEventListener('click', e => {
+                this.$el.classList.contains('is-hide') ? this.open() : this.close()
+            })
+        }
+    }
+
+    if (document.querySelector('.filter-properties__head')) {
+        document.querySelectorAll('.filter-properties').forEach(el => {
+            el['СollapseFilterProperties'] = new СollapseFilterProperties({
+                el
+            })
+        })
+    }
+
+
+
+    /* ====================================
+    clear filter
+    ====================================*/
+
+    if (document.querySelector('[data-filter="clear"]')) {
+
+        const items = document.querySelectorAll('[data-filter="clear"]')
+
+        items.forEach(item => {
+            item.addEventListener('click', e => {
+                e.target.closest('form').reset()
+            })
+        })
+
+
+    }
+
+    /* ====================================
+    data-filter="open"
+    ====================================*/
+
+    if (document.querySelector('[data-filter="open"]')) {
+        document.querySelectorAll('[data-filter="open"]').forEach(item => {
+            item.addEventListener('click', e => {
+                if (document.body.clientWidth >= 993) {
+                    e.target.closest('.catalog-category').classList.toggle('is-close-filter')
+                } else {
+                    document.body.classList.toggle('page-hidden')
+                    document.querySelector('[data-filter-container="catalog"]').classList.toggle('is-open')
+                    initPriceRange(document)
+                }
+            })
+        })
+    }
+
+    /* ====================================
+    data-filter="open"
+    ====================================*/
+
+    if (document.querySelector('[data-filter="submit"]') && document.body.clientWidth < 992) {
+        document.querySelectorAll('[data-filter="submit"]').forEach(item => {
+            item.addEventListener('click', e => {
+                document.querySelector('[data-filter-container="catalog"]').classList.toggle('is-open')
+            })
+        })
+    }
+
+    /* ===================================================================================
+    end filter
+    ===================================================================================*/
+
 }); //dcl

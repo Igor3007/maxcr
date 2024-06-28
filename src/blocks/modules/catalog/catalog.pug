@@ -4,7 +4,13 @@ mixin card-category(data)
             a(href='/category.html'): +picture(''+data.image.slice(0, -4)+'')
         .card-category__name
             a(href='/category.html')= data.title
-
+mixin card-category-2(data)
+    .card-category
+        .card-category__image
+            a(href='/category-2.html'): +picture(''+data.image.slice(0, -4)+'')
+        .card-category__name
+            a(href='/category-2.html')= data.title
+ 
 
 mixin catalog
     section.section-catalog
@@ -42,7 +48,7 @@ mixin catalog-category
                         .category-group
                             .category-group__sub
                                 each cat in item.sub
-                                    .category-group__subitem: +card-category(cat)
+                                    .category-group__subitem: +card-category-2(cat)
                 .catalog__seotext
                     .formated-text
                         h3 Полезная информация

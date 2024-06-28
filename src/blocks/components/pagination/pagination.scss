@@ -16,17 +16,13 @@
          width: 100%;
          padding: 24px 0;
 
-         @media screen and (min-width: $w576) {
-             justify-content: flex-start;
-         }
-
          & ul {
              display: flex;
              list-style-type: none;
 
              & li {
 
-                 margin: 0 2px;
+                 margin: 0 4px;
 
                  & span,
                  & a {
@@ -38,11 +34,14 @@
                      color: var(--color-text-03);
                      font-size: 16px;
                      font-weight: 500;
-                     background-color: var(--color-bg-6);
+                     background-color: var(--color-bg-1);
+                     color: var(--color-text-1);
+                     border-radius: 6px;
+                     transition: 0.3s ease;
 
                      @media screen and (min-width: $w992) {
-                         width: rem(48);
-                         height: rem(40);
+                         width: rem(52);
+                         height: rem(52);
                      }
 
                      & svg {
@@ -52,9 +51,8 @@
                      }
 
                      &:hover {
-
-                         color: #fff;
-                         background-color: var(--color-bg-7);
+                         background-color: var(--color-bg-3);
+                         color: var(--color-accent-2);
 
                          & svg {
                              fill: #fff;
@@ -78,8 +76,32 @@
 
                  &.next,
                  &.prev {
+
+                     & a {
+                         background-color: transparent;
+                         border: 2px solid var(--color-borders-2);
+
+                         & svg {
+                             fill: var(--color-accent-1);
+                         }
+
+                         &:hover {
+                             background-color: var(--color-bg-3);
+                             border: 2px solid var(--color-bg-5);
+
+                             & svg {
+                                 fill: var(--color-accent-2);
+                             }
+                         }
+                     }
+
                      & span {
                          background-color: transparent;
+                         border: 2px solid var(--color-borders-1);
+
+                         & svg {
+                             fill: var(--color-borders-1);
+                         }
                      }
 
                      & a:not(:hover) {

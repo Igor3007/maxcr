@@ -5,9 +5,9 @@ mixin minicard(data)
                 +icons('#ic_compare', 24)
                 span В сравнение
 
-        .minicard__image: +picture(data.img)
+        .minicard__image: a(href='single-product.html'): +picture(data.img)
         .minicard__main
-            .minicard__title= data.title
+            .minicard__title: a(href='single-product.html')= data.title
             .minicard__prop
                 ul
                     each item in data.prop

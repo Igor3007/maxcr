@@ -1,7 +1,8 @@
 include  ../../components/breadcrumb/breadcrumb.pug
 include  ../minicard/minicard.pug 
 include  ../../components/pagination/pagination.pug
-include  parts/filter.pug
+include  parts/filter-parts.pug
+
 
 mixin catalog-category
     section.section-catalog-category
@@ -15,169 +16,24 @@ mixin catalog-category
                             .current-category__parent
                                 a(href='#')
                                     +icons('#ic_arrow-prev', 24)
-                                    span Компьютеры
-                            .current-category__link Ноутбуки (124)
+                                    span Весь каталог
+                                a(href='#')
+                                    +icons('#ic_arrow-prev', 24)
+                                    span Оснащение для чистых помещений
+                                
+                            .current-category__link Передаточные боксы
+                            .current-category__sub
+                                ul
+                                    li: a(href='#') Активные
+                                    li: a(href='#') Пассивные
 
-                        .category-filter(data-filter-container="catalog")
-                            .category-filter__head
-                                .category-filter__head-title Фильтры
-                                .category-filter__head-close: span.icon-cross(data-filter="open" data-elem="catalog")
-
-                            .category-filter__wrp
-                                form(action='#' method='POST')
-                                    .category-filter__props
-                                         
-                                        .category-filter__item: +prop-checkbox({
-                                            title: 'Производитель',
-                                            checkbox: [
-                                                'HP',
-                                                'ASUS',
-                                                'Lenovo',
-                                                'MSI',
-                                                'DELL',
-                                                'Acer',
-                                                'Apple',
-                                                'Fujitsu-Siemens',
-                                                'HP',
-                                                'ASUS',
-                                                'Lenovo',
-                                                'MSI',
-                                                'DELL',
-                                                'Acer',
-                                                'Apple',
-                                                'Fujitsu-Siemens',
-                                            ]
-                                        })
-
-                                        .category-filter__item: +prop-checkbox({
-                                            title: 'Модельный ряд',
-                                            checkbox: [
-                                                'Dolby Atmos',
-                                                'Harman Kardon',
-                                                'Dolby Digital',
-                                                'Google Pixel 8',
-                                                'Google Pixel 8 Pro',
-                                                'Google Pixel Fold',
-                                                'Nothing Phone (2)',
-                                                'OnePlus 11',
-                                                'Poco M5',
-                                                'Poco M5s',
-                                                'Poco X5',
-                                                'Poco X5 Pro',
-                                                'Poco X6',
-                                                'Poco X6 Pro',
-                                                'Redmi Note 12',
-                                                'Redmi Note 12 Pro+',
-                                                'Samsung Galaxy A15',
-                                                'Samsung Galaxy A34',
-                                                'Samsung Galaxy A54',
-                                                'Samsung Galaxy S23',
-                                                'Samsung Galaxy S23 FE',
-                                                'Samsung Galaxy S23 Ultra',
-                                                'Samsung Galaxy S23+',
-                                                'Poco X5 Pro',
-                                                'Poco X6',
-                                                'Poco X6 Pro',
-                                                'Redmi Note 12',
-                                                'Redmi Note 12 Pro+',
-                                                'Samsung Galaxy A15',
-                                                'Samsung Galaxy A34',
-                                                'Samsung Galaxy A54',
-                                            ]
-                                        })
-
- 
-
- 
-                                        .category-filter__item: +prop-checkbox-single('Bluetooth')
-                                        .category-filter__item: +prop-color({
-                                            title: 'Цвет',
-                                            colors: [
-                                                {hex: '#000000', name: 'Черный'}, 
-                                                {hex: '#808080', name: 'Серый'}, 
-                                                {hex: '#FF0000', name: 'Красный'}, 
-                                                {hex: '#FF0000', name: 'Красный'}, 
-                                                {hex: '#008000', name: 'Зеленый'}, 
-                                                {hex: '#0000FF', name: 'Синий'}, 
-                                                {hex: '#C0C0C0', name: 'Серый'}, 
-                                                {hex: '#ffffff', name: 'Белый'}, 
-                                                {hex: '#FFA500', name: 'Оранжевый'}, 
-                                                {hex: '#42AAFF', name: 'Голубой'}, 
-                                                {hex: '#42AAFF', name: 'Голубой'}, 
-                                                {hex: '#42AAFF', name: 'Голубой'}, 
-                                            ]
-                                        })
-                                        .category-filter__item: +prop-radio({
-                                            title: 'Рейтинг магазина',
-                                            radio: [
-                                                'Любой',
-                                                'Высокий: 4.5+',
-                                                'Хороший: 4+',
-                                                'Средний: 3.5+',
-                                            ],
-                                        })
-
-                                        .category-filter__item: +prop-checkbox({
-                                            title: 'Скидки и акции ',
-                                            checkbox: [
-                                                'Скидки',
-                                                'Промокоды',
-                                                'Подарки за покупки',
-                                                'Больше за ту же цену',
-                                            ]
-                                        })
-
-                                        .category-filter__item: +prop-checkbox({
-                                            title: 'Магазины',
-                                            checkbox: [
-                                                'PCPuls.ru',
-                                                'AMD.ru',
-                                                'intel.cpm',
-                                                'kst.by',
-                                            ]
-                                        })
-
-                                        .category-filter__item: +prop-checkbox({
-                                            title: 'Способ доставки',
-                                            checkbox: [
-                                                'Курьером',
-                                                'Самовывоз',
-                                                'Транспортная компания',
-                                                
-                                            ]
-                                        })
-
-                                        .category-filter__item: +prop-checkbox({
-                                            title: 'Способ оплаты',
-                                            checkbox: [
-                                                'Онлайн',
-                                                'Курьеру',
-                                            ]
-                                        })
-
-                                        .category-filter__item: +prop-checkbox({
-                                            title: 'Состояние товара',
-                                            checkbox: [
-                                                'Новый',
-                                                'Немного БУ',
-                                                'Восстановленный',
-                                            ]
-                                        })
-                                    .category-filter__submit
-                                        .category-filter__send(data-filter="submit")
-                                            button.btn
-                                                span Посмотреть
-                                                small 328 предложений 
-                                        .category-filter__clear(data-filter="clear")
-                                            span.icon-cross 
-                                            small Очистить <span>все фильтры</span>
-                                    
+                        include  parts/filter.pug
                                  
 
                     .catalog-category__main 
                         .catalog-category__top
                             .catalog-category__help
-                                a(href='#'): button.btn Помощь с подбором
+                                a(href='#'): button.btn.btn-small Помощь с подбором
                              
 
                         .catalog-category__products
@@ -194,5 +50,41 @@ mixin catalog-category
                                 .catalog-pagination__page
                                     +pagination()
 
+                        .catalog-category__seotext
+                            .formated-text
+                                h3 Полезная информация
+                                p Передаточное окно – это бокс в форме куба с двумя и более (до 4-х) дверцами. Шлюз позволяет сохранять герметичность и не допускать смешения воздуха помещений. Блоки устанавливают в ограждающих стенах или дверных проемах.
+                                p Пасс-боксы – отличная возможность перемещать небольшие стерильные предметы между помещениями разных классов чистоты. Для снижения до минимума риска загрязнения достаточно купить передаточное окно MAX Clean Room.
+                                
+                                h3 Конструкция
+                                strong Устройство включает в себя:
+                                ul
+                                    li Корпус из стали - материал устойчив к механическим воздействиям.
+                                    li Внутренний металлический короб из полированной «нержавейки». Гладкие поверхности легко дезинфицировать.
+                                    li Двери глухие или с остеклением. Закаленное стекло смотровых окошек не искажает предметы.
+                                    li Ручки и петли скрытого исполнения. На них не скапливаются загрязнения. Боксы не имеют наружного крепежа.
+
+                                img(src="/img/products/image15.jpg")
+
+                                strong Мы предлагаем камеры двух типов:
+                                ul
+                                    li Пассивные. Внутри установлена УФ лампа. Дверцы снабжены ревизионным окном и замком.
+                                    li Активные. Попеременно (при необходимости одновременно) запускаются циклы обдува и обеззараживания ультрафиолетом. Блокировка дверей электромагнитная либо механическая.
+
+                                h3 Комплектация
+                                strong Базовая поставка:
+                                ul
+                                    li корпус из холоднокатаного стального листа с порошковой окраской;
+                                    li внутренняя рабочая камера;
+                                    li замки (механические);
+                                    li УФ лампа;
+                                    li система блокирования дверей (механическая).
+                                strong По желанию заказчика исполнение можно изменить под его проект:
+                                ul
+                                    li материалы корпуса и короба – нержавеющая сталь;
+                                    li замок с электронным механизмом;
+                                    li системы блокировки электронные;
+                                    li переговорные устройства.
+                                strong Каждая опция учитывается в суммарной цене на передаточный шлюз.
 
 

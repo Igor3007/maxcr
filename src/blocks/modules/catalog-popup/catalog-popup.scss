@@ -55,6 +55,8 @@ $w991: 991px;
         & * {
             user-select: none;
         }
+
+        z-index: 200;
     }
 
     @media screen and (min-width: $w992) {

@@ -37,6 +37,7 @@
         margin-right: rem(10);
         border: 2px solid var(--color-borders-2);
         border-radius: 4px;
+        transition: 0.3s ease;
 
         &::after {
             content: "";
@@ -165,13 +166,16 @@
 
     & input {
         &:hover~.radio__elem {
-            border: 1px solid $accent-1-1;
+            border-color: var(--color-accent-2);
         }
 
         &:checked~.radio__elem {
-            border: 7px solid var(--color-accent-1);
+            border: 6px solid var(--color-accent-1);
             background-color: #fff;
 
+            &:hover {
+                border-color: var(--color-accent-2);
+            }
         }
 
         &:checked~.radio__text {
