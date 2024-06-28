@@ -1121,4 +1121,53 @@ document.addEventListener('DOMContentLoaded', function (event) {
     end filter
     ===================================================================================*/
 
+    /* ======================================
+    slider single product
+    ======================================*/
+
+    if (document.querySelector('[data-slider="single"]')) {
+
+        let main = new Splide('[data-slider="single"]', {
+            type: 'slide',
+            pagination: false,
+            arrows: false,
+            cover: true,
+
+            breakpoints: {
+                992: {
+                    pagination: true,
+                    type: 'slide',
+                },
+            },
+        });
+
+        let thumbnails = new Splide('[data-slider="thumb"]', {
+            rewind: true,
+            perPage: 4,
+            arrows: false,
+            isNavigation: true,
+            gap: 10,
+            focus: 'center',
+            pagination: false,
+            cover: true,
+            updateOnMove: true,
+            dragMinThreshold: {
+                mouse: 4,
+                touch: 10,
+            },
+            //  breakpoints: {
+            //      640: {
+            //          fixedWidth: 70,
+            //          fixedHeight: 70,
+            //      },
+            //  },
+        });
+
+        main.sync(thumbnails);
+        main.mount();
+        thumbnails.mount();
+
+    }
+
+
 }); //dcl

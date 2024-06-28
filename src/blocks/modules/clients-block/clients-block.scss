@@ -4,6 +4,23 @@
     @media screen and (min-width: $w576) {
         padding: 90px 0 50px 0;
     }
+
+    &.section-clients-block--blue {
+        background-color: var(--color-bg-2);
+        padding: 30px 0 50px 0;
+
+        & .clients-marquee {
+            &__list {
+                & li {
+                    background-color: var(--color-bg-2);
+
+                    & .bgimage {
+                        mix-blend-mode: multiply;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .clients-block {

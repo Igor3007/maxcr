@@ -1,0 +1,29 @@
+mixin single-product
+    section.section-single-product
+        .container
+            .single-product
+                .single-product__image
+                    .single-product__compare
+                    .single-product__gallery
+                        .product-images
+                            .product-images__large
+                                .splide(data-slider="single")
+                                    .splide__track
+                                        .splide__list
+                                            .splide__slide: +picture('/img/products/single/0')
+                                            .splide__slide: +picture('/img/products/single/1')
+                                            .splide__slide: +picture('/img/products/single/2')
+                                            .splide__slide: +picture('/img/products/single/3')
+                                            .splide__slide: +picture('/img/products/single/4')
+                            .product-images__thumb
+                                .product-images__slider
+                                    .splide(data-slider="thumb")
+                                        .splide__track
+                                            .splide__list
+                                                .splide__slide: +picture('/img/products/single/0')
+                                                .splide__slide: +picture('/img/products/single/1')
+                                                .splide__slide: +picture('/img/products/single/2')
+                                                .splide__slide: +picture('/img/products/single/3')
+                                                .splide__slide: +picture('/img/products/single/4')
+                                
+                .single-product__details

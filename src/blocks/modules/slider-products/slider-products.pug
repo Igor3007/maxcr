@@ -1,20 +1,27 @@
 include ../../modules/minicard/minicard.pug
 
+mixin content2
+    .container
+        .slider-products 
+            .slider-products__top
+                .slider-products__head
+                    .slider-products__title Продукция в наличии
+                    .slider-products__desc Можете заказать прямо сейчас, придёт к вам в кратчайшие сроки
+                    
+            .slider-products__list
+                .splide(data-slider="product")
+                    .splide__track
+                        .splide__list
+                            each item in sliderProduct
+                                .splide__slide: +minicard(item)
+            .slider-products__all
+                a(href='/catalog.html'): button.btn Больше товаров
 
 mixin slider-products
     section.section-slider-products
-        .container
-            .slider-products 
-                .slider-products__top
-                    .slider-products__head
-                        .slider-products__title Продукция в наличии
-                        .slider-products__desc Можете заказать прямо сейчас, придёт к вам в кратчайшие сроки
-                     
-                .slider-products__list
-                    .splide(data-slider="product")
-                        .splide__track
-                            .splide__list
-                                each item in sliderProduct
-                                    .splide__slide: +minicard(item)
-                .slider-products__all
-                    a(href='/catalog.html'): button.btn Больше товаров
+        +content2
+
+
+mixin slider-products-2
+    section.section-slider-products.section-slider-products--blue
+        +content2 

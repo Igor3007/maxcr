@@ -84,15 +84,7 @@
         padding-top: 27px;
     }
 
-    &--details {
-        @media screen and (min-width: $w1440) {
-            & .page {
-                &__breadcrumb {
-                    padding-bottom: 36px;
-                }
-            }
-        }
-    }
+
 
     &__breadcrumb {
         padding-bottom: 30px;
@@ -134,6 +126,21 @@
             font-size: 18px;
             color: var(--color-text-02);
         }
+    }
+
+    &.page--single {
+
+
+        & .page {
+            &__title {
+                & h1 {
+                    @media screen and (min-width: $w1376) {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+
     }
 }
 

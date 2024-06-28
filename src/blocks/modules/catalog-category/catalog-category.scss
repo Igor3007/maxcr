@@ -189,7 +189,9 @@
 
     &__seotext {
 
-        padding-top: 40px @media screen and (min-width: $w1440) {
+        padding-top: 40px;
+
+        @media screen and (min-width: $w1440) {
             padding-top: 60px;
         }
     }

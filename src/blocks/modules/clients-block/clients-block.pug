@@ -1,6 +1,5 @@
-mixin clients-block
-    section.section-clients-block
-        .container
+mixin content
+    .container
             .clients-block
                 .clients-block__top
                     .clients-block__left
@@ -12,16 +11,26 @@ mixin clients-block
                     .clients-block__right
                         p За 16 лет работы мы не получили ни одного негативного отзыва. Напротив, наши клиенты с гордостью приглашают всех желающих на экскурсии по построенным нами заводам. Мы всегда готовы к новым вызовам и будем рады работать и над Вашим проектом. 
 
-        .clients-marquee
-            .clients-marquee__list(data-marquee="container")
-                ul
-                    li: +bgimage('/img/clients/logo--1.jpg')
-                    li: +bgimage('/img/clients/logo--2.jpg')
-                    li: +bgimage('/img/clients/logo--3.jpg')
-                    li: +bgimage('/img/clients/logo-.jpg')
-                    li: +bgimage('/img/clients/logo-mailru.jpg')
-                    li: +bgimage('/img/clients/logo-mercedes.jpg')
-                    li: +bgimage('/img/clients/logo-rafarma.jpg')
-                    li: +bgimage('/img/clients/logo-rosatom.jpg')
-                    li: +bgimage('/img/clients/logo-roskosmos.jpg')
-                    li: +bgimage('/img/clients/logo-samsung.jpg')
+    .clients-marquee
+        .clients-marquee__list(data-marquee="container")
+            ul
+                li: +bgimage('/img/clients/logo--1.jpg')
+                li: +bgimage('/img/clients/logo--2.jpg')
+                li: +bgimage('/img/clients/logo--3.jpg')
+                li: +bgimage('/img/clients/logo-.jpg')
+                li: +bgimage('/img/clients/logo-mailru.jpg')
+                li: +bgimage('/img/clients/logo-mercedes.jpg')
+                li: +bgimage('/img/clients/logo-rafarma.jpg')
+                li: +bgimage('/img/clients/logo-rosatom.jpg')
+                li: +bgimage('/img/clients/logo-roskosmos.jpg')
+                li: +bgimage('/img/clients/logo-samsung.jpg')
+
+
+mixin clients-block
+    section.section-clients-block
+        +content
+
+mixin clients-block-2
+    section.section-clients-block.section-clients-block--blue
+        +content
+        
