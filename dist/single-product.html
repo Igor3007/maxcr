@@ -248,46 +248,17 @@
       <section class="section-single-product">
         <div class="container">
           <div class="single-product">
-            <div class="single-product__image">
-              <div class="single-product__compare"></div>
-              <div class="single-product__gallery">
-                <div class="product-images">
-                  <div class="product-images__large">
-                    <div class="splide" data-slider="single">
-                      <div class="splide__track">
-                        <div class="splide__list">
-                          <div class="splide__slide">
-                            <picture>
-                              <source srcset="/img/products/single/0.webp" type="image/webp"/><img src="/img/products/single/0.jpg" loading="lazy" alt="image"/>
-                            </picture>
-                          </div>
-                          <div class="splide__slide">
-                            <picture>
-                              <source srcset="/img/products/single/1.webp" type="image/webp"/><img src="/img/products/single/1.jpg" loading="lazy" alt="image"/>
-                            </picture>
-                          </div>
-                          <div class="splide__slide">
-                            <picture>
-                              <source srcset="/img/products/single/2.webp" type="image/webp"/><img src="/img/products/single/2.jpg" loading="lazy" alt="image"/>
-                            </picture>
-                          </div>
-                          <div class="splide__slide">
-                            <picture>
-                              <source srcset="/img/products/single/3.webp" type="image/webp"/><img src="/img/products/single/3.jpg" loading="lazy" alt="image"/>
-                            </picture>
-                          </div>
-                          <div class="splide__slide">
-                            <picture>
-                              <source srcset="/img/products/single/4.webp" type="image/webp"/><img src="/img/products/single/4.jpg" loading="lazy" alt="image"/>
-                            </picture>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-images__thumb">
-                    <div class="product-images__slider">
-                      <div class="splide" data-slider="thumb">
+            <div class="single-product__top">
+              <div class="single-product__image">
+                <div class="single-product__compare">
+                  <svg width="25" height="25">
+                    <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                  </svg><span>В сравнение</span>
+                </div>
+                <div class="single-product__gallery">
+                  <div class="product-images">
+                    <div class="product-images__large">
+                      <div class="splide" data-slider="single">
                         <div class="splide__track">
                           <div class="splide__list">
                             <div class="splide__slide">
@@ -319,11 +290,273 @@
                         </div>
                       </div>
                     </div>
+                    <div class="product-images__thumb">
+                      <div class="product-images__slider">
+                        <div class="splide" data-slider="thumb">
+                          <div class="splide__track">
+                            <div class="splide__list">
+                              <div class="splide__slide">
+                                <picture>
+                                  <source srcset="/img/products/single/0.webp" type="image/webp"/><img src="/img/products/single/0.jpg" loading="lazy" alt="image"/>
+                                </picture>
+                              </div>
+                              <div class="splide__slide">
+                                <picture>
+                                  <source srcset="/img/products/single/1.webp" type="image/webp"/><img src="/img/products/single/1.jpg" loading="lazy" alt="image"/>
+                                </picture>
+                              </div>
+                              <div class="splide__slide">
+                                <picture>
+                                  <source srcset="/img/products/single/2.webp" type="image/webp"/><img src="/img/products/single/2.jpg" loading="lazy" alt="image"/>
+                                </picture>
+                              </div>
+                              <div class="splide__slide">
+                                <picture>
+                                  <source srcset="/img/products/single/3.webp" type="image/webp"/><img src="/img/products/single/3.jpg" loading="lazy" alt="image"/>
+                                </picture>
+                              </div>
+                              <div class="splide__slide">
+                                <picture>
+                                  <source srcset="/img/products/single/4.webp" type="image/webp"/><img src="/img/products/single/4.jpg" loading="lazy" alt="image"/>
+                                </picture>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-product__details">
+                <div class="single-product__config">
+                  <div class="product-config">
+                    <div class="product-config__instock">
+                      <svg width="25" height="25">
+                        <use xlink:href="/img/sprites/sprite.svg#iс_stock"></use>
+                      </svg><span>В наличии</span>
+                    </div>
+                    <div class="product-config__props">
+                      <div class="product-config__item">
+                        <div class="product-config__label">Материал корпуса</div>
+                        <div class="product-config__val">
+                          <label class="radio">
+                            <input type="radio" name="mat" value="true"/><span class="radio__elem"></span><span class="radio__text">Нержавеющая сталь</span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="mat" value="undefined"/><span class="radio__elem"></span><span class="radio__text">Порошковая окраска</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="product-config__item">
+                        <div class="product-config__label">Внутренние размеры</div>
+                        <div class="product-config__val">
+                          <label class="radio">
+                            <input type="radio" name="size" value="true"/><span class="radio__elem"></span><span class="radio__text">400x400</span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="size" value="undefined"/><span class="radio__elem"></span><span class="radio__text">500x500</span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="size" value="undefined"/><span class="radio__elem"></span><span class="radio__text">600x600</span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="size" value="undefined"/><span class="radio__elem"></span><span class="radio__text">750x750</span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="size" value="undefined"/><span class="radio__elem"></span><span class="radio__text">Индивидуальный размер</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-config__submit">
+                      <div class="product-config__btn">
+                        <button class="btn">Запросить расчёт</button>
+                      </div>
+                      <div class="product-config__note">С учётом доставки до вашего объекта.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="single-product__info">
+                  <div class="product-info">
+                    <div class="product-info__label">Доставка</div>
+                    <div class="product-info__value"><strong>В любую точку СНГ</strong>
+                      <p>транспортной компанией либо самовывоз со склада транспортной компании.</p>
+                    </div>
+                    <div class="product-info__label">Гарантия</div>
+                    <div class="product-info__value">
+                      <p>— 1 год</p>
+                    </div>
+                    <div class="product-info__label">Сопутствующие услуги</div>
+                    <div class="product-info__value">
+                      <div class="product-info__similar">
+                        <ul>
+                          <li><span>Монтаж</span></li>
+                          <li><span>Другая услуга</span></li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="single-product__details"></div>
+            <div class="single-product__description">
+              <div class="single-product__nav">
+                <ul>
+                  <li>
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_char"></use>
+                    </svg><span>Характеристики</span>
+                  </li>
+                  <li>
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_edit"></use>
+                    </svg><span>Описание товара</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="single-product__tech">
+                <h2>Технические характеристики боксов биологической безопасности</h2>
+                <div class="table-responsive">
+                  <table>
+                    <tr>
+                      <td>Модель</td>
+                      <td>MCRBSC-1500-II-A2-S</td>
+                    </tr>
+                    <tr>
+                      <td>Внешние размеры (ШхГхВ), мм</td>
+                      <td>1500x785x2220</td>
+                    </tr>
+                    <tr>
+                      <td>Внутренние размеры (ШхГхВ), мм</td>
+                      <td>1220x700x660</td>
+                    </tr>
+                    <tr>
+                      <td>Высота рабочей поверхности, мм</td>
+                      <td>750 (с основанием)</td>
+                    </tr>
+                    <tr>
+                      <td>Максимальная высота открытия окна, мм</td>
+                      <td>450</td>
+                    </tr>
+                    <tr>
+                      <td>Безопасная высота открытия окна, мм</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Скорость приточного воздуха, м/с</td>
+                      <td>0,48±0,025</td>
+                    </tr>
+                    <tr>
+                      <td>Скорость нисходящего воздушного потока, м/с</td>
+                      <td>0,33±0,025</td>
+                    </tr>
+                    <tr>
+                      <td>Фильтр</td>
+                      <td>ULPA фильтр (2 шт, эффективность 99,9995% для частиц размером до 0,12 мкм)</td>
+                    </tr>
+                    <tr>
+                      <td>Уровень шума, дБ</td>
+                      <td>≤67</td>
+                    </tr>
+                    <tr>
+                      <td>Освещенность, люкс</td>
+                      <td>≥1000</td>
+                    </tr>
+                    <tr>
+                      <td>Переднее окно</td>
+                      <td>Двухслойное ламинированное закаленное стекло толщиной ≥5 мм с защитой от ультрафиолета</td>
+                    </tr>
+                    <tr>
+                      <td>Дисплей</td>
+                      <td>ЖК-дисплей</td>
+                    </tr>
+                    <tr>
+                      <td>Водонепроницаемые розетки, Вт</td>
+                      <td>500</td>
+                    </tr>
+                    <tr>
+                      <td>Требование к электросети</td>
+                      <td>220В±10%, 50/60 Гц 110В±10%, 60 Гц</td>
+                    </tr>
+                    <tr>
+                      <td>Потребляемая мощность, Вт</td>
+                      <td>1300</td>
+                    </tr>
+                    <tr>
+                      <td>Визуальное и звуковое оповещение</td>
+                      <td>Аномальная скорость воздушного потока, замена фильтра, переднее стекло на небезопасной высоте, высокое давление в фильтре</td>
+                    </tr>
+                    <tr>
+                      <td>Материал рабочей поверхности</td>
+                      <td>Нержавеющая сталь 304</td>
+                    </tr>
+                    <tr>
+                      <td>Материал корпуса</td>
+                      <td>Холоднокатаная сталь с антибактериальным порошковым покрытием</td>
+                    </tr>
+                    <tr>
+                      <td>Система обдува воздуха</td>
+                      <td>70% рециркуляции воздуха, 30% отвода воздуха</td>
+                    </tr>
+                    <tr>
+                      <td>УФ лампа, Вт</td>
+                      <td>15 (2 шт)</td>
+                    </tr>
+                    <tr>
+                      <td>Светодиодная лампа, Вт</td>
+                      <td>16 (2 шт)</td>
+                    </tr>
+                    <tr>
+                      <td>Стандартные аксессуары</td>
+                      <td>Светодиодные лампы (2 шт), УФ лампы (2 шт), основание, вентилятор, приточный фильтр, вытяжной фильтр, сливной кран, водонепроницаемые розетки (2 шт)</td>
+                    </tr>
+                    <tr>
+                      <td>Дополнительные аксессуары</td>
+                      <td>Подлокотник, стерилизатор для фумигации формалином, инфракрасный стерилизатор, водопроводный и газовый краны</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="single-product__desc">
+                <div class="formated-text">
+                  <h4>Особенности модели</h4>
+                  <ul>
+                    <li>Конструкция рассчитана на двух операторов.</li>
+                    <li>Легкая замена высокоэффективных фильтров (Может осуществляться с передней стороны безопасного шкафа, что более удобно).</li>
+                    <li>Конструкция под углом (Соответствует принципу эргономики и обеспечивает больший угол обзора).</li>
+                    <li>Рабочая зона из нержавеющей стали 304 (Окружена отрицательным давлением).</li>
+                    <li>Рабочая зона в форме бассейна (При пролитии отработанной жидкости в процессе эксперимента она попадает в специальный бак для накопления жидкости, который легко очищается).</li>
+                    <li>Интегрированная конструкция роликов и кронштейнов (Может быть зафиксирована и выровнена путем регулировки ножек роликов).</li>
+                    <li>Отделяемый кронштейн (Позволяет настраивать высоту конструкции).</li>
+                    <li>Двухслойное ламинированное взрывозащищенное стекло.</li>
+                    <li>7-дюймовый сенсорный цветной дисплей (Операторы могут проверить на дисплее следующие характеристики: динамика воздушного потока, скорость притока и оттока, температура и влажность рабочей зоны, давление фильтра, время работы УФ-излучения и время работы фильтра, индикатор срока службы фильтра и т.д).</li>
+                  </ul><img src="/img/other/image16.jpg"/>
+                  <h4>Преимущества сотрудничества с MAX Clean Room</h4>
+                  <p>Купить боксы биологической безопасности II класса защиты можно непосредственно у производителя — компании MAX Clean Room. Здесь вы можете заказать стандартные боксы или боксы с внесением конструктивных изменений, необходимых для применения в условиях конкретной лаборатории или производства.</p><strong>Наши клиенты по достоинству оценили качество продукции и сервиса:</strong>
+                  <ul>
+                    <li>Лучшие цены на рынке — без накруток и скрытых платежей.</li>
+                    <li>Политика компании ориентирована на потребности клиента: заказчик получает бесплатную консультацию, в режиме экскурсии знакомится с оборудованием.</li>
+                    <li>Согласно заявке составляется подробная прозрачная смета заказа, персональный менеджер ведет проект от момента оформления заявки до сдачи объекта «под ключ».</li>
+                    <li>Компания дает гарантию на оборудование и комплектующие.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="single-product__contacts">
+                <div class="sp-contacts">
+                  <div class="sp-contacts__title">Свяжитесь с нами</div>
+                  <div class="sp-contacts__desc">В случае возникновения любых вопросов или для оформления заказа просто позвоните нам по телефонам:</div>
+                  <div class="sp-contacts__row">
+                    <div class="sp-contacts__col"><small>Беларусь</small><a href="tel:">+375 (29) 224-07-65</a></div>
+                    <div class="sp-contacts__col"><small>Россия</small><a href="tel:">+7 (499) 113-56-52</a></div>
+                  </div>
+                  <div class="sp-contacts__desc">Наши менеджеры всегда готовы проконсультировать совершенно бесплатно.</div>
+                  <div class="sp-contacts__btn">
+                    <button class="btn">Связаться с нами</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -332,8 +565,7 @@
           <div class="slider-products"> 
             <div class="slider-products__top">
               <div class="slider-products__head">
-                <div class="slider-products__title">Продукция в наличии</div>
-                <div class="slider-products__desc">Можете заказать прямо сейчас, придёт к вам в кратчайшие сроки</div>
+                <div class="slider-products__title">Похожие товары</div>
               </div>
             </div>
             <div class="slider-products__list">

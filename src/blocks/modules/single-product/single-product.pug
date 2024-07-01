@@ -2,22 +2,15 @@ mixin single-product
     section.section-single-product
         .container
             .single-product
-                .single-product__image
-                    .single-product__compare
-                    .single-product__gallery
-                        .product-images
-                            .product-images__large
-                                .splide(data-slider="single")
-                                    .splide__track
-                                        .splide__list
-                                            .splide__slide: +picture('/img/products/single/0')
-                                            .splide__slide: +picture('/img/products/single/1')
-                                            .splide__slide: +picture('/img/products/single/2')
-                                            .splide__slide: +picture('/img/products/single/3')
-                                            .splide__slide: +picture('/img/products/single/4')
-                            .product-images__thumb
-                                .product-images__slider
-                                    .splide(data-slider="thumb")
+                .single-product__top
+                    .single-product__image
+                        .single-product__compare
+                            +icons('#ic_compare')
+                            span В сравнение
+                        .single-product__gallery
+                            .product-images
+                                .product-images__large
+                                    .splide(data-slider="single")
                                         .splide__track
                                             .splide__list
                                                 .splide__slide: +picture('/img/products/single/0')
@@ -25,5 +18,184 @@ mixin single-product
                                                 .splide__slide: +picture('/img/products/single/2')
                                                 .splide__slide: +picture('/img/products/single/3')
                                                 .splide__slide: +picture('/img/products/single/4')
-                                
-                .single-product__details
+                                .product-images__thumb
+                                    .product-images__slider
+                                        .splide(data-slider="thumb")
+                                            .splide__track
+                                                .splide__list
+                                                    .splide__slide: +picture('/img/products/single/0')
+                                                    .splide__slide: +picture('/img/products/single/1')
+                                                    .splide__slide: +picture('/img/products/single/2')
+                                                    .splide__slide: +picture('/img/products/single/3')
+                                                    .splide__slide: +picture('/img/products/single/4')
+                                    
+                    .single-product__details
+                        .single-product__config
+                            .product-config
+                                .product-config__instock
+                                    +icons('#iс_stock')
+                                    span В наличии
+                                .product-config__props
+                                    .product-config__item
+                                        .product-config__label Материал корпуса
+                                        .product-config__val
+                                            +radio('Нержавеющая сталь', 'mat', true)
+                                            +radio('Порошковая окраска', 'mat')
+                                    .product-config__item
+                                        .product-config__label Внутренние размеры
+                                        .product-config__val
+                                            +radio('400x400', 'size', true)
+                                            +radio('500x500', 'size')
+                                            +radio('600x600', 'size')
+                                            +radio('750x750', 'size')
+                                            +radio('Индивидуальный размер', 'size')
+                                            
+
+                                .product-config__submit
+                                    .product-config__btn: button.btn Запросить расчёт
+                                    .product-config__note С учётом доставки до вашего объекта.
+                        .single-product__info
+                            .product-info
+                                .product-info__label Доставка
+                                .product-info__value
+                                    strong В любую точку СНГ
+                                    p транспортной компанией либо самовывоз со склада транспортной компании.
+
+                                .product-info__label Гарантия
+                                .product-info__value
+                                    p — 1 год
+
+                                .product-info__label Сопутствующие услуги
+                                .product-info__value
+                                    .product-info__similar
+                                        ul
+                                            li: span Монтаж
+                                            li: span Другая услуга
+
+                .single-product__description
+                    .single-product__nav
+                        ul
+                            li
+                                +icons('#ic_char')
+                                span Характеристики
+                            li
+                                +icons('#ic_edit')
+                                span Описание товара
+                    .single-product__tech
+                        h2 Технические характеристики боксов биологической безопасности
+                        .table-responsive: table
+                            tr
+                                td Модель
+                                td MCRBSC-1500-II-A2-S
+                            tr
+                                td Внешние размеры (ШхГхВ), мм
+                                td 1500x785x2220
+                            tr
+                                td Внутренние размеры (ШхГхВ), мм
+                                td 1220x700x660
+                            tr
+                                td Высота рабочей поверхности, мм
+                                td 750 (с основанием)
+                            tr
+                                td Максимальная высота открытия окна, мм
+                                td 450
+                            tr
+                                td Безопасная высота открытия окна, мм
+                                td 200
+                            tr
+                                td Скорость приточного воздуха, м/с
+                                td 0,48±0,025
+                            tr
+                                td Скорость нисходящего воздушного потока, м/с
+                                td 0,33±0,025
+                            tr
+                                td Фильтр
+                                td ULPA фильтр (2 шт, эффективность 99,9995% для частиц размером до 0,12 мкм)
+                            tr
+                                td Уровень шума, дБ
+                                td ≤67
+                            tr
+                                td Освещенность, люкс
+                                td ≥1000
+                            tr
+                                td Переднее окно
+                                td Двухслойное ламинированное закаленное стекло толщиной ≥5 мм с защитой от ультрафиолета
+                            tr
+                                td Дисплей
+                                td ЖК-дисплей
+                            tr
+                                td Водонепроницаемые розетки, Вт
+                                td 500
+                            tr
+                                td Требование к электросети
+                                td 220В±10%, 50/60 Гц 110В±10%, 60 Гц
+                            tr
+                                td Потребляемая мощность, Вт
+                                td 1300
+                            tr
+                                td Визуальное и звуковое оповещение
+                                td Аномальная скорость воздушного потока, замена фильтра, переднее стекло на небезопасной высоте, высокое давление в фильтре
+                            tr
+                                td Материал рабочей поверхности
+                                td Нержавеющая сталь 304
+                            tr
+                                td Материал корпуса
+                                td Холоднокатаная сталь с антибактериальным порошковым покрытием
+                            tr
+                                td Система обдува воздуха
+                                td 70% рециркуляции воздуха, 30% отвода воздуха
+                            tr
+                                td УФ лампа, Вт
+                                td 15 (2 шт)
+                            tr
+                                td Светодиодная лампа, Вт
+                                td 16 (2 шт)
+                            tr
+                                td Стандартные аксессуары
+                                td Светодиодные лампы (2 шт), УФ лампы (2 шт), основание, вентилятор, приточный фильтр, вытяжной фильтр, сливной кран, водонепроницаемые розетки (2 шт)
+                            tr
+                                td Дополнительные аксессуары
+                                td Подлокотник, стерилизатор для фумигации формалином, инфракрасный стерилизатор, водопроводный и газовый краны
+
+                    .single-product__desc: .formated-text
+
+                        h4 Особенности модели
+
+                        ul
+                            li Конструкция рассчитана на двух операторов.
+                            li Легкая замена высокоэффективных фильтров (Может осуществляться с передней стороны безопасного шкафа, что более удобно).
+                            li Конструкция под углом (Соответствует принципу эргономики и обеспечивает больший угол обзора).
+                            li Рабочая зона из нержавеющей стали 304 (Окружена отрицательным давлением).
+                            li Рабочая зона в форме бассейна (При пролитии отработанной жидкости в процессе эксперимента она попадает в специальный бак для накопления жидкости, который легко очищается).
+                            li Интегрированная конструкция роликов и кронштейнов (Может быть зафиксирована и выровнена путем регулировки ножек роликов).
+                            li Отделяемый кронштейн (Позволяет настраивать высоту конструкции).
+                            li Двухслойное ламинированное взрывозащищенное стекло.
+                            li 7-дюймовый сенсорный цветной дисплей (Операторы могут проверить на дисплее следующие характеристики: динамика воздушного потока, скорость притока и оттока, температура и влажность рабочей зоны, давление фильтра, время работы УФ-излучения и время работы фильтра, индикатор срока службы фильтра и т.д).
+
+                        img(src="/img/other/image16.jpg")
+
+                        h4 Преимущества сотрудничества с MAX Clean Room
+
+                        p Купить боксы биологической безопасности II класса защиты можно непосредственно у производителя — компании MAX Clean Room. Здесь вы можете заказать стандартные боксы или боксы с внесением конструктивных изменений, необходимых для применения в условиях конкретной лаборатории или производства.
+
+                        strong Наши клиенты по достоинству оценили качество продукции и сервиса:
+
+                        ul
+                            li Лучшие цены на рынке — без накруток и скрытых платежей.
+                            li Политика компании ориентирована на потребности клиента: заказчик получает бесплатную консультацию, в режиме экскурсии знакомится с оборудованием.
+                            li Согласно заявке составляется подробная прозрачная смета заказа, персональный менеджер ведет проект от момента оформления заявки до сдачи объекта «под ключ».
+                            li Компания дает гарантию на оборудование и комплектующие.
+
+                    .single-product__contacts
+                        .sp-contacts
+                            .sp-contacts__title Свяжитесь с нами
+                            .sp-contacts__desc В случае возникновения любых вопросов или для оформления заказа просто позвоните нам по телефонам:
+                            .sp-contacts__row
+                                .sp-contacts__col
+                                    small Беларусь
+                                    a(href='tel:') +375 (29) 224-07-65
+                                .sp-contacts__col
+                                    small Россия
+                                    a(href='tel:') +7 (499) 113-56-52
+                            .sp-contacts__desc Наши менеджеры всегда готовы проконсультировать совершенно бесплатно.
+                            .sp-contacts__btn: button.btn Связаться с нами
