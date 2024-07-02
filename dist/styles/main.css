@@ -6492,6 +6492,7 @@ footer a {
   transition: 0.3s ease;
 }
 
+.single-product__nav ul li a,
 .single-product__nav ul li span {
   display: flex;
   padding: 8px 12px;
@@ -6509,6 +6510,7 @@ footer a {
   border-radius: 6px;
 }
 
+.single-product__nav ul li:hover a,
 .single-product__nav ul li:hover span {
   color: var(--color-accent-2);
 }
@@ -6635,6 +6637,7 @@ footer a {
   padding: 6px;
 }
 
+.product-info__similar ul li a,
 .product-info__similar ul li span {
   min-height: 40px;
   padding: 0 12px;

@@ -263,6 +263,7 @@
                 transition: 0.3s ease;
 
 
+                & a,
                 & span {
                     display: flex;
                     padding: 8px 12px;
@@ -281,6 +282,7 @@
                     cursor: pointer;
                     border-radius: 6px;
 
+                    & a,
                     & span {
                         color: var(--color-accent-2);
                     }
@@ -428,6 +430,7 @@
             & li {
                 padding: 6px;
 
+                & a,
                 & span {
                     min-height: 40px;
                     padding: 0 12px;

@@ -1169,5 +1169,29 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     }
 
+    /*====================================== 
+    scroll nav single product
+    ======================================*/
+
+    if (document.querySelector('[data-sp="nav"]')) {
+        const items = document.querySelectorAll('[data-sp="nav"] li a')
+        const container = document
+        items.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault()
+
+                if (container.querySelector(item.getAttribute('href'))) {
+                    let elem = container.querySelector(item.getAttribute('href'))
+                    window.scrollToTargetAdjusted({
+                        elem,
+                        offset: 20
+                    })
+                }
+
+
+            })
+        })
+    }
+
 
 }); //dcl

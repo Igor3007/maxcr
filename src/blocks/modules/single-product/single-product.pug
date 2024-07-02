@@ -69,19 +69,19 @@ mixin single-product
                                 .product-info__value
                                     .product-info__similar
                                         ul
-                                            li: span Монтаж
-                                            li: span Другая услуга
+                                            li: a(href='#') Монтаж
+                                            li: a(href='#') Другая услуга
 
                 .single-product__description
-                    .single-product__nav
+                    .single-product__nav(data-sp="nav")
                         ul
                             li
                                 +icons('#ic_char')
-                                span Характеристики
+                                a(href="#tech") Характеристики
                             li
                                 +icons('#ic_edit')
-                                span Описание товара
-                    .single-product__tech
+                                a(href="#desc") Описание товара
+                    .single-product__tech(id="tech")
                         h2 Технические характеристики боксов биологической безопасности
                         .table-responsive: table
                             tr
@@ -128,7 +128,7 @@ mixin single-product
                                 td 500
                             tr
                                 td Требование к электросети
-                                td 220В±10%, 50/60 Гц 110В±10%, 60 Гц
+                                td 220В±10%, 50/60 Гц110В±10%, 60 Гц
                             tr
                                 td Потребляемая мощность, Вт
                                 td 1300
@@ -157,7 +157,7 @@ mixin single-product
                                 td Дополнительные аксессуары
                                 td Подлокотник, стерилизатор для фумигации формалином, инфракрасный стерилизатор, водопроводный и газовый краны
 
-                    .single-product__desc: .formated-text
+                    .single-product__desc(id="desc"): .formated-text
 
                         h4 Особенности модели
 
