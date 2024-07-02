@@ -32,7 +32,7 @@
                      align-items: center;
                      justify-content: center;
                      color: var(--color-text-03);
-                     font-size: 16px;
+                     font-size: 14px;
                      font-weight: 500;
                      background-color: var(--color-bg-1);
                      color: var(--color-text-1);
@@ -42,6 +42,7 @@
                      @media screen and (min-width: $w992) {
                          width: rem(52);
                          height: rem(52);
+                         font-size: 16px;
                      }
 
                      & svg {

@@ -91,10 +91,11 @@
 
     &__content {
 
-        padding-bottom: 50px;
+        padding-bottom: 0px;
 
         @media screen and (min-width: $w992) {
             display: flex;
+            padding-bottom: 50px;
         }
     }
 
@@ -231,7 +232,7 @@
         left: 0;
         right: 0;
         flex-direction: column;
-
+        padding: 0;
         z-index: 1000;
         animation: fade-drop-filter 0.3s ease forwards;
         height: 100%;
@@ -254,7 +255,9 @@
             }
 
             &__send {
-                width: 50%;
+                width: 100%;
+                margin-right: 12px;
+                max-width: 360px;
 
                 & .btn {
                     width: 100%;
@@ -262,7 +265,12 @@
             }
 
             &__clear {
-                width: 50%;
+                // width: 50%;
+                margin-left: auto;
+            }
+
+            &__submit {
+                padding: 12px 16px;
             }
 
         }
@@ -814,6 +822,25 @@
 
         & .btn {
             width: 100%;
+
+            & span {
+                margin-left: 4px;
+
+                @media screen and (max-width: $w576) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__fl {
+        @media screen and (min-width: $w992) {
+            display: none;
+        }
+
+        & .btn {
+            margin-right: 12px;
+            padding-left: 20px;
         }
     }
 
@@ -880,18 +907,36 @@
 
     &__item {
 
+        padding: 6px;
+        width: 100%;
 
+        @media screen and (min-width: $w576) {
+            width: 50%;
+        }
 
         @media screen and (min-width: $w992) {
             padding: 12px;
+            width: 50%;
         }
 
         @media screen and (min-width: $w1200) {
             width: 33.33%;
         }
 
-        @media screen and (min-width: $w576) {
-            width: 50%;
+
+
+        & .minicard {
+
+            &::before {
+                height: 100%;
+            }
+
+            &__details {
+                @media screen and (max-width: $w992) {
+                    position: static;
+                    padding-top: 24px;
+                }
+            }
         }
 
     }

@@ -49,8 +49,8 @@
 mixin card-image(data)
     .card-image
         .card-image__picture
-            a(href='caregories.html'): +picture(data.image)
-        .card-image__title: a(href='caregories.html')= data.title
+            a(href='category.html'): +picture(data.image)
+        .card-image__title: a(href='category.html')= data.title
 
 mixin top-category
     section.section-top-category
@@ -62,7 +62,7 @@ mixin top-category
                     each item in cat
                         .top-category__item: +card-image(item)
                     .top-category__item
-                        .all-caregories
+                        .all-category
                             a(href='#')
                                 span Все категории
                                 +icons('#ic_to-catalog', 38)

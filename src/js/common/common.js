@@ -1099,7 +1099,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 } else {
                     document.body.classList.toggle('page-hidden')
                     document.querySelector('[data-filter-container="catalog"]').classList.toggle('is-open')
-                    initPriceRange(document)
                 }
             })
         })

@@ -32,8 +32,14 @@ mixin catalog-category
 
                     .catalog-category__main 
                         .catalog-category__top
+
+                            .catalog-category__fl
+                                button.btn.btn-small(data-filter="open")
+                                    +icons('#ic_filter')
+                                    span Фильтр
                             .catalog-category__help
-                                a(href='#'): button.btn.btn-small Помощь с подбором
+                                a(href='#'): button.btn.btn-small Помощь <span> с подбором</span>
+                           
                              
 
                         .catalog-category__products
