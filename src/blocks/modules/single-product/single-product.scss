@@ -138,7 +138,8 @@
     & .splide {
         &__pagination {
             position: relative;
-            padding-top: 10px;
+            padding-top: 30px;
+            display: flex !important;
 
             @media screen and (min-width: $w760) {
                 padding-top: 25px;
@@ -160,14 +161,25 @@
         & table {
             & td {
                 background-color: #eee;
-                padding: 11px 24px;
+                padding: 8px 14px;
                 border-radius: 6px;
+                line-height: 120%;
+                font-size: 14px;
+
+                @media screen and (min-width: $w576) {
+                    padding: 11px 24px;
+                    line-height: 140%;
+                }
 
 
                 &:first-child {
                     background-color: var(--color-bg-6);
                     color: #fff;
-                    font-weight: 700;
+                    font-weight: 500;
+
+                    @media screen and (min-width: $w576) {
+                        font-weight: 700;
+                    }
                 }
             }
         }
@@ -224,6 +236,12 @@
         margin-bottom: 24px;
     }
 
+    &__info {
+        @media screen and (max-width: $w992) {
+            margin-bottom: 24px;
+        }
+    }
+
     &__gallery {
         max-width: 400px;
         margin: 0 auto;
@@ -261,6 +279,12 @@
                 margin: 4px;
                 font-weight: 500;
                 transition: 0.3s ease;
+                border-radius: 6px;
+
+                @media screen and (max-width: $w480) {
+                    background-color: #fff;
+                    width: 100%;
+                }
 
 
                 & a,
@@ -280,7 +304,7 @@
 
 
                     cursor: pointer;
-                    border-radius: 6px;
+
 
                     & a,
                     & span {
@@ -305,6 +329,15 @@
             margin-bottom: 24px;
             font-family: Geometria;
         }
+
+        & h2 {
+            font-size: 20px;
+            font-weight: 800;
+
+            @media screen and (min-width: $w576) {
+                font-size: 24px;
+            }
+        }
     }
 
     &__desc {
@@ -314,6 +347,7 @@
     &__compare {
         display: flex;
         align-items: center;
+        padding-bottom: 12px;
 
 
         & svg {
@@ -344,8 +378,12 @@
         display: flex;
         align-items: center;
         border-bottom: 1px solid var(--color-borders-2);
-        padding-bottom: 24px;
+        padding-bottom: 14px;
         margin-bottom: 8px;
+
+        @media screen and (min-width: $w576) {
+            padding-bottom: 24px;
+        }
 
         & span {
             padding-left: 6px;
@@ -383,10 +421,14 @@
 
     &__note {
         font-size: 15px;
-        padding-left: 12px;
+
         color: var(--color-text-2);
         padding-top: 12px;
         padding-bottom: 12px;
+
+        @media screen and (min-width: $w480) {
+            padding-left: 12px;
+        }
     }
 
     &__btn {

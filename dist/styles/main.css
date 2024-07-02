@@ -6454,19 +6454,22 @@ footer a {
 
 .product-images .splide__pagination {
   position: relative;
-  padding-top: 10px;
+  padding-top: 30px;
+  display: flex !important;
 }
 
 .single-product__tech table td {
   background-color: #eee;
-  padding: 11px 24px;
+  padding: 8px 14px;
   border-radius: 6px;
+  line-height: 120%;
+  font-size: 14px;
 }
 
 .single-product__tech table td:first-child {
   background-color: var(--color-bg-6);
   color: #fff;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .single-product__image {
@@ -6518,6 +6521,7 @@ footer a {
   margin: 4px;
   font-weight: 500;
   transition: 0.3s ease;
+  border-radius: 6px;
 }
 
 .single-product__nav ul li a,
@@ -6535,7 +6539,6 @@ footer a {
 .single-product__nav ul li:hover {
   background-color: #fff;
   cursor: pointer;
-  border-radius: 6px;
 }
 
 .single-product__nav ul li:hover a,
@@ -6555,6 +6558,11 @@ footer a {
   font-family: Geometria;
 }
 
+.single-product__tech h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
 .single-product__desc {
   padding-top: 24px;
 }
@@ -6562,6 +6570,7 @@ footer a {
 .single-product__compare {
   display: flex;
   align-items: center;
+  padding-bottom: 12px;
 }
 
 .single-product__compare svg {
@@ -6587,7 +6596,7 @@ footer a {
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--color-borders-2);
-  padding-bottom: 24px;
+  padding-bottom: 14px;
   margin-bottom: 8px;
 }
 
@@ -6624,7 +6633,6 @@ footer a {
 
 .product-config__note {
   font-size: 15px;
-  padding-left: 12px;
   color: var(--color-text-2);
   padding-top: 12px;
   padding-bottom: 12px;
@@ -6906,6 +6914,10 @@ footer a {
     padding: 12px;
   }
 
+  .product-config__note {
+    padding-left: 12px;
+  }
+
   .font-h2 {
     font-size: 42px;
   }
@@ -7097,6 +7109,23 @@ footer a {
 
   .product-images picture {
     padding-top: 51%;
+  }
+
+  .single-product__tech table td {
+    padding: 11px 24px;
+    line-height: 140%;
+  }
+
+  .single-product__tech table td:first-child {
+    font-weight: 700;
+  }
+
+  .single-product__tech h2 {
+    font-size: 24px;
+  }
+
+  .product-config__instock {
+    padding-bottom: 24px;
   }
 
   .page {
@@ -8471,6 +8500,10 @@ footer a {
     position: static;
     padding-top: 24px;
   }
+
+  .single-product__info {
+    margin-bottom: 24px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -8530,6 +8563,11 @@ footer a {
   }
 
   .slider-products__all .btn {
+    width: 100%;
+  }
+
+  .single-product__nav ul li {
+    background-color: #fff;
     width: 100%;
   }
 }

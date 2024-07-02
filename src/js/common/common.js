@@ -1087,7 +1087,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     }
 
-    /* ====================================
+    /* ==================================== 
     data-filter="open"
     ====================================*/
 
@@ -1100,7 +1100,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
                     document.body.classList.toggle('page-hidden')
                     document.querySelector('[data-filter-container="catalog"]').classList.toggle('is-open')
                 }
+
+                //init collapse filter
+                document.querySelectorAll('.filter-properties').forEach(el => el['СollapseFilterProperties'].reinit(el))
             })
+
+
         })
     }
 
