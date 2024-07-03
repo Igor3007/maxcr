@@ -23,11 +23,10 @@
     &__text {
         line-height: 140%;
         text-align: left;
+        transition: 0.3s ease;
     }
 
     &__elem {
-
-
         position: relative;
         height: 20px;
         width: 20px;
@@ -92,6 +91,11 @@
             &__elem {
                 border-color: var(--color-accent-2);
             }
+
+            &__text {
+                color: var(--color-accent-2);
+
+            }
         }
     }
 
@@ -144,6 +148,7 @@
         color: #222;
         font-weight: 500;
         padding-top: 1px;
+        transition: 0.3s ease;
     }
 
     &__elem {
@@ -178,10 +183,19 @@
             }
         }
 
-        &:checked~.radio__text {
 
-            color: #525166;
+    }
 
+    &:hover {
+        & .radio {
+            &__elem {
+                border-color: var(--color-accent-2);
+            }
+
+            &__text {
+                color: var(--color-accent-2);
+
+            }
         }
     }
 

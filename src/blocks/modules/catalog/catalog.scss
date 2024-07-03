@@ -211,10 +211,7 @@
         padding: 24px;
     }
 
-    &:hover {
-        background-color: var(--color-bg-3);
-        border-color: var(--color-accent-2);
-    }
+
 
     &__image {
         padding-bottom: 12px;
@@ -250,6 +247,7 @@
 
             font-size: 14px;
             line-height: 135%;
+            transition: 0.3s ease;
 
             @media screen and (min-width: $w576) {
                 font-size: 16px;
@@ -259,6 +257,20 @@
                 font-size: 18px;
                 font-weight: 600;
                 line-height: 155%;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: var(--color-bg-3);
+        border-color: var(--color-accent-2);
+
+        & .card-category {
+            &__name {
+                & a {
+                    color: var(--color-accent-2);
+
+                }
             }
         }
     }

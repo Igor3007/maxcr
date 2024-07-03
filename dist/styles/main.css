@@ -245,6 +245,7 @@ input[type="date"] {
   font-style: normal;
   line-height: 116%;
   margin-bottom: 0.7em;
+  margin-top: 1em;
 }
 
 .formated-text h2 {
@@ -254,6 +255,7 @@ input[type="date"] {
   font-style: normal;
   line-height: 130%;
   margin-bottom: 0.7em;
+  margin-top: 1.2em;
 }
 
 .formated-text h3 {
@@ -263,6 +265,7 @@ input[type="date"] {
   font-style: normal;
   line-height: 137%;
   margin-bottom: 0.7em;
+  margin-top: 1.4em;
 }
 
 .formated-text h4 {
@@ -272,6 +275,7 @@ input[type="date"] {
   font-style: normal;
   line-height: 150%;
   margin-bottom: 0.7em;
+  margin-top: 1.5em;
 }
 
 .formated-text h5 {
@@ -281,16 +285,16 @@ input[type="date"] {
   font-style: normal;
   line-height: 160%;
   margin-bottom: 0.7em;
+  margin-top: 1.5em;
 }
 
 .formated-text * {
   line-height: 140%;
 }
 
-.formated-text h5,
 .formated-text h6 {
-  margin-bottom: 25px;
-  line-height: 120%;
+  margin-bottom: 0.7em;
+  margin-top: 1.6em;
   font-size: 16px;
   font-weight: 700;
 }
@@ -1752,6 +1756,7 @@ template {
 .checkbox__text {
   line-height: 140%;
   text-align: left;
+  transition: 0.3s ease;
 }
 
 .checkbox__elem {
@@ -1812,6 +1817,10 @@ template {
   border-color: var(--color-accent-2);
 }
 
+.checkbox:hover .checkbox__text {
+  color: var(--color-accent-2);
+}
+
 /* radio */
 
 .radio {
@@ -1857,6 +1866,7 @@ template {
   color: #222;
   font-weight: 500;
   padding-top: 1px;
+  transition: 0.3s ease;
 }
 
 .radio__elem {
@@ -1886,8 +1896,12 @@ template {
   border-color: var(--color-accent-2);
 }
 
-.radio input:checked ~ .radio__text {
-  color: #525166;
+.radio:hover .radio__elem {
+  border-color: var(--color-accent-2);
+}
+
+.radio:hover .radio__text {
+  color: var(--color-accent-2);
 }
 
 .toggle {
@@ -5584,11 +5598,6 @@ footer a {
   transition: 0.3s ease;
 }
 
-.card-category:hover {
-  background-color: var(--color-bg-3);
-  border-color: var(--color-accent-2);
-}
-
 .card-category__image {
   padding-bottom: 12px;
 }
@@ -5632,6 +5641,16 @@ footer a {
   overflow: hidden;
   font-size: 14px;
   line-height: 135%;
+  transition: 0.3s ease;
+}
+
+.card-category:hover {
+  background-color: var(--color-bg-3);
+  border-color: var(--color-accent-2);
+}
+
+.card-category:hover .card-category__name a {
+  color: var(--color-accent-2);
 }
 
 .section-catalog-category {
@@ -6242,21 +6261,27 @@ footer a {
 
 .catalog-category__help {
   margin-left: auto;
-  width: 100%;
-  max-width: 320px;
+  width: 50%;
+  max-width: 313px;
 }
 
 .catalog-category__help .btn {
-  width: 100%;
+  width: calc(100% - 6px);
+  margin-left: auto;
 }
 
 .catalog-category__help .btn span {
   margin-left: 4px;
 }
 
+.catalog-category__fl {
+  width: 50%;
+}
+
 .catalog-category__fl .btn {
   margin-right: 12px;
   padding-left: 20px;
+  width: calc(100% - 6px);
 }
 
 .catalog-category__mobile {
@@ -6719,6 +6744,11 @@ footer a {
   color: var(--color-accent-1);
   font-size: 20px;
   font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.sp-contacts__col a:hover {
+  color: var(--color-accent-2);
 }
 
 .sp-contacts__col small {
@@ -6912,6 +6942,22 @@ footer a {
 
   .card-category {
     padding: 12px;
+  }
+
+  .catalog-category__help {
+    width: 100%;
+  }
+
+  .catalog-category__help .btn {
+    width: 100%;
+  }
+
+  .catalog-category__fl {
+    width: auto;
+  }
+
+  .catalog-category__fl .btn {
+    width: auto;
   }
 
   .product-config__note {
@@ -7112,7 +7158,7 @@ footer a {
   }
 
   .single-product__tech table td {
-    padding: 11px 24px;
+    padding: 15px 16px 16px 16px;
     line-height: 140%;
   }
 
@@ -7959,26 +8005,6 @@ footer a {
     max-width: 100%;
   }
 
-  .formated-text h4 {
-    margin-top: 0.2em;
-  }
-
-  .formated-text h3 {
-    margin-top: 0.2em;
-  }
-
-  .formated-text h4 {
-    margin-top: 0.2em;
-  }
-
-  .formated-text h5 {
-    margin-top: 1.5em;
-  }
-
-  .formated-text h6 {
-    margin-top: 0.2em;
-  }
-
   .btn {
     height: 56px;
   }
@@ -8127,6 +8153,10 @@ footer a {
 
   .top-category__item:nth-child(-n+11) {
     display: block;
+  }
+
+  .sp-contacts__btn .btn {
+    font-size: 16px;
   }
 
   .page__title h1 {
@@ -8503,6 +8533,32 @@ footer a {
 
   .single-product__info {
     margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .formated-text h1 {
+    font-size: 28px;
+  }
+
+  .formated-text h2 {
+    font-size: 26px;
+  }
+
+  .formated-text h3 {
+    font-size: 24px;
+  }
+
+  .formated-text h4 {
+    font-size: 22px;
+  }
+
+  .formated-text h5 {
+    font-size: 18px;
+  }
+
+  .formated-text h6 {
+    font-size: 15px;
   }
 }
 

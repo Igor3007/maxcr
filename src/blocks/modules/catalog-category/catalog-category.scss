@@ -817,11 +817,24 @@
 
     &__help {
         margin-left: auto;
-        width: 100%;
-        max-width: 320px;
+        width: 50%;
+        max-width: 313px;
+
+
+
+
+        @media screen and (min-width: $w480) {
+            width: 100%;
+        }
 
         & .btn {
-            width: 100%;
+
+            width: calc(100% - 6px);
+            margin-left: auto;
+
+            @media screen and (min-width: $w480) {
+                width: 100%;
+            }
 
             & span {
                 margin-left: 4px;
@@ -834,6 +847,13 @@
     }
 
     &__fl {
+
+        width: 50%;
+
+        @media screen and (min-width: $w480) {
+            width: auto;
+        }
+
         @media screen and (min-width: $w992) {
             display: none;
         }
@@ -841,6 +861,12 @@
         & .btn {
             margin-right: 12px;
             padding-left: 20px;
+            width: calc(100% - 6px);
+
+            @media screen and (min-width: $w480) {
+                width: auto;
+
+            }
         }
     }
 

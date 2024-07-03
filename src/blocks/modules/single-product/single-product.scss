@@ -167,7 +167,7 @@
                 font-size: 14px;
 
                 @media screen and (min-width: $w576) {
-                    padding: 11px 24px;
+                    padding: 15px 16px 16px 16px;
                     line-height: 140%;
                 }
 
@@ -516,6 +516,11 @@
             color: var(--color-accent-1);
             font-size: 20px;
             font-weight: 700;
+            transition: 0.3s ease;
+
+            &:hover {
+                color: var(--color-accent-2);
+            }
 
         }
 
@@ -529,5 +534,11 @@
 
     &__btn {
         padding-top: 32px;
+
+        & .btn {
+            @media screen and (min-width: $w1376) {
+                font-size: 16px;
+            }
+        }
     }
 }
