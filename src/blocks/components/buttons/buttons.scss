@@ -80,13 +80,13 @@
 
     }
 
-    &.btn-white {
-        background-color: #fff;
+    &.btn-light {
+        background-color: var(--color-bg-2);
         color: var(--color-accent-1);
 
         &:hover {
             color: var(--color-accent-2);
-
+            background-color: var(--color-bg-3);
 
         }
 

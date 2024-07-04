@@ -1,0 +1,50 @@
+extends ../layouts/main
+
+include ../../blocks/components/breadcrumb/breadcrumb.pug
+include ../../blocks/modules/compare/compare.pug
+include ../../blocks/modules/compare/compare-headphone.pug
+include ../../blocks/modules/compare/compare-laptop.pug
+include ../../blocks/modules/clients-block/clients-block
+include ../../blocks/modules/contacts-block/contacts-block
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Max Clean Room"
+ 
+
+block main
+   
+  section.section-page
+    .container
+      .page
+        .page__breadcrumbs
+          +breadcrumb([
+            'Главная',
+            'Сравнение продукции'
+          ])
+        .page__title: h1 Сравнение продукции
+
+  section.section-compare-page
+    .container
+      .compare-page__tabs
+        ul(data-tab-nav="compare") 
+          li.active: a(href='#1') Боксы биологической безопасности
+          li: a(href='#2') Ламинарные шкафы
+          li: a(href='#3') Передаточные окна
+
+      .compare-page__content(data-container="compare")
+        .compare-page__item(data-tab="1"): +compare()
+        .compare-page__item(data-tab="2"): +compare-cabinets()
+        .compare-page__item(data-tab="3"): +compare-windows()
+
+   
+  +clients-block
+  +contacts-block 
+
+ 
+ 
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 
+  script(src="/js/compare.js") 
