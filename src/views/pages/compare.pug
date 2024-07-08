@@ -4,7 +4,7 @@ include ../../blocks/components/breadcrumb/breadcrumb.pug
 include ../../blocks/modules/compare/compare.pug
 include ../../blocks/modules/compare/compare-headphone.pug
 include ../../blocks/modules/compare/compare-laptop.pug
-include ../../blocks/modules/clients-block/clients-block
+
 include ../../blocks/modules/contacts-block/contacts-block
 
 
@@ -14,6 +14,8 @@ block variables
  
 
 block main
+
+  include ../../blocks/modules/about-block/about-block
    
   section.section-page
     .container
@@ -27,19 +29,25 @@ block main
 
   section.section-compare-page
     .container
-      .compare-page__tabs
-        ul(data-tab-nav="compare") 
-          li.active: a(href='#1') Боксы биологической безопасности
-          li: a(href='#2') Ламинарные шкафы
-          li: a(href='#3') Передаточные окна
+      .compare-page
+        .compare-page__top
+          .compare-page__tabs
+            ul(data-tab-nav="compare") 
+              li.active: a(href='#1') Боксы биологической безопасности
+              li: a(href='#2') Ламинарные шкафы
+              li: a(href='#3') Передаточные окна
+          .compare-page__clear
+            .compare-clear-btn
+              +icons('#ic_trash', 24)
+              span Очистить список сравнения
 
-      .compare-page__content(data-container="compare")
-        .compare-page__item(data-tab="1"): +compare()
-        .compare-page__item(data-tab="2"): +compare-cabinets()
-        .compare-page__item(data-tab="3"): +compare-windows()
+        .compare-page__content(data-container="compare")
+          .compare-page__item.active(data-tab="1"): +compare()
+          .compare-page__item(data-tab="2"): +compare-cabinets()
+          .compare-page__item(data-tab="3"): +compare-windows()
 
    
-  +clients-block
+  +about-block
   +contacts-block 
 
  

@@ -200,6 +200,59 @@ document.addEventListener('DOMContentLoaded', function (event) {
     compare scroll
     =============================================*/
 
+    class FixedThead {
+        constructor(params) {
+            this.$el = params.el
+            this.elWidth = params.elWidth
+            this.wrapper = null
+            this.init()
+        }
+
+        init() {
+            !this.$el.querySelector('.fixed-thead') ? this.create() : this.update()
+        }
+
+        create() {
+            let elem = this.$el.querySelector('.product-table__tbody').cloneNode(true);
+            let section = document.querySelector('.section-compare-page')
+
+            this.wrapper = document.createElement('div')
+            this.wrapper.classList.add('fixed-thead')
+            this.wrapper.style.width = this.elWidth + 'px'
+            this.wrapper.append(elem)
+
+            this.$el.querySelector('.compare-table__wrp').prepend(this.wrapper)
+
+            let fixedStart = section.offsetTop + this.$el.querySelector('.product-table__group').offsetTop
+            let fixedEnd = section.offsetTop + section.offsetHeight
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > fixedStart && window.scrollY < fixedEnd) {
+                    this.wrapper.classList.add('is-visible')
+                } else {
+                    !this.wrapper.classList.contains('is-visible') || this.wrapper.classList.remove('is-visible')
+                }
+            })
+
+        }
+
+        update() {
+
+            this.wrapper = this.$el.querySelector('.fixed-thead')
+            this.wrapper.style.width = this.elWidth + 'px'
+
+        }
+
+        syncScroll(offset) {
+
+            if (this.wrapper) {
+                this.wrapper.scrollLeft = offset
+            }
+
+
+        }
+    }
+
     if (document.querySelector('.compare-table__wrp')) {
 
         window.InitScrollCompare = function ($el) {
@@ -209,20 +262,31 @@ document.addEventListener('DOMContentLoaded', function (event) {
             let scrollerContent = $el.querySelector('.table-scroller__content')
             let scroller = $el.querySelector('.table-scroller')
             let groups = $el.querySelectorAll('.product-table__group')
+            let fixedHeadIns = null;
 
             groups.forEach(item => {
                 item.style.width = widthTable.clientWidth + 'px'
+                item.querySelector('span').style.width = widthWrp.clientWidth + 'px'
             })
-
 
             scrollerWrp.style.width = widthWrp.clientWidth + 'px'
             scrollerContent.style.width = widthTable.clientWidth + 'px'
+
+            //init fixed thead
+
+            fixedHeadIns = new FixedThead({
+                el: $el,
+                elWidth: widthWrp.clientWidth
+            })
 
             scrollerWrp.addEventListener('scroll', e => {
 
                 if (scroller.classList.contains('is-hover-scroller')) {
                     widthWrp.scrollLeft = e.target.scrollLeft
+
                 }
+
+                fixedHeadIns.syncScroll(e.target.scrollLeft)
 
             })
 
@@ -236,6 +300,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
             scroller.addEventListener('mouseleave', e => {
                 e.target.classList.contains('is-hover-scroller') ? e.target.classList.remove('is-hover-scroller') : ''
             })
+
+
+
+
         }
 
         //compare
@@ -256,7 +324,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                     document.querySelectorAll('.compare-table').forEach(item => {
                         const products = item.querySelectorAll('.compare-product');
                         let widthWrp = item.querySelector('.compare-table__wrp')
-                        const widthUnit = 250;
+                        const widthUnit = 336;
                         const table = item
 
                         if (widthWrp.clientWidth > (products.length * widthUnit)) {
@@ -295,7 +363,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             this.containerW = this.elem.querySelector('.compare-table__wrp')
             this.containerTable = this.elem.querySelector('.compare-table__wrp table')
             this.leftPX = 0
-            this.itemWidth = 230
+            this.itemWidth = 336
 
             this.nav = {
                 next: this.elem.querySelector('[data-se-slider="next"]'),
@@ -392,7 +460,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
         document.querySelectorAll('.compare-box').forEach(item => {
             item['compareSlider'] = new CompareSlider(item)
-            window.InitScrollCompare(item)
+            //window.InitScrollCompare(item)
         })
 
     }
@@ -545,5 +613,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
     }
+
+
+
+
 
 });

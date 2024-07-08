@@ -30,7 +30,7 @@ mixin compare-product(item)
             .compare-product__action
                 a(href='#' data-tooltip="Удалить" data-comare="remove"): +icons('#ic_cross', 24)
         .compare-product__title
-            a(href='single-product.html' target="_blank")= item.title
+            a(href='single-product.html' target="_blank" title=item.title)= item.title
        
         .compare-product__offers
             button.btn.btn-light.btn-small Запросить расчёт
