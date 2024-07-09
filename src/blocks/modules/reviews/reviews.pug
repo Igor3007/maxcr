@@ -1,0 +1,17 @@
+mixin card-review(data)
+    .card-review
+        .card-review__image: +picture(data.image)
+        .card-review__title= data.title
+        .card-review__desc
+            span!= data.desc
+
+
+
+
+mixin reviews
+    section.section-reviews
+        .container
+            .reviews
+                .reviews__list
+                    each item in review
+                        .reviews__item: +card-review(item)
