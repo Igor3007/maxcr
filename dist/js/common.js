@@ -1,5 +1,27 @@
 document.addEventListener('DOMContentLoaded', function (event) {
 
+    const API_YMAPS = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug';
+
+
+    /* =================================================
+    load ymaps api
+    =================================================*/
+
+    window.loadApiYmaps = function (callback) {
+
+        if (window.ymaps == undefined) {
+            const script = document.createElement('script')
+            script.src = API_YMAPS
+            script.onload = () => {
+                callback(window.ymaps)
+            }
+            document.head.append(script)
+        } else {
+            callback(window.ymaps)
+        }
+
+    }
+
 
     /* =================================================
     css variable
@@ -281,6 +303,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
                     e.preventDefault()
                     item.classList.toggle('is-open')
                     item.querySelector('.sub-menu').classList.toggle('is-open')
+
+                    item.querySelectorAll('.sub-menu li').forEach(item => {
+                        item.addEventListener('click', e => e.stopPropagation())
+                    })
                 })
             })
         }
@@ -1196,6 +1222,256 @@ document.addEventListener('DOMContentLoaded', function (event) {
             })
         })
     }
+
+    /* ====================================
+    crop long text on review
+    ====================================*/
+
+    function showHideLongText() {
+
+        let countChars = document.body.clientWidth > 576 ? 500 : 150
+
+        document.querySelectorAll('.card-review__desc').forEach(item => {
+            if (item.innerText.length > countChars) {
+                item.classList.add('crop--text')
+
+                let showButton = document.createElement('div')
+                showButton.classList.add('card-review__more')
+                showButton.innerText = 'Читать полностью'
+
+                showButton.addEventListener('click', e => {
+
+                    showButton.classList.toggle('is-open')
+
+                    if (item.classList.contains('crop--text')) {
+                        item.classList.remove('crop--text')
+                        showButton.innerText = 'Cвернуть'
+                    } else {
+                        item.classList.add('crop--text')
+                        showButton.innerText = 'Читать полностью'
+                    }
+                })
+
+                item.after(showButton)
+            }
+        })
+
+    }
+
+    function popupReviewAll() {
+        document.querySelectorAll('.card-review').forEach(item => {
+
+            if (item.querySelector('.card-review__desc')) {
+                item.querySelector('.card-review__desc').addEventListener('click', function () {
+
+
+                    const instansePopup = new afLightbox({
+                        mobileInBottom: true
+                    })
+
+                    instansePopup.open(item.cloneNode(true).outerHTML, (instanse) => {
+                        instanse.querySelector('.card-review').classList.add('popup-review')
+                    })
+
+                })
+            }
+
+        })
+
+    }
+
+    //init
+
+    showHideLongText()
+    popupReviewAll()
+
+
+    /* ====================================================
+    map contacts
+    ====================================================*/
+
+    function initMapFooter() {
+        window.loadApiYmaps((ymaps) => {
+
+            //map contacts
+            if (document.querySelector('#map-container')) {
+
+                const placemark = document.querySelector('#map-container').dataset.coordinates.split(',')
+                const center = document.querySelector('#map-container').dataset.center.split(',')
+
+                ymaps.ready(function () {
+                    const myMap = new ymaps.Map('map-container', {
+                        center: window.innerWidth > 992 ? center : placemark,
+                        zoom: 14,
+                        controls: ['zoomControl'],
+
+                    }, {
+                        searchControlProvider: 'yandex#search',
+                        suppressMapOpenBlock: true,
+                        zoomControlPosition: {
+                            right: 32,
+                            top: 32
+                        },
+
+                    });
+                    const myPlacemark = new ymaps.Placemark(placemark, {
+                        hintContent: 'MaxCleanRoom',
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: '/img/svg/ic_pin.svg',
+                        iconImageSize: [60, 68],
+                        iconImageOffset: [-30, -68]
+                    });
+                    myMap.geoObjects.add(myPlacemark)
+                    myMap.behaviors.disable('scrollZoom');
+
+                })
+            }
+
+
+        })
+
+        window.removeEventListener('scroll', initMapFooter)
+    }
+
+    window.addEventListener('scroll', initMapFooter)
+
+    /* =======================================================
+    Compare
+    =======================================================*/
+
+    function Compare(params) {
+
+        this.elemCookie = params.elemCookie;
+        this.elemTotal = document.querySelector(params.elemTotal);
+
+        this.init = function () {
+            this.getTotal()
+        }
+
+        this.getTotal = function () {
+            this.elemTotal.innerText = this.getArray().length ? '(' + this.getArray().length + ')' : '';
+        }
+
+        this.getArray = function () {
+            if (!Cookies.get(this.elemCookie)) return new Array()
+
+            return String(Cookies.get(this.elemCookie)).split(',')
+        }
+
+        this.add = function (id) {
+            var array = this.getArray();
+            array.push(id)
+            array = Array.from(new Set(array))
+
+            Cookies.set(this.elemCookie, array.join(','), {
+                expires: 7
+            })
+            this.getTotal()
+            return array;
+        }
+
+        this.remove = function (id) {
+
+            var array = this.getArray();
+            var result = array.filter(function (item) {
+                return item != id
+            })
+
+            Cookies.set(this.elemCookie, result.join(','), {
+                expires: 7
+            })
+            this.getTotal()
+            return array;
+
+        }
+    }
+
+    /* ==========================================
+    popup compare
+    ==========================================*/
+
+    function comparePopup(id, type) {
+
+        if (!id) return false
+
+        window.ajax({
+            type: 'GET',
+            url: '/parts/_compare-popup.html',
+            data: {
+                id: id
+            }
+        }, (status, response) => {
+
+
+            if (document.querySelector('main')) {
+
+                let elem = document.createElement('div')
+                let main = document.querySelector('main')
+
+                elem.innerHTML = response
+                elem.classList.add('popup-top-tooltip')
+
+                //remove old
+                main.querySelectorAll('.popup-top-tooltip').forEach(item => item.remove())
+                main.append(elem)
+
+                //add scroll event
+                window.addEventListener('scroll', e => {
+                    elem.classList.add('fadeout')
+                    setTimeout(() => {
+                        elem.remove()
+                    }, 100)
+                })
+
+            } else {
+                window.STATUS.msg('Товар добавлен в избранное')
+            }
+
+
+        })
+
+    }
+
+
+    /*===========================================
+    init compare
+    ===========================================*/
+
+    window.compareInstance = new Compare({
+        elemCookie: 'compare',
+        elemTotal: '[data-total="compare"]',
+    });
+
+    const CP = window.compareInstance;
+
+    CP.init()
+
+    const compare = document.querySelectorAll('[data-compare]');
+    const arrayCompare = CP.getArray()
+
+    compare.forEach(function (item, index) {
+
+        const product_id = item.dataset.compare;
+
+        if (arrayCompare.lastIndexOf(product_id) !== -1) {
+            item.classList.add('active')
+        }
+
+        item.addEventListener('click', function (event) {
+            event.preventDefault()
+            if (this.classList.contains('active')) {
+
+                CP.remove(product_id)
+                this.classList.remove('active')
+            } else {
+
+                CP.add(product_id)
+                this.classList.add('active')
+                comparePopup(product_id, 'compare')
+            }
+        })
+    })
 
 
 }); //dcl

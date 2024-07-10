@@ -1,0 +1,233 @@
+section.section-home-contacts {
+    padding: 45px 0;
+
+    @media screen and (min-width: $w576) {
+        padding: 32px 0 82px 0;
+    }
+}
+
+
+.map-container {
+    height: 70vh;
+    background-color: #f7f7f7;
+
+    @media screen and (min-width: $w992) {
+        height: auto;
+        max-height: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 18px;
+        overflow: hidden;
+    }
+}
+
+.home-contacts {
+
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__info {
+
+        position: relative;
+        z-index: 4;
+
+
+        @media screen and (min-width: $w992) {
+            max-width: 1350px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        & .btn {
+            width: 100%;
+
+            @media screen and (min-width: $w480) {
+                width: auto;
+            }
+        }
+    }
+
+    &__map {
+        @media screen and (min-width: $w992) {
+            position: absolute;
+            z-index: 3;
+            top: -32px;
+            left: -32px;
+            bottom: -32px;
+            right: -32px;
+
+            padding: 32px;
+        }
+
+
+    }
+}
+
+.contact-info {
+
+    background-color: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    border-radius: 8px;
+    min-width: 480px;
+    overflow-y: auto;
+    max-width: 568px;
+    margin-left: auto;
+
+    @media screen and (min-width: $w576) {
+        padding: 24px;
+    }
+
+    @media screen and (min-width: $w992) {
+        padding: 36px;
+    }
+
+    &__item {
+        border-top: 2px solid var(--color-borders-2);
+        padding: 24px 0;
+    }
+
+    &__title {
+
+        @include font-h3;
+        padding-bottom: 20px;
+        line-height: 90%;
+
+    }
+
+    &__desc {
+        padding-bottom: 16px;
+
+        & a {
+            color: var(--color-accent-1);
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        & p {
+            margin: 12px 0;
+        }
+    }
+
+    &__name,
+    &__desc {
+        color: var(--color-text-1, #5B5B5B);
+        font-size: 14px;
+        line-height: 150%;
+
+        @media screen and (min-width: $w992) {
+            font-size: 16px;
+        }
+    }
+
+    &__name {
+        padding-bottom: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+
+        @media screen and (min-width: $w992) {
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+
+        & .bgimage {
+            display: inline-block;
+            width: 28px;
+            height: 21px;
+            background-size: cover;
+            border: 1px solid #eee;
+            background-repeat: no-repeat;
+            margin-right: 12px;
+
+        }
+    }
+
+    &__label {
+        font-size: 13px;
+        padding-bottom: 4px;
+        color: var(--color-text-2);
+
+        @media screen and (min-width: $w480) {
+            font-size: 14px;
+        }
+
+
+    }
+
+    &__contact {
+
+        font-size: 16px;
+        padding-bottom: 20px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 140%;
+
+
+        & a {
+
+
+            display: inline-block;
+            margin-right: 5px;
+
+            color: var(--color-accent-1);
+
+
+            &:hover {
+                color: var(--color-accent-2);
+            }
+        }
+
+        @media screen and (min-width: $w992) {
+            font-size: 20px;
+
+        }
+    }
+
+    &__inmap {
+        color: var(--color-accent-1);
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 500;
+        padding-top: 12px;
+
+
+
+        & svg {
+            fill: var(--color-accent-1);
+            margin-right: 8px;
+        }
+
+        &:hover {
+            color: var(--color-accent-2);
+            cursor: pointer;
+
+            & svg {
+                fill: var(--color-accent-2);
+            }
+        }
+    }
+
+    &__address {
+        & a {
+            font-weight: 700;
+
+            @media screen and (min-width: $w992) {
+                font-size: 16px;
+            }
+        }
+    }
+
+
+}

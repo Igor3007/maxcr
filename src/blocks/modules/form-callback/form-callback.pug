@@ -1,0 +1,27 @@
+mixin form-callback
+    section.section-form-callback
+        .container
+            .form-callback
+                .form-callback__title Напишите нам
+                .form-callback__desc Узнайте, как сэкономить до 45% на создании комплекса чистых помещений!
+                .form-callback__fields
+                    form(action='#' method='POST')
+                        .form
+                            .form__item
+                                .form__subitem: input(type="text" placeholder="Ваше имя")
+                                .form__subitem: input(type="text" placeholder="Номер телефона *")
+                                .form__subitem: input(type="text" placeholder="Текст вопроса")
+
+                            .form__item
+                                .form__subitem.form__subitem
+                                    textarea(placeholder="Сообщение")
+
+                            .form__item
+                                .form__subitem.form__subitem--button
+                                    button.btn(type="submit") Оставить заявку
+                                .form__subitem
+                                    .form__note 
+                                        | Нажимая на кнопку «Отправить», я соглашаюсь на обработку персональных данных
+                                        //- br
+                                        //- a(href='/policy.html') политике обработки данных 
+                                

@@ -66,6 +66,21 @@
     }
 
 
+    &.btn-white {
+        background-color: #fff;
+        color: var(--color-accent-1);
+
+        &:hover {
+            color: var(--color-accent-2);
+
+
+        }
+
+        &:disabled {
+            color: #B8B8B8;
+            border-color: var(--color-bg-1);
+        }
+    }
 
     &.btn-black {
         background-color: #000;
