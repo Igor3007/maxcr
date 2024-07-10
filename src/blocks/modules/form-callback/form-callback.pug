@@ -8,8 +8,8 @@ mixin form-callback
                     form(action='#' method='POST')
                         .form
                             .form__item
-                                .form__subitem: input(type="text" placeholder="Ваше имя")
-                                .form__subitem: input(type="text" placeholder="Номер телефона *")
+                                .form__subitem: input(type="text" required placeholder="Ваше имя")
+                                .form__subitem: input(type="tel" data-maska="+7(###)##-##-##" required placeholder="Номер телефона")
                                 .form__subitem: input(type="text" placeholder="Текст вопроса")
 
                             .form__item
@@ -18,10 +18,8 @@ mixin form-callback
 
                             .form__item
                                 .form__subitem.form__subitem--button
-                                    button.btn(type="submit") Оставить заявку
+                                    button.btn(type="submit") Отправить
                                 .form__subitem
                                     .form__note 
-                                        | Нажимая на кнопку «Отправить», я соглашаюсь на обработку персональных данных
-                                        //- br
-                                        //- a(href='/policy.html') политике обработки данных 
+                                       +checkbox('Нажимая на кнопку «Отправить», я соглашаюсь на обработку персональных данных')
                                 

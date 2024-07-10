@@ -1290,31 +1290,60 @@ document.addEventListener('DOMContentLoaded', function (event) {
     map contacts
     ====================================================*/
 
-    function initMapFooter() {
+    function initMapContacts() {
         window.loadApiYmaps((ymaps) => {
 
-            //map contacts
-            if (document.querySelector('#map-container')) {
+            let points = [];
+            let myMap = null;
 
-                const placemark = document.querySelector('#map-container').dataset.coordinates.split(',')
-                const center = document.querySelector('#map-container').dataset.center.split(',')
+            let isMobile = () => {
+                return document.body.clientWidth <= 992
+            }
 
-                ymaps.ready(function () {
-                    const myMap = new ymaps.Map('map-container', {
-                        center: window.innerWidth > 992 ? center : placemark,
-                        zoom: 14,
-                        controls: ['zoomControl'],
+            // add click for button "in-map"
+            // create points array
 
-                    }, {
-                        searchControlProvider: 'yandex#search',
-                        suppressMapOpenBlock: true,
-                        zoomControlPosition: {
-                            right: 32,
-                            top: 32
-                        },
+            document.querySelectorAll('.contact-info [data-coordinates]').forEach((item, i) => {
+                points.push({
+                    coordinates: item.dataset.coordinates.split(',')
+                })
 
-                    });
-                    const myPlacemark = new ymaps.Placemark(placemark, {
+                item.addEventListener('click', () => {
+                    myMap.setCenter(points[i]['coordinates'])
+                    myMap.setZoom(14)
+
+                    //offset center map
+                    if (!isMobile()) {
+                        let gpc = myMap.getGlobalPixelCenter()
+                        myMap.setGlobalPixelCenter([(gpc[0] + 300), (gpc[1])], 14)
+                    }
+
+                    if (isMobile()) {
+                        window.scrollToTargetAdjusted({
+                            elem: '#map-container',
+                            offset: 20
+                        })
+                    }
+                })
+            })
+
+            ymaps.ready(function () {
+
+                //init ymaps
+                myMap = new ymaps.Map('map-container', {
+                    center: points[0].coordinates,
+                    zoom: 7,
+                    controls: ['zoomControl'],
+
+                }, {
+                    searchControlProvider: 'yandex#search',
+                    suppressMapOpenBlock: true,
+                });
+
+                // create placemark
+
+                for (let key in points) {
+                    const myPlacemark = new ymaps.Placemark(points[key].coordinates, {
                         hintContent: 'MaxCleanRoom',
                     }, {
                         iconLayout: 'default#image',
@@ -1322,19 +1351,37 @@ document.addEventListener('DOMContentLoaded', function (event) {
                         iconImageSize: [60, 68],
                         iconImageOffset: [-30, -68]
                     });
+
                     myMap.geoObjects.add(myPlacemark)
-                    myMap.behaviors.disable('scrollZoom');
+                }
 
-                })
-            }
+                // set MapCenter with offset
 
+                function getOffsetLeft() {
+                    if (!isMobile()) {
+                        return (document.body.clientWidth / 2)
+                    }
+                    return 60;
+                }
 
+                myMap.setBounds(myMap.geoObjects.getBounds(), {
+                    checkZoomRange: true,
+                    zoomMargin: [30, getOffsetLeft(), 30, 30],
+                    duration: 300,
+                }).then(() => {
+                    if (myMap.getZoom() > 6) myMap.setZoom(6);
+                });
+
+                myMap.behaviors.disable('scrollZoom');
+
+            })
         })
-
-        window.removeEventListener('scroll', initMapFooter)
     }
 
-    window.addEventListener('scroll', initMapFooter)
+    //init
+    if (document.querySelector('#map-container')) initMapContacts()
+
+
 
     /* =======================================================
     Compare

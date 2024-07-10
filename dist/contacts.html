@@ -266,7 +266,7 @@
                         <div class="contact-info__inmap">
                           <svg width="24" height="24">
                             <use xlink:href="/img/sprites/sprite.svg#ic_pen-contacts"></use>
-                          </svg><span>Показать на карте</span>
+                          </svg><span data-coordinates="55.748914, 37.535475">Показать на карте</span>
                         </div>
                       </div>
                       <div class="contact-info__item"> 
@@ -279,7 +279,7 @@
                         <div class="contact-info__inmap">
                           <svg width="24" height="24">
                             <use xlink:href="/img/sprites/sprite.svg#ic_pen-contacts"></use>
-                          </svg><span>Показать на карте</span>
+                          </svg><span data-coordinates="53.928593, 27.582888">Показать на карте</span>
                         </div>
                       </div>
                     </div>
@@ -297,10 +297,10 @@
                       <div class="form">
                         <div class="form__item">
                           <div class="form__subitem">
-                            <input type="text" placeholder="Ваше имя">
+                            <input type="text" required placeholder="Ваше имя">
                           </div>
                           <div class="form__subitem">
-                            <input type="text" placeholder="Номер телефона *">
+                            <input type="tel" data-maska="+7(###)##-##-##" required placeholder="Номер телефона">
                           </div>
                           <div class="form__subitem">
                             <input type="text" placeholder="Текст вопроса">
@@ -313,11 +313,14 @@
                         </div>
                         <div class="form__item">
                           <div class="form__subitem form__subitem--button">
-                            <button class="btn" type="submit">Оставить заявку</button>
+                            <button class="btn" type="submit">Отправить</button>
                           </div>
                           <div class="form__subitem">
-                            <div class="form__note">
-                               Нажимая на кнопку «Отправить», я соглашаюсь на обработку персональных данных</div>
+                            <div class="form__note"> 
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Нажимая на кнопку «Отправить», я соглашаюсь на обработку персональных данных</span>
+                              </label>
+                            </div>
                           </div>
                         </div>
                       </div>
