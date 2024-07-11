@@ -7036,7 +7036,6 @@ footer a {
   transition: 0.3s ease;
   top: 0;
   position: relative;
-  margin-right: 12px;
   background-size: contain;
 }
 
@@ -7587,6 +7586,7 @@ div[data-state="1"] {
   font-size: 16px;
   padding-bottom: 1em;
   line-height: 140%;
+  color: var(--color-text-2);
 }
 
 .form-callback__fields .btn {
@@ -7658,6 +7658,10 @@ section.section-home-contacts {
   color: var(--color-accent-1);
   font-size: 20px;
   font-weight: 600;
+}
+
+.contact-info__desc a:hover {
+  color: var(--color-accent-2);
 }
 
 .contact-info__desc p {
@@ -9293,6 +9297,7 @@ section.section-home-contacts {
     margin-right: 32px;
     max-height: 80vh;
     overflow-y: auto;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.1);
   }
 
   .home-contacts__map {
@@ -9308,7 +9313,6 @@ section.section-home-contacts {
   .contact-info {
     padding: 36px;
     max-width: 100%;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.1);
   }
 
   .contact-info__name,
@@ -9839,6 +9843,19 @@ section.section-home-contacts {
 }
 
 @media screen and (max-width: 1440.98px) {
+  .fixed-thead .compare-product__offers {
+    display: none;
+  }
+
+  .fixed-thead .compare-product__title {
+    padding-bottom: 0;
+  }
+
+  .fixed-thead .compare-product__title a {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
   .contact-info__title {
     font-size: 24px;
   }
