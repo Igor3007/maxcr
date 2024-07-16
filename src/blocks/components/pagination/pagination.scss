@@ -1,6 +1,7 @@
  .pagination {
      display: flex;
      justify-content: space-between;
+     flex-wrap: wrap;
      width: 100%;
 
      @media screen and (max-width: $w480) {
@@ -119,6 +120,7 @@
 
      &__more {
 
+         width: 100%;
 
          @media screen and (max-width: $w480) {
              padding-bottom: 24px;
@@ -126,18 +128,7 @@
          }
 
          & .btn {
-
-             @media screen and (max-width: $w480) {
-                 width: 100%;
-             }
-
-             & svg {
-                 fill: #fff;
-                 margin-left: 0.5em;
-                 margin-right: -0.5em;
-             }
-
-
+             width: 100%;
          }
      }
 

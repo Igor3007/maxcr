@@ -4,7 +4,8 @@ include ../../blocks/components/breadcrumb/breadcrumb.pug
 include ../../blocks/modules/catalog/catalog.pug
 include ../../blocks/modules/catalog-category/catalog-category
 include ../../blocks/modules/contacts-block/contacts-block
-include ../../blocks/modules/clients-block/clients-block.pug
+include ../../blocks/modules/about-block/about-block.pug
+include ../../blocks/modules/news-list/news-list.pug
 
 
 block variables
@@ -20,11 +21,18 @@ block main
         .page__breadcrumbs
           +breadcrumb([
             'Главная',
-            'Новости',
+            'Новости и статьи',
           ])
-        .page__title: h1 Новости
+        .page__title: h1 Новости и статьи
+        .page__links
+          ul
+            li.is-active: a(href='#') Наши поставки
+            li: a(href='#') Полезные статьи
+            li: a(href='#') Другая метка
  
-
+  +news-list
+  +about-block
+  +contacts-block
  
  
 block scripts
