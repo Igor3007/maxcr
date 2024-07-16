@@ -595,9 +595,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
             buttons.forEach(item => {
 
-                console.log(item.dataset.similar)
-                console.log(data)
-
                 if (item.dataset.similar == data) {
                     item.classList.add('is-active')
                 } else {
@@ -608,14 +605,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             })
 
         }
-
-
-
-
     }
-
-
-
 
 
 });

@@ -94,3 +94,18 @@ mixin catalog-category
                                 strong Каждая опция учитывается в суммарной цене на передаточный шлюз.
 
 
+mixin find-result
+    section.section-find-result
+        .container
+            .find-result
+                .find-result__list
+                    each item in [...sliderProduct, ...sliderProduct]
+                        .find-result__item: +minicard(item)
+                        
+            .catalog-pagination
+                .catalog-pagination__more
+                    button
+                        +icons('#ic_more', 14)
+                        span Показать ещё
+                .catalog-pagination__page
+                    +pagination()

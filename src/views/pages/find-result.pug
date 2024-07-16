@@ -1,0 +1,32 @@
+extends ../layouts/main
+
+include ../../blocks/components/breadcrumb/breadcrumb.pug
+include ../../blocks/modules/catalog-category/catalog-category.pug
+ 
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Max Clean Room - Результаты поиска"
+ 
+
+block main
+   
+  section.section-page
+    .container
+      .page
+        .page__breadcrumbs
+          +breadcrumb([
+            'Главная',
+            'Результаты поиска',
+          ])
+        .page__title: h1 Результаты поиска по: введённый текст
+
+  +find-result
+   
+
+ 
+ 
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 

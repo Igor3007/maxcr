@@ -148,3 +148,61 @@
 
 
 }
+
+.placemark {
+    &__balloon {
+        display: none;
+
+        &.is-open {
+            display: block;
+        }
+    }
+}
+
+.placemark-balloon {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 6px 0px #4d73954f;
+    width: 320px;
+
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 12px;
+    }
+
+    &__title {
+        font-weight: 700;
+    }
+
+    &__close {
+        transform: rotate(45deg);
+        font-size: 30px;
+        color: #666;
+        cursor: pointer;
+    }
+}
+
+.point-popup {
+    border-bottom: 1px solid var(--color-borders-2);
+    padding: 12px 0;
+    font-size: 14px;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &__name {
+        font-weight: 700;
+    }
+
+    &__city {
+        color: var(--color-text-2);
+    }
+}

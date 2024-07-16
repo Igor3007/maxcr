@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Max Clean Room - Объекты</title>
+    <title>Max Clean Room - Результаты поиска</title>
     <meta name="theme-color" content="#1EBC61">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -229,227 +229,335 @@
         <div class="container">
           <div class="page">
             <div class="page__breadcrumbs">
-                    <div class="breadcrumb">
-                      <ul>
-                        <li><a href="/">Главная</a></li>
-                        <li><span>Объекты</span></li>
-                      </ul>
-                    </div>
+              <div class="breadcrumb">
+                <ul>
+                  <li><a href="/">Главная</a></li>
+                  <li><span>Результаты поиска</span></li>
+                </ul>
+              </div>
             </div>
             <div class="page__title">
-              <h1>Объекты</h1>
+              <h1>Результаты поиска по: введённый текст</h1>
             </div>
           </div>
         </div>
       </section>
-            <section class="section-objects">
-              <div class="objects">
-                <div class="objects__map">
-                  <div id="map-root"></div>
-                </div>
-                <div class="objects__content">
-                  <div class="container">
-                    <div class="objects__title">Проекты по отраслям, регионам и продукции</div>
-                    <div class="objects__filter">
+      <section class="section-find-result">
+        <div class="container">
+          <div class="find-result">
+            <div class="find-result__list">
+              <div class="find-result__item">
+                <div class="minicard">
+                  <div class="minicard__topbar">
+                    <div class="minicard__compare" data-compare="1">
+                      <svg width="24" height="24">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                      </svg><span>В сравнение</span>
+                    </div>
+                  </div>
+                  <div class="minicard__image"><a href="single-product.html">
+                      <picture>
+                        <source srcset="/img/products/img.webp" type="image/webp"/><img src="/img/products/img.jpg" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="minicard__main">
+                    <div class="minicard__title"><a href="single-product.html">Вытяжной шкаф MCRBK-FH</a></div>
+                    <div class="minicard__prop">
                       <ul>
-                        <li><span class="is-active">Все</span></li>
-                        <li><span>
-                            <svg width="24" height="24">
-                              <use xlink:href="/img/sprites/sprite.svg#ic_pen-contacts"></use>
-                            </svg>По регионам</span></li>
-                        <li><span>
-                            <svg width="24" height="24">
-                              <use xlink:href="/img/sprites/sprite.svg#ic_routes"></use>
-                            </svg>По отраслям</span></li>
-                        <li><span>
-                            <svg width="24" height="24">
-                              <use xlink:href="/img/sprites/sprite.svg#ic_hand-gear"></use>
-                            </svg>По продукции</span></li>
+                        <li>Оснащены центробежным вентилятором</li>
+                        <li>Закаленное стекло толщиной 5 мм</li>
+                        <li>Противовес ручного переднего окна</li>
                       </ul>
                     </div>
-                    <div class="objects__filter">
-                      <ul>
-                        <li><span class="is-active">Все</span></li>
-                        <li><span>Россия</span></li>
-                        <li><span>Беларусь</span></li>
-                        <li><span>Казахстан</span></li>
-                        <li><span>Узбекистан</span></li>
-                      </ul>
-                    </div>
-                    <div class="objects__list">
-                      <ul>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--1.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--2.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--3.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-mailru.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-mercedes.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-rafarma.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-rosatom.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-roskosmos.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-samsung.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--1.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--2.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--3.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-mailru.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-mercedes.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-rafarma.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-rosatom.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-roskosmos.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-samsung.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--1.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--2.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--3.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-mailru.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-mercedes.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-rafarma.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-rosatom.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-roskosmos.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-samsung.jpg"></span>
-                        </li>
-                      </ul>
-                    </div>
+                    <div class="minicard__stock"><span>В наличии</span></div>
+                    <div class="minicard__details"><a href="single-product.html">
+                        <button class="btn">Перейти к товару</button></a></div>
                   </div>
                 </div>
               </div>
-            </section>
-            <section class="section-contacts-block">
-              <div class="container">
-                <div class="contacts-block">
-                  <div class="contacts-block__left">
-                    <div class="contacts-block__title">Свяжитесь с нами</div>
-                    <div class="contacts-block__text">
-                      <div class="formated-text">
-                        <p><strong>Есть вопросы? Хотите заказать товар или услугу?</strong></p>
-                        <p><strong>Пишите — мы свяжемся с Вами в кратчайшие сроки и подробно проконсультируем!</strong></p>
-                        <p>Запросы на коммерческое предложение, пожалуйста, отправляйте на почту:</p>
-                        <p><a href="mailto:info@maxcr.ru">info@maxcr.ru</a></p>
-                      </div>
-                    </div>
-                    <div class="contacts-block__btn">
-                      <button class="btn" data-modal="callback">Связаться с нами</button>
+              <div class="find-result__item">
+                <div class="minicard">
+                  <div class="minicard__topbar">
+                    <div class="minicard__compare" data-compare="2">
+                      <svg width="24" height="24">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                      </svg><span>В сравнение</span>
                     </div>
                   </div>
-                  <div class="contacts-block__right">
-                    <picture>
-                      <source srcset="/img/common/big-img-1.webp" type="image/webp"/><img src="/img/common/big-img-1.jpg" loading="lazy" alt="image"/>
-                    </picture>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="section-about-block">
-              <div class="container">
-                <div class="about-block">
-                  <div class="about-block__top">
-                    <div class="about-block__left">
-                      <div class="about-block__title">О группе компаний «MAX Clean Room»</div>
-                      <div class="about-block__link"><a href="#"><span>Подробнее о компании </span>
-                          <svg width="38" height="38">
-                            <use xlink:href="/img/sprites/sprite.svg#ic_to-catalog"></use>
-                          </svg></a></div>
+                  <div class="minicard__image"><a href="single-product.html">
+                      <picture>
+                        <source srcset="/img/products/img-1.webp" type="image/webp"/><img src="/img/products/img-1.jpg" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="minicard__main">
+                    <div class="minicard__title"><a href="single-product.html">Пассивные боксы с утопленной дверью MCR SB-01e</a></div>
+                    <div class="minicard__prop">
+                      <ul>
+                        <li>Материал корпуса: сталь с порошковым покрытием RAL 9003 / сталь с порошковым покрытием RAL 9010</li>
+                        <li>Электронная блокировка дверей</li>
+                      </ul>
                     </div>
-                    <div class="about-block__right">
-                      <p>Группа компаний MAX Clean Room — производственная инжиниринговая компания, занимающаяся проектированием, реконструкцией и строительством чистых производств в различных областях.</p>
-                      <p>За более чем 16 лет работы группа компаний MAX Clean Room успела поработать с 10 странами на рынках СНГ, Азии и Европы. На сегодняшний день офисы компании располагаются в Москве и в Минске. Мы постоянно работаем над расширением географии работы и осваиваем новые страны и территории.</p>
-                    </div>
-                  </div>
-                  <div class="about-block__list">
-                    <div class="about-block__item">
-                      <div class="card-icon">
-                        <div class="card-icon__img"><span class="bgimage lazyload" data-bg="/img/icons/01-production.svg"></span>
-                        </div>
-                        <div class="card-icon__main">
-                          <div class="card-icon__text">Собственное производство</div>
-                          <div class="card-icon__desc">Мы — одна из ведущих компаний в области строительства чистых помещений</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="about-block__item">
-                      <div class="card-icon">
-                        <div class="card-icon__img"><span class="bgimage lazyload" data-bg="/img/icons/02-time.svg"></span>
-                        </div>
-                        <div class="card-icon__main">
-                          <div class="card-icon__text">Отгрузка за 2 дня</div>
-                          <div class="card-icon__desc">Не срываем сроки, стремимся к максимальному качеству, лучшему сервису</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="about-block__item">
-                      <div class="card-icon">
-                        <div class="card-icon__img"><span class="bgimage lazyload" data-bg="/img/icons/03-warranty.svg"></span>
-                        </div>
-                        <div class="card-icon__main">
-                          <div class="card-icon__text">Гарантийный сервис</div>
-                          <div class="card-icon__desc">Одно из главных направлений развития нашей компании — постоянное улучшение качества обслуживания клиентов</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="about-block__item">
-                      <div class="card-icon">
-                        <div class="card-icon__img"><span class="bgimage lazyload" data-bg="/img/icons/04-stock.svg"></span>
-                        </div>
-                        <div class="card-icon__main">
-                          <div class="card-icon__text">Склад готовой продукции</div>
-                          <div class="card-icon__desc">Мы — одна из ведущих компаний в области строительства чистых помещений</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="about-block__item">
-                      <div class="card-icon">
-                        <div class="card-icon__img"><span class="bgimage lazyload" data-bg="/img/icons/05-certificate.svg"></span>
-                        </div>
-                        <div class="card-icon__main">
-                          <div class="card-icon__text">Полная сертификация</div>
-                          <div class="card-icon__desc">Имеем все необходимые сертификаты и лицензии для работы на рынках Европы, СНГ и Азии</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="about-block__item">
-                      <div class="card-icon">
-                        <div class="card-icon__img"><span class="bgimage lazyload" data-bg="/img/icons/06-location.svg"></span>
-                        </div>
-                        <div class="card-icon__main">
-                          <div class="card-icon__text">Офисы в России и Беларуси</div>
-                          <div class="card-icon__desc">Мы — одна из ведущих компаний в области строительства чистых помещений</div>
-                        </div>
-                      </div>
-                    </div>
+                    <div class="minicard__stock"><span>В наличии</span></div>
+                    <div class="minicard__details"><a href="single-product.html">
+                        <button class="btn">Перейти к товару</button></a></div>
                   </div>
                 </div>
               </div>
-            </section>
+              <div class="find-result__item">
+                <div class="minicard">
+                  <div class="minicard__topbar">
+                    <div class="minicard__compare" data-compare="3">
+                      <svg width="24" height="24">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                      </svg><span>В сравнение</span>
+                    </div>
+                  </div>
+                  <div class="minicard__image"><a href="single-product.html">
+                      <picture>
+                        <source srcset="/img/products/img-2.webp" type="image/webp"/><img src="/img/products/img-2.jpg" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="minicard__main">
+                    <div class="minicard__title"><a href="single-product.html">Воздушные души SB-1400/2 с двусторонним обдувом для 2 чел</a></div>
+                    <div class="minicard__prop">
+                      <ul>
+                        <li>Внешний размер: 1400x2000x2180 мм (ШxГxВ)</li>
+                        <li>Материал корпуса: Сталь с порошковым покрытием RAL 9003</li>
+                        <li>Сопла из нержавеющей стали: 24 шт.</li>
+                      </ul>
+                    </div>
+                    <div class="minicard__stock"><span>В наличии</span></div>
+                    <div class="minicard__details"><a href="single-product.html">
+                        <button class="btn">Перейти к товару</button></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="find-result__item">
+                <div class="minicard">
+                  <div class="minicard__topbar">
+                    <div class="minicard__compare" data-compare="4">
+                      <svg width="24" height="24">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                      </svg><span>В сравнение</span>
+                    </div>
+                  </div>
+                  <div class="minicard__image"><a href="single-product.html">
+                      <picture>
+                        <source srcset="/img/products/img-3.webp" type="image/webp"/><img src="/img/products/img-3.jpg" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="minicard__main">
+                    <div class="minicard__title"><a href="single-product.html">Профили для чистых помещений</a></div>
+                    <div class="minicard__prop">
+                      <ul>
+                        <li>Направляющий П-профиль (800 м.п)</li>
+                        <li>Межпанельный профиль для сэндвич-панели (1000 м.п)</li>
+                        <li>И многие другие (переходите на страницу товара)</li>
+                      </ul>
+                    </div>
+                    <div class="minicard__stock"><span>В наличии</span></div>
+                    <div class="minicard__details"><a href="single-product.html">
+                        <button class="btn">Перейти к товару</button></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="find-result__item">
+                <div class="minicard">
+                  <div class="minicard__topbar">
+                    <div class="minicard__compare" data-compare="5">
+                      <svg width="24" height="24">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                      </svg><span>В сравнение</span>
+                    </div>
+                  </div>
+                  <div class="minicard__image"><a href="single-product.html">
+                      <picture>
+                        <source srcset="/img/products/img-2.webp" type="image/webp"/><img src="/img/products/img-2.jpg" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="minicard__main">
+                    <div class="minicard__title"><a href="single-product.html">Воздушные души SB-1400/2 с двусторонним обдувом для 2 чел</a></div>
+                    <div class="minicard__prop">
+                      <ul>
+                        <li>Внешний размер: 1400x2000x2180 мм (ШxГxВ)</li>
+                        <li>Материал корпуса: Сталь с порошковым покрытием RAL 9003</li>
+                        <li>Сопла из нержавеющей стали: 24 шт.</li>
+                      </ul>
+                    </div>
+                    <div class="minicard__stock"><span>В наличии</span></div>
+                    <div class="minicard__details"><a href="single-product.html">
+                        <button class="btn">Перейти к товару</button></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="find-result__item">
+                <div class="minicard">
+                  <div class="minicard__topbar">
+                    <div class="minicard__compare" data-compare="1">
+                      <svg width="24" height="24">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                      </svg><span>В сравнение</span>
+                    </div>
+                  </div>
+                  <div class="minicard__image"><a href="single-product.html">
+                      <picture>
+                        <source srcset="/img/products/img.webp" type="image/webp"/><img src="/img/products/img.jpg" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="minicard__main">
+                    <div class="minicard__title"><a href="single-product.html">Вытяжной шкаф MCRBK-FH</a></div>
+                    <div class="minicard__prop">
+                      <ul>
+                        <li>Оснащены центробежным вентилятором</li>
+                        <li>Закаленное стекло толщиной 5 мм</li>
+                        <li>Противовес ручного переднего окна</li>
+                      </ul>
+                    </div>
+                    <div class="minicard__stock"><span>В наличии</span></div>
+                    <div class="minicard__details"><a href="single-product.html">
+                        <button class="btn">Перейти к товару</button></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="find-result__item">
+                <div class="minicard">
+                  <div class="minicard__topbar">
+                    <div class="minicard__compare" data-compare="2">
+                      <svg width="24" height="24">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                      </svg><span>В сравнение</span>
+                    </div>
+                  </div>
+                  <div class="minicard__image"><a href="single-product.html">
+                      <picture>
+                        <source srcset="/img/products/img-1.webp" type="image/webp"/><img src="/img/products/img-1.jpg" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="minicard__main">
+                    <div class="minicard__title"><a href="single-product.html">Пассивные боксы с утопленной дверью MCR SB-01e</a></div>
+                    <div class="minicard__prop">
+                      <ul>
+                        <li>Материал корпуса: сталь с порошковым покрытием RAL 9003 / сталь с порошковым покрытием RAL 9010</li>
+                        <li>Электронная блокировка дверей</li>
+                      </ul>
+                    </div>
+                    <div class="minicard__stock"><span>В наличии</span></div>
+                    <div class="minicard__details"><a href="single-product.html">
+                        <button class="btn">Перейти к товару</button></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="find-result__item">
+                <div class="minicard">
+                  <div class="minicard__topbar">
+                    <div class="minicard__compare" data-compare="3">
+                      <svg width="24" height="24">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                      </svg><span>В сравнение</span>
+                    </div>
+                  </div>
+                  <div class="minicard__image"><a href="single-product.html">
+                      <picture>
+                        <source srcset="/img/products/img-2.webp" type="image/webp"/><img src="/img/products/img-2.jpg" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="minicard__main">
+                    <div class="minicard__title"><a href="single-product.html">Воздушные души SB-1400/2 с двусторонним обдувом для 2 чел</a></div>
+                    <div class="minicard__prop">
+                      <ul>
+                        <li>Внешний размер: 1400x2000x2180 мм (ШxГxВ)</li>
+                        <li>Материал корпуса: Сталь с порошковым покрытием RAL 9003</li>
+                        <li>Сопла из нержавеющей стали: 24 шт.</li>
+                      </ul>
+                    </div>
+                    <div class="minicard__stock"><span>В наличии</span></div>
+                    <div class="minicard__details"><a href="single-product.html">
+                        <button class="btn">Перейти к товару</button></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="find-result__item">
+                <div class="minicard">
+                  <div class="minicard__topbar">
+                    <div class="minicard__compare" data-compare="4">
+                      <svg width="24" height="24">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                      </svg><span>В сравнение</span>
+                    </div>
+                  </div>
+                  <div class="minicard__image"><a href="single-product.html">
+                      <picture>
+                        <source srcset="/img/products/img-3.webp" type="image/webp"/><img src="/img/products/img-3.jpg" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="minicard__main">
+                    <div class="minicard__title"><a href="single-product.html">Профили для чистых помещений</a></div>
+                    <div class="minicard__prop">
+                      <ul>
+                        <li>Направляющий П-профиль (800 м.п)</li>
+                        <li>Межпанельный профиль для сэндвич-панели (1000 м.п)</li>
+                        <li>И многие другие (переходите на страницу товара)</li>
+                      </ul>
+                    </div>
+                    <div class="minicard__stock"><span>В наличии</span></div>
+                    <div class="minicard__details"><a href="single-product.html">
+                        <button class="btn">Перейти к товару</button></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="find-result__item">
+                <div class="minicard">
+                  <div class="minicard__topbar">
+                    <div class="minicard__compare" data-compare="5">
+                      <svg width="24" height="24">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_compare"></use>
+                      </svg><span>В сравнение</span>
+                    </div>
+                  </div>
+                  <div class="minicard__image"><a href="single-product.html">
+                      <picture>
+                        <source srcset="/img/products/img-2.webp" type="image/webp"/><img src="/img/products/img-2.jpg" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="minicard__main">
+                    <div class="minicard__title"><a href="single-product.html">Воздушные души SB-1400/2 с двусторонним обдувом для 2 чел</a></div>
+                    <div class="minicard__prop">
+                      <ul>
+                        <li>Внешний размер: 1400x2000x2180 мм (ШxГxВ)</li>
+                        <li>Материал корпуса: Сталь с порошковым покрытием RAL 9003</li>
+                        <li>Сопла из нержавеющей стали: 24 шт.</li>
+                      </ul>
+                    </div>
+                    <div class="minicard__stock"><span>В наличии</span></div>
+                    <div class="minicard__details"><a href="single-product.html">
+                        <button class="btn">Перейти к товару</button></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-pagination">
+            <div class="catalog-pagination__more">
+              <button>
+                <svg width="14" height="14">
+                  <use xlink:href="/img/sprites/sprite.svg#ic_more"></use>
+                </svg><span>Показать ещё</span>
+              </button>
+            </div>
+            <div class="catalog-pagination__page">
+              <div class="pagination">
+                <div class="pagination__page">
+                  <ul>
+                    <li class="next"><span>
+                        <svg width="48" height="48">
+                          <use xlink:href="/img/sprites/sprite.svg#ic_arrow-prev"></use>
+                        </svg></span></li>
+                    <li class="active"><a href="#1">1</a></li>
+                    <li><a href="#2">2</a></li>
+                    <li><a href="#3">3</a></li>
+                    <li><span>...</span></li>
+                    <li><a href="#10">10</a></li>
+                    <li class="next"><a href="#2">
+                        <svg width="48" height="48">
+                          <use xlink:href="/img/sprites/sprite.svg#ic_arrow-next"></use>
+                        </svg></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="footer"> 
@@ -887,7 +995,6 @@
             </div>
     </footer>
     <script src="/js/vendor.js"> </script>
-    <script src="/js/map-customization.js"> </script>
     <script src="/js/common.js"> </script>
   </body>
 </html>

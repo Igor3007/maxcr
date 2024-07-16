@@ -290,3 +290,67 @@
         font-size: 15px;
     }
 }
+
+.section-page-document {
+    overflow: visible;
+}
+
+.page-document {
+
+    padding: 36px 0;
+
+    @media screen and (min-width: $w992) {
+        display: flex;
+
+
+        &__aside {
+            width: 320px;
+            display: none;
+
+            @media screen and (min-width: $w992) {
+                display: block;
+            }
+
+            & nav {
+                position: sticky;
+                top: 30px;
+
+            }
+        }
+
+        &__content {
+            width: 100%;
+            max-width: calc(100% - 320px);
+            padding-right: 60px;
+        }
+    }
+
+    &__aside {
+        & ul {
+            & li {
+                padding: 2px 0;
+
+                & a {
+                    display: block;
+                    padding: 10px 12px 10px 12px;
+                    border-radius: 6px;
+                    transition: 0.3s ease;
+
+                    &:hover {
+                        background-color: var(--color-bg-2);
+                        color: var(--color-accent-2)
+                    }
+
+
+                }
+
+                &.is-active {
+                    & a {
+                        background-color: var(--color-bg-6);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
