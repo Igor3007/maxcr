@@ -1654,6 +1654,8 @@
 
 
 
+
+
                  const marker = new YMapMarker({
                          source: 'markerSource',
                          coordinates: [37.588144, 55.733842],
