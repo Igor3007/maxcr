@@ -17,10 +17,11 @@
          width: auto;
          flex-grow: 1;
 
-         border-radius: 2px;
-         border: 1px solid var(--color-borders-2);
+         border-radius: 8px;
+         border: 2px solid var(--color-borders-2);
          width: 100%;
-         color: var(--text-01);
+         color: var(--color-text-1);
+         height: 50px;
 
          @media screen and (min-width: $w576) {
              height: 52px;
@@ -36,8 +37,15 @@
          }
 
          &:focus {
-             border-color: var(--color-accent-1);
+             border-color: var(--color-accent-2);
              outline: 0;
+         }
+
+         &:required {
+             background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0zLjMgOGwuMTE2LTMuMDU2LTIuNzE1IDEuNjRMMCA1LjQxNiAyLjg2MSA0IDAgMi41ODNsLjctMS4xNjYgMi43MTYgMS42MzlMMy4zIDBoMS40MDJsLS4xMTcgMy4wNTZMNy4zIDEuNDE2IDggMi41ODQgNS4xMzkgNCA4IDUuNDE3bC0uNyAxLjE2Ni0yLjcxNi0xLjYzOUw0LjcgOEgzLjI5OXoiIGZpbGw9IiMwMUFGRDIiLz48L3N2Zz4=);
+             background-repeat: no-repeat;
+             background-position: calc(100% - 16px) center;
+             padding-right: 32px;
          }
      }
 
@@ -98,12 +106,12 @@
          max-width: 100%;
          resize: vertical;
          width: 100%;
-         font-size: 15px;
+         font-size: 14px;
          padding: rem(15);
          line-height: 140%;
          outline: none !important;
-         border: 1px solid var(--color-borders-2);
-         border-radius: 0;
+         border: 2px solid var(--color-borders-2);
+         border-radius: 8px;
          transition: 0.3s ease;
 
 
@@ -117,7 +125,7 @@
 
          &:focus {
              outline: none;
-             border-color: var(--color-accent-1);
+             border-color: var(--color-accent-2);
          }
      }
 

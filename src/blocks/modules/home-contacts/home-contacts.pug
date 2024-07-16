@@ -1,0 +1,63 @@
+ 
+                            
+mixin home-contacts--page-contacts
+    section.section-home-contacts
+       
+            .home-contacts
+                .home-contacts__map
+                    div.map-container(id="map-container" data-coordinates="53.850443, 30.377200" data-center="53.84875012290331,30.35647875909417")
+
+                .home-contacts__info
+                    .contact-info
+                        .contact-info__title Информация для связи
+                        .contact-info__desc 
+                            p Запрос на <strong>оформление коммерческого предложения</strong> присылайте на почту:
+                            p: strong: a(href='mailto:info@maxcr.ru') info@maxcr.ru 
+
+                        .contact-info__list
+                            .contact-info__item 
+                                .contact-info__name 
+                                    +bgimage('/img/flags/ru.svg')
+                                    | Россия, Москва:
+                                .contact-info__label Телефон:
+                                .contact-info__contact  
+                                    a(href='tel: +74991135652') +7 (499) 113-56-52
+                                    
+
+                                .contact-info__label Адрес:
+                                .contact-info__address
+                                    a(href='#') Москва, Пресненская набережная, д.12, этаж 45, офис 11/3Д
+                                .contact-info__inmap
+                                    +icons('#ic_pen-contacts')
+                                    span(data-coordinates="55.748914, 37.535475") Показать на карте
+                                    
+                            //- ============
+
+                            .contact-info__item 
+                                .contact-info__name 
+                                    +bgimage('/img/flags/by.svg')
+                                    | Беларусь, Минск:
+                                .contact-info__label Телефон:
+                                .contact-info__contact  
+                                    a(href='tel: +375292240765') +375 (29) 224-07-65
+
+                                .contact-info__label Адрес:
+                                .contact-info__address
+                                    a(href='#') Минск, ул. Сурганова, д. 57Б, 5 этаж, офис 157
+                                .contact-info__inmap
+                                    +icons('#ic_pen-contacts')
+                                    span(data-coordinates="53.928593, 27.582888") Показать на карте
+                                
+                            
+                         
+
+                         
+
+                        
+
+                       
+                            
+
+ 
+
+                

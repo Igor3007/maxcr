@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
             groups.forEach(item => {
                 item.style.width = widthTable.clientWidth + 'px'
-                item.querySelector('span').style.width = widthWrp.clientWidth + 'px'
+                item.querySelector('span').style.width = (widthWrp.clientWidth - 30) + 'px'
             })
 
             scrollerWrp.style.width = widthWrp.clientWidth + 'px'
@@ -595,9 +595,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
             buttons.forEach(item => {
 
-                console.log(item.dataset.similar)
-                console.log(data)
-
                 if (item.dataset.similar == data) {
                     item.classList.add('is-active')
                 } else {
@@ -608,14 +605,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             })
 
         }
-
-
-
-
     }
-
-
-
 
 
 });

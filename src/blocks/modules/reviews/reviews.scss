@@ -1,10 +1,59 @@
+.section-reviews {
+    padding: 34px 0;
+}
+
 .card-review {
     &__image {
-        & picture {
-            @include picture(120%, cover);
-            border: 10px solid var(--color-accent-1);
 
-            max-width: 60%;
+
+        margin-bottom: 24px;
+        position: relative;
+
+        @media screen and (min-width: $w992) {
+            max-width: 54%;
+        }
+
+        & picture {
+            @include picture(137%, cover);
+            border: 10px solid var(--color-bg-2);
+            outline: 2px solid var(--color-borders-2);
+            border-radius: 10px;
+
+            transition: 0.3s ease;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            & picture {
+                border-color: var(--color-accent-2);
+                outline-color: var(--color-accent-2);
+            }
+
+            & .card-review__zoom {
+                background-color: var(--color-accent-2);
+
+                & svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &__zoom {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        background-color: var(--color-bg-2);
+        padding: 14px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        pointer-events: none;
+        transition: 0.3s ease;
+
+        & svg {
+            fill: var(--color-accent-1);
         }
     }
 
@@ -12,11 +61,85 @@
         padding-bottom: 12px;
         @include font-h4;
     }
+
+    &__desc {
+        cursor: pointer;
+
+        &.crop--text span {
+            @include line-clamp(6);
+        }
+    }
+
+    &__more {
+        color: var(--color-accent-1);
+        padding-top: 12px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        &::after {
+            content: '';
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            margin-left: 6px;
+            margin-bottom: -1px;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01LjI5MyA4LjI5M2ExIDEgMCAwMTEuNDE0IDBMMTIgMTMuNTg2bDUuMjkzLTUuMjkzYTEgMSAwIDExMS40MTQgMS40MTRsLTYgNmExIDEgMCAwMS0xLjQxNCAwbC02LTZhMSAxIDAgMDEwLTEuNDE0eiIgZmlsbD0iIzAxQUZEMiIvPjwvc3ZnPg==);
+            transition: 0.3s ease;
+        }
+
+        &.is-open {
+            &::after {
+                transform: rotate(180deg);
+
+            }
+        }
+
+        &:hover {
+            color: var(--color-accent-2);
+
+            &::after {
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01LjI5MyA4LjI5M2ExIDEgMCAwMTEuNDE0IDBMMTIgMTMuNTg2bDUuMjkzLTUuMjkzYTEgMSAwIDExMS40MTQgMS40MTRsLTYgNmExIDEgMCAwMS0xLjQxNCAwbC02LTZhMSAxIDAgMDEwLTEuNDE0eiIgZmlsbD0iIzA0QyIvPjwvc3ZnPg==);
+            }
+        }
+    }
+
+    &.popup-review {
+        background-color: #fff;
+        overflow-y: auto;
+        padding: 32px 12px 12px 12px;
+        max-width: 660px;
+        border-radius: 12px;
+
+        @media screen and (min-width: $w576) {
+            padding: 24px;
+        }
+
+        & .card-review {
+            &__image {
+                max-width: 320px;
+                pointer-events: none;
+
+            }
+
+            &__more {
+                display: none;
+            }
+
+            &__desc span {
+                -webkit-line-clamp: unset;
+            }
+
+            &__zoom {
+                display: none;
+            }
+        }
+    }
 }
 
 .reviews {
     &__list {
-        @media screen and (min-width: $w760) {
+        @media screen and (min-width: $w576) {
             display: flex;
             flex-wrap: wrap;
             margin: -24px;
@@ -24,7 +147,10 @@
     }
 
     &__item {
-        @media screen and (min-width: $w760) {
+
+        margin-bottom: 24px;
+
+        @media screen and (min-width: $w576) {
             width: 50%;
             padding: 24px;
         }

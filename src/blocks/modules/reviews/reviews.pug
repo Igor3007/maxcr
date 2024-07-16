@@ -1,6 +1,9 @@
 mixin card-review(data)
     .card-review
-        .card-review__image: +picture(data.image)
+        .card-review__image
+            a(href=''+data.image+'.jpg' data-fslightbox="reviews"): +picture(data.image)
+            .card-review__zoom
+                +icons('#ic_zoom-plus', 24)
         .card-review__title= data.title
         .card-review__desc
             span!= data.desc

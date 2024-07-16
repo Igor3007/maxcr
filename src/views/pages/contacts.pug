@@ -1,0 +1,38 @@
+extends ../layouts/main
+ 
+block variables
+  include ../../data/data.pug
+  - const title = "Max Clean Room - Контакты"
+ 
+
+block main
+
+  include ../../blocks/components/breadcrumb/breadcrumb.pug
+  include ../../blocks/modules/home-contacts/home-contacts.pug
+  include ../../blocks/modules/form-callback/form-callback.pug
+  include ../../blocks/modules/clients-block/clients-block.pug
+
+
+   
+  section.section-page
+    .container
+      .page
+        .page__breadcrumbs
+          +breadcrumb([
+            'Главная',
+            'Контакты',
+             
+          ])
+        .page__title: h1 Контакты
+        .page__desc Сделайте запрос на интересующий товар или услугу и мы свяжемся с Вами в кратчайшие сроки!
+
+  +home-contacts--page-contacts
+  +form-callback
+  +clients-block
+
+   
+       
+ 
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 

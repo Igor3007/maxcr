@@ -1,0 +1,73 @@
+.section-form-callback {
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    @media screen and (min-width: $w992) {
+        padding-top: 45px;
+        padding-bottom: 30px;
+    }
+}
+
+.form-callback {
+    background-color: var(--color-bg-2);
+    padding: 32px 16px;
+    border-radius: 10px;
+
+    @media screen and (min-width: $w576) {
+        padding: 32px;
+        border-radius: 20px;
+    }
+
+    &__title {
+        @include font-h3;
+        padding-bottom: 0.3em;
+
+
+    }
+
+    &__desc {
+        font-size: 16px;
+        padding-bottom: 1em;
+        line-height: 140%;
+        color: var(--color-text-2);
+    }
+
+    &__fields {
+
+        & .btn {
+            width: 100%;
+            font-size: 16px;
+        }
+
+        & .form__subitem--button {
+            @media screen and (min-width: $w760) {
+                max-width: 180px;
+            }
+        }
+
+        & .form {
+
+            &__item {
+                @media screen and (min-width: $w760) and (max-width: $w992) {
+                    flex-wrap: wrap;
+                }
+            }
+
+            &__note {
+                & .checkbox {
+                    margin-top: 5px;
+                }
+            }
+
+            &__subitem {
+                @media screen and (min-width: $w760) and (max-width: $w992) {
+                    width: 50%;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+
+    }
+}

@@ -1,7 +1,7 @@
 mixin minicard(data)
     .minicard
         .minicard__topbar
-            .minicard__compare
+            .minicard__compare(data-compare=data.id)
                 +icons('#ic_compare', 24)
                 span В сравнение
 
