@@ -1,0 +1,10 @@
+include ../news-list/news-list.pug
+
+mixin news-similar
+    section.section-news-similar
+        .container
+            .news-similar
+                .news-similar__title Другие материалы
+                .news-similar__list
+                    each item in [newsList[0], newsList[1], newsList[2], newsList[3]]
+                        .news-similar__item: +card-news(item)

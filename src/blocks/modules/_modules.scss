@@ -1,6 +1,5 @@
 @import "common/header/header";
 @import "common/footer/footer";
-@import "common/page-404/page-404";
 @import "common/main-menu/main-menu";
 
 @import "first-block/first-block";
@@ -21,3 +20,11 @@
 
 @import "compare/compare";
 @import "reviews/reviews";
+@import "objects/objects";
+
+@import "form-callback/form-callback";
+@import "home-contacts/home-contacts";
+
+@import "news-list/news-list";
+@import "news-details/news-details";
+@import "news-similar/news-similar";

@@ -1,0 +1,34 @@
+extends ../layouts/main
+
+include ../../blocks/components/breadcrumb/breadcrumb.pug
+include ../../blocks/modules/news-details/news-details.pug
+include ../../blocks/modules/news-similar/news-similar.pug
+ 
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Max Clean Room - Новости"
+ 
+
+block main
+   
+  section.section-page
+    .container
+      .page
+        .page__breadcrumbs
+          +breadcrumb([
+            'Главная',
+            'Новости и статьи',
+            'Новая поставка для «Фармлэнд»',
+          ])
+        .page__title: h1 Новая поставка для «Фармлэнд»
+
+  +news-details
+  +news-similar
+     
+ 
+ 
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 

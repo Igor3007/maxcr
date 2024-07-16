@@ -131,6 +131,91 @@
         }
     }
 
+    &__tabs {
+        background-color: #fff;
+        margin-bottom: 12px;
+        padding: 8px;
+        border-radius: 8px;
+        position: relative;
+        margin-top: 10px;
+
+        & ul {
+            display: flex;
+            align-items: center;
+            margin: -4px;
+            flex-wrap: nowrap;
+            overflow-y: auto;
+            scrollbar-width: none;
+            position: relative;
+            scrollbar-color: transparent transparent;
+
+
+
+            & li {
+                padding: 4px;
+
+            }
+
+            & a,
+            & span {
+
+                height: 36px;
+                border-radius: 6px;
+                padding-left: 12px;
+                padding-right: 12px;
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                transition: 0.3s ease;
+                font-size: 14px;
+                font-weight: 500;
+
+                @media screen and (min-width: $w576) {
+                    font-size: 15px;
+                    height: 40px;
+                }
+
+                & svg {
+                    margin-right: 12px;
+                    fill: var(--color-accent-1);
+                }
+
+                &:hover {
+                    background-color: var(--color-bg-3);
+                    color: var(--color-accent-2);
+                    cursor: pointer;
+
+                    & svg {
+                        fill: var(--color-accent-2);
+                    }
+                }
+
+                &.is-active {
+                    background-color: var(--color-bg-6);
+                    color: #fff;
+
+                    & svg {
+                        fill: #fff;
+                    }
+                }
+
+
+            }
+        }
+
+        &::after {
+            content: '';
+            width: 24px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: linear-gradient(270deg, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 0) 100%);
+            border-radius: 8px;
+
+        }
+    }
+
     &.page--single {
 
 

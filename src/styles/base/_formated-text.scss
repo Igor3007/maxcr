@@ -75,61 +75,50 @@
 
     & table {
 
-        border: 1px solid #DDDDDD;
-        border-collapse: collapse;
-        margin: 35px 0;
+        margin: 16px 0;
         width: 100%;
         min-width: 600px;
 
-        & th {
-            padding: 13px 25px;
-            background-color: #DFF0FD;
-            color: #000;
-            text-decoration: transparent;
-            font-weight: bold;
-            text-align: left;
-            border: 1px solid #CACACA;
-            border-bottom-color: transparent;
-
-            &:first-child {
-                text-align: left;
-            }
-
-            @media screen and (min-width: $w760) {
-                padding: 15px 25px;
-
-            }
-
-
+        @media screen and (min-width: $w992) {
+            margin: 35px 0;
         }
 
+
+
+        & th,
         & td {
-            padding: 10px 15px;
-            border: 1px solid #CACACA;
-            font-weight: normal;
-            text-align: left;
-            min-width: 150px;
+            background-color: var(--color-bg-2);
+            padding: 8px 14px;
+            border-radius: 6px;
+            line-height: 120%;
+            font-size: 14px;
+
+            @media screen and (min-width: $w576) {
+                padding: 15px 16px 16px 16px;
+                line-height: 140%;
+            }
+
 
             &:first-child {
-                text-align: left;
-                font-weight: bold;
-            }
+                background-color: var(--color-bg-6);
+                color: #fff;
+                font-weight: 500;
+                width: 180px;
 
-            @media screen and (min-width: $w760) {
-                padding: 10px 25px;
+                @media screen and (min-width: $w992) {
+                    width: 320px;
+                }
 
-            }
-
-            & strong {
-                display: block;
-                margin-bottom: 10px;
-            }
-
-            &:first-child {
-                font-weight: normal;
+                @media screen and (min-width: $w576) {
+                    font-weight: 700;
+                }
             }
         }
 
+        & th {
+            background-color: var(--color-bg-6);
+            color: #fff;
+        }
     }
 
     & a {
@@ -259,15 +248,32 @@
     & blockquote {
         border: none;
         padding: 16px;
-        font-size: 14px;
-        background-color: #EFF8FF;
+
+        background-color: var(--color-bg-2);
         line-height: 147%;
         margin-left: 0;
         margin-right: 0;
+        border-radius: 12px;
 
         @media screen and (min-width: $w760) {
-            font-size: 16px;
-            padding: 20px 24px;
+            padding: 24px 24px 24px 124px;
+            background-position: 24px 24px;
+            background-repeat: no-repeat;
+            display: block;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNmZmYiLz48ZyBjbGlwLXBhdGg9InVybCgjcHJlZml4X19wcmVmaXhfX2NsaXAwXzU5Nl8xNDU3MikiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik00MC4yMjggNTAuMjU4aC0uNDZhNC4wNjIgNC4wNjIgMCAwMS00LjA1Ni0zLjgyNWwtMS41NTYtMjYuNjFhNC4wNjIgNC4wNjIgMCAwMTQuMDU1LTQuM2gzLjU3NGE0LjA2MiA0LjA2MiAwIDAxNC4wNTUgNC4zbC0xLjU1NiAyNi42MWE0LjA2MiA0LjA2MiAwIDAxLTQuMDU2IDMuODI1em0tLjIzIDE0LjIxOWE0LjA2MiA0LjA2MiAwIDExMC04LjEyNSA0LjA2MiA0LjA2MiAwIDAxMCA4LjEyNXoiIHN0cm9rZT0iIzAxQUZEMiIvPjxwYXRoIGQ9Ik0yOS4zNzcgMzguOTM4YTEyLjIxMyAxMi4yMTMgMCAwMC0xLjY2NiA2LjE3YzAgMi4yNDkuNjA3IDQuMzU3IDEuNjY2IDYuMTcybS01LjI2OC0xNS40MDNhMTguMjY5IDE4LjI2OSAwIDAwLTIuNDkyIDkuMjMyYzAgMy4zNjIuOTA5IDYuNTE3IDIuNDkyIDkuMjMxbS01LjI3Ni0yMS41MjdhMjQuMzYzIDI0LjM2MyAwIDAwLTMuMzEgMTIuMjk2IDI0LjM3IDI0LjM3IDAgMDAzLjMxIDEyLjI5Nm0zMS44MDMtNi4xNDdhMTIuMjEzIDEyLjIxMyAwIDAwMS42NTMtNi4xNWMwLTIuMjM4LS42MDItNC4zMzktMS42NTMtNi4xNDhtNS4yNjggMTUuMzU4YTE4LjI2OSAxOC4yNjkgMCAwMDIuNDc5LTkuMjFjMC0zLjM1My0uOTA0LTYuNS0yLjQ3OS05LjIwOW01LjI3NiAyMS40ODRhMjQuMzYzIDI0LjM2MyAwIDAwMy4yOTYtMTIuMjc0YzAtNC40NzMtMS4yLTguNjY2LTMuMjk2LTEyLjI3NCIgc3Ryb2tlPSIjRDNFQkYwIi8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0icHJlZml4X19wcmVmaXhfX2NsaXAwXzU5Nl8xNDU3MiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQgMTQpIiBkPSJNMCAwaDUydjUySDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+);
         }
+
+        & h1,
+        & h2,
+        & h3,
+        & h4 {
+            margin: 0;
+        }
+
+        &>:last-child {
+            margin-bottom: 0;
+        }
+
+
     }
 }

@@ -24,9 +24,9 @@ block main
             'Новости и статьи',
           ])
         .page__title: h1 Новости и статьи
-        .page__links
-          ul
-            li.is-active: a(href='#') Наши поставки
+        .page__tabs
+          ul.dragscroll
+            li: a(href='#').is-active Наши поставки
             li: a(href='#') Полезные статьи
             li: a(href='#') Другая метка
  

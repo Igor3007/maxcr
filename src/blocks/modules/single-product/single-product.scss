@@ -159,8 +159,10 @@
 
     &__tech {
         & table {
+
+            & th,
             & td {
-                background-color: #eee;
+                background-color: var(--color-bg-2);
                 padding: 8px 14px;
                 border-radius: 6px;
                 line-height: 120%;
