@@ -1,0 +1,20 @@
+include ../../components/pagination/pagination.pug
+
+mixin card-vacancy(data)
+    .card-vacancy
+         
+        .card-vacancy__date: span 1 месяц назад
+        .card-vacancy__title: a(href='/vacancy-details.html')= data.title
+        .card-vacancy__desc
+            span= data.desc
+        .card-vacancy__details
+            a(href='/vacancy-details.html'): button.btn.btn-small.btn-light Подробнее
+
+mixin vacancy-list
+    section.section-vacancy-list
+        .container
+            .vacancy-list
+                each item in [...vacancyList, ...vacancyList]
+                    .vacancy-list__item: +card-vacancy(item)
+            .news-pagination
+                +pagination-showmore

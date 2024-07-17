@@ -4439,6 +4439,7 @@ footer a {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  color: transparent;
 }
 
 .card-image__picture picture img {
@@ -4670,6 +4671,7 @@ footer a {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  color: transparent;
 }
 
 .contacts-block__title {
@@ -4838,6 +4840,7 @@ footer a {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  color: transparent;
 }
 
 .minicard__compare {
@@ -5645,6 +5648,7 @@ footer a {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  color: transparent;
 }
 
 .card-category__image picture img {
@@ -7148,6 +7152,7 @@ footer a {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  color: transparent;
 }
 
 .compare-product__action {
@@ -7469,6 +7474,7 @@ div[data-state="1"] {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  color: transparent;
 }
 
 .card-review__image:hover {
@@ -7784,7 +7790,7 @@ div[data-state="1"] {
 }
 
 .form-callback__desc {
-  font-size: 16px;
+  font-size: 14px;
   padding-bottom: 1em;
   line-height: 140%;
   color: var(--color-text-2);
@@ -7797,6 +7803,79 @@ div[data-state="1"] {
 
 .form-callback__fields .form__note .checkbox {
   margin-top: 5px;
+}
+
+.form-attach {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  flex-wrap: wrap;
+}
+
+.form-attach__btn input {
+  display: none;
+}
+
+.form-attach__btn label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.form-attach__btn label svg {
+  margin-right: 10px;
+  fill: var(--color-accent-1);
+}
+
+.form-attach__btn label span {
+  color: var(--color-accent-1);
+}
+
+.form-attach__btn:hover svg {
+  fill: var(--color-accent-2);
+}
+
+.form-attach__btn:hover span {
+  color: var(--color-accent-2);
+}
+
+.form-attach__txt {
+  margin-left: 12px;
+}
+
+.attach-filelist {
+  width: 100%;
+}
+
+.file-attach {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 12px 12px 12px 0;
+}
+
+.file-attach:hover {
+  color: var(--color-accent-2);
+}
+
+.file-attach__name {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+  pointer-events: none;
+}
+
+.file-attach__remove {
+  transform: rotate(-45deg);
+  font-size: 20px;
+  margin-left: 14px;
+  cursor: pointer;
+  color: var(--color-accent-1);
 }
 
 section.section-home-contacts {
@@ -7996,6 +8075,7 @@ section.section-home-contacts {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  color: transparent;
 }
 
 .card-news__date {
@@ -8049,6 +8129,7 @@ section.section-home-contacts {
   padding-top: 56.3%;
   border-radius: 16px;
   overflow: hidden;
+  background-color: var(--color-bg-3);
 }
 
 .news-details__poster picture img {
@@ -8058,6 +8139,7 @@ section.section-home-contacts {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  color: transparent;
 }
 
 .form-small {
@@ -8119,6 +8201,149 @@ section.section-home-contacts {
 
 .news-similar__item .card-news__desc {
   padding-bottom: 15px;
+}
+
+.section-vacancy-list {
+  padding: 35px 0;
+}
+
+.vacancy-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -12px;
+}
+
+.vacancy-list__item {
+  padding: 12px;
+  width: 100%;
+}
+
+.news-pagination {
+  padding-top: 24px;
+}
+
+.card-vacancy {
+  border: 2px solid var(--color-borders-2);
+  height: 100%;
+  padding: 18px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+}
+
+.card-vacancy__image {
+  padding-bottom: 24px;
+}
+
+.card-vacancy__image picture {
+  position: relative;
+  display: block;
+  padding-top: 81%;
+}
+
+.card-vacancy__image picture img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  color: transparent;
+}
+
+.card-vacancy__date {
+  padding-bottom: 18px;
+}
+
+.card-vacancy__date span {
+  background-color: var(--color-bg-3);
+  color: var(--color-text-2);
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: inline-block;
+  line-height: 20px;
+}
+
+.card-vacancy__title {
+  font-weight: 600;
+  padding-bottom: 6px;
+  font-size: 16px;
+}
+
+.card-vacancy__title a {
+  transition: 0.3s ease;
+}
+
+.card-vacancy__desc {
+  color: var(--color-text-2);
+  margin-bottom: auto;
+  padding-bottom: 32px;
+  font-size: 14px;
+  line-height: 161%;
+}
+
+.card-vacancy__desc span {
+  letter-spacing: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-vacancy__details .btn {
+  width: 100%;
+}
+
+.card-vacancy:hover {
+  border: 2px solid var(--color-accent-2);
+}
+
+.card-vacancy:hover .card-vacancy__title a {
+  color: var(--color-accent-2);
+}
+
+.section-vacancy-details {
+  padding: 24px 0;
+  overflow: visible;
+}
+
+.vacancy-details .formated-text > :first-child {
+  margin-top: 0;
+}
+
+.form-small {
+  background-color: var(--color-bg-2);
+  border-radius: 16px;
+  padding: 20px 24px;
+}
+
+.form-small__title {
+  font-size: 24px;
+  font-family: Geometria;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 150%;
+  padding-bottom: 8px;
+}
+
+.form-small__desc {
+  color: var(--color-text-1);
+  padding-bottom: 12px;
+  font-size: 15px;
+}
+
+.form-small__fields .btn {
+  width: 100%;
+}
+
+.form-small .form__note {
+  padding-top: 12px;
+}
+
+.form-small .form__note .checkbox {
+  font-size: 14px;
 }
 
 /* common styles */
@@ -8210,6 +8435,21 @@ section.section-home-contacts {
 .page__desc {
   line-height: 155%;
   padding-bottom: 1em;
+}
+
+.page__desc a {
+  color: var(--color-accent-1);
+  font-weight: 600;
+}
+
+.page__text {
+  line-height: 155%;
+  padding-bottom: 1em;
+}
+
+.page__text a {
+  color: var(--color-accent-1);
+  font-weight: 600;
 }
 
 .page__tabs {
@@ -8552,6 +8792,10 @@ section.section-home-contacts {
     font-size: 15px;
   }
 
+  .card-vacancy__desc {
+    font-size: 15px;
+  }
+
   .font-h2 {
     font-size: 42px;
   }
@@ -8850,6 +9094,10 @@ section.section-home-contacts {
     font-size: 32px;
   }
 
+  .form-callback__desc {
+    font-size: 16px;
+  }
+
   section.section-home-contacts {
     padding: 32px 0 82px 0;
   }
@@ -8868,6 +9116,10 @@ section.section-home-contacts {
 
   .news-list__item {
     width: 50%;
+  }
+
+  .vacancy-list__item {
+    width: 100%;
   }
 
   .page {
@@ -9218,6 +9470,10 @@ section.section-home-contacts {
     padding: 48px 0;
   }
 
+  .section-vacancy-details {
+    padding: 36px 0;
+  }
+
   .page__title {
     padding-bottom: 20px;
   }
@@ -9225,6 +9481,11 @@ section.section-home-contacts {
   .page__desc {
     font-size: 16px;
     color: var(--color-text-2);
+  }
+
+  .page__text {
+    font-size: 16px;
+    color: var(--color-text-1);
   }
 }
 
@@ -9832,6 +10093,11 @@ section.section-home-contacts {
     padding-bottom: 30px;
   }
 
+  .section-form-callback--vacancy {
+    padding-bottom: 90px;
+    padding-top: 0;
+  }
+
   .map-container {
     height: auto;
     max-height: none;
@@ -9938,6 +10204,28 @@ section.section-home-contacts {
 
   .news-similar__item:nth-child(-n+4) {
     display: block;
+  }
+
+  .vacancy-list__item {
+    width: 50%;
+  }
+
+  .vacancy-details {
+    display: flex;
+  }
+
+  .vacancy-details__aside {
+    width: 312px;
+  }
+
+  .vacancy-details__article {
+    width: calc(100% - 312px);
+    padding-right: 24px;
+  }
+
+  .form-small {
+    position: sticky;
+    top: 30px;
   }
 
   .page__title h1 {
@@ -10605,6 +10893,10 @@ section.section-home-contacts {
   .form-small {
     margin-top: 60px;
   }
+
+  .form-small {
+    margin-top: 60px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -10657,6 +10949,15 @@ section.section-home-contacts {
 
   .catalog-category__help .btn span {
     display: none;
+  }
+
+  .form-callback__fields .form__note .checkbox {
+    font-size: 13px;
+  }
+
+  .form-attach__txt {
+    font-size: 13px;
+    color: var(--color-text-2);
   }
 
   .contact-info__title {
@@ -10734,6 +11035,22 @@ section.section-home-contacts {
 }
 
 @media screen and (min-width: 650px) and (max-width: 992.98px) {
+  .form-small__fields .form {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .form-small__fields .form__item {
+    width: calc(33.33% - 12px);
+  }
+
+  .form-small__fields .form__note {
+    width: 100%;
+    flex-grow: 1;
+  }
+
   .form-small__fields .form {
     flex-direction: row;
     display: flex;

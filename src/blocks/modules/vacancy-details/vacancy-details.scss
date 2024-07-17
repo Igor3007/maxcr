@@ -1,13 +1,13 @@
-.section-news-details {
+.section-vacancy-details {
     padding: 24px 0;
     overflow: visible;
 
     @media screen and (min-width: $w760) {
-        padding: 48px 0;
+        padding: 36px 0;
     }
 }
 
-.news-details {
+.vacancy-details {
     @media screen and (min-width: $w992) {
         display: flex;
 
@@ -21,14 +21,9 @@
         }
     }
 
-    &__poster {
-        & picture {
-            @include picture(56.3%, cover);
-            border-radius: 16px;
-            overflow: hidden;
-            background-color: var(--color-bg-3);
-
-
+    & .formated-text {
+        &>:first-child {
+            margin-top: 0;
         }
     }
 }

@@ -4,7 +4,8 @@ include ../../blocks/components/breadcrumb/breadcrumb.pug
 include ../../blocks/modules/contacts-block/contacts-block
 include ../../blocks/modules/about-block/about-block.pug
 
-include ../../blocks/modules/vacancy-list/vacancy-list.pug
+include ../../blocks/modules/vacancy-details/vacancy-details.pug
+include ../../blocks/modules/form-callback/form-callback.pug
  
 
 block variables
@@ -21,14 +22,14 @@ block main
           +breadcrumb([
             'Главная',
             'Вакансии',
+            'Инженер технического отдела / Менеджер проекта',
           ])
-        .page__title: h1 Вакансии
-        .page__text Группа компаний «MAX Clean Room» постоянно находится в поиске опытных и талантливых сотрудников. <br> Есть полезный опыт в сфере чистых помещений? Присылайте, нам свое резюме на  <a href="mailto:hr@maxcr.ru" >hr@maxcr.ru</a>
+        .page__title: h1 Инженер технического отдела / Менеджер проекта
  
 
-  +vacancy-list 
-  +about-block
-  +contacts-block
+  +vacancy-details 
+  +form-callback--vacancy
+
 
  
 block scripts

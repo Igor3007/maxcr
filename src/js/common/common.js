@@ -1699,6 +1699,38 @@
          })
      }
 
+     /* ====================================
+     attach file
+     ====================================*/
+
+     if (document.querySelector('.form-attach')) {
+         const input = document.querySelector('.form-attach input')
+         const filelist = input.closest('form').querySelector('.attach-filelist')
+
+         input.addEventListener('change', function (e) {
+
+             let file = document.createElement('span')
+             file.classList.add('file-attach')
+             file.innerHTML = `
+                <div class="file-attach__name" >${this.files[0]['name']}</div>
+                <div class="file-attach__remove" >+</div>
+            `;
+
+             file.querySelector('.file-attach__remove').addEventListener('click', event => {
+                 event.preventDefault()
+                 event.stopPropagation()
+                 file.remove();
+                 e.target.value = '';
+             })
+
+             if (filelist.querySelector('.file-attach')) {
+                 filelist.querySelector('.file-attach').remove()
+             }
+
+             filelist.append(file)
+         })
+     }
+
 
 
  }); //dcl

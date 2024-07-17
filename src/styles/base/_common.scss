@@ -122,12 +122,32 @@
     &__desc {
 
         line-height: 155%;
-
         padding-bottom: 1em;
+
+        & a {
+            color: var(--color-accent-1);
+            font-weight: 600;
+        }
 
         @media screen and (min-width: $w760) {
             font-size: 16px;
             color: var(--color-text-2);
+        }
+    }
+
+    &__text {
+
+        line-height: 155%;
+        padding-bottom: 1em;
+
+        & a {
+            color: var(--color-accent-1);
+            font-weight: 600;
+        }
+
+        @media screen and (min-width: $w760) {
+            font-size: 16px;
+            color: var(--color-text-1);
         }
     }
 
