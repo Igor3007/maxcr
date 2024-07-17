@@ -7813,6 +7813,11 @@ div[data-state="1"] {
   border: 2px solid var(--color-borders-2);
 }
 
+.placemark {
+  margin-top: -48px;
+  margin-left: -16px;
+}
+
 .placemark__balloon {
   display: none;
 }
