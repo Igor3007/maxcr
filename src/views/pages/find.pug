@@ -1,0 +1,45 @@
+extends ../layouts/main
+
+include ../../blocks/components/breadcrumb/breadcrumb.pug
+include ../../blocks/modules/catalog-category/catalog-category.pug
+ 
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Max Clean Room - Поиск"
+ 
+
+block main
+   
+  section.section-page
+    .container
+      .page
+        .page__breadcrumbs
+          +breadcrumb([
+            'Главная',
+            'Поиск по сайту',
+          ])
+        .page__title: h1 Поиск по сайту
+
+  section.section-find-result
+        .container
+            .find-result
+                .find-result__field
+                    form(action='/find-result.html' method='GET')
+                      .find-result__input
+                          input(type="text" name="q" placeholder="Поиск по сайту")
+                      .find-result__btn
+                          button.btn.btn-small(type="submit")
+                              +icons('#ic_loupe')
+                .find-result__empty Введите в строку поиска все что хотели найти!
+
+                
+                        
+          
+
+ 
+ 
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 

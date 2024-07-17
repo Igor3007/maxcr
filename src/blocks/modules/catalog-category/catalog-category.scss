@@ -1093,4 +1093,57 @@
 
     }
 
+    &__empty {
+        font-size: 20px;
+        text-align: center;
+        padding: 5%;
+        color: var(--color-text-2);
+    }
+
+    &__field {
+
+        padding-bottom: 24px;
+
+        @media screen and (min-width: $w1200) {
+            padding-bottom: 42px;
+        }
+
+        & form {
+            display: flex;
+            border: 1px solid var(--color-accent-1);
+            border-radius: 10px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        & input {
+            height: 100%;
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            font-size: 15px;
+            padding: 6px 16px;
+        }
+    }
+
+    &__btn {
+        & .btn {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            padding-left: 0.3em;
+            padding-right: 0.3em;
+            min-width: 40px;
+
+            @media screen and (min-width: $w760) {
+                min-width: 60px;
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+        }
+    }
+
 }

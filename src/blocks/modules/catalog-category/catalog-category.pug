@@ -98,6 +98,13 @@ mixin find-result
     section.section-find-result
         .container
             .find-result
+                .find-result__field
+                    form(action='/find-result.html' method='GET')
+                            .find-result__input
+                                input(type="text" placeholder="Поиск по сайту" value="Вытяжной шкаф")
+                            .find-result__btn
+                                button.btn.btn-small(type="submit")
+                                    +icons('#ic_loupe')
                 .find-result__list
                     each item in [...sliderProduct, ...sliderProduct]
                         .find-result__item: +minicard(item)
