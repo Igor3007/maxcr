@@ -3935,6 +3935,68 @@ footer a {
   display: none;
 }
 
+.section-page-404 {
+  padding: 20px 0;
+}
+
+.page-404 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.page-404__right {
+  padding-bottom: 24px;
+}
+
+.page-404__label {
+  color: var(--color-text-2);
+  padding-bottom: 12px;
+}
+
+.page-404__title {
+  font-size: 24px;
+  font-family: Geometria;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 150%;
+  line-height: 120%;
+  padding-bottom: 0.8em;
+}
+
+.page-404__subtitle {
+  font-weight: bold;
+  padding-bottom: 12px;
+}
+
+.page-404__row a {
+  width: 100%;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.page-404__row a .btn {
+  width: 100%;
+}
+
+.page-404__num {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+
+.page-404__num span {
+  color: var(--color-text-2);
+  display: block;
+  padding-bottom: 6px;
+  font-size: 14px;
+}
+
+.page-404__num a {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--color-accent-1);
+}
+
 .main-menu {
   position: fixed;
   top: calc(var(--hgt-header, 54px) + var(--hgt-header-top));
@@ -8757,6 +8819,10 @@ section.section-home-contacts {
     padding: 24px;
   }
 
+  .page-404__row .btn {
+    max-width: 240px;
+  }
+
   .fb-slide__main {
     padding: 36px;
   }
@@ -8943,6 +9009,15 @@ section.section-home-contacts {
   .footer-bottom__dev span {
     padding-bottom: 12px;
     font-size: 16px;
+  }
+
+  .page-404__row {
+    display: flex;
+    gap: 12px;
+  }
+
+  .page-404__row a {
+    width: auto;
   }
 
   .fb-slide__title {
@@ -9285,6 +9360,14 @@ section.section-home-contacts {
 
   .float-bar__top-text {
     display: block;
+  }
+
+  .page-404__title {
+    font-size: 40px;
+    font-family: Geometria;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 130%;
   }
 
   .first-block__bg img {
@@ -9679,6 +9762,43 @@ section.section-home-contacts {
 
   .footer-bottom__company {
     padding-bottom: 12px;
+  }
+
+  .section-page-404 {
+    padding: 45px 0;
+  }
+
+  .page-404 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .page-404__left {
+    width: 60%;
+    padding-right: 50px;
+  }
+
+  .page-404__right {
+    width: 40%;
+  }
+
+  .page-404__right {
+    padding-bottom: 0;
+  }
+
+  .page-404__label {
+    padding-bottom: 0px;
+  }
+
+  .page-404__row {
+    padding-bottom: 24px;
+  }
+
+  .page-404__phones {
+    display: flex;
+    align-items: center;
+    gap: 40px;
   }
 
   .main-menu {
@@ -10654,6 +10774,18 @@ section.section-home-contacts {
 
   .footer-bottom__dev span {
     display: inline;
+  }
+
+  .section-page-404 {
+    padding: 70px 0;
+  }
+
+  .page-404__title {
+    font-size: 48px;
+    font-family: Geometria;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 116%;
   }
 
   .main-menu {
