@@ -1,12 +1,14 @@
 .section-news-similar {
     padding: 50px 0;
 
-    @media screen and (min-width: $w992) {
-        margin-bottom: 60px;
-    }
+
 }
 
 .news-similar {
+
+    @media screen and (min-width: $w992) {
+        margin-bottom: 60px;
+    }
 
     &__title {
         @include font-h4;
