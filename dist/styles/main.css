@@ -7855,6 +7855,10 @@ div[data-state="1"] {
   cursor: pointer;
 }
 
+.placemark-balloon__content ul {
+  overflow: auto;
+}
+
 .point-popup {
   border-bottom: 1px solid var(--color-borders-2);
   padding: 12px 0;

@@ -1564,11 +1564,36 @@ document.addEventListener('DOMContentLoaded', function (event) {
                             <div class="placemark-balloon__close" >+</div>
                         </div>
                         <div class="placemark-balloon__content" >
-                            <ul>
+                            <ul style="height: ${this.rootSize.height*0.35}px">
                                 <li class="point-popup" >
                                     <div class="point-popup__name" >ООО «Магнит»</div>
                                     <div class="point-popup__city" >Москва</div>
                                     <div class="point-popup__desc" >Поставка передаточных окон.</div>
+                                </li>
+                                <li class="point-popup" >
+                                    <div class="point-popup__name" >ООО «Больницы»</div>
+                                    <div class="point-popup__city" >Москва</div>
+                                    <div class="point-popup__desc" >Проектирование чистого помещения.</div>
+                                </li>
+                                <li class="point-popup" >
+                                    <div class="point-popup__name" >ООО «Больницы»</div>
+                                    <div class="point-popup__city" >Москва</div>
+                                    <div class="point-popup__desc" >Проектирование чистого помещения.</div>
+                                </li>
+                                <li class="point-popup" >
+                                    <div class="point-popup__name" >ООО «Больницы»</div>
+                                    <div class="point-popup__city" >Москва</div>
+                                    <div class="point-popup__desc" >Проектирование чистого помещения.</div>
+                                </li>
+                                <li class="point-popup" >
+                                    <div class="point-popup__name" >ООО «Больницы»</div>
+                                    <div class="point-popup__city" >Москва</div>
+                                    <div class="point-popup__desc" >Проектирование чистого помещения.</div>
+                                </li>
+                                <li class="point-popup" >
+                                    <div class="point-popup__name" >ООО «Больницы»</div>
+                                    <div class="point-popup__city" >Москва</div>
+                                    <div class="point-popup__desc" >Проектирование чистого помещения.</div>
                                 </li>
                                 <li class="point-popup" >
                                     <div class="point-popup__name" >ООО «Больницы»</div>
@@ -1611,8 +1636,20 @@ document.addEventListener('DOMContentLoaded', function (event) {
             }
 
             checkPositionBallon() {
-                let offsetBotton = this.rootSize.height - this.icon.getBoundingClientRect().top
-                console.log(this.icon)
+                let toppx = this.$el.closest('ymaps').style.getPropertyValue('transform').match(/translate\(\d+px,\s*(\d+)px\)/)[1];
+                let offsetBotton = this.rootSize.height - toppx
+                let balloonHeight = this.$el.querySelector('.placemark-balloon').clientHeight
+
+                console.log(this.point.marker._props.coordinates)
+                console.log(window.map.center)
+
+                if (balloonHeight > offsetBotton) {
+                    window.map.setLocation({
+                        center: [window.map.center[0], this.point.marker._props.coordinates[1]],
+                        duration: 500
+                    });
+                }
+
             }
 
             closeBalloon() {
@@ -1627,9 +1664,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
             }
 
             createEventMarker() {
-                this.$el.querySelector('.placemark__icon').addEventListener('click', () => {
-                    this.openBalloon()
-                })
+                // this.$el.querySelector('.placemark__icon').addEventListener('click', () => {
+                //     this.openBalloon()
+                // })
 
                 document.addEventListener('click', (e) => {
                     if (!e.target.closest('.placemark')) this.closeBalloon()
@@ -1659,7 +1696,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 const rootEl = document.getElementById('map-root')
 
                 // Иницилиазируем карту
-                const map = new YMap(rootEl, {
+                window.map = new YMap(rootEl, {
                     location: {
                         center: [53.117374431117014, 71.41754715721409].reverse(),
                         zoom: 4
@@ -1670,14 +1707,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
                 //источник данных для маркеров
-                map.addChild(
+                window.map.addChild(
                     new YMapFeatureDataSource({
                         id: 'markerSource'
                     })
                 );
 
                 // Добавляем слой для отображения схематической карты
-                map.addChild(new YMapDefaultSchemeLayer({
+                window.map.addChild(new YMapDefaultSchemeLayer({
                     customization: layerStyle
                 }));
 
@@ -1689,7 +1726,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                     zIndex: 2020
                 })
 
-                map.addChild(
+                window.map.addChild(
                     layerMarker
                 );
 
@@ -1701,19 +1738,26 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
                         points.forEach(point => {
 
-                            point['marker'] = new YMapMarker({
-                                source: 'markerSource',
-                                coordinates: point['coordinates'].split(',').reverse(),
-                                zIndex: 1
-
-                            }, new Placemark({
+                            point['pl'] = new Placemark({
                                 point,
                                 rootSize: {
                                     width: rootEl.clientWidth,
                                     height: rootEl.clientHeight
                                 }
-                            }).marker());
-                            map.addChild(point['marker']);
+                            })
+
+                            point['marker'] = new YMapMarker({
+                                source: 'markerSource',
+                                coordinates: point['coordinates'].split(',').reverse(),
+                                zIndex: 1,
+                                onClick: () => {
+                                    points.forEach(el => el.pl.closeBalloon())
+
+                                    point['pl'].openBalloon()
+                                }
+
+                            }, point['pl'].marker());
+                            window.map.addChild(point['marker']);
                         })
 
                     });
