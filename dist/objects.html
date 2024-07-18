@@ -248,7 +248,7 @@
                   <div id="map-root"></div>
                 </div>
                 <div class="objects__content">
-                  <div class="container">
+                  <div class="container" id="app-filter">
                     <div class="objects__title">Проекты по отраслям, регионам и продукции</div>
                     <div class="objects__filter">
                       <ul>
@@ -278,66 +278,7 @@
                     </div>
                     <div class="objects__list">
                       <ul>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--1.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--2.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--3.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-mailru.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-mercedes.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-rafarma.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-rosatom.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-roskosmos.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-samsung.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--1.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--2.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--3.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-mailru.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-mercedes.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-rafarma.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-rosatom.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-roskosmos.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-samsung.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--1.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--2.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo--3.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-mailru.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-mercedes.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-rafarma.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-rosatom.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-roskosmos.jpg"></span>
-                        </li>
-                        <li><span class="bgimage lazyload" data-bg="/img/clients/logo-samsung.jpg"></span>
-                        </li>
+                        <li v-for="(item, index) in json" :key="index"><span class="bgimage" :style="{backgroundImage: `url(${item.logo})`}"></span></li>
                       </ul>
                     </div>
                   </div>
@@ -887,7 +828,9 @@
             </div>
     </footer>
     <script src="/js/vendor.js"> </script>
-    <script src="/js/map-customization.js"> </script>
     <script src="/js/common.js"> </script>
+    <script src="/js/map-customization.js"> </script>
+    <script src="/js/vue.js"> </script>
+    <script src="/js/objects.js"> </script>
   </body>
 </html>

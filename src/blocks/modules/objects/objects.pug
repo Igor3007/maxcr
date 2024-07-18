@@ -4,7 +4,7 @@ mixin objects
             .objects__map
                 #map-root
             .objects__content
-                .container
+                .container(id="app-filter")
                     .objects__title Проекты по отраслям, регионам и продукции
                     .objects__filter
                         ul
@@ -35,14 +35,5 @@ mixin objects
 
                     .objects__list
                         ul
-                            each item in [1,1,1]
-                                li: +bgimage('/img/clients/logo--1.jpg')
-                                li: +bgimage('/img/clients/logo--2.jpg')
-                                li: +bgimage('/img/clients/logo--3.jpg')
-                                li: +bgimage('/img/clients/logo-.jpg')
-                                li: +bgimage('/img/clients/logo-mailru.jpg')
-                                li: +bgimage('/img/clients/logo-mercedes.jpg')
-                                li: +bgimage('/img/clients/logo-rafarma.jpg')
-                                li: +bgimage('/img/clients/logo-rosatom.jpg')
-                                li: +bgimage('/img/clients/logo-roskosmos.jpg')
-                                li: +bgimage('/img/clients/logo-samsung.jpg')
+                            li(v-for="(item, index) in json" :key="index")
+                                span.bgimage( :style = '{backgroundImage: `url(${item.logo})`}' )

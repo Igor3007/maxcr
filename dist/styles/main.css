@@ -7818,12 +7818,29 @@ div[data-state="1"] {
   margin-left: -16px;
 }
 
+.placemark__icon {
+  cursor: pointer;
+}
+
+.placemark__icon svg {
+  fill: var(--color-accent-1);
+  transition: 0.3s ease;
+}
+
+.placemark__icon:hover svg {
+  fill: var(--color-accent-2);
+}
+
 .placemark__balloon {
   display: none;
 }
 
-.placemark__balloon.is-open {
+.placemark.is-open--balloon .placemark__balloon {
   display: block;
+}
+
+.placemark.is-open--balloon .placemark__icon svg {
+  fill: var(--color-accent-2);
 }
 
 .placemark-balloon {
@@ -7835,6 +7852,7 @@ div[data-state="1"] {
   border-radius: 12px;
   box-shadow: 0 0 6px 0px #4d73954f;
   width: 320px;
+  border: 3px solid var(--color-accent-2);
 }
 
 .placemark-balloon__top {
@@ -7846,21 +7864,50 @@ div[data-state="1"] {
 
 .placemark-balloon__title {
   font-weight: 700;
+  font-size: 20px;
 }
 
 .placemark-balloon__close {
-  transform: rotate(45deg);
-  font-size: 30px;
   color: #666;
   cursor: pointer;
+}
+
+.placemark-balloon__close .ic_24 {
+  width: 24px;
+  height: 24px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  opacity: 0.35;
+}
+
+.placemark-balloon__close .ic_24:hover {
+  opacity: 0.8;
 }
 
 .placemark-balloon__content ul {
   overflow: auto;
 }
 
+.af-popup .placemark-balloon {
+  position: relative;
+  transform: translateX(0);
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  padding: 12px;
+}
+
+.af-popup .placemark-balloon__close {
+  display: none;
+}
+
+.af-popup .placemark-balloon__content ul {
+  height: auto !important;
+}
+
 .point-popup {
-  border-bottom: 1px solid var(--color-borders-2);
   padding: 12px 0;
   font-size: 14px;
 }
@@ -7871,10 +7918,21 @@ div[data-state="1"] {
 
 .point-popup__name {
   font-weight: 700;
+  font-size: 16px;
+  padding-bottom: 3px;
 }
 
 .point-popup__city {
   color: var(--color-text-2);
+  padding-bottom: 3px;
+}
+
+.point-popup__desc {
+  letter-spacing: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .section-form-callback {
@@ -10965,6 +11023,11 @@ section.section-home-contacts {
     width: 16.6%;
   }
 
+  .placemark-balloon {
+    width: 440px;
+    left: -20px;
+  }
+
   .home-contacts__info {
     margin-right: calc((100vw - 1350px)/2);
     max-width: 560px;
@@ -11092,6 +11155,10 @@ section.section-home-contacts {
 
   .single-product__info {
     margin-bottom: 24px;
+  }
+
+  .placemark-balloon {
+    transform: translateX(-50%);
   }
 
   .form-small {

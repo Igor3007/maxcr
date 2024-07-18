@@ -154,11 +154,36 @@
     margin-top: -48px;
     margin-left: -16px;
 
+    &__icon {
+        cursor: pointer;
+
+        & svg {
+            fill: var(--color-accent-1);
+            transition: 0.3s ease;
+        }
+
+        &:hover {
+            & svg {
+                fill: var(--color-accent-2);
+            }
+        }
+    }
+
     &__balloon {
         display: none;
+    }
 
-        &.is-open {
-            display: block;
+    &.is-open--balloon {
+        & .placemark {
+            &__balloon {
+                display: block;
+            }
+
+            &__icon {
+                & svg {
+                    fill: var(--color-accent-2);
+                }
+            }
         }
     }
 }
@@ -172,6 +197,16 @@
     border-radius: 12px;
     box-shadow: 0 0 6px 0px #4d73954f;
     width: 320px;
+    border: 3px solid var(--color-accent-2);
+
+    @media screen and (min-width: $w1440) {
+        width: 440px;
+        left: -20px;
+    }
+
+    @media screen and (max-width: $w992) {
+        transform: translateX(-50%);
+    }
 
 
     &__top {
@@ -183,13 +218,27 @@
 
     &__title {
         font-weight: 700;
+        font-size: 20px;
     }
 
     &__close {
-        transform: rotate(45deg);
-        font-size: 30px;
+
         color: #666;
         cursor: pointer;
+
+        & .ic_24 {
+            width: 24px;
+            height: 24px;
+            background-size: 15px;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            opacity: 0.35;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
     }
 
     &__content ul {
@@ -197,8 +246,28 @@
     }
 }
 
+.af-popup .placemark-balloon {
+    position: relative;
+    transform: translateX(0);
+    width: 100%;
+    border: none;
+    box-shadow: none;
+
+    padding: 12px;
+
+    &__close {
+        display: none;
+    }
+
+    &__content {
+        & ul {
+            height: auto !important;
+        }
+    }
+}
+
 .point-popup {
-    border-bottom: 1px solid var(--color-borders-2);
+
     padding: 12px 0;
     font-size: 14px;
 
@@ -208,9 +277,16 @@
 
     &__name {
         font-weight: 700;
+        font-size: 16px;
+        padding-bottom: 3px;
     }
 
     &__city {
         color: var(--color-text-2);
+        padding-bottom: 3px;
+    }
+
+    &__desc {
+        @include line-clamp(3);
     }
 }
