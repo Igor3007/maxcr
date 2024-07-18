@@ -22,6 +22,16 @@
     }
 }
 
+.ic_24 {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .splide {
     &__arrow {
         width: 52px;

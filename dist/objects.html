@@ -247,39 +247,23 @@
                 <div class="objects__map">
                   <div id="map-root"></div>
                 </div>
-                <div class="objects__content">
-                  <div class="container" id="app-filter">
+                <div class="objects__content" id="app-filter">
+                  <div class="container" :class="{'is-loading': !isLoading}">
                     <div class="objects__title">Проекты по отраслям, регионам и продукции</div>
                     <div class="objects__filter">
                       <ul>
-                        <li><span class="is-active">Все</span></li>
-                        <li><span>
-                            <svg width="24" height="24">
-                              <use xlink:href="/img/sprites/sprite.svg#ic_pen-contacts"></use>
-                            </svg>По регионам</span></li>
-                        <li><span>
-                            <svg width="24" height="24">
-                              <use xlink:href="/img/sprites/sprite.svg#ic_routes"></use>
-                            </svg>По отраслям</span></li>
-                        <li><span>
-                            <svg width="24" height="24">
-                              <use xlink:href="/img/sprites/sprite.svg#ic_hand-gear"></use>
-                            </svg>По продукции</span></li>
+                        <li v-for="(item, index) in uniqFields" :key="item.name" @click="changeType(index)"><span :class="{'is-active': index == defaultConfig.type}"><span class="bgimage ic_24" v-if="item.icon" :style="{backgroundImage: `url(${item.icon})`}"></span>{{item.name}}</span></li>
                       </ul>
                     </div>
-                    <div class="objects__filter">
+                    <div class="objects__filter" v-if="defaultConfig.type != 'all'">
                       <ul>
-                        <li><span class="is-active">Все</span></li>
-                        <li><span>Россия</span></li>
-                        <li><span>Беларусь</span></li>
-                        <li><span>Казахстан</span></li>
-                        <li><span>Узбекистан</span></li>
+                        <li v-for="sub in getSubType" :key="sub" @click="changeTypeSub(sub)"><span :class="{'is-active': sub == defaultConfig.sub}">{{sub}}</span></li>
                       </ul>
                     </div>
                     <div class="objects__list">
-                      <ul>
-                        <li v-for="(item, index) in json" :key="index"><span class="bgimage" :style="{backgroundImage: `url(${item.logo})`}"></span></li>
-                      </ul>
+                      <transition-group name="fade" tag="ul" appear>
+                        <li v-for="(item, index) in getList" :key="(item.region+'-'+item.industry + index)"><span class="bgimage" :style="{backgroundImage: `url(${item.logo})`}"></span></li>
+                      </transition-group>
                     </div>
                   </div>
                 </div>

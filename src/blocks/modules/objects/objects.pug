@@ -3,37 +3,25 @@ mixin objects
         .objects
             .objects__map
                 #map-root
-            .objects__content
-                .container(id="app-filter")
+            .objects__content(id="app-filter")
+                .container(:class="{'is-loading': !isLoading}")
                     .objects__title Проекты по отраслям, регионам и продукции
                     .objects__filter
                         ul
-                            li: span.is-active Все
-                            li
-                                
-                                span
-                                    +icons('#ic_pen-contacts')
-                                    | По регионам
-                            li
-                                
-                                span
-                                    +icons('#ic_routes')
-                                    | По отраслям
-                            li
-                                
-                                span
-                                    +icons('#ic_hand-gear')
-                                    | По продукции
+                            li(v-for="(item, index) in uniqFields" :key="item.name" @click="changeType(index)")
+                                span(:class="{'is-active': index == defaultConfig.type}")
+                                    span.bgimage.ic_24( v-if="item.icon" :style = '{backgroundImage: `url(${item.icon})`}' )
+                                    | {{item.name}}
+                                    
+                           
 
-                    .objects__filter
+                    .objects__filter(v-if="defaultConfig.type != 'all'")
                         ul
-                            li: span.is-active Все
-                            li: span Россия
-                            li: span Беларусь
-                            li: span Казахстан
-                            li: span Узбекистан
+                            li(v-for="sub in getSubType" :key="sub" @click="changeTypeSub(sub)")
+                                span(:class="{'is-active': sub == defaultConfig.sub}") {{sub}}
+                           
 
                     .objects__list
-                        ul
-                            li(v-for="(item, index) in json" :key="index")
+                       transition-group(name="fade" tag="ul" appear)
+                            li(v-for="(item, index) in getList" :key="(item.region+'-'+item.industry + index)")
                                 span.bgimage( :style = '{backgroundImage: `url(${item.logo})`}' )

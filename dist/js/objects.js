@@ -119,8 +119,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 ballonList.style.setProperty('max-height', (this.rootSize.height * 0.35) + 'px')
 
 
-
-
                 if ((balloonWidth > offsetRight && balloonHeight > offsetBotton) || leftpx < balloonWidth) {
                     window.map.setLocation({
                         center: this.point.marker._props.coordinates,
@@ -297,28 +295,34 @@ document.addEventListener('DOMContentLoaded', function (event) {
             el: '#app-filter',
             data: {
                 json: null,
+                isLoading: false,
                 uniqFields: {
+                    all: {
+                        name: 'Все',
+                        icon: false,
+                    },
                     region: {
                         name: 'По регионам',
-                        icon: '/img/svg/ic_pen-contacts.svg',
+                        icon: '/img/icons/ic_pen-contacts.svg',
                     },
                     industry: {
                         name: 'По отраслям',
-                        icon: '/img/svg/ic_pen-contacts.svg',
+                        icon: '/img/icons/ic_routes.svg',
                     },
                     product: {
                         name: 'По продукции',
-                        icon: '/img/svg/ic_pen-contacts.svg',
+                        icon: '/img/icons/ic_hand-gear.svg',
                     },
+                },
+
+                defaultConfig: {
+                    type: 'all',
+                    sub: 'Все'
                 }
             },
 
             created: function () {
                 this.fetchData()
-            },
-
-            mounted: function () {
-                // console.log(this.json)
             },
 
             methods: {
@@ -328,26 +332,46 @@ document.addEventListener('DOMContentLoaded', function (event) {
                         .then(clients => {
                             this.json = clients
                             this.getUniqArray()
+                            this.isLoading = !this.isLoading
                         });
                 },
 
                 getUniqArray() {
-
-                    for (let key in this.uniqFields) {
-                        this.uniqFields[key]['uq'] = new Set()
-                    }
-
                     this.json.forEach(item => {
                         for (let key in item) {
-                            if (typeof this.uniqFields[key] == 'undefined') {
-                                this.uniqFields[key] = Object()
-                                this.uniqFields[key]['uq'] = new Set()
+                            if (typeof this.uniqFields[key] != 'undefined') {
+                                if (typeof this.uniqFields[key]['uq'] == 'undefined') {
+                                    this.uniqFields[key]['uq'] = new Set()
+                                    this.uniqFields[key]['uq'].add('Все')
+                                }
+
+                                this.uniqFields[key]['uq'].add(item[key])
                             }
-                            //this.uniqFields[key]['uq'].add(item[key])
+
                         }
                     })
+                },
 
+                changeType(index) {
+                    this.defaultConfig.type = index
+                    this.defaultConfig.sub = 'Все'
+                },
 
+                changeTypeSub(index) {
+                    this.defaultConfig.sub = index
+                }
+            },
+
+            computed: {
+                getSubType() {
+                    if (this.defaultConfig.type == 'all') return [];
+                    return this.uniqFields[this.defaultConfig.type]['uq'];
+                },
+
+                getList() {
+                    if (this.defaultConfig.sub == 'Все') return this.json;
+
+                    return this.json.filter(item => item[this.defaultConfig.type] == this.defaultConfig.sub)
                 }
             }
         })
