@@ -7736,6 +7736,7 @@ div[data-state="1"] {
   overflow-y: auto;
   scrollbar-width: none;
   position: relative;
+  overscroll-behavior: contain;
 }
 
 .objects__filter ul li {
