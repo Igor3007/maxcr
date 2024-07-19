@@ -261,6 +261,7 @@
 
     &__content ul {
         overflow: auto;
+        overscroll-behavior: contain;
     }
 }
 

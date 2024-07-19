@@ -7899,6 +7899,7 @@ div[data-state="1"] {
 
 .placemark-balloon__content ul {
   overflow: auto;
+  overscroll-behavior: contain;
 }
 
 .af-popup .placemark-balloon {
