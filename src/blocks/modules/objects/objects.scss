@@ -28,15 +28,13 @@
     }
 
     &__filter {
+
         background-color: var(--color-bg-2);
         margin-bottom: 12px;
         padding: 8px;
         border-radius: 8px;
         position: relative;
         overflow: hidden;
-
-
-
 
         & ul {
             display: flex;
@@ -48,11 +46,8 @@
             position: relative;
             overscroll-behavior: contain;
 
-
-
             & li {
                 padding: 4px;
-
 
                 & .ic_24 {
                     margin-right: 8px;
@@ -106,8 +101,6 @@
 
                 }
             }
-
-
         }
 
         &::after {
@@ -117,9 +110,7 @@
             position: absolute;
             right: 0;
             top: 0;
-
             background: linear-gradient(270deg, rgba(240, 250, 252, 1) 47%, rgba(255, 255, 255, 0) 100%);
-
         }
     }
 
@@ -365,4 +356,8 @@
     top: 50%;
     margin-left: -20px;
     margin-top: -20px;
+}
+
+#app-filter .is-loading .objects__filter {
+    opacity: 0
 }

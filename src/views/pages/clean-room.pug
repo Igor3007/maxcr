@@ -1,0 +1,61 @@
+extends ../layouts/main
+
+include ../../blocks/components/breadcrumb/breadcrumb.pug
+include ../../blocks/modules/catalog/catalog.pug
+include ../../blocks/modules/catalog-category/catalog-category
+include ../../blocks/modules/contacts-block/contacts-block
+include ../../blocks/modules/clients-block/clients-block
+include ../../blocks/modules/clean-room/clean-room.pug
+include ../../blocks/modules/about-block/about-block.pug
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Max Clean Room - Чистые помещения"
+ 
+
+block main
+   
+  section.section-page
+    .container
+      .page
+        .page__breadcrumbs
+          +breadcrumb([
+            'Главная',
+            'Чистые помещения',
+          ])
+        .page__title: h1 Чистые помещения
+
+        .page__nav
+          ul
+            li
+              a(href='#')
+                +ic_24('/img/icons/icon-areas.svg')
+                | О чистых помещениях
+
+            li
+              a(href='#')
+                +ic_24('/img/icons/icon-catalog.svg')
+                | Чистые помещения «под ключ»
+
+            li
+              a(href='#')
+                +ic_24('/img/icons/icon-clean-room.svg')
+                | Сферы применения
+
+            li
+              a(href='#')
+                +ic_24('/img/icons/icon-services.svg')
+                | Наши услуги
+
+ 
+  +clean-room
+  +about-block--video    
+  +clients-block
+  +contacts-block
+
+ 
+ 
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 

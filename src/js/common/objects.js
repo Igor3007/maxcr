@@ -296,25 +296,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             data: {
                 json: null,
                 isLoading: false,
-                uniqFields: {
-                    all: {
-                        name: 'Все',
-                        icon: false,
-                    },
-                    region: {
-                        name: 'По регионам',
-                        icon: '/img/icons/ic_pen-contacts.svg',
-                    },
-                    industry: {
-                        name: 'По отраслям',
-                        icon: '/img/icons/ic_routes.svg',
-                    },
-                    product: {
-                        name: 'По продукции',
-                        icon: '/img/icons/ic_hand-gear.svg',
-                    },
-                },
-
+                uniqFields: {},
                 defaultConfig: {
                     type: 'all',
                     sub: 'Все'
@@ -329,8 +311,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 fetchData: function () {
                     fetch('/json/clients.json')
                         .then(response => response.json())
-                        .then(clients => {
-                            this.json = clients
+                        .then(data => {
+                            this.uniqFields = data.filter
+                            this.json = data.clients
                             this.getUniqArray()
                             this.isLoading = !this.isLoading
                         });
@@ -345,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                                     this.uniqFields[key]['uq'].add('Все')
                                 }
 
-                                this.uniqFields[key]['uq'].add(item[key])
+                                if (item[key]) this.uniqFields[key]['uq'].add()
                             }
 
                         }
@@ -370,7 +353,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
                 getList() {
                     if (this.defaultConfig.sub == 'Все') return this.json;
-
                     return this.json.filter(item => item[this.defaultConfig.type] == this.defaultConfig.sub)
                 }
             }

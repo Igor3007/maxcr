@@ -1,39 +1,6 @@
+include ../../components/video/video.pug
+
 mixin about-block
-
-    -
-        const about = [
-            {
-                image: '01-production',
-                title: 'Собственное производство',
-                desc: 'Мы — одна из ведущих компаний в области строительства чистых помещений',
-            },
-            {
-                image: '02-time',
-                title: 'Отгрузка за 2 дня',
-                desc: 'Не срываем сроки, стремимся к максимальному качеству, лучшему сервису',
-            },
-            {
-                image: '03-warranty',
-                title: 'Гарантийный сервис',
-                desc: 'Одно из главных направлений развития нашей компании — постоянное улучшение качества обслуживания клиентов',
-            },
-            {
-                image: '04-stock',
-                title: 'Склад готовой продукции',
-                desc: 'Мы — одна из ведущих компаний в области строительства чистых помещений',
-            },
-            {
-                image: '05-certificate',
-                title: 'Полная сертификация',
-                desc: 'Имеем все необходимые сертификаты и лицензии для работы на рынках Европы, СНГ и Азии',
-            },
-            {
-                image: '06-location',
-                title: 'Офисы в России и Беларуси',
-                desc: 'Мы — одна из ведущих компаний в области строительства чистых помещений',
-            }
-        ]
-
     section.section-about-block
         .container
             .about-block
@@ -50,6 +17,37 @@ mixin about-block
                 
                 .about-block__list
                     each item in about
+                        .about-block__item
+                            .card-icon
+                                .card-icon__img: +bgimage('/img/icons/'+item.image+'.svg')
+                                .card-icon__main
+                                    .card-icon__text=item.title
+                                    .card-icon__desc=item.desc
+
+mixin about-block--video
+    section.section-about-block.section-about-block--video
+        .container
+            .about-block
+                .about-block__top
+                    .about-block__left
+                        .about-block__title О группе компаний «MAX Clean Room»
+                        .about-block__link
+                            a(href="#")
+                                span Подробнее о компании 
+                                +icons('#ic_to-catalog', 38)
+                    .about-block__right
+                        p Группа компаний MAX Clean Room — производственная инжиниринговая компания, занимающаяся проектированием, реконструкцией и строительством чистых производств в различных областях.
+                        p За более чем 16 лет работы группа компаний MAX Clean Room успела поработать с 10 странами на рынках СНГ, Азии и Европы. На сегодняшний день офисы компании располагаются в Москве и в Минске. Мы постоянно работаем над расширением географии работы и осваиваем новые страны и территории.
+                
+                .about-block__list
+
+                    .about-block__item
+                        +video({
+                            'preview': '//img.youtube.com/vi/xGMTmfrNsz4/maxresdefault',
+                            'link': 'https://www.youtube.com/watch?v=xGMTmfrNsz4',
+                        })
+
+                    each item in [about[0], about[1], about[4], about[5], about[3]]
                         .about-block__item
                             .card-icon
                                 .card-icon__img: +bgimage('/img/icons/'+item.image+'.svg')

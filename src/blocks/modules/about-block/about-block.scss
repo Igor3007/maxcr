@@ -210,3 +210,50 @@
     }
 
 }
+
+.section-about-block--video {
+    & .about-block {
+        &__list {
+
+            margin: -16px;
+
+            @media screen and (min-width: $w1024) {
+                grid-template-columns: repeat(3, 1fr);
+                display: grid;
+            }
+
+            @media screen and (min-width: $w760) {
+                grid-template-columns: repeat(2, 1fr);
+                display: grid;
+            }
+        }
+
+        &__item {
+            width: 100%;
+
+            &:first-child {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+
+            & .video {
+                height: 100%;
+                border-radius: 8px;
+
+                &__preview {
+                    height: 100%;
+
+                    & picture {
+                        height: 100%;
+
+                        & img {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

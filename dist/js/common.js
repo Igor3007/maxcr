@@ -1591,6 +1591,93 @@ document.addEventListener('DOMContentLoaded', function (event) {
         })
     }
 
+    /* ====================================
+    splide
+    ====================================*/
+
+    if (document.querySelector('[data-slider="cr-main"]')) {
+        let main = new Splide('[data-slider="cr-main"]', {
+            type: 'fade',
+            pagination: false,
+            arrows: true,
+
+            breakpoints: {
+
+                992: {
+                    arrows: false,
+                },
+
+
+            },
+
+        });
+
+        let thumbnails = new Splide('[data-slider="cr-thumb"]', {
+            rewind: true,
+            isNavigation: true,
+            gap: 4,
+            focus: 'center',
+            pagination: false,
+            perPage: 12,
+            arrows: false,
+
+            dragMinThreshold: {
+                mouse: 4,
+                touch: 10,
+            },
+
+            breakpoints: {
+                1200: {
+                    perPage: 10,
+
+                },
+                992: {
+                    perPage: 7,
+
+                },
+                576: {
+                    perPage: 4,
+                },
+
+            },
+
+        });
+
+        main.sync(thumbnails);
+        main.mount();
+        thumbnails.mount();
+    }
+
+    /* =========================================
+    video youtube
+    =========================================*/
+
+    if (document.querySelector('.video')) {
+        document.querySelectorAll('.video').forEach(container => {
+
+            if (container.closest('.video-block__yt')) return false
+
+            const getYoutubeId = (url) => {
+                var m = url.match(/^.*(?:youtu.be\/|v\/|e\/|u\/\w+\/|embed\/|v=)([^#\&\?]*).*/);
+                if (!m || !m[1]) return null;
+                return m[1];
+            }
+
+            container.querySelector('.video__button').addEventListener('click', e => {
+                container.classList.add('is-play')
+
+                let iframe = document.createElement('iframe')
+                iframe.setAttribute('allowfullscreen', '')
+                iframe.setAttribute('src', '//www.youtube.com/embed/' + getYoutubeId(container.dataset.id) + '?autoplay=true')
+
+                container.querySelector('.video__iframe').append(iframe)
+            })
+
+
+        })
+    }
+
+
 
 
 }); //dcl

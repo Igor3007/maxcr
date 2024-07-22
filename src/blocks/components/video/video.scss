@@ -110,12 +110,9 @@
 
         &:hover {
             background-color: rgba(0, 0, 0, 0.3);
-            box-shadow: 0 0 0 8px var(--color-bg-7) inset;
 
-            & .video__button {
-                border: 3px solid #000;
-                box-shadow: 0 0 0 1px #333;
-            }
+
+            & .video__button {}
         }
     }
 
@@ -142,9 +139,15 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        background-color: var(--color-bg-7);
+        background-color: var(--color-accent-1);
         width: 48px;
         height: 48px;
+        border-radius: 50%;
+
+        @media screen and (min-width: $w992) {
+            width: 52px;
+            height: 52px;
+        }
 
 
         & span {

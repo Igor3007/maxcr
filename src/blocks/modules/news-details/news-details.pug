@@ -73,9 +73,9 @@ mixin news-details
                         .form-small__fields
                             form(action='#' method='POST')
                                 .form
-                                  .form__item: .form__subitem: input(type="text" placeholder="Ваше имя" required)
-                                  .form__item: .form__subitem: input(type="tel" placeholder="Контактный телефон" data-maska="+7(###)##-##-##" required)
-                                  .form__item: .form__subitem
-                                    button.btn(type="submit") Отправить заявку
-                                  .form__note
+                                    .form__item: .form__subitem: input(type="text" placeholder="Ваше имя" required)
+                                    .form__item: .form__subitem: input(type="tel" placeholder="Контактный телефон" data-maska="+7(###)##-##-##" required)
+                                    .form__item: .form__subitem
+                                        button.btn(type="submit") Отправить заявку
+                                    .form__note
                                         +checkbox('Нажимая на кнопку «Отправить заявку», я соглашаюсь на обработку персональных данных', 'policy', 'checked')
