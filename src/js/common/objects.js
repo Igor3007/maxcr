@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                                     this.uniqFields[key]['uq'].add('Все')
                                 }
 
-                                if (item[key]) this.uniqFields[key]['uq'].add()
+                                if (item[key]) this.uniqFields[key]['uq'].add(item[key])
                             }
 
                         }
