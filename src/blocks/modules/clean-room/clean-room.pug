@@ -16,7 +16,7 @@ mixin clean-room
             {image: '/img/other/slider/img-slider-02'},
         ]
 
-    section.section-clean-room
+    section.section-clean-room(id="about")
         .container
             .clean-room
                 .clean-room__top
@@ -91,7 +91,7 @@ mixin clean-room
                                 .tile-small__main
                                     .tile-small__title Офисы в России и Беларуси
                                     .tile-small__desc Мы не срываем сроки, стремимся к максимальному качеству, лучшему сервису
-    section.clean-room-products 
+    section.clean-room-products(id="our-product")
         .container
             .cr-products
                 .cr-products__head
@@ -116,64 +116,64 @@ mixin clean-room
                                     id: '15'
                                 },
                                 {
-                                    image : '/img/common/tooltip/img-1',
+                                    image : '/img/common/tooltip/img-6',
                                     title : 'Фармацевтическое оборудование',
+                                    desc : 'Кликните для просмотра продукции',
+                                    id: '14' 
+                                },
+                                {
+                                    image : '/img/common/tooltip/img-1',
+                                    title : 'Стеновые панели',
                                     desc : 'Кликните для просмотра продукции',
                                     id: '13'
                                 },
                                 {
-                                    image : '/img/common/tooltip/img-2',
-                                    title : 'Стеновые панели',
-                                    desc : 'Кликните для просмотра продукции',
-                                    id: '3'
-                                },
-                                {
-                                    image : '/img/common/tooltip/img-3',
-                                    title : 'Передаточные окна',
+                                    image : '/img/common/tooltip/img-7',
+                                    title : 'Передаточные окна', 
                                     desc : 'Кликните для просмотра продукции',
                                     id: '4'
                                 },
                                 {
-                                    image : '/img/common/tooltip/img-4',
+                                    image : '/img/common/tooltip/img-2',
                                     title : 'Двери',
                                     desc : 'Кликните для просмотра продукции',
                                     id: '11'
                                 },
                                 {
-                                    image : '/img/common/tooltip/img-5',
+                                    image : '/img/common/tooltip/img-8',
                                     title : 'Медицинская мебель',
                                     desc : 'Кликните для просмотра продукции',
-                                    id: '6'
+                                    id: '10'
                                 },
                                 {
-                                    image : '/img/common/tooltip/img-6',
+                                    image : '/img/common/tooltip/img-3',
                                     title : 'Воздушные души',
                                     desc : 'Кликните для просмотра продукции',
-                                    id: '14'
+                                    id: '9'
                                 },
                                 { 
-                                    image : '/img/common/tooltip/img-7',
+                                    image : '/img/common/tooltip/img-9',
                                     title : 'Ламинарные шкафы',
                                     desc : 'Кликните для просмотра продукции',
-                                    id: '12'
-                                },
+                                    id: '8'
+                                }, 
                                 {
-                                    image : '/img/common/tooltip/img-8',
+                                    image : '/img/common/tooltip/img-4',
                                     title : 'Напольные покрытия',
                                     desc : 'Кликните для просмотра продукции',
                                     id: '7'
                                 },
                                 {
-                                    image : '/img/common/tooltip/img-9',
+                                    image : '/img/common/tooltip/img-10',
                                     title : 'Смотровые окна',
                                     desc : 'Кликните для просмотра продукции',
-                                    id: '8'
+                                    id: '12'
                                 },
                                 {
-                                    image : '/img/common/tooltip/img-10',
+                                    image : '/img/common/tooltip/img-5',
                                     title : 'Воздухо-распределители',
                                     desc : 'Кликните для просмотра продукции',
-                                    id: '5'
+                                    id: '2'
                                 },
                                 {
                                     image : '/img/common/tooltip/img-11',
@@ -182,6 +182,10 @@ mixin clean-room
                                     id: '1'
                                 },
                             ]
+ 
+
+
+
                     .cr-products__tooltips
                         each item in tooltips
                             .product-tooltip(data-tooltip=item.id)
@@ -199,7 +203,7 @@ mixin clean-room
                         .cr-contact__btn
                             button.btn Связаться с нами
 
-    section.clean-room-applying
+    section.clean-room-applying(id="apply")
         .container
             .clean-room-applying__wrp
                 .clean-room-applying__title Сферы применения
@@ -248,7 +252,7 @@ mixin clean-room
                 .cr-imageblock__img
                     +picture('/img/common/img-complex-medical-01')
 
-    section.clean-room-services
+    section.clean-room-services(id="our-services")
         .container
             .cr-services
                 .cr-services__title Услуги по созданию чистых помещений

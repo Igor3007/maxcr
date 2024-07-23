@@ -8707,10 +8707,17 @@ section.section-home-contacts {
 .cr-gallery__thumb img {
   border: 2px solid var(--color-borders-1);
   border-radius: 8px;
+  opacity: 0.5;
 }
 
 .cr-gallery__thumb .splide__slide.is-active img {
   border: 2px solid var(--color-accent-2);
+  opacity: 1;
+}
+
+.cr-gallery__thumb .splide__slide:hover img {
+  border: 2px solid var(--color-borders-3);
+  opacity: 1;
 }
 
 .cr-gallery .splide__slide {
@@ -8943,11 +8950,26 @@ section.section-home-contacts {
   fill: var(--color-accent-2);
 }
 
+@keyframes to-fade-tooltip {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .cr-products__picture .product-tooltip {
   background-color: #fff;
   padding: 13px;
   border-radius: 12px;
   border: 2px solid var(--color-borders-3);
+  opacity: 0;
+  transform: translateY(10px);
+  min-width: 320px;
+  animation: to-fade-tooltip 0.3s ease forwards;
+}
+
+.cr-products__picture .product-tooltip__title a {
+  color: var(--color-accent-2);
 }
 
 .cr-products__image {
@@ -9054,6 +9076,11 @@ section.section-home-contacts {
   transition: 0.3s ease;
 }
 
+.cr-services-card__main {
+  transition: 0.3s ease;
+  transform: translateX(0.01px);
+}
+
 .cr-services-card__image {
   width: 100%;
   max-width: 192px;
@@ -9097,6 +9124,10 @@ section.section-home-contacts {
 
 .cr-services-card:hover .cr-services-card__title {
   color: var(--color-accent-2);
+}
+
+.cr-services-card:hover .cr-services-card__main {
+  transform: translateX(10px);
 }
 
 .clean-room-imageblock {
@@ -9353,6 +9384,7 @@ section.section-home-contacts {
   white-space: nowrap;
   transition: 0.3s ease;
   font-size: 14px;
+  font-weight: 500;
 }
 
 .page__nav ul li > a svg,
@@ -9364,7 +9396,7 @@ section.section-home-contacts {
 .page__nav ul li > a:hover,
 .page__nav ul li > span:hover {
   background-color: var(--color-bg-3);
-  color: var(--color-accent-1);
+  color: var(--color-accent-2);
   cursor: pointer;
 }
 
@@ -11579,6 +11611,23 @@ section.section-home-contacts {
     font-size: 16px;
   }
 
+  .cr-products__picture .product-tooltip {
+    padding-right: 32px;
+  }
+
+  .cr-products__picture .product-tooltip__title a {
+    font-size: 24px;
+    font-family: Geometria;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 150%;
+  }
+
+  .cr-products__picture .product-tooltip__image {
+    width: 168px;
+    min-width: 168px;
+  }
+
   .page__title h1 {
     font-size: 48px;
     font-family: Geometria;
@@ -12290,6 +12339,23 @@ section.section-home-contacts {
   .form-small__fields .form__note {
     width: 100%;
     flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .cr-products__tooltips {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .product-tooltip {
+    width: calc(50% - 12px);
+    margin-left: 12px;
+  }
+
+  .product-tooltip__image {
+    width: 80px;
+    min-width: 80px;
   }
 }
 

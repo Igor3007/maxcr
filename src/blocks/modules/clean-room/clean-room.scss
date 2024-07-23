@@ -155,6 +155,7 @@
         & img {
             border: 2px solid var(--color-borders-1);
             border-radius: 8px;
+            opacity: 0.5;
         }
 
         & .splide {
@@ -163,6 +164,15 @@
                 &.is-active {
                     & img {
                         border: 2px solid var(--color-accent-2);
+                        opacity: 1;
+                    }
+
+                }
+
+                &:hover {
+                    & img {
+                        border: 2px solid var(--color-borders-3);
+                        opacity: 1;
                     }
 
                 }
@@ -514,17 +524,54 @@
             }
         }
 
+        @keyframes to-fade-tooltip {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         & .product-tooltip {
             background-color: #fff;
             padding: 13px;
             border-radius: 12px;
             border: 2px solid var(--color-borders-3);
+            opacity: 0;
+            transform: translateY(10px);
+            min-width: 320px;
+            animation: to-fade-tooltip 0.3s ease forwards;
+
+            @media screen and (min-width: $w1376) {
+                padding-right: 32px;
+            }
+
+            &__title {
+                & a {
+                    color: var(--color-accent-2);
+
+                    @media screen and (min-width: $w1376) {
+                        @include font-h4;
+                    }
+                }
+            }
+
+            &__image {
+                @media screen and (min-width: $w1376) {
+                    width: 168px;
+                    min-width: 168px;
+                }
+            }
         }
     }
 
     &__tooltips {
         @media screen and (min-width: $w760) {
             display: none;
+        }
+
+        @media screen and (min-width: $w576) and (max-width: $w760) {
+            display: flex;
+            flex-wrap: wrap;
         }
     }
 
@@ -544,9 +591,20 @@
     margin-bottom: 12px;
     align-items: center;
 
+    @media screen and (min-width: $w576) and (max-width: $w760) {
+        width: calc(50% - 12px);
+        margin-left: 12px;
+    }
+
     &__image {
         width: 100px;
         min-width: 100px;
+
+        @media screen and (min-width: $w576) and (max-width: $w760) {
+            width: 80px;
+            min-width: 80px;
+
+        }
 
         & picture {
             background-color: var(--color-bg-2);
@@ -668,6 +726,9 @@
 
 
     &__main {
+        transition: 0.3s ease;
+        transform: translateX(0.01px);
+
         @media screen and (min-width: $w760) {
             padding-left: 24px;
             padding-top: 10px;
@@ -715,6 +776,10 @@
 
             &__title {
                 color: var(--color-accent-2);
+            }
+
+            &__main {
+                transform: translateX(10px);
             }
         }
     }

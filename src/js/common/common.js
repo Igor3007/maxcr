@@ -1703,6 +1703,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 this.tooltip.style.setProperty('left', rect.left + 'px')
                 this.tooltip.style.setProperty('top', rect.top - (this.tooltip.clientHeight) - (this.offset.top) + 'px')
 
+                if ((window.innerWidth - (rect.left)) < this.tooltip.clientWidth) {
+                    this.tooltip.style.setProperty('left', rect.left - (this.tooltip.clientWidth) + 'px')
+                }
 
                 window.addEventListener('scroll', () => {
                     this.close()
@@ -1748,6 +1751,23 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
 
 
+
+    /* ======================================
+    scroll smooth
+    ======================================*/
+
+    if (document.querySelector('[data-scroll="smooth"]')) {
+        const items = document.querySelectorAll('[data-scroll="smooth"]')
+        items.forEach(item => {
+            item.addEventListener('click', e => {
+                e.preventDefault()
+
+                window.scrollToTargetAdjusted({
+                    elem: item.getAttribute('href')
+                })
+            })
+        })
+    }
 
 
 }); //dcl
