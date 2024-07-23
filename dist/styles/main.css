@@ -9142,6 +9142,90 @@ section.section-home-contacts {
   margin-bottom: 0;
 }
 
+.section-company-history {
+  padding: 40px 0;
+}
+
+.company-history__item::after {
+  content: '';
+  height: 15px;
+  width: 2px;
+  background-color: var(--color-borders-2);
+  display: block;
+  margin-left: 60px;
+}
+
+.company-history__item:last-child::after {
+  display: none;
+}
+
+.history-item {
+  background-color: var(--color-bg-2);
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.history-item__year {
+  padding-bottom: 12px;
+  display: inline-block;
+}
+
+.history-item__year span {
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: 0.3s ease;
+  font-size: 24px;
+  font-family: Geometria;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 137%;
+  color: var(--color-accent-1);
+}
+
+.history-item__text {
+  font-size: 14px;
+}
+
+.history-item__text::before {
+  content: '';
+  min-width: 6px;
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  vertical-align: super;
+  transform: rotate(45deg);
+  background-color: var(--color-accent-1);
+  position: relative;
+  top: 2px;
+  margin: 14px 12px 0 0;
+  transition: 0.3s ease;
+}
+
+.history-item__text a {
+  color: var(--color-accent-1);
+  font-weight: 600;
+}
+
+.history-item__text a:hover {
+  color: var(--color-accent-2);
+}
+
+.history-item:hover {
+  background-color: var(--color-bg-3);
+}
+
+.history-item:hover .history-item__year span {
+  color: var(--color-accent-2);
+}
+
+.history-item:hover .history-item__text::before {
+  background-color: var(--color-accent-2);
+  transform: rotate(405deg);
+}
+
 /* common styles */
 
 .font-h2 {
@@ -10036,6 +10120,10 @@ section.section-home-contacts {
     width: 100%;
   }
 
+  .history-item__year span {
+    font-size: 32px;
+  }
+
   .page {
     padding-top: 27px;
   }
@@ -10457,6 +10545,31 @@ section.section-home-contacts {
   .cr-services-card__image {
     width: 96px;
     min-width: 96px;
+  }
+
+  .company-history__item::after {
+    height: 24px;
+  }
+
+  .history-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .history-item__year {
+    padding-bottom: 0;
+  }
+
+  .history-item__text {
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+  }
+
+  .history-item__text::before {
+    top: 0;
+    margin-top: 0;
+    margin-right: 24px;
   }
 
   .page__title {
@@ -11329,6 +11442,10 @@ section.section-home-contacts {
     width: 38%;
   }
 
+  .history-item__text {
+    font-size: 16px;
+  }
+
   .page__title h1 {
     font-size: 40px;
     font-family: Geometria;
@@ -12026,6 +12143,20 @@ section.section-home-contacts {
 
   .cr-services-card__main {
     padding-left: 36px;
+  }
+
+  .company-history__item::after {
+    margin-left: 120px;
+  }
+
+  .history-item {
+    padding: 24px 36px;
+  }
+
+  .history-item__year span {
+    padding: 10px 24px;
+    min-width: 170px;
+    text-align: center;
   }
 
   .page__breadcrumb {
