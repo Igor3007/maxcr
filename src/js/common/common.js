@@ -1677,6 +1677,76 @@ document.addEventListener('DOMContentLoaded', function (event) {
         })
     }
 
+    /* =======================================
+    hover image
+    =======================================*/
+
+    if (document.querySelector('[data-map-image]')) {
+
+        class ImageMap {
+            constructor(el) {
+                this.$el = el
+                this.tooltip = null
+                this.addEvents()
+                this.offset = {
+                    left: 0,
+                    top: 10
+                }
+            }
+
+            open() {
+
+                let rect = this.$el.getBoundingClientRect()
+                this.$el.closest('[data-map-image]').append(this.tooltip)
+
+                this.tooltip.style.setProperty('position', 'fixed')
+                this.tooltip.style.setProperty('left', rect.left + 'px')
+                this.tooltip.style.setProperty('top', rect.top - (this.tooltip.clientHeight) - (this.offset.top) + 'px')
+
+
+                window.addEventListener('scroll', () => {
+                    this.close()
+                })
+            }
+
+            close() {
+                if (this.tooltip) this.tooltip.remove()
+            }
+
+            getTooltipElem(id) {
+                return document.querySelector('[data-tooltip="' + id + '"]')
+            }
+
+            clickHandler() {
+                window.open(this.tooltip.querySelector('a').getAttribute('href'))
+            }
+
+            addEvents() {
+                this.$el.addEventListener('mouseleave', () => {
+                    this.close()
+                })
+
+                this.$el.addEventListener('click', () => {
+                    this.clickHandler()
+                })
+
+                this.$el.addEventListener('mouseenter', () => {
+                    if (this.getTooltipElem(this.$el.dataset.tooltipId)) {
+                        this.tooltip = this.getTooltipElem(this.$el.dataset.tooltipId).cloneNode(true)
+                        this.open()
+                    } else {
+                        console.error('Не найден элемент для подсказки')
+                    }
+                })
+
+
+            }
+        }
+
+        document.querySelectorAll('[data-tooltip-id]').forEach(el => new ImageMap(el))
+
+    }
+
 
 
 

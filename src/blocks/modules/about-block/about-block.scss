@@ -203,9 +203,7 @@
                 color: var(--color-accent-2);
             }
 
-            &__img {
-                & .bgimage {}
-            }
+
         }
     }
 
@@ -213,6 +211,15 @@
 
 .section-about-block--video {
     & .about-block {
+
+        &__right {
+            padding-bottom: 24px;
+
+            @media screen and (max-width: $w992) {
+                font-size: 15px;
+            }
+        }
+
         &__list {
 
             margin: -16px;

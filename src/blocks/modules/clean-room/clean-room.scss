@@ -4,21 +4,64 @@
 
 .clean-room {
     &__top {
-        @media screen and (min-width: $w992) {
+        @media screen and (min-width: $w1024) {
             display: flex;
         }
     }
 
     &__left {
-        @media screen and (min-width: $w992) {
+        @media screen and (min-width: $w1024) {
             width: calc(100% - 400px);
             padding-right: 40px;
         }
     }
 
     &__right {
-        @media screen and (min-width: $w992) {
+        @media screen and (min-width: $w1024) {
             width: 400px;
+        }
+
+        & .form-small {
+            @media screen and (min-width: $w1440) {
+                padding: 30px;
+
+                &__desc {
+                    font-size: 16px;
+                    padding-bottom: 24px;
+                }
+
+                & .btn {
+                    font-size: 16px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+
+
+
+            }
+
+            & .checkbox {
+                margin-bottom: 6px;
+
+                @media screen and (min-width: $w1440) {
+                    &__text {
+                        font-size: 15px;
+                        line-height: 150%
+                    }
+                }
+            }
+
+
+
+        }
+    }
+
+    &__text:first-child {
+        & .formated-text {
+            @media screen and (min-width: $w1440) {
+                font-size: 18px;
+                line-height: 145%;
+            }
         }
     }
 
@@ -28,16 +71,45 @@
         background-color: var(--color-bg-2);
         border-radius: 16px;
         margin-top: 24px;
+
+        @media screen and (min-width: $w1440) {
+            padding: 24px 28px;
+        }
     }
 
     &__tile {
         margin-top: 12px;
+
+        @media screen and (min-width: $w1440) {
+            padding: 22px 24px;
+        }
     }
 
     &__about {
+
+        @media screen and (min-width: $w992) {
+            margin-bottom: 24px;
+        }
+
+        & .formated-text {
+            & h4 {
+                margin-top: 0;
+            }
+
+            & p {
+                margin: 16px 0;
+                line-height: 150%;
+            }
+
+            & :last-child {
+                margin-bottom: 0;
+            }
+        }
+
         & a {
             display: inline-flex;
             color: var(--color-accent-1);
+            font-weight: 600;
 
             & svg {
                 margin-right: 12px;
@@ -53,48 +125,12 @@
             }
         }
     }
+
+    &__gallery {
+        padding-top: 18px;
+    }
+
 }
-
-.cr-products {
-
-    padding: 48px 0;
-
-    &__title {
-        @include font-h4;
-        padding-bottom: 0.8em;
-
-        @media screen and (min-width: $w1200) {
-            @include font-h2;
-        }
-    }
-
-    &__subtitle {
-        padding-bottom: 24px;
-    }
-
-    &__right {
-        & .btn {
-            width: 100%;
-        }
-    }
-
-    &__picture {
-        padding: 40px 0;
-    }
-
-    &__picture,
-    &__image {
-        width: 100%;
-
-
-        & svg {
-            width: 100%;
-            height: auto;
-        }
-    }
-}
-
-
 
 .cr-gallery {
 
@@ -104,11 +140,12 @@
         & picture {
             width: 100%;
 
-            @include picture(67%, cover);
+            @include picture(66.3%, cover);
         }
 
         & img {
             width: 100%;
+            border-radius: 8px;
         }
     }
 
@@ -117,7 +154,7 @@
 
         & img {
             border: 2px solid var(--color-borders-1);
-            border-radius: 12px;
+            border-radius: 8px;
         }
 
         & .splide {
@@ -158,7 +195,6 @@
 
     display: flex;
 
-
     &__icon {
         width: 64px;
         min-width: 64px;
@@ -174,11 +210,18 @@
 
     &__main {
         padding-left: 24px;
+
+        @media screen and (min-width: $w992) {
+            padding-left: 12px;
+        }
     }
 
     &__title {
         @include font-h5;
 
+        @media screen and (min-width: $w992) {
+            padding-bottom: 8px;
+        }
     }
 
     &__desc {
@@ -186,6 +229,315 @@
         font-size: 15px;
     }
 }
+
+
+
+.clean-room-applying {
+
+    padding: 48px 0px;
+
+    &__title {
+        @include font-h4;
+        padding-bottom: 0.8em;
+
+        @media screen and (min-width: $w992) {
+            @include font-h2;
+            padding-bottom: 1.05em;
+        }
+    }
+
+    &__wrp {
+        background-color: var(--color-bg-2);
+        padding: 16px 24px;
+        border-radius: 12px;
+
+        @media screen and (min-width: $w760) {
+            padding: 24px 36px;
+        }
+
+        @media screen and (min-width: $w1440) {
+            padding: 46px;
+        }
+    }
+
+    &__list {
+        & ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -3px;
+
+            @media screen and (min-width: $w1440) {
+                margin: -6px;
+            }
+
+
+
+            & li {
+
+                padding: 3px;
+
+                @media screen and (min-width: $w1440) {
+                    padding: 6px;
+                }
+
+                @media screen and (min-width: $w1200) {
+                    width: 33.33%;
+                }
+
+                & a,
+                & span {
+                    background-color: #fff;
+                    padding: 12px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    border: 2px solid transparent;
+                    transition: 0.3s ease;
+
+                    @media screen and (min-width: $w1200) {
+                        padding: 16px 24px;
+                    }
+
+                    @media screen and (min-width: $w1440) {
+                        min-height: 72px;
+                        font-weight: 600;
+                    }
+
+                    &::after {
+                        content: '';
+                        width: 24px;
+                        height: 24px;
+                        display: block;
+                        background-position: right center;
+                        background-repeat: no-repeat;
+                        margin-left: 12px;
+                        background-size: 20px;
+                        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNi4yOTMuMjkzYTEgMSAwIDAxMS40MTQgMGw2IDZhMSAxIDAgMDEwIDEuNDE0bC02IDZhMSAxIDAgMDEtMS40MTQtMS40MTRMMjAuNTg2IDhIMWExIDEgMCAwMTAtMmgxOS41ODZsLTQuMjkzLTQuMjkzYTEgMSAwIDAxMC0xLjQxNHoiIGZpbGw9IiMwMUFGRDIiLz48L3N2Zz4=);
+                        transition: 0.3s ease;
+
+                        @media screen and (min-width: $w1200) {
+                            margin-left: auto;
+                        }
+                    }
+                }
+
+                &:hover {
+
+                    & a,
+                    & span {
+                        border: 2px solid var(--color-accent-2);
+                        color: var(--color-accent-2);
+
+                        &::after {
+                            width: 35px;
+                            height: 24px;
+                            background-size: 35px 20px;
+                            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zMi4yOTMgNS4yOTNhMSAxIDAgMDExLjQxNCAwbDYgNmExIDEgMCAwMTAgMS40MTRsLTYgNmExIDEgMCAwMS0xLjQxNC0xLjQxNEwzNi41ODYgMTNIMWExIDEgMCAxMTAtMmgzNS41ODZsLTQuMjkzLTQuMjkzYTEgMSAwIDAxMC0xLjQxNHoiIGZpbGw9IiMwNEMiLz48L3N2Zz4=);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .formated-text {
+
+        @media screen and (min-width: $w1440) {
+            padding-top: 20px;
+        }
+
+        & ul {
+
+            padding-left: 0;
+
+            @media screen and (min-width: $w992) {
+                column-count: 2;
+            }
+
+            & li {
+                break-inside: avoid;
+            }
+        }
+
+        &>:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+.clean-room-products {
+    padding: 48px 0;
+
+    @media screen and (min-width: $w1440) {
+        padding: 30px 0;
+    }
+}
+
+.cr-products {
+
+    &__head {
+        @media screen and (min-width: $w992) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__dash {
+        padding: 16px;
+        border: 2px solid var(--color-borders-2);
+        padding-left: 70px;
+        background-repeat: no-repeat;
+        display: inline-flex;
+        border-radius: 6px;
+        background-position: 20px 20px;
+        max-width: 370px;
+        font-size: 14px;
+        color: var(--color-text-1);
+        align-items: flex-end;
+        cursor: pointer;
+        position: absolute;
+        top: 16px;
+
+        display: none;
+
+        @media screen and (min-width: $w760) {
+            display: flex;
+        }
+
+
+        @keyframes arrow-dash {
+            from {
+                transform: translateX(0) translateY(0);
+            }
+
+            33% {
+                transform: translateX(-5px) translateY(-5px);
+            }
+
+            33% {
+                transform: translateX(5px) translateY(5px);
+            }
+
+            100% {
+                transform: translateX(0) translateY(0);
+            }
+        }
+
+        &::after {
+            content: '';
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTYgNmwxMiAxMm0wIDBWOG0wIDEwSDgiIHN0cm9rZT0iIzAxQUZEMiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            bottom: -5px;
+            animation: arrow-dash 1s linear infinite both;
+        }
+    }
+
+    &__title {
+        @include font-h4;
+        padding-bottom: 0.8em;
+
+        @media screen and (min-width: $w992) {
+            @include font-h2;
+            padding-bottom: 0.4em;
+        }
+    }
+
+    &__subtitle {
+        padding-bottom: 24px;
+        color: var(--color-text-2);
+    }
+
+    &__right {
+
+        padding-bottom: 36px;
+
+        @media screen and (min-width: $w992) {
+            padding-bottom: 0;
+            padding-left: 24px;
+            margin-left: auto;
+
+        }
+
+        & .btn {
+
+            @media screen and (min-width: $w992) {
+                font-size: 16px;
+
+            }
+
+            @media screen and (min-width: $w1440) {
+                width: 310px;
+            }
+
+            @media screen and (max-width: $w480) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__picture {
+        padding: 40px 0 0 0;
+    }
+
+    &__picture,
+    &__image {
+        width: 100%;
+
+
+        & svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__picture {
+        display: none;
+
+        @media screen and (min-width: $w760) {
+            display: block;
+        }
+
+        & [data-tooltip-id] {
+            cursor: pointer;
+
+            &:hover {
+                stroke: var(--color-accent-2);
+                fill: var(--color-accent-2);
+            }
+        }
+
+        & .product-tooltip {
+            background-color: #fff;
+            padding: 13px;
+            border-radius: 12px;
+            border: 2px solid var(--color-borders-3);
+        }
+    }
+
+    &__tooltips {
+        @media screen and (min-width: $w760) {
+            display: none;
+        }
+    }
+
+    &__image {
+        position: relative;
+    }
+
+    &__contact {
+        padding-top: 24px;
+    }
+}
+
+
 
 .product-tooltip {
     display: flex;
@@ -227,6 +579,12 @@
     border: 2px solid var(--color-borders-2);
     border-radius: 12px;
 
+    @media screen and (min-width: $w760) {
+        display: flex;
+        align-items: center;
+    }
+
+
     &__title {
         padding-bottom: 12px;
         font-weight: 800;
@@ -235,13 +593,165 @@
 
     &__desc {
         padding-bottom: 12px;
+
+
+        @media screen and (min-width: $w760) {
+            padding-bottom: 0;
+            font-size: 15px;
+        }
     }
 
     &__btn {
+
+        @media screen and (min-width: $w760) {
+            padding-left: 24px;
+            margin-left: auto;
+        }
+
         & .btn {
+            font-size: 16px;
+
+            @media screen and (min-width: $w1440) {
+                width: 310px;
+            }
+
             @media screen and (max-width: $w480) {
                 width: 100%;
             }
         }
+    }
+
+}
+
+.clean-room-services {
+    padding: 36px 0
+}
+
+.cr-services {
+    &__title {
+        @include font-h4;
+        padding-bottom: 0.5em;
+
+        @media screen and (min-width: $w992) {
+            @include font-h3;
+        }
+    }
+
+    &__desc {
+        color: var(--color-text-2);
+        padding-bottom: 36px;
+
+        @media screen and (min-width: $w1440) {
+            padding-bottom: 24px;
+        }
+    }
+
+    &__item {
+        &:last-child {
+            & .cr-services-card {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.cr-services-card {
+    border: 2px solid var(--color-borders-2);
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: 0.3s ease;
+
+    @media screen and (min-width: $w760) {
+        display: flex;
+    }
+
+
+    &__main {
+        @media screen and (min-width: $w760) {
+            padding-left: 24px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        @media screen and (min-width: $w1440) {
+            padding-left: 36px;
+        }
+    }
+
+    &__image {
+
+        width: 100%;
+        max-width: 192px;
+
+        @media screen and (min-width: $w760) {
+            width: 96px;
+            min-width: 96px;
+        }
+
+        & picture {
+            @include picture(100%, contain);
+        }
+    }
+
+    &__title {
+        @include font-h5;
+        line-height: 120%;
+        transition: 0.3s ease;
+        padding-bottom: 0.8em;
+    }
+
+    &__desc {
+        color: var(--color-text-1);
+
+        font-size: 15px;
+    }
+
+    &:hover {
+        border-color: var(--color-accent-2);
+
+        & .cr-services-card {
+
+
+            &__title {
+                color: var(--color-accent-2);
+            }
+        }
+    }
+}
+
+.clean-room-imageblock {
+    padding: 48px 0;
+}
+
+.cr-imageblock {
+
+    @media screen and (min-width: $w992) {
+        display: flex;
+    }
+
+    &__text {
+        @media screen and (min-width: $w992) {
+            width: 62%;
+            padding-right: 30px;
+        }
+
+        & .formated-text {
+            &>:first-child {
+                margin-top: 0;
+            }
+
+            &>:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__img {
+        @media screen and (min-width: $w992) {
+            width: 38%;
+        }
+
+
     }
 }

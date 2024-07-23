@@ -261,6 +261,9 @@
         overflow: hidden;
         width: auto;
         display: inline-block;
+        max-width: 100%;
+        overflow-x: auto;
+        margin-top: 8px;
 
         & ul {
             display: inline-flex;

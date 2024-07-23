@@ -4434,6 +4434,10 @@ footer a {
   color: var(--color-accent-2);
 }
 
+.section-about-block--video .about-block__right {
+  padding-bottom: 24px;
+}
+
 .section-about-block--video .about-block__list {
   margin: -16px;
 }
@@ -8619,6 +8623,10 @@ section.section-home-contacts {
   padding: 40px 0;
 }
 
+.clean-room__right .form-small .checkbox {
+  margin-bottom: 6px;
+}
+
 .clean-room__tile,
 .clean-room__about {
   padding: 24px;
@@ -8631,9 +8639,23 @@ section.section-home-contacts {
   margin-top: 12px;
 }
 
+.clean-room__about .formated-text h4 {
+  margin-top: 0;
+}
+
+.clean-room__about .formated-text p {
+  margin: 16px 0;
+  line-height: 150%;
+}
+
+.clean-room__about .formated-text :last-child {
+  margin-bottom: 0;
+}
+
 .clean-room__about a {
   display: inline-flex;
   color: var(--color-accent-1);
+  font-weight: 600;
 }
 
 .clean-room__about a svg {
@@ -8649,40 +8671,8 @@ section.section-home-contacts {
   fill: var(--color-accent-2);
 }
 
-.cr-products {
-  padding: 48px 0;
-}
-
-.cr-products__title {
-  font-size: 24px;
-  font-family: Geometria;
-  font-weight: 800;
-  font-style: normal;
-  line-height: 150%;
-  padding-bottom: 0.8em;
-}
-
-.cr-products__subtitle {
-  padding-bottom: 24px;
-}
-
-.cr-products__right .btn {
-  width: 100%;
-}
-
-.cr-products__picture {
-  padding: 40px 0;
-}
-
-.cr-products__picture,
-.cr-products__image {
-  width: 100%;
-}
-
-.cr-products__picture svg,
-.cr-products__image svg {
-  width: 100%;
-  height: auto;
+.clean-room__gallery {
+  padding-top: 18px;
 }
 
 .cr-gallery__thumb picture,
@@ -8690,7 +8680,7 @@ section.section-home-contacts {
   width: 100%;
   position: relative;
   display: block;
-  padding-top: 67%;
+  padding-top: 66.3%;
 }
 
 .cr-gallery__thumb picture img,
@@ -8707,6 +8697,7 @@ section.section-home-contacts {
 .cr-gallery__thumb img,
 .cr-gallery__main img {
   width: 100%;
+  border-radius: 8px;
 }
 
 .cr-gallery__thumb {
@@ -8715,7 +8706,7 @@ section.section-home-contacts {
 
 .cr-gallery__thumb img {
   border: 2px solid var(--color-borders-1);
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 .cr-gallery__thumb .splide__slide.is-active img {
@@ -8770,6 +8761,201 @@ section.section-home-contacts {
 .tile-small__desc {
   color: var(--color-text-1);
   font-size: 15px;
+}
+
+.clean-room-applying {
+  padding: 48px 0px;
+}
+
+.clean-room-applying__title {
+  font-size: 24px;
+  font-family: Geometria;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 150%;
+  padding-bottom: 0.8em;
+}
+
+.clean-room-applying__wrp {
+  background-color: var(--color-bg-2);
+  padding: 16px 24px;
+  border-radius: 12px;
+}
+
+.clean-room-applying__list ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -3px;
+}
+
+.clean-room-applying__list ul li {
+  padding: 3px;
+}
+
+.clean-room-applying__list ul li a,
+.clean-room-applying__list ul li span {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.clean-room-applying__list ul li a::after,
+.clean-room-applying__list ul li span::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-position: right center;
+  background-repeat: no-repeat;
+  margin-left: 12px;
+  background-size: 20px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNi4yOTMuMjkzYTEgMSAwIDAxMS40MTQgMGw2IDZhMSAxIDAgMDEwIDEuNDE0bC02IDZhMSAxIDAgMDEtMS40MTQtMS40MTRMMjAuNTg2IDhIMWExIDEgMCAwMTAtMmgxOS41ODZsLTQuMjkzLTQuMjkzYTEgMSAwIDAxMC0xLjQxNHoiIGZpbGw9IiMwMUFGRDIiLz48L3N2Zz4=);
+  transition: 0.3s ease;
+}
+
+.clean-room-applying__list ul li:hover a,
+.clean-room-applying__list ul li:hover span {
+  border: 2px solid var(--color-accent-2);
+  color: var(--color-accent-2);
+}
+
+.clean-room-applying__list ul li:hover a::after,
+.clean-room-applying__list ul li:hover span::after {
+  width: 35px;
+  height: 24px;
+  background-size: 35px 20px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zMi4yOTMgNS4yOTNhMSAxIDAgMDExLjQxNCAwbDYgNmExIDEgMCAwMTAgMS40MTRsLTYgNmExIDEgMCAwMS0xLjQxNC0xLjQxNEwzNi41ODYgMTNIMWExIDEgMCAxMTAtMmgzNS41ODZsLTQuMjkzLTQuMjkzYTEgMSAwIDAxMC0xLjQxNHoiIGZpbGw9IiMwNEMiLz48L3N2Zz4=);
+}
+
+.clean-room-applying .formated-text ul {
+  padding-left: 0;
+}
+
+.clean-room-applying .formated-text ul li {
+  break-inside: avoid;
+}
+
+.clean-room-applying .formated-text > :last-child {
+  margin-bottom: 0;
+}
+
+.clean-room-products {
+  padding: 48px 0;
+}
+
+.cr-products__dash {
+  padding: 16px;
+  border: 2px solid var(--color-borders-2);
+  padding-left: 70px;
+  background-repeat: no-repeat;
+  display: inline-flex;
+  border-radius: 6px;
+  background-position: 20px 20px;
+  max-width: 370px;
+  font-size: 14px;
+  color: var(--color-text-1);
+  align-items: flex-end;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  display: none;
+}
+
+@keyframes arrow-dash {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+
+  33% {
+    transform: translateX(-5px) translateY(-5px);
+  }
+
+  33% {
+    transform: translateX(5px) translateY(5px);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.cr-products__dash::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTYgNmwxMiAxMm0wIDBWOG0wIDEwSDgiIHN0cm9rZT0iIzAxQUZEMiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  bottom: -5px;
+  animation: arrow-dash 1s linear infinite both;
+}
+
+.cr-products__title {
+  font-size: 24px;
+  font-family: Geometria;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 150%;
+  padding-bottom: 0.8em;
+}
+
+.cr-products__subtitle {
+  padding-bottom: 24px;
+  color: var(--color-text-2);
+}
+
+.cr-products__right {
+  padding-bottom: 36px;
+}
+
+.cr-products__picture {
+  padding: 40px 0 0 0;
+}
+
+.cr-products__picture,
+.cr-products__image {
+  width: 100%;
+}
+
+.cr-products__picture svg,
+.cr-products__image svg {
+  width: 100%;
+  height: auto;
+}
+
+.cr-products__picture {
+  display: none;
+}
+
+.cr-products__picture [data-tooltip-id] {
+  cursor: pointer;
+}
+
+.cr-products__picture [data-tooltip-id]:hover {
+  stroke: var(--color-accent-2);
+  fill: var(--color-accent-2);
+}
+
+.cr-products__picture .product-tooltip {
+  background-color: #fff;
+  padding: 13px;
+  border-radius: 12px;
+  border: 2px solid var(--color-borders-3);
+}
+
+.cr-products__image {
+  position: relative;
+}
+
+.cr-products__contact {
+  padding-top: 24px;
 }
 
 .product-tooltip {
@@ -8832,6 +9018,97 @@ section.section-home-contacts {
 
 .cr-contact__desc {
   padding-bottom: 12px;
+}
+
+.cr-contact__btn .btn {
+  font-size: 16px;
+}
+
+.clean-room-services {
+  padding: 36px 0;
+}
+
+.cr-services__title {
+  font-size: 24px;
+  font-family: Geometria;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 150%;
+  padding-bottom: 0.5em;
+}
+
+.cr-services__desc {
+  color: var(--color-text-2);
+  padding-bottom: 36px;
+}
+
+.cr-services__item:last-child .cr-services-card {
+  margin-bottom: 0;
+}
+
+.cr-services-card {
+  border: 2px solid var(--color-borders-2);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+}
+
+.cr-services-card__image {
+  width: 100%;
+  max-width: 192px;
+}
+
+.cr-services-card__image picture {
+  position: relative;
+  display: block;
+  padding-top: 100%;
+}
+
+.cr-services-card__image picture img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  color: transparent;
+}
+
+.cr-services-card__title {
+  font-size: 20px;
+  font-family: Geometria;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 160%;
+  line-height: 120%;
+  transition: 0.3s ease;
+  padding-bottom: 0.8em;
+}
+
+.cr-services-card__desc {
+  color: var(--color-text-1);
+  font-size: 15px;
+}
+
+.cr-services-card:hover {
+  border-color: var(--color-accent-2);
+}
+
+.cr-services-card:hover .cr-services-card__title {
+  color: var(--color-accent-2);
+}
+
+.clean-room-imageblock {
+  padding: 48px 0;
+}
+
+.cr-imageblock__text .formated-text > :first-child {
+  margin-top: 0;
+}
+
+.cr-imageblock__text .formated-text > :last-child {
+  margin-bottom: 0;
 }
 
 /* common styles */
@@ -9041,6 +9318,9 @@ section.section-home-contacts {
   overflow: hidden;
   width: auto;
   display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  margin-top: 8px;
 }
 
 .page__nav ul {
@@ -10101,6 +10381,52 @@ section.section-home-contacts {
     padding: 36px 0;
   }
 
+  .clean-room-applying__wrp {
+    padding: 24px 36px;
+  }
+
+  .cr-products__dash {
+    display: flex;
+  }
+
+  .cr-products__picture {
+    display: block;
+  }
+
+  .cr-products__tooltips {
+    display: none;
+  }
+
+  .cr-contact {
+    display: flex;
+    align-items: center;
+  }
+
+  .cr-contact__desc {
+    padding-bottom: 0;
+    font-size: 15px;
+  }
+
+  .cr-contact__btn {
+    padding-left: 24px;
+    margin-left: auto;
+  }
+
+  .cr-services-card {
+    display: flex;
+  }
+
+  .cr-services-card__main {
+    padding-left: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .cr-services-card__image {
+    width: 96px;
+    min-width: 96px;
+  }
+
   .page__title {
     padding-bottom: 20px;
   }
@@ -10901,17 +11227,74 @@ section.section-home-contacts {
     top: 30px;
   }
 
-  .clean-room__top {
+  .clean-room__about {
+    margin-bottom: 24px;
+  }
+
+  .tile-small__main {
+    padding-left: 12px;
+  }
+
+  .tile-small__title {
+    padding-bottom: 8px;
+  }
+
+  .clean-room-applying__title {
+    font-size: 40px;
+    font-family: Geometria;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 130%;
+    padding-bottom: 1.05em;
+  }
+
+  .clean-room-applying .formated-text ul {
+    column-count: 2;
+  }
+
+  .cr-products__head {
+    display: flex;
+    align-items: center;
+  }
+
+  .cr-products__title {
+    font-size: 40px;
+    font-family: Geometria;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 130%;
+    padding-bottom: 0.4em;
+  }
+
+  .cr-products__right {
+    padding-bottom: 0;
+    padding-left: 24px;
+    margin-left: auto;
+  }
+
+  .cr-products__right .btn {
+    font-size: 16px;
+  }
+
+  .cr-services__title {
+    font-size: 24px;
+    font-family: Geometria;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 137%;
+  }
+
+  .cr-imageblock {
     display: flex;
   }
 
-  .clean-room__left {
-    width: calc(100% - 400px);
-    padding-right: 40px;
+  .cr-imageblock__text {
+    width: 62%;
+    padding-right: 30px;
   }
 
-  .clean-room__right {
-    width: 400px;
+  .cr-imageblock__img {
+    width: 38%;
   }
 
   .page__title h1 {
@@ -10969,6 +11352,10 @@ section.section-home-contacts {
   .fb-slide__title {
     font-size: 32px;
   }
+
+  .cr-services__title {
+    font-size: 32px;
+  }
 }
 
 @media screen and (min-width: 992.98px) and (min-width: 992.98px) {
@@ -10981,6 +11368,19 @@ section.section-home-contacts {
   .section-about-block--video .about-block__list {
     grid-template-columns: repeat(3, 1fr);
     display: grid;
+  }
+
+  .clean-room__top {
+    display: flex;
+  }
+
+  .clean-room__left {
+    width: calc(100% - 400px);
+    padding-right: 40px;
+  }
+
+  .clean-room__right {
+    width: 400px;
   }
 }
 
@@ -11150,12 +11550,18 @@ section.section-home-contacts {
     width: 25%;
   }
 
-  .cr-products__title {
-    font-size: 40px;
-    font-family: Geometria;
-    font-weight: 800;
-    font-style: normal;
-    line-height: 130%;
+  .clean-room-applying__list ul li {
+    width: 33.33%;
+  }
+
+  .clean-room-applying__list ul li a,
+  .clean-room-applying__list ul li span {
+    padding: 16px 24px;
+  }
+
+  .clean-room-applying__list ul li a::after,
+  .clean-room-applying__list ul li span::after {
+    margin-left: auto;
   }
 }
 
@@ -11209,6 +11615,11 @@ section.section-home-contacts {
 
   .form__item > .form__item {
     flex-direction: row;
+  }
+
+  .video__button {
+    width: 58px;
+    height: 58px;
   }
 
   .header__wrp {
@@ -11492,6 +11903,82 @@ section.section-home-contacts {
     font-size: 20px;
   }
 
+  .clean-room__right .form-small {
+    padding: 30px;
+  }
+
+  .clean-room__right .form-small__desc {
+    font-size: 16px;
+    padding-bottom: 24px;
+  }
+
+  .clean-room__right .form-small .btn {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .clean-room__right .form-small .checkbox__text {
+    font-size: 15px;
+    line-height: 150%;
+  }
+
+  .clean-room__text:first-child .formated-text {
+    font-size: 18px;
+    line-height: 145%;
+  }
+
+  .clean-room__tile,
+  .clean-room__about {
+    padding: 24px 28px;
+  }
+
+  .clean-room__tile {
+    padding: 22px 24px;
+  }
+
+  .clean-room-applying__wrp {
+    padding: 46px;
+  }
+
+  .clean-room-applying__list ul {
+    margin: -6px;
+  }
+
+  .clean-room-applying__list ul li {
+    padding: 6px;
+  }
+
+  .clean-room-applying__list ul li a,
+  .clean-room-applying__list ul li span {
+    min-height: 72px;
+    font-weight: 600;
+  }
+
+  .clean-room-applying .formated-text {
+    padding-top: 20px;
+  }
+
+  .clean-room-products {
+    padding: 30px 0;
+  }
+
+  .cr-products__right .btn {
+    width: 310px;
+  }
+
+  .cr-contact__btn .btn {
+    width: 310px;
+  }
+
+  .cr-services__desc {
+    padding-bottom: 24px;
+  }
+
+  .cr-services-card__main {
+    padding-left: 36px;
+  }
+
   .page__breadcrumb {
     padding-bottom: 10px;
   }
@@ -11574,6 +12061,10 @@ section.section-home-contacts {
 }
 
 @media screen and (max-width: 992.98px) {
+  .section-about-block--video .about-block__right {
+    font-size: 15px;
+  }
+
   .top-category__item {
     width: 33.33%;
   }
@@ -11732,6 +12223,10 @@ section.section-home-contacts {
 
   .single-product__nav ul li {
     background-color: #fff;
+    width: 100%;
+  }
+
+  .cr-products__right .btn {
     width: 100%;
   }
 

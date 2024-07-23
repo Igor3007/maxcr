@@ -149,6 +149,11 @@
             height: 52px;
         }
 
+        @media screen and (min-width: $w1440) {
+            width: 58px;
+            height: 58px;
+        }
+
 
         & span {
             display: none;
@@ -184,24 +189,10 @@
                 opacity: 1;
             }
 
-            // @media screen and (min-width: $w1200) {
-            //     width: 60px;
-            //     min-width: 60px;
-            //     height: 60px;
-
-            // }
 
 
-            // @media screen and (min-width: $w760) {
-            //     width: rem(86);
-            //     height: rem(86);
-            // }
 
 
-            // @media screen and (max-width: $w480) {
-            //     width: rem(60);
-            //     height: rem(60);
-            // }
 
         }
     }
