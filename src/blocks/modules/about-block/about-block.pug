@@ -54,3 +54,61 @@ mixin about-block--video
                                 .card-icon__main
                                     .card-icon__text=item.title
                                     .card-icon__desc=item.desc
+
+mixin about-block--page
+   
+            .about-block.about-block--page
+                
+                .about-block__title Особенности группы компаний «MAX Clean Room»
+
+                .about-block__list
+
+                    each item in [about[0], about[1], about[2], about[3], about[4], about[5]]
+                        .about-block__item
+                            .card-icon
+                                .card-icon__img: +bgimage('/img/icons/'+item.image+'.svg')
+                                .card-icon__main
+                                    .card-icon__text=item.title
+                                    .card-icon__desc=item.desc
+
+                    .about-block__item
+                        .card-icon
+                            .card-icon__main
+                                .card-icon__text А также мы:
+                                .card-icon__desc
+                                    .formated-text  
+                                        ul
+                                            li Имеем портфолио, включающее более 600 проектов в 10 странах мира.
+                                            li Не срываем сроки, стремимся к максимальному качеству и сервису.
+                                            li Уверены в себе и можем выполнить любую задачу на самом высоком уровне.
+                                            li За 16 лет работы не получили ни одного негативного отзыва.
+                                            li Наши клиенты с гордостью приглашают всех желающих на экскурсии по построенным нами заводам.
+                                            li Всегда готовы к вызовам и <strong>будем рады работать над Вашим проектом</strong>.
+                            
+
+                    .about-block__item.about-block__item--video
+                        +video({
+                            'preview': '//img.youtube.com/vi/xGMTmfrNsz4/maxresdefault',
+                            'link': 'https://www.youtube.com/watch?v=xGMTmfrNsz4',
+                        })
+
+                    .about-block__item.about-block__item--full
+                        .card-icon
+                            .card-icon__main
+                                .card-icon__text Организационная структура
+                                .card-icon__desc
+                                    .formated-text  
+                                        p: strong Наша организационная структура включает множество направлений:
+                                        ul
+                                            li отдел проектирования чистых помещений;
+                                            li отдел чистых помещений;
+                                            li отдел проектирования систем вентиляции и кондиционирования;
+                                            li отдел оборудования;
+                                            li отдел снабжения;
+                                            li финансовый отдел;
+                                            li производства;
+                                            li администрация;
+                                            li отдел логистики;
+                                            li отдел маркетинга;
+                                            li служба контроля качества;
+                                            li монтажные бригады.

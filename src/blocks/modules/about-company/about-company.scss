@@ -1,0 +1,59 @@
+.section-about-company {
+    padding: 24px 0;
+
+    @media screen and (min-width: $w1440) {
+        padding: 44px 0;
+    }
+}
+
+.about-company {
+
+    &__top {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 24px;
+
+        @media screen and (min-width: $w1024) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__image {
+
+        padding-bottom: 12px;
+
+        @media screen and (min-width: $w1024) {
+            width: 35%;
+        }
+
+        @media screen and (min-width: $w1200) {
+            width: 48%;
+        }
+
+        & img {
+            border: 2px solid var(--color-borders-2);
+            border-radius: 12px;
+            transition: 0.5s ease;
+
+            &:hover {
+                border-color: var(--color-accent-2);
+            }
+        }
+    }
+
+    &__left {
+        @media screen and (min-width: $w1024) {
+            width: 65%;
+            padding-right: 48px;
+        }
+
+        @media screen and (min-width: $w1200) {
+            width: 52%;
+        }
+    }
+
+    &__gallery {
+        max-width: 1200px;
+    }
+}

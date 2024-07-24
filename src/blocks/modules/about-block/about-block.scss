@@ -133,13 +133,18 @@
         padding: 30px 40px;
     }
 
-
-
     &__main {
         padding-left: 18px;
 
         @media screen and (min-width: $w760) {
             padding-left: 0;
+        }
+
+        & .formated-text {
+            & ul {
+                font-size: 16px;
+                padding-left: 0;
+            }
         }
     }
 
@@ -174,6 +179,7 @@
     &__text {
         @include font-h5;
         padding-bottom: 6px;
+        transition: 0.5s ease;
 
         @media screen and (min-width: $w760) {
             @include font-h4;
@@ -263,4 +269,100 @@
             }
         }
     }
+}
+
+
+.about-block--page {
+
+    padding-top: 6px;
+
+    & .about-block {
+        &__right {
+            padding-bottom: 24px;
+
+            @media screen and (max-width: $w992) {
+                font-size: 15px;
+            }
+        }
+
+        &__title {
+            padding-bottom: 36px;
+        }
+
+        &__list {
+
+            margin: -16px;
+
+
+            @media screen and (min-width: $w1200) {
+                grid-template-columns: repeat(3, 1fr);
+                display: grid;
+            }
+
+            @media screen and (min-width: $w760) {
+                grid-template-columns: repeat(3, 2fr);
+                display: grid;
+            }
+        }
+
+        &__item {
+            width: 100%;
+
+            &--video {
+                grid-column-start: 2;
+                grid-column-end: 4;
+                grid-row-start: 3;
+                grid-row-end: 3;
+
+                @media screen and (max-width: $w992) {
+                    grid-column-start: 1;
+                }
+            }
+
+            &--full {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 4;
+                grid-row-end: 4;
+
+                @media screen and (max-width: $w992) {
+                    grid-column-start: 2;
+                }
+
+                & .formated-text {
+                    & ul {
+                        @media screen and (min-width: $w992) {
+                            column-count: 2;
+                            column-gap: 24px;
+                        }
+                    }
+                }
+
+                & .card-icon__text {
+                    @media screen and (min-width: $w1440) {
+                        font-size: 32px;
+                    }
+                }
+            }
+
+            & .video {
+                height: 100%;
+                border-radius: 8px;
+
+                &__preview {
+                    height: 100%;
+
+                    & picture {
+                        height: 100%;
+
+                        & img {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 }

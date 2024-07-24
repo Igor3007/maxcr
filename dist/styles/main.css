@@ -316,7 +316,6 @@ input[type="date"] {
 }
 
 .formated-text .table-responsive table {
-  min-width: auto;
   margin: 0;
 }
 
@@ -4396,6 +4395,11 @@ footer a {
   padding-left: 18px;
 }
 
+.card-icon__main .formated-text ul {
+  font-size: 16px;
+  padding-left: 0;
+}
+
 .card-icon__img {
   padding-bottom: 12px;
 }
@@ -4418,6 +4422,7 @@ footer a {
   font-style: normal;
   line-height: 160%;
   padding-bottom: 6px;
+  transition: 0.5s ease;
 }
 
 .card-icon__desc {
@@ -4467,6 +4472,57 @@ footer a {
 }
 
 .section-about-block--video .about-block__item .video__preview picture img {
+  height: 100%;
+}
+
+.about-block--page {
+  padding-top: 6px;
+}
+
+.about-block--page .about-block__right {
+  padding-bottom: 24px;
+}
+
+.about-block--page .about-block__title {
+  padding-bottom: 36px;
+}
+
+.about-block--page .about-block__list {
+  margin: -16px;
+}
+
+.about-block--page .about-block__item {
+  width: 100%;
+}
+
+.about-block--page .about-block__item--video {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+.about-block--page .about-block__item--full {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 4;
+}
+
+.about-block--page .about-block__item .video {
+  height: 100%;
+  border-radius: 8px;
+}
+
+.about-block--page .about-block__item .video__preview {
+  height: 100%;
+}
+
+.about-block--page .about-block__item .video__preview picture {
+  height: 100%;
+}
+
+.about-block--page .about-block__item .video__preview picture img {
   height: 100%;
 }
 
@@ -9227,6 +9283,34 @@ section.section-home-contacts {
   transform: rotate(405deg);
 }
 
+.section-about-company {
+  padding: 24px 0;
+}
+
+.about-company__top {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 24px;
+}
+
+.about-company__image {
+  padding-bottom: 12px;
+}
+
+.about-company__image img {
+  border: 2px solid var(--color-borders-2);
+  border-radius: 12px;
+  transition: 0.5s ease;
+}
+
+.about-company__image img:hover {
+  border-color: var(--color-accent-2);
+}
+
+.about-company__gallery {
+  max-width: 1200px;
+}
+
 /* common styles */
 
 .font-h2 {
@@ -10342,6 +10426,11 @@ section.section-home-contacts {
     display: grid;
   }
 
+  .about-block--page .about-block__list {
+    grid-template-columns: repeat(3, 2fr);
+    display: grid;
+  }
+
   .top-category__title {
     font-size: 40px;
     font-family: Geometria;
@@ -10796,6 +10885,11 @@ section.section-home-contacts {
   .about-block__item {
     width: 33.33%;
     padding: 12px;
+  }
+
+  .about-block--page .about-block__item--full .formated-text ul {
+    column-count: 2;
+    column-gap: 24px;
   }
 
   .advantages-block {
@@ -11536,6 +11630,20 @@ section.section-home-contacts {
   .clean-room__right {
     width: 400px;
   }
+
+  .about-company__top {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about-company__image {
+    width: 35%;
+  }
+
+  .about-company__left {
+    width: 65%;
+    padding-right: 48px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -11652,6 +11760,11 @@ section.section-home-contacts {
     padding-left: 36px;
   }
 
+  .about-block--page .about-block__list {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+  }
+
   .clients-block__top {
     display: flex;
     padding-bottom: 12px;
@@ -11716,6 +11829,14 @@ section.section-home-contacts {
   .clean-room-applying__list ul li a::after,
   .clean-room-applying__list ul li span::after {
     margin-left: auto;
+  }
+
+  .about-company__image {
+    width: 48%;
+  }
+
+  .about-company__left {
+    width: 52%;
   }
 }
 
@@ -11969,6 +12090,10 @@ section.section-home-contacts {
     font-size: 16px;
   }
 
+  .about-block--page .about-block__item--full .card-icon__text {
+    font-size: 32px;
+  }
+
   .top-category__desc {
     font-size: 18px;
   }
@@ -12169,6 +12294,10 @@ section.section-home-contacts {
     text-align: center;
   }
 
+  .section-about-company {
+    padding: 44px 0;
+  }
+
   .page__breadcrumb {
     padding-bottom: 10px;
   }
@@ -12253,6 +12382,18 @@ section.section-home-contacts {
 @media screen and (max-width: 992.98px) {
   .section-about-block--video .about-block__right {
     font-size: 15px;
+  }
+
+  .about-block--page .about-block__right {
+    font-size: 15px;
+  }
+
+  .about-block--page .about-block__item--video {
+    grid-column-start: 1;
+  }
+
+  .about-block--page .about-block__item--full {
+    grid-column-start: 2;
   }
 
   .top-category__item {
