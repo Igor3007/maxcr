@@ -325,6 +325,7 @@
                         background-size: 20px;
                         background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNi4yOTMuMjkzYTEgMSAwIDAxMS40MTQgMGw2IDZhMSAxIDAgMDEwIDEuNDE0bC02IDZhMSAxIDAgMDEtMS40MTQtMS40MTRMMjAuNTg2IDhIMWExIDEgMCAwMTAtMmgxOS41ODZsLTQuMjkzLTQuMjkzYTEgMSAwIDAxMC0xLjQxNHoiIGZpbGw9IiMwMUFGRDIiLz48L3N2Zz4=);
                         transition: 0.3s ease;
+                        transition-property: width;
 
                         @media screen and (min-width: $w1200) {
                             margin-left: auto;
@@ -647,6 +648,10 @@
         padding-bottom: 12px;
         font-weight: 800;
         font-size: 20px;
+
+        @media screen and (min-width: $w992) {
+            padding-bottom: 4px;
+        }
     }
 
     &__desc {

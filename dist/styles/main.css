@@ -357,7 +357,7 @@ input[type="date"] {
   display: block;
   position: absolute;
   left: 4px;
-  top: 0.6em;
+  top: 0.5em;
   transform: rotate(45deg);
   border-radius: 1px;
   background-color: var(--color-accent-2);
@@ -8823,6 +8823,7 @@ section.section-home-contacts {
   background-size: 20px;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNi4yOTMuMjkzYTEgMSAwIDAxMS40MTQgMGw2IDZhMSAxIDAgMDEwIDEuNDE0bC02IDZhMSAxIDAgMDEtMS40MTQtMS40MTRMMjAuNTg2IDhIMWExIDEgMCAwMTAtMmgxOS41ODZsLTQuMjkzLTQuMjkzYTEgMSAwIDAxMC0xLjQxNHoiIGZpbGw9IiMwMUFGRDIiLz48L3N2Zz4=);
   transition: 0.3s ease;
+  transition-property: width;
 }
 
 .clean-room-applying__list ul li:hover a,
@@ -11421,6 +11422,10 @@ section.section-home-contacts {
     font-size: 16px;
   }
 
+  .cr-contact__title {
+    padding-bottom: 4px;
+  }
+
   .cr-services__title {
     font-size: 24px;
     font-family: Geometria;
@@ -11773,6 +11778,11 @@ section.section-home-contacts {
   .formated-text ul li {
     padding-bottom: 14px;
     padding-left: 30px;
+  }
+
+  .formated-text ul li::before {
+    width: 7.5px;
+    height: 7.5px;
   }
 
   .btn {
