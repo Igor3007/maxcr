@@ -61,6 +61,7 @@
             border-radius: 6px;
             display: inline-block;
             transition: 0.3s ease;
+            white-space: nowrap;
 
             @include font-h3;
             color: var(--color-accent-1);
