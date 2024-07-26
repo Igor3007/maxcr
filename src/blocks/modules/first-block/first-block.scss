@@ -9,6 +9,8 @@
 
     &__bg {
         @include layer(1);
+        transition: 0.8s ease;
+        opacity: 1;
 
         & img {
             height: 100%;
@@ -27,7 +29,9 @@
 
 
 
-        & picture {}
+        &.fade-out-animate {
+            opacity: 0;
+        }
     }
 
     &__slides {
@@ -46,7 +50,7 @@
     &__slide {
         border-right: 2px solid #fff;
         margin-bottom: 2px;
-        transition: 0.6s ease;
+        transition: 1.5s linear;
         background-color: transparent;
 
         @media screen and (min-width: $w760) {
@@ -64,8 +68,12 @@
             }
         }
 
-        @media screen and (min-width: $w1440) {
+        @media screen and (min-width: 1880px) {
             padding: 48px;
+        }
+
+        @media screen and (min-width: $w1440) {
+            padding: 30px;
             min-height: 640px;
 
 
@@ -177,8 +185,12 @@
             line-height: 110%;
         }
 
-        @media screen and (min-width: $w1440) {
+        @media screen and (min-width: 1880px) {
             @include font-h1;
+        }
+
+        @media screen and (min-width: $w1440) {
+            font-size: 40px;
         }
 
         @media screen and (min-width: $w1200) {
@@ -198,16 +210,20 @@
         font-weight: 500;
         padding-right: 30px;
 
-        @media screen and (min-width: $w1440) {
+        @media screen and (min-width: 1880px) {
             font-size: 20px;
             line-height: 160%;
 
         }
 
+        @media screen and (min-width: $w1440) {
+            font-size: 17px;
+        }
+
         @media screen and (min-width: $w1200) {
             font-size: 17px;
             padding-bottom: 0;
-            transition: 0.3s ease;
+            transition: 0.5s ease;
 
         }
 
@@ -228,7 +244,7 @@
             max-height: 0;
             overflow: hidden;
             opacity: 0;
-            transition: 0.7s ease;
+            transition: 1.4s ease;
         }
 
         & p {
@@ -288,7 +304,7 @@
         @media screen and (min-width: $w1200) {
             height: 0;
             opacity: 0;
-            transition: 0.3s ease .3s;
+            transition: 0.4s ease .5s;
             margin-top: 0;
         }
 

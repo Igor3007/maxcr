@@ -360,10 +360,21 @@ document.addEventListener('DOMContentLoaded', function (event) {
     =========================================*/
 
     if (document.querySelector('.first-block__slide')) {
-        document.querySelectorAll('.first-block__slide').forEach(slide => {
+
+        const bgContainer = document.querySelector('.first-block__bg')
+
+        document.querySelectorAll('.first-block__slide').forEach((slide, index) => {
             slide.addEventListener('mouseenter', (e) => {
-                if (document.body.clientWidth > 992) {
-                    document.querySelector('.first-block__bg').innerHTML = slide.querySelector('.fb-slide__image').innerHTML
+                if (document.body.clientWidth > 992 && bgContainer.dataset.slideIndex != index) {
+
+                    bgContainer.classList.add('fade-out-animate')
+
+                    setTimeout(() => {
+                        bgContainer.innerHTML = slide.querySelector('.fb-slide__image').innerHTML
+                        bgContainer.classList.remove('fade-out-animate')
+                        bgContainer.dataset.slideIndex = index
+                    }, 600)
+
                 }
             })
         })
