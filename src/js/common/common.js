@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                         bgContainer.innerHTML = slide.querySelector('.fb-slide__image').innerHTML
                         bgContainer.classList.remove('fade-out-animate')
                         bgContainer.dataset.slideIndex = index
-                    }, 600)
+                    }, 200)
 
                 }
             })
@@ -386,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
     if (document.querySelector('[data-slider="product"]')) {
-        var splide = new Splide('[data-slider="product"]', {
+        var splide22 = new Splide('[data-slider="product"]', {
 
             arrows: true,
             pagination: false,
@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
 
-        splide.mount();
+        splide22.mount();
     }
 
     /* ==================================================
@@ -856,21 +856,28 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
                                 btn.classList.add('btn-loading')
 
-                                window.ajax({
-                                    type: 'POST',
-                                    url: form.getAttribute('action'),
-                                    data: params
+                                /*  window.ajax({
+                                     type: 'POST',
+                                     url: form.getAttribute('action'),
+                                     data: params
 
-                                }, (status, response) => {
+                                 }, (status, response) => {
 
-                                    if (status == 200) {
-                                        popupSuccess();
-                                        !btn.classList.contains('btn-loading') || btn.classList.remove('btn-loading')
-                                        instansePopup.close()
-                                    }
+                                     if (status == 200) {
+                                         popupSuccess();
+                                         !btn.classList.contains('btn-loading') || btn.classList.remove('btn-loading')
+                                         instansePopup.close()
+                                     }
 
 
-                                })
+                                 }) */
+
+                                setTimeout(() => {
+
+                                    popupSuccess();
+                                    !btn.classList.contains('btn-loading') || btn.classList.remove('btn-loading')
+                                    instansePopup.close()
+                                }, 1000)
                             })
                         }
 

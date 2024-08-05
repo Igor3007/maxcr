@@ -25,7 +25,9 @@ block main
             'Главная',
             'Сравнение продукции'
           ])
-        .page__title: h1 Сравнение продукции
+        .page__title
+          h1 Сравнение продукции
+          a(href='#'): button.btn Помочь с подбором 
 
   section.section-compare-page
     .container

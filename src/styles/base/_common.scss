@@ -42,11 +42,11 @@
         transition: 0.3s ease;
 
         &--prev {
-            left: -26px;
+            left: -64px;
         }
 
         &--next {
-            right: -26px;
+            right: -64px;
         }
 
         & svg {
@@ -567,5 +567,28 @@
                 }
             }
         }
+    }
+}
+
+.page__title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.page__title .btn {
+    height: 52px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: $w480) {
+
+    .page__title a,
+    .page__title .btn {
+
+        width: 100%;
+        display: block;
+
     }
 }
