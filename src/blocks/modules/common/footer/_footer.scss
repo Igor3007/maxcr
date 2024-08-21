@@ -95,7 +95,7 @@ footer {
         color: var(--color-text-2);
 
         @media screen and (min-width: $w1440) {
-            padding-bottom: 64px;
+            padding-bottom: 42px;
         }
     }
 
@@ -133,7 +133,17 @@ footer {
         padding-bottom: 12px;
 
         @media screen and (min-width: $w1440) {
-            padding-bottom: 36px;
+            padding-bottom: 22px;
+        }
+
+        & .ic-catalog {
+            width: 38px;
+            height: 38px;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center;
+            vertical-align: middle;
+            margin-left: 12px;
         }
 
         & ul {
@@ -287,6 +297,7 @@ footer {
             display: block;
             font-weight: bold;
             padding-bottom: 14px;
+            color: #fff;
 
             @media screen and (min-width: $w1200) {
                 display: inline;

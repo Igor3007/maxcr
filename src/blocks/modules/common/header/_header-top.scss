@@ -214,6 +214,7 @@
     padding: 0 16px;
     border-left: 1px solid var(--color-borders-2);
     height: 100%;
+    font-weight: 500;
 
     & svg {
         fill: var(--color-accent-1);
@@ -248,6 +249,7 @@
 
         display: flex;
         align-items: center;
+        color: var(--color-text-2);
 
         & .is-active {
             padding-left: 26px;
