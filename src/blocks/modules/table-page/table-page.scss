@@ -1,0 +1,109 @@
+.table-page {
+    padding: 0px 0 20px 0;
+
+    @media screen and (min-width: $w576) {
+        padding: 50px 0 50px 0;
+    }
+
+
+    & .table {
+        &__td {
+            &:first-child {
+                @media screen and (max-width: $w992) {
+                    display: none;
+                }
+            }
+
+            &:nth-child(2) {
+                @media screen and (max-width: $w992) {
+                    font-weight: 600;
+
+                    &::before {
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+.table-ref {
+    padding: 0px 0 20px 0;
+
+    @media screen and (min-width: $w576) {
+        padding: 50px 0 50px 0;
+    }
+
+    & .table {
+
+        &__tr {
+
+            &.is-hide {
+                display: none;
+            }
+
+            @media screen and (max-width: $w992) {
+                display: flex;
+
+            }
+        }
+
+        &__td {
+
+            @media screen and (max-width: $w992) {
+                background-color: var(--color-bg-2);
+            }
+
+            &:first-child {
+                @media screen and (max-width: $w992) {
+                    order: 1;
+                }
+            }
+
+
+            &:nth-child(2) {
+                @media screen and (max-width: $w992) {
+                    font-weight: 600;
+                    order: 0;
+
+                    &::before {
+                        font-weight: normal;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                @media screen and (max-width: $w992) {
+                    order: 2;
+                }
+            }
+        }
+    }
+
+    &__more {
+        display: none;
+
+        &.is-show {
+            display: block;
+        }
+
+        & div {
+            background-color: var(--color-bg-2);
+            text-align: center;
+            font-size: 14px;
+            padding: 12px 0;
+            border-radius: 6px;
+            cursor: pointer;
+            color: var(--color-accent-1);
+            font-weight: 600;
+            transition: 0.3s ease;
+
+            &:hover {
+                background-color: var(--color-bg-3);
+                color: var(--color-accent-2);
+            }
+        }
+    }
+}

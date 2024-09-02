@@ -34,8 +34,12 @@
             & .catalog {
                 &__nav {
                     & ul {
-                        height: 92px;
+                        height: 96px;
                         overflow: hidden;
+
+                        @media screen and (min-width: $w992) {
+                            height: 160px;
+                        }
                     }
                 }
             }
@@ -89,6 +93,7 @@
                     width: calc(100% - 24px);
                     display: block;
                     transition: 0.3s ease-in;
+                    width: 100%;
                 }
 
                 & .ic_24 {

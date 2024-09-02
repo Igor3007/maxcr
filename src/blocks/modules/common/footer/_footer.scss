@@ -11,7 +11,7 @@ footer {
     padding: 24px 0;
     border-top: 1px solid var(--color-bg-7);
 
-    @media screen and (min-width: $w1440) {
+    @media screen and (min-width: $w1510) {
         padding: 92px 0 29px;
     }
 
@@ -54,13 +54,13 @@ footer {
 
             &--contacts {
 
-                @media screen and (min-width: $w1440) {
+                @media screen and (min-width: $w1510) {
                     padding-left: 32px;
                 }
 
                 & .footer {
                     &__link {
-                        @media screen and (min-width: $w1440) {
+                        @media screen and (min-width: $w1510) {
                             padding-bottom: 14px;
                         }
                     }
@@ -73,7 +73,7 @@ footer {
 
         padding-bottom: 24px;
 
-        @media screen and (min-width: $w1440) {
+        @media screen and (min-width: $w1510) {
             padding-bottom: 24px;
         }
 
@@ -94,7 +94,11 @@ footer {
         padding-bottom: 36px;
         color: var(--color-text-2);
 
-        @media screen and (min-width: $w1440) {
+        @media screen and (min-width: $w576) {
+            padding-bottom: 20px;
+        }
+
+        @media screen and (min-width: $w1510) {
             padding-bottom: 42px;
         }
     }
@@ -102,7 +106,7 @@ footer {
     &__link {
         padding-bottom: 12px;
 
-        @media screen and (min-width: $w1440) {
+        @media screen and (min-width: $w1510) {
             padding-bottom: 52px;
         }
     }
@@ -132,7 +136,7 @@ footer {
         display: none;
         padding-bottom: 12px;
 
-        @media screen and (min-width: $w1440) {
+        @media screen and (min-width: $w1510) {
             padding-bottom: 22px;
         }
 
@@ -152,7 +156,7 @@ footer {
                 transition: 0.3s ease;
                 transform: translateX(0.1px);
 
-                @media screen and (min-width: $w1440) {
+                @media screen and (min-width: $w1510) {
                     padding: 10px 0;
                 }
 
@@ -167,7 +171,7 @@ footer {
                 & a {
                     color: #fff;
 
-                    @media screen and (min-width: $w1440) {
+                    @media screen and (min-width: $w1510) {
                         font-size: 16px;
                         font-weight: 600;
                     }
@@ -243,7 +247,7 @@ footer {
         font-size: 14px;
         color: var(--color-text-2);
 
-        @media screen and (min-width: $w1440) {
+        @media screen and (min-width: $w1510) {
             font-size: 15px;
             padding-bottom: 6px;
         }
@@ -254,7 +258,7 @@ footer {
             font-size: 16px;
             font-weight: bold;
 
-            @media screen and (min-width: $w1440) {
+            @media screen and (min-width: $w1510) {
                 font-size: 18px;
             }
 
@@ -313,7 +317,7 @@ footer {
         line-height: 143%;
         max-width: 900px;
 
-        @media screen and (min-width: $w576) {
+        @media screen and (min-width: $w1510) {
             font-size: 14px;
         }
 
@@ -325,7 +329,7 @@ footer {
     &__dev {
         color: var(--color-text-2);
 
-        @media screen and (min-width: $w1440) {
+        @media screen and (min-width: $w1510) {
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -341,18 +345,26 @@ footer {
             padding-bottom: 6px;
             font-size: 13px;
 
-            @media screen and (min-width: $w576) {
+            @media screen and (min-width: $w1510) {
                 padding-bottom: 12px;
                 font-size: 16px;
             }
 
-            @media screen and (min-width: $w1440) {
+            @media screen and (min-width: $w1510) {
                 display: inline;
             }
         }
 
         & img {
             max-width: 180px;
+
+            @media screen and (min-width: $w576) {
+                max-width: 165px;
+            }
+
+            @media screen and (min-width: $w1510) {
+                max-width: 180px;
+            }
         }
     }
 }

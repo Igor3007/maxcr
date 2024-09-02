@@ -1,0 +1,126 @@
+extends ../layouts/main
+
+include ../../blocks/components/breadcrumb/breadcrumb.pug
+include ../../blocks/modules/catalog/catalog.pug
+include ../../blocks/modules/catalog-category/catalog-category
+include ../../blocks/modules/contacts-block/contacts-block
+include ../../blocks/modules/clients-block/clients-block.pug
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Max Clean Room - Референс-лист выполненных проектов"
+ 
+
+block main
+   
+  section.section-page
+    .container
+      .page
+        .page__breadcrumbs
+          +breadcrumb([
+            'Главная',
+            'О компании',
+            'Референс-лист выполненных проектов',
+          ])
+        .page__title: h1 Референс-лист выполненных проектов
+
+  section.section-table-ref
+    .container
+      .table-ref
+        .table
+          .table__tr
+            .table__th Год
+            .table__th Клиент
+            .table__th Страна
+            .table__th Проект
+          each item in [1,1,1]
+           
+            .table__tr
+              .table__td 2024
+              .table__td ООО «Новотекс+»
+              .table__td РФ
+              .table__td Поставка оборудования для чистых помещений для детской больницы.
+            .table__tr
+              .table__td 2024
+              .table__td ФГУП НПЦ «Фармзащита» ФМБА России
+              .table__td РФ
+              .table__td Поставка оборудования для чистых помещений для фармацевтической компании.
+            .table__tr
+              .table__td 2024
+              .table__td СП ООО «Фармлэнд»
+              .table__td РБ
+              .table__td Поставка оборудования для чистых помещений для нужд лаборатории.
+            .table__tr
+              .table__td 2024
+              .table__td ООО «ЕДС ЛАБ»
+              .table__td РФ
+              .table__td Поставка оборудования для чистых помещений для фармацевтической компании.
+            .table__tr
+              .table__td 2024
+              .table__td ООО «МК Протон»
+              .table__td РФ
+              .table__td Поставка оборудования для чистых помещений для строительной компании.
+            .table__tr
+              .table__td 2024
+              .table__td ООО «Инновационное образование»
+              .table__td РФ
+              .table__td Поставка и монтаж локальной чистой зоны класса ИСО6 для нужд образовательного центра на базе Сколково.
+            .table__tr
+              .table__td 2024
+              .table__td ТОО «ЕвроКристалл»
+              .table__td КЗ
+              .table__td Поставка ограждающих конструкций и комплекта дверных блоков для строительства лабораторного комплекса.
+            .table__tr
+              .table__td 2024
+              .table__td ООО «Лаборатории Весслинг»
+              .table__td РФ
+              .table__td Поставка оборудования для чистых помещений для нужд лаборатории.
+            .table__tr
+              .table__td 2024
+              .table__td ООО «ПСК Фарма»
+              .table__td РФ
+              .table__td Поставка инструментов из нержавеющей стали для чистых помещений для фармацевтической компании.
+            .table__tr
+              .table__td 2024
+              .table__td МФТИ
+              .table__td РФ
+              .table__td Разработка проекта, производство, монтаж и валидация чистых помещений, материалов и вентиляционного оборудования для физико-технического института.
+            .table__tr
+              .table__td 2024
+              .table__td ООО «РХС»
+              .table__td РФ
+              .table__td Поставка оборудования для чистых помещений для оптовой компании.
+            .table__tr
+              .table__td 2024
+              .table__td АО «НИЦЭВТ»
+              .table__td РФ
+              .table__td Поставка оборудования для чистых помещений для научно-исследовательского предприятия.
+            .table__tr
+              .table__td 2024
+              .table__td ООО «К1 Медицина»
+              .table__td РФ
+              .table__td Поставка оборудования для чистых помещений для поликлиники в Сахалинской области.
+            .table__tr
+              .table__td 2024
+              .table__td ООО «Гротекс»
+              .table__td РФ
+              .table__td Поставка ограждающих конструкций чистых помещений для фармацевтического производства.
+            .table__tr
+              .table__td 2024
+              .table__td ООО «Катэн»
+              .table__td РФ
+              .table__td Поставка ограждающих конструкций чистых помещений для строительства производственной площадки.
+
+      .table-ref__more
+        div Показать все проекты
+        
+  +clients-block 
+  +contacts-block
+ 
+
+ 
+ 
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 

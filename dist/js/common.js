@@ -1787,5 +1787,30 @@ document.addEventListener('DOMContentLoaded', function (event) {
         })
     }
 
+    /* ======================================
+    SHOW MORE REFERENCE
+    ======================================*/
+
+    if (document.querySelector('.table-ref')) {
+        const items = document.querySelectorAll('.table-ref .table__tr')
+        const btn = document.querySelector('.table-ref__more')
+
+        items.forEach((item, index) => {
+            if (index > 30) {
+                item.classList.add('is-hide')
+                btn.classList.add('is-show')
+            }
+        })
+
+        btn.addEventListener('click', () => {
+            items.forEach((item, index) => {
+                !item.classList.contains('is-hide') || item.classList.remove('is-hide')
+            })
+
+            btn.classList.remove('is-show')
+        })
+
+    }
+
 
 }); //dcl
