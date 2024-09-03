@@ -12463,6 +12463,11 @@ section.section-home-contacts {
     line-height: 150%;
   }
 
+  .clients-block__right {
+    font-size: 18px;
+    line-height: 155%;
+  }
+
   .clients-marquee {
     padding: 30px 0;
   }
