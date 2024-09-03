@@ -3114,12 +3114,12 @@ template {
 .table__th,
 .table__td {
   padding: 8px 14px;
-  border-radius: 6px;
   line-height: 120%;
   font-size: 14px;
   border: 4px solid #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: 0.2s ease;
+  vertical-align: middle;
 }
 
 .table__th {
@@ -9458,6 +9458,38 @@ section.section-home-contacts {
   max-width: 1200px;
 }
 
+.section-table-page table th,
+.section-table-page table td {
+  background-color: var(--color-bg-2);
+  border: 4px solid #fff;
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 140%;
+  border-radius: 12px;
+}
+
+.section-table-page table th p,
+.section-table-page table td p {
+  padding: 0;
+  margin: 0;
+}
+
+.section-table-page table tr:nth-child(even) td {
+  background-color: #fff;
+}
+
+.section-table-page table tr:first-child th,
+.section-table-page table tr:first-child td {
+  background-color: var(--color-bg-6);
+  color: #fff;
+  font-weight: 600;
+}
+
+.section-table-page table tr:hover td {
+  background-color: var(--color-accent-2);
+  color: #fff;
+}
+
 .table-page {
   padding: 0px 0 20px 0;
 }
@@ -11782,6 +11814,11 @@ section.section-home-contacts {
 
   .history-item__text {
     font-size: 16px;
+  }
+
+  .table-ref .table__td:nth-child(3) {
+    vertical-align: middle;
+    text-align: center;
   }
 
   .page__title h1 {
