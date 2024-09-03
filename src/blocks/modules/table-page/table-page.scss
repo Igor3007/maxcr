@@ -58,6 +58,10 @@
     & .table {
         &__td {
             &:first-child {
+                @media screen and (min-width: $w992) {
+                    text-align: center;
+                }
+
                 @media screen and (max-width: $w992) {
                     display: none;
                 }
@@ -105,6 +109,8 @@
             }
         }
 
+
+
         &__td {
 
             @media screen and (max-width: $w992) {
@@ -112,6 +118,10 @@
             }
 
             &:first-child {
+                @media screen and (min-width: $w992) {
+                    text-align: center;
+                }
+
                 @media screen and (max-width: $w992) {
                     order: 1;
                 }
