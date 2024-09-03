@@ -64,6 +64,11 @@
             }
 
             &:nth-child(2) {
+
+                @media screen and (min-width: $w992) {
+                    width: 30%;
+                }
+
                 @media screen and (max-width: $w992) {
                     font-weight: 600;
 

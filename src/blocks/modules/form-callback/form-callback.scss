@@ -11,6 +11,35 @@
             padding-bottom: 90px;
             padding-top: 0;
         }
+
+        &--cooperation {
+            padding-bottom: 40px;
+            padding-top: 0;
+
+            & .form-callback {
+                &__desc {
+                    @media screen and (min-width: $w1440) {
+                        padding-bottom: 32px;
+                    }
+                }
+
+                &__fields {
+
+
+
+                    & textarea {
+                        height: 150px;
+
+
+                    }
+
+                    & .form-attach {
+                        padding-top: 14px;
+                        padding-bottom: 12px;
+                    }
+                }
+            }
+        }
     }
 
 

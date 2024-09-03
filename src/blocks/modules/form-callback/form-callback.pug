@@ -58,5 +58,44 @@ mixin form-callback--vacancy
                                     button.btn(type="submit") Откликнуться
                                 .form__subitem
                                     .form__note 
-                                       +checkbox('Нажимая на кнопку «Откликнуться», я соглашаюсь на обработку персональных данных', 'policy', 'checked')
+                                       +checkbox('Нажимая на кнопку "Откликнуться", я соглашаюсь на обработку персональных данных', 'policy', 'checked')
+                                
+
+
+mixin form-callback--cooperation
+    section.section-form-callback.section-form-callback--cooperation
+        .container
+            .form-callback
+                .form-callback__title Или свяжитесь с нами через сайт
+                .form-callback__desc Присылайте свои предложения или узнавайте подробнее об условиях сотрудничества. Или просто отправьте свои контакты — и мы свяжемся с вами.
+                .form-callback__fields
+                    form(action='#' method='POST')
+                        .form
+                            .form__item
+                                .form__subitem: input(type="text" required placeholder="Ваше имя")
+                                .form__subitem: input(type="tel" data-maska="+7(###)##-##-##" required placeholder="Контактный телефон")
+                                .form__subitem: input(type="text" placeholder="Какую компанию представляете")
+
+                            .form__item
+                                .form__subitem
+                                    textarea(placeholder="Сообщение")
+
+                            .form__item
+                                .form__subitem
+                                    .form-attach
+                                        .form-attach__btn
+                                            label
+                                                input(type="file" id="attach-file")
+                                                +icons('#ic_attach')
+                                                span Прикрепить файл резюме 
+                                        .form-attach__txt (подходят файлы форматов: .doc, .docx, .pdf)
+
+                                    .attach-filelist
+
+                            .form__item
+                                .form__subitem.form__subitem--button
+                                    button.btn(type="submit") Отправить
+                                .form__subitem
+                                    .form__note 
+                                       +checkbox('Нажимая на кнопку Отправить, я соглашаюсь на обработку персональных данных', 'policy', 'checked')
                                 
