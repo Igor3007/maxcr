@@ -19,6 +19,12 @@
         @media screen and (min-width: $w1200) {
             font-size: 32px;
         }
+
+        @media screen and (max-width: $w992) {
+            font-size: 28px;
+        }
+
+
     }
 
     &__label {
@@ -37,16 +43,37 @@
     &__left {
         padding: 12px;
         margin: -12px;
-        width: 100%;
+
         flex-grow: 1;
     }
 
     &__left {
-        max-width: 628px;
+        @media screen and (min-width: $w992) {
+            max-width: 628px;
+        }
+
+        @media screen and (min-width: $w760) and (max-width: $w992) {
+            display: flex;
+
+            & .mcr-orders {
+                &__item {
+                    min-width: 320px;
+                }
+            }
+
+            & .mcr-block {
+                height: 100%;
+            }
+        }
     }
 
     &__item {
-        padding: 12px;
+        padding: 12px 0;
+
+        @media screen and (min-width: $w760) {
+            padding: 12px;
+
+        }
     }
 
 
@@ -60,6 +87,10 @@
     &__title {
         @include font-h4;
         padding-bottom: 8px;
+
+        @media screen and (max-width: $w992) {
+            font-size: 20px;
+        }
     }
 
     &__desc {
@@ -87,10 +118,10 @@
             flex-direction: column;
             gap: 12px;
 
-            & li {}
 
             & a {
                 display: flex;
+                align-items: center;
                 background-color: var(--color-bg-2);
                 padding: 14px 16px;
                 border-radius: 6px;
@@ -125,9 +156,13 @@
     }
 
     &__label {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         padding-bottom: 6px;
+
+        @media screen and (min-width: $w1440) {
+            font-size: 18px;
+        }
     }
 
     &__row {
@@ -146,6 +181,9 @@
 
             display: flex;
             gap: 24px;
+            flex-wrap: wrap;
+
+
 
 
             & li {
@@ -189,6 +227,24 @@
 }
 
 .order-row {
+
+    @media screen and (max-width: $w576) {
+        padding-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+
+        &>div {
+            flex-grow: 1;
+            flex-basis: 150px;
+
+            &:first-child {
+                width: 100%;
+                flex-basis: 100%;
+            }
+        }
+    }
+
     @media screen and (min-width: $w576) {
         display: table-row;
 
@@ -227,6 +283,12 @@
 
     &__head {
 
+        display: none;
+
+        @media screen and (min-width: $w576) {
+            display: table-cell;
+        }
+
         & span {
             background-color: var(--color-bg-6);
             color: #fff;
@@ -235,5 +297,90 @@
         }
     }
 
+    & .order {
+        &-id {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
 
+            & a {
+                font-weight: 700;
+                color: var(--color-accent-1);
+            }
+
+            & svg {
+                fill: var(--color-accent-1);
+                cursor: pointer;
+            }
+
+            &:hover {
+                background-color: var(--color-bg-3);
+
+                & svg {
+                    fill: var(--color-accent-2);
+                }
+            }
+
+        }
+
+        &-status {
+            background-color: #eee;
+            font-weight: 500;
+            position: relative;
+            padding-left: 30px;
+
+            &::before {
+                content: '';
+                width: 8px;
+                height: 8px;
+                display: block;
+                position: absolute;
+                left: 10px;
+                top: calc(50% - 4px);
+                transform: rotate(45deg);
+                border-radius: 1px;
+                background-color: #888;
+            }
+        }
+    }
+
+
+
+
+}
+
+.status {
+    &--orange {
+        & .order-status {
+            background-color: #FFFBF5;
+            color: #F59300;
+
+            &::before {
+                background-color: #F59300;
+            }
+        }
+    }
+
+    &--gray {
+        & .order-status {
+            background-color: #F7F7F7;
+            color: #7688AD;
+
+            &::before {
+                background-color: #7688AD;
+            }
+        }
+    }
+
+    &--green {
+        & .order-status {
+            background-color: #F0FFFA;
+            color: #00B87A;
+
+            &::before {
+                background-color: #00B87A;
+            }
+        }
+    }
 }

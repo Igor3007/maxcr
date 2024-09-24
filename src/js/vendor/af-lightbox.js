@@ -4,6 +4,7 @@ class afLightbox {
         this.modal = '';
         if (opion) {
             this.mobileBottom = (opion.mobileInBottom ? opion.mobileInBottom : false)
+            this.clases = (opion.clases ? opion.clases : null)
         }
     }
 
@@ -13,7 +14,7 @@ class afLightbox {
 
     createTemplate() {
         let template = document.createElement('div')
-        template.innerHTML = `<div class="af-popup"> <div class="af-popup__bg"></div><div class="af-popup__wrp"><div class="af-popup__container"><div class="af-popup__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" tabindex="-1"><path d="M20 20L4 4m16 0L4 20"></path></svg></div><div class="af-popup__content"></div></div></div></div>`
+        template.innerHTML = `<div class="af-popup ${this.clases} "> <div class="af-popup__bg"></div><div class="af-popup__wrp"><div class="af-popup__container"><div class="af-popup__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" tabindex="-1"><path d="M20 20L4 4m16 0L4 20"></path></svg></div><div class="af-popup__content"></div></div></div></div>`
         document.body.append(template)
         this.instanse = template;
         return template;

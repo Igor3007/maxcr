@@ -19,18 +19,23 @@ header {
         padding-left: 0;
         margin-right: 38px;
 
+        @media screen and (max-width: $w576) {
+            margin-right: 16px;
+        }
+
         @media screen and (min-width: $w992) {
             margin-left: 0;
         }
 
         & .bgimage {
             display: inline-block;
-            width: 160px;
+            width: 140px;
             height: 68px;
             @include bgimage-contain;
 
             @media screen and (min-width: $w576) {
                 height: 60px;
+                width: 160px;
             }
 
             @media screen and (min-width: $w1440) {
@@ -49,17 +54,21 @@ header {
 
         & ul {
 
-            @media screen and (min-width: $w992) {
-                display: flex;
-            }
-
-            display: none;
+            display: flex;
             align-items: center;
             height: 100%;
 
             & li {
 
                 padding: 6px 14px;
+
+                @media screen and (max-width: $w992) {
+                    display: none;
+
+                    &:first-child {
+                        display: block;
+                    }
+                }
 
                 & a {
                     display: flex;
@@ -103,6 +112,25 @@ header {
             display: flex;
             align-items: center;
             font-size: 15px;
+            font-weight: 500;
+
+            @media screen and (max-width: $w576) {
+                background-color: var(--color-bg-2);
+                width: 48px;
+                height: 48px;
+                justify-content: center;
+                border-radius: 6px;
+
+                & svg {
+                    margin-right: 0;
+                }
+            }
+
+            & span {
+                @media screen and (max-width: $w576) {
+                    display: none;
+                }
+            }
 
             &:hover {
                 color: var(--color-accent-2);

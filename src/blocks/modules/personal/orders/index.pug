@@ -1,4 +1,67 @@
 mixin orders
+
+    - 
+        let arr = [
+            ['1278990',
+                '12.04.2024',
+                'Выполнен',
+            ],
+
+            ['1265678',
+                '29.03.2024',
+                'В процессе'
+            ],
+
+            ['1260617',
+                '29.03.2024',
+                'В процессе'
+            ],
+
+            ['1254443',
+                '29.03.2024',
+                'Приостановлен'
+            ],
+
+            ['1251119',
+                '06.06.2023',
+                'Выполнен'
+            ],
+
+            ['1247675',
+                '17.02.2023',
+                'Выполнен'
+            ],
+
+            ['1243210',
+                '22.11.2022',
+                'Выполнен'
+            ],
+
+            ['1242004',
+                '01.08.2022',
+                'Выполнен'
+            ],
+
+            ['1239552',
+                '17.09.2021',
+                'Выполнен'
+            ],
+
+            ['1238765',
+                '24.12.2020',
+                'Выполнен'
+            ]
+        ];
+
+        function getStatusClass(id) {
+            let arr = {
+                'В процессе': 'status--orange',
+                'Приостановлен': 'status--gray',
+                'Выполнен': 'status--green',
+            }
+            return arr[id]
+        }
+
     section.section-mcr-orders
         .container
             .mcr-orders
@@ -82,45 +145,14 @@ mixin orders
                                         .order-row__head: span № заказа
                                         .order-row__head: span Дата
                                         .order-row__head: span Статус
-                                    .order-row
-                                        .order-row__col: span 1278990
-                                        .order-row__col: span 12.04.2024
-                                        .order-row__col: span Выполнен
-                                    .order-row
-                                        .order-row__col: span 1265678
-                                        .order-row__col: span 29.03.2024
-                                        .order-row__col: span В процессе
-                                    .order-row
-                                        .order-row__col: span 1260617
-                                        .order-row__col: span 29.03.2024
-                                        .order-row__col: span В процессе
-                                    .order-row
-                                        .order-row__col: span 1254443
-                                        .order-row__col: span 29.03.2024
-                                        .order-row__col: span Приостановлен
-                                    .order-row
-                                        .order-row__col: span 1251119
-                                        .order-row__col: span 06.06.2023
-                                        .order-row__col: span Выполнен
-                                    .order-row
-                                        .order-row__col: span 1247675
-                                        .order-row__col: span 17.02.2023
-                                        .order-row__col: span Выполнен
-                                    .order-row
-                                        .order-row__col: span 1243210
-                                        .order-row__col: span 22.11.2022
-                                        .order-row__col: span Выполнен
-                                    .order-row
-                                        .order-row__col: span 1242004
-                                        .order-row__col: span 01.08.2022
-                                        .order-row__col: span Выполнен
-                                    .order-row
-                                        .order-row__col: span 1239552
-                                        .order-row__col: span 17.09.2021
-                                        .order-row__col: span Выполнен
-                                    .order-row
-                                        .order-row__col: span 1238765
-                                        .order-row__col: span 24.12.2020
-                                        .order-row__col: span Выполнен
+                                    each item in arr    
+                                        .order-row(class=getStatusClass(item[2]))
+                                            .order-row__col
+                                                span.order-id(data-copy=item[0])
+                                                    a(href="./order.html")= item[0]
+                                                    +icons('#ic_copy')
+                                            .order-row__col: span= item[1]
+                                            .order-row__col: span.order-status= item[2]
+                                    
                                 .mcr-block__more
                                     button.btn.btn-light Показать все заказы

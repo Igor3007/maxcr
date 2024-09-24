@@ -1,0 +1,11 @@
+extends ../../layouts/personal
+
+block variables
+  include ../../../data/data.pug
+  - const title = "Личный кабинет - Max Clean Room"
+
+block main
+ 
+  include ../../../blocks/modules/personal/sinsgle-order/sinsgle-order.pug
+
+  +single-order
