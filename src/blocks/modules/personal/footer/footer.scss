@@ -1,0 +1,59 @@
+.footer-bottom {
+    background-color: #fff;
+    padding: 18px 0;
+
+
+
+    & .container {
+        @media screen and (min-width: $w1200) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__info {
+        @media screen and (min-width: $w1200) {
+            flex-grow: 1;
+        }
+    }
+
+    &__company {
+        padding-bottom: 0;
+        font-size: 16px;
+        color: var(--color-text-2);
+
+        @media screen and (min-width: $w992) {
+            padding-bottom: 12px;
+        }
+
+        & strong {
+            display: block;
+            font-weight: bold;
+            padding-bottom: 14px;
+            color: var(--color-text-2);
+
+            @media screen and (min-width: $w1200) {
+                display: inline;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__copyright {
+        font-size: 13px;
+        color: var(--color-text-2);
+        padding-bottom: 24px;
+        line-height: 143%;
+
+
+        @media screen and (min-width: $w1510) {
+            font-size: 14px;
+        }
+
+        @media screen and (min-width: $w1200) {
+            padding-bottom: 0;
+        }
+    }
+
+
+}

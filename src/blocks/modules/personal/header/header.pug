@@ -1,0 +1,20 @@
+.container
+    .header
+        .header__logo: +bgimage('/img/common/logo.png')
+        .header__links
+            ul
+                li: a(href='/')
+                    +icons('#ic_back')
+                    span На сайт
+                li: a(href='/catalog.html')
+                    +icons('#ic_catalog')
+                    span Каталог
+                li: a(href='/clean-room.html')
+                    +icons('#ic_clean-room')
+                    span Чистые помещения
+        
+        .header__logout
+            a(href='/clean-room.html')
+                +icons('#ic_exit')
+                span Чистые помещения
+

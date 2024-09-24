@@ -1,0 +1,121 @@
+header {
+    background-color: #fff;
+}
+
+.header {
+
+    display: flex;
+    padding: 10px 0;
+
+
+    @media screen and (min-width: $w1440) {
+        padding: 16px 0;
+    }
+
+    &__logo {
+
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+        margin-right: 38px;
+
+        @media screen and (min-width: $w992) {
+            margin-left: 0;
+        }
+
+        & .bgimage {
+            display: inline-block;
+            width: 160px;
+            height: 68px;
+            @include bgimage-contain;
+
+            @media screen and (min-width: $w576) {
+                height: 60px;
+            }
+
+            @media screen and (min-width: $w1440) {
+                width: 180px;
+                height: 68px;
+            }
+        }
+    }
+
+    &__links {
+
+        display: flex;
+        align-items: center;
+
+
+
+        & ul {
+
+            @media screen and (min-width: $w992) {
+                display: flex;
+            }
+
+            display: none;
+            align-items: center;
+            height: 100%;
+
+            & li {
+
+                padding: 6px 14px;
+
+                & a {
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    font-weight: 500;
+
+                    @media screen and (min-width: $w1440) {
+                        font-size: 15px;
+                    }
+
+                    & span {
+                        padding-left: 8px;
+                    }
+
+                    & svg {
+                        fill: var(--color-accent-1);
+                    }
+
+                    &:hover {
+                        color: var(--color-accent-2);
+
+                        & svg {
+                            fill: var(--color-accent-2);
+
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    &__logout {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        & a {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+
+            &:hover {
+                color: var(--color-accent-2);
+
+                & svg {
+                    fill: var(--color-accent-2);
+                }
+            }
+        }
+
+        & svg {
+            fill: var(--color-accent-1);
+            margin-right: 10px;
+        }
+    }
+}

@@ -2296,7 +2296,7 @@ template {
 }
 
 .form__submit {
-  padding-top: 3em;
+  padding-top: 12px;
 }
 
 .form__item {
@@ -10474,6 +10474,10 @@ section.section-home-contacts {
     height: 40px;
   }
 
+  .objects__list ul li {
+    width: 33.33%;
+  }
+
   .form-callback {
     padding: 32px;
     border-radius: 20px;
@@ -10896,6 +10900,10 @@ section.section-home-contacts {
 
   .objects__list ul li {
     padding: 12px;
+  }
+
+  .objects__list ul li {
+    width: 25%;
   }
 
   .form-callback__fields .form__subitem--button {
@@ -11666,6 +11674,10 @@ section.section-home-contacts {
     font-weight: 800;
     font-style: normal;
     line-height: 130%;
+  }
+
+  .objects__list ul li {
+    width: 20%;
   }
 
   .section-form-callback {
@@ -12552,7 +12564,7 @@ section.section-home-contacts {
   }
 
   .objects__list ul li {
-    width: 16.6%;
+    width: 16.666%;
   }
 
   .placemark-balloon {

@@ -1,0 +1,126 @@
+mixin orders
+    section.section-mcr-orders
+        .container
+            .mcr-orders
+                .mcr-orders__head
+                    .mcr-orders__label Клиент:
+                    .mcr-orders__title ООО «ПСК Фарма»
+                .mcr-orders__content
+                    .mcr-orders__left
+                        .mcr-orders__item
+                            .mcr-block
+                                .mcr-block__title ООО «Рби Инжиниринг»
+                                .mcr-block__desc Актуальные документы для скачивания:
+                                .mcr-block__docs
+                                    ul
+                                        li: a(href='#') 
+                                            | О компании 
+                                            span (PDF)
+                                            +icons('#ic_dl')
+                                        li: a(href='#') 
+                                            | Общий каталог 
+                                            span (PDF)
+                                            +icons('#ic_dl')
+                                        li: a(href='#') 
+                                            | Референс-лист 
+                                            span (PDF)
+                                            +icons('#ic_dl')
+                        .mcr-orders__item
+                            .mcr-block
+                                .mcr-block__title Важные контакты
+                                .mcr-block__row
+                                    .mcr-block__contacts
+                                        .mcr-block__label Бухгалтерия
+                                        .mcr-block__list
+                                            ul
+                                                li
+                                                    small  Телефон:
+                                                    a(href='#') +7 (499) 113-56-52
+                                                li
+                                                    small Добавочный:
+                                                    span 112
+                                                li
+                                                    small Email:
+                                                    a(href='mailto:jurist@maxcr.ru') buh@maxcr.ru
+                                    .mcr-block__contacts
+                                        .mcr-block__label Юридический отдел
+                                        .mcr-block__list
+                                            ul
+                                                li
+                                                    small  Телефон:
+                                                    a(href='#') +7 (499) 113-56-52
+                                                li
+                                                    small Добавочный:
+                                                    span 114
+                                                li
+                                                    small Email:
+                                                    a(href='mailto:jurist@maxcr.ru') jurist@maxcr.ru
+                                    .mcr-block__contacts
+                                        .mcr-block__label Служба контроля
+                                        .mcr-block__list
+                                            ul
+                                                li
+                                                    small  Email:
+                                                    a(href='#') control@maxcr.ru
+                                    .mcr-block__contacts
+                                        .mcr-block__label Сервисная служба
+                                        .mcr-block__list
+                                            ul
+                                                li
+                                                    small  Email:
+                                                    a(href='#') service@maxcr.ru
+                                         
+                                           
+                                     
+
+                    .mcr-orders__right
+                        .mcr-orders__item
+                            .mcr-block
+                                .mcr-block__title Заказы
+                                .mcr-block__orders
+                                    .order-row
+                                        .order-row__head: span № заказа
+                                        .order-row__head: span Дата
+                                        .order-row__head: span Статус
+                                    .order-row
+                                        .order-row__col: span 1278990
+                                        .order-row__col: span 12.04.2024
+                                        .order-row__col: span Выполнен
+                                    .order-row
+                                        .order-row__col: span 1265678
+                                        .order-row__col: span 29.03.2024
+                                        .order-row__col: span В процессе
+                                    .order-row
+                                        .order-row__col: span 1260617
+                                        .order-row__col: span 29.03.2024
+                                        .order-row__col: span В процессе
+                                    .order-row
+                                        .order-row__col: span 1254443
+                                        .order-row__col: span 29.03.2024
+                                        .order-row__col: span Приостановлен
+                                    .order-row
+                                        .order-row__col: span 1251119
+                                        .order-row__col: span 06.06.2023
+                                        .order-row__col: span Выполнен
+                                    .order-row
+                                        .order-row__col: span 1247675
+                                        .order-row__col: span 17.02.2023
+                                        .order-row__col: span Выполнен
+                                    .order-row
+                                        .order-row__col: span 1243210
+                                        .order-row__col: span 22.11.2022
+                                        .order-row__col: span Выполнен
+                                    .order-row
+                                        .order-row__col: span 1242004
+                                        .order-row__col: span 01.08.2022
+                                        .order-row__col: span Выполнен
+                                    .order-row
+                                        .order-row__col: span 1239552
+                                        .order-row__col: span 17.09.2021
+                                        .order-row__col: span Выполнен
+                                    .order-row
+                                        .order-row__col: span 1238765
+                                        .order-row__col: span 24.12.2020
+                                        .order-row__col: span Выполнен
+                                .mcr-block__more
+                                    button.btn.btn-light Показать все заказы

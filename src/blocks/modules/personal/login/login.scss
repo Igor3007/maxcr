@@ -1,0 +1,75 @@
+.section-login {
+    background-color: var(--color-bg-2);
+    min-height: calc((var(--vh, 1vh) * 100));
+    display: flex;
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.login {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4%;
+    margin-bottom: auto;
+
+    &__logo {
+
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5vh;
+
+        & a {
+            display: inline-block;
+        }
+
+        & .bgimage {
+            width: 270px;
+            height: 120px;
+
+            @include bgimage-contain;
+        }
+    }
+
+    &__window {
+        max-width: 425px;
+        background-color: #fff;
+        padding: 32px 32px;
+        border-radius: 12px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title {
+        @include font-h4;
+        color: var(--color-text-1);
+        padding-bottom: 8px;
+    }
+
+    &__desc {
+        color: var(--color-text-2);
+        padding-bottom: 24px;
+        font-size: 15px;
+    }
+
+    & .btn {
+        height: 50px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    &__form {
+        & a {
+            display: block;
+            width: 100%;
+        }
+    }
+
+
+
+
+}

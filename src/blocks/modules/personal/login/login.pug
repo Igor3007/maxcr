@@ -1,0 +1,19 @@
+mixin login 
+    section.section-login
+        .container
+            .login
+                .login__wrp
+                    .login__logo: a(href='#'): +bgimage('/img/common/logo.png')
+                    .login__window
+                        .login__title Личный кабинет
+                        .login__desc Введите полученные от менеджера логин и пароль для входа в личный кабинет.
+                        .login__form
+                            form(action='/personal/home.html' method='POST')  
+                                .form
+                                  .form__item: .form__subitem: input(type="text" placeholder="Ваш логин" required)
+                                  .form__item: .form__subitem: input(type="password" placeholder="Пароль" required)
+                                  .form__item.form__submit: .form__subitem
+                                     button.btn(type="submit") Войти
+                                  .form__item: .form__subitem
+                                     a(href='/'): button.btn.btn-light(type="button") Вернуться на сайт 
+

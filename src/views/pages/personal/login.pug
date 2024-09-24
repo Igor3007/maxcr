@@ -1,0 +1,15 @@
+extends ../../layouts/login
+
+block variables
+  include ../../../data/data.pug
+  - const title = "Личный кабинет - Max Clean Room"
+
+block main
+   
+  include ../../../blocks/modules/personal/login/login.pug
+
+  +login 
+  
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 
