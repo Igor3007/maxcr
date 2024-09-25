@@ -46,6 +46,7 @@ mixin orders
                 '17.09.2021',
                 'Выполнен'
             ],
+         
 
             ['1238765',
                 '24.12.2020',
@@ -76,6 +77,192 @@ mixin orders
                                 .mcr-block__desc Актуальные документы для скачивания:
                                 .mcr-block__docs
                                     ul
+                                        li: a(href='#') 
+                                            | О компании 
+                                            span (PDF)
+                                            +icons('#ic_dl')
+                                        li: a(href='#') 
+                                            | Общий каталог 
+                                            span (PDF)
+                                            +icons('#ic_dl')
+                                        li: a(href='#') 
+                                            | Референс-лист 
+                                            span (PDF)
+                                            +icons('#ic_dl')
+                                      
+                        .mcr-orders__item
+                            .mcr-block
+                                .mcr-block__title Важные контакты
+                                .mcr-block__row
+                                    .mcr-block__contacts
+                                        .mcr-block__label Бухгалтерия
+                                        .mcr-block__list
+                                            ul
+                                                li
+                                                    small  Телефон:
+                                                    a(href='#') +7 (499) 113-56-52
+                                                li
+                                                    small Добавочный:
+                                                    span 112
+                                                li
+                                                    small Email:
+                                                    a(href='mailto:jurist@maxcr.ru') buh@maxcr.ru
+                                    .mcr-block__contacts
+                                        .mcr-block__label Юридический отдел
+                                        .mcr-block__list
+                                            ul
+                                                li
+                                                    small  Телефон:
+                                                    a(href='#') +7 (499) 113-56-52
+                                                li
+                                                    small Добавочный:
+                                                    span 114
+                                                li
+                                                    small Email:
+                                                    a(href='mailto:jurist@maxcr.ru') jurist@maxcr.ru
+                                    .mcr-block__contacts
+                                        .mcr-block__label Служба контроля
+                                        .mcr-block__list
+                                            ul
+                                                li
+                                                    small  Email:
+                                                    a(href='#') control@maxcr.ru
+                                    .mcr-block__contacts
+                                        .mcr-block__label Сервисная служба
+                                        .mcr-block__list
+                                            ul
+                                                li
+                                                    small  Email:
+                                                    a(href='#') service@maxcr.ru
+                                         
+                                           
+                                     
+
+                    .mcr-orders__right
+                        .mcr-orders__item
+                            .mcr-block
+                                .mcr-block__title Заказы
+                                .mcr-block__orders
+                                    .mcr-block__scroll
+                                        .order-row
+                                            .order-row__head: span № заказа
+                                            .order-row__head: span Дата
+                                            .order-row__head: span Статус
+                                        each item in arr    
+                                            .order-row(class=getStatusClass(item[2]))
+                                                .order-row__col
+                                                    span.order-id(data-copy=item[0])
+                                                        a(href="./order.html")= item[0]
+                                                        +icons('#ic_copy')
+                                                .order-row__col: span= item[1]
+                                                .order-row__col: span.order-status= item[2]
+                                    
+                                .mcr-block__more
+                                    button.btn.btn-light Показать все заказы
+
+
+mixin orders--full
+
+    - 
+        let arr = [
+            ['1278990',
+                '12.04.2024',
+                'Выполнен',
+            ],
+
+            ['1265678',
+                '29.03.2024',
+                'В процессе'
+            ],
+
+            ['1260617',
+                '29.03.2024',
+                'В процессе'
+            ],
+
+            ['1254443',
+                '29.03.2024',
+                'Приостановлен'
+            ],
+
+            ['1251119',
+                '06.06.2023',
+                'Выполнен'
+            ],
+
+            ['1247675',
+                '17.02.2023',
+                'Выполнен'
+            ],
+
+            ['1243210',
+                '22.11.2022',
+                'Выполнен'
+            ],
+
+            ['1242004',
+                '01.08.2022',
+                'Выполнен'
+            ],
+
+            ['1239552',
+                '17.09.2021',
+                'Выполнен'
+            ],
+            ['1239552',
+                '17.09.2021',
+                'Выполнен'
+            ],
+            ['1239552',
+                '17.09.2021',
+                'Выполнен'
+            ],
+            ['1239552',
+                '17.09.2021',
+                'Выполнен'
+            ],
+
+            ['1238765',
+                '24.12.2020',
+                'Выполнен'
+            ]
+        ];
+
+        function getStatusClass(id) {
+            let arr = {
+                'В процессе': 'status--orange',
+                'Приостановлен': 'status--gray',
+                'Выполнен': 'status--green',
+            }
+            return arr[id]
+        }
+
+    section.section-mcr-orders
+        .container
+            .mcr-orders
+                .mcr-orders__head
+                    .mcr-orders__label Клиент:
+                    .mcr-orders__title ООО «ПСК Фарма»
+                .mcr-orders__content
+                    .mcr-orders__left
+                        .mcr-orders__item
+                            .mcr-block
+                                .mcr-block__title ООО «Рби Инжиниринг»
+                                .mcr-block__desc Актуальные документы для скачивания:
+                                .mcr-block__docs
+                                    ul
+                                        li: a(href='#') 
+                                            | О компании 
+                                            span (PDF)
+                                            +icons('#ic_dl')
+                                        li: a(href='#') 
+                                            | Общий каталог 
+                                            span (PDF)
+                                            +icons('#ic_dl')
+                                        li: a(href='#') 
+                                            | Референс-лист 
+                                            span (PDF)
+                                            +icons('#ic_dl')
                                         li: a(href='#') 
                                             | О компании 
                                             span (PDF)
@@ -141,18 +328,19 @@ mixin orders
                             .mcr-block
                                 .mcr-block__title Заказы
                                 .mcr-block__orders
-                                    .order-row
-                                        .order-row__head: span № заказа
-                                        .order-row__head: span Дата
-                                        .order-row__head: span Статус
-                                    each item in arr    
-                                        .order-row(class=getStatusClass(item[2]))
-                                            .order-row__col
-                                                span.order-id(data-copy=item[0])
-                                                    a(href="./order.html")= item[0]
-                                                    +icons('#ic_copy')
-                                            .order-row__col: span= item[1]
-                                            .order-row__col: span.order-status= item[2]
+                                    .mcr-block__scroll
+                                        .order-row
+                                            .order-row__head: span № заказа
+                                            .order-row__head: span Дата
+                                            .order-row__head: span Статус
+                                        each item in arr    
+                                            .order-row(class=getStatusClass(item[2]))
+                                                .order-row__col
+                                                    span.order-id(data-copy=item[0])
+                                                        a(href="./order.html")= item[0]
+                                                        +icons('#ic_copy')
+                                                .order-row__col: span= item[1]
+                                                .order-row__col: span.order-status= item[2]
                                     
                                 .mcr-block__more
                                     button.btn.btn-light Показать все заказы

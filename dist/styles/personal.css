@@ -3363,6 +3363,42 @@ header {
   flex-grow: 1;
 }
 
+.mcr-orders__right .mcr-block {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mcr-orders__right .mcr-block__orders {
+  flex-grow: 1;
+  position: relative;
+  overflow-y: auto;
+  margin-right: -6px;
+  width: auto;
+  height: 100vh;
+}
+
+.mcr-orders__right .mcr-block__orders.is-open {
+  overflow-y: visible;
+  height: auto;
+}
+
+.mcr-orders__right .mcr-block__orders.is-open .mcr-block__scroll {
+  position: static;
+}
+
+.mcr-orders__right .mcr-block__scroll {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% - 3px);
+}
+
+.mcr-orders__right .mcr-orders__item {
+  height: 100%;
+}
+
 .mcr-orders__item {
   padding: 12px 0;
 }
@@ -3391,10 +3427,18 @@ header {
   margin: -3px;
 }
 
+.mcr-block__scroll {
+  width: 100%;
+}
+
 .mcr-block__docs ul {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  max-height: 248px;
+  overflow-y: auto;
+  padding-right: 6px;
+  margin-right: -6px;
 }
 
 .mcr-block__docs ul a {
@@ -3479,6 +3523,10 @@ header {
 
 .mcr-block__more {
   padding-top: 24px;
+}
+
+.mcr-block__more:not(.is-visible) {
+  display: none;
 }
 
 .mcr-block__more .btn {
@@ -4452,12 +4500,19 @@ header {
     width: 160px;
   }
 
-  .mcr-block__orders {
+  .mcr-block__scroll {
     display: table;
   }
 
   .order-row {
     display: table-row;
+  }
+
+  .order-row:first-child {
+    position: sticky;
+    top: -14px;
+    z-index: 5;
+    background-color: #fff;
   }
 
   .order-row__head,
@@ -4719,6 +4774,14 @@ header {
   .mcr-orders__content {
     display: flex;
     margin: -12px;
+  }
+
+  .mcr-orders__right .mcr-block {
+    height: 100%;
+  }
+
+  .mcr-orders__right .mcr-block__orders {
+    height: auto;
   }
 
   .mcr-orders__left {

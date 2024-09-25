@@ -131,4 +131,29 @@ document.addEventListener('DOMContentLoaded', function (event) {
             })
         })
     }
+
+    /* ==================================================
+    button all order
+    ==================================================*/
+
+    if (document.querySelector('.mcr-block__orders')) {
+
+        let wrapper = document.querySelector('.mcr-block__orders')
+        let elScroll = document.querySelector('.mcr-block__scroll')
+        let elButton = document.querySelector('.mcr-block__more')
+        let elButtonText = elButton.innerText
+
+        if (elScroll.clientHeight > wrapper.clientHeight) {
+            elButton.classList.add('is-visible')
+        }
+
+        elButton.addEventListener('click', (e) => {
+            wrapper.classList.toggle('is-open')
+
+            elButton.querySelector('.btn').innerText = wrapper.classList.contains('is-open') ? 'Cвернуть' : elButtonText
+        })
+
+    }
+
+
 });

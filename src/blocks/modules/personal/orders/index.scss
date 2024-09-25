@@ -47,6 +47,64 @@
         flex-grow: 1;
     }
 
+    &__right {
+        & .mcr-block {
+
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            @media screen and (min-width: $w992) {
+                height: 100%;
+            }
+
+            &__orders {
+                flex-grow: 1;
+                position: relative;
+                overflow-y: auto;
+                margin-right: -6px;
+                width: auto;
+                height: (var(--vh, 1vh) * 100);
+
+                @media screen and (min-width: $w992) {
+                    height: auto;
+                }
+
+                &.is-open {
+
+                    overflow-y: visible;
+                    height: auto;
+
+                    & .mcr-block {
+                        &__scroll {
+                            position: static;
+                        }
+                    }
+                }
+
+            }
+
+            &__scroll {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: calc(100% - 3px);
+
+            }
+
+        }
+
+        & .mcr-orders {
+            &__item {
+                height: 100%;
+
+            }
+
+
+        }
+    }
+
     &__left {
         @media screen and (min-width: $w992) {
             max-width: 628px;
@@ -106,6 +164,12 @@
             padding-top: 14px;
         }
 
+
+    }
+
+    &__scroll {
+        width: 100%;
+
         @media screen and (min-width: $w576) {
             display: table;
         }
@@ -117,6 +181,11 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+
+            max-height: 248px;
+            overflow-y: auto;
+            padding-right: 6px;
+            margin-right: -6px;
 
 
             & a {
@@ -216,6 +285,10 @@
 
         padding-top: 24px;
 
+        &:not(.is-visible) {
+            display: none;
+        }
+
         & .btn {
             height: 50px;
             font-size: 16px;
@@ -248,7 +321,16 @@
     @media screen and (min-width: $w576) {
         display: table-row;
 
+        &:first-child {
+            position: sticky;
+            top: -14px;
+            z-index: 5;
+            background-color: #fff;
+        }
+
     }
+
+
 
     &__head,
     &__col {
