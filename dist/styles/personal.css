@@ -3376,7 +3376,7 @@ header {
   overflow-y: auto;
   margin-right: -6px;
   width: auto;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .mcr-orders__right .mcr-block__orders.is-open {
@@ -3435,7 +3435,6 @@ header {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-height: 248px;
   overflow-y: auto;
   padding-right: 6px;
   margin-right: -6px;
@@ -3477,7 +3476,7 @@ header {
 .mcr-block__label {
   font-size: 16px;
   font-weight: 600;
-  padding-bottom: 6px;
+  padding-bottom: 9px;
 }
 
 .mcr-block__row {
@@ -3505,7 +3504,7 @@ header {
 .mcr-block__list ul li small {
   font-size: 14px;
   color: var(--color-text-2);
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
 
 .mcr-block__list ul li a {
@@ -3543,6 +3542,7 @@ header {
   padding: 10px 14px;
   font-size: 14px;
   border-radius: 6px;
+  min-height: 48px;
 }
 
 .order-row__head:first-child,
@@ -3565,7 +3565,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
 }
 
 .order-row .order-id a {
@@ -3573,17 +3572,23 @@ header {
   color: var(--color-accent-1);
 }
 
+.order-row .order-id a:hover {
+  color: var(--color-accent-2);
+}
+
 .order-row .order-id svg {
   fill: var(--color-accent-1);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.order-row .order-id svg:hover {
+  fill: var(--color-accent-2);
   cursor: pointer;
 }
 
 .order-row .order-id:hover {
   background-color: var(--color-bg-3);
-}
-
-.order-row .order-id:hover svg {
-  fill: var(--color-accent-2);
 }
 
 .order-row .order-status {
@@ -4515,6 +4520,10 @@ header {
     background-color: #fff;
   }
 
+  .order-row:hover > div:not(.order-row__head) span {
+    background-color: var(--color-bg-3);
+  }
+
   .order-row__head,
   .order-row__col {
     display: table-cell;
@@ -4786,6 +4795,10 @@ header {
 
   .mcr-orders__left {
     max-width: 628px;
+  }
+
+  .mcr-block__docs ul {
+    max-height: 90vh;
   }
 
   .single-order__row {

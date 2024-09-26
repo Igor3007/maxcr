@@ -75,6 +75,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
         items.forEach(item => {
             item.addEventListener('click', e => {
 
+                if (e.target.getAttribute('href')) {
+                    return false
+                }
+
                 const instansePopup = new afLightbox({
                     mobileInBottom: true
                 })
@@ -145,11 +149,33 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
         if (elScroll.clientHeight > wrapper.clientHeight) {
             elButton.classList.add('is-visible')
+        } else {
+            if (document.body.clientWidth >= 992) {
+
+                //добивает таблицу заказов пустыми строками
+
+                let delta = wrapper.clientHeight - elScroll.clientHeight
+                let count = Math.floor(delta / 54.5)
+
+                console.log(count)
+
+                for (let i = 1; i <= count; i++) {
+
+                    let elem = document.createElement('div')
+                    elem.classList.add('order-row')
+                    elem.innerHTML = ` 
+                        <div class="order-row__col"><span></span></div>
+                        <div class="order-row__col"><span></span></div>
+                        <div class="order-row__col"><span></span></div>
+                `
+
+                    elScroll.append(elem)
+                }
+            }
         }
 
         elButton.addEventListener('click', (e) => {
             wrapper.classList.toggle('is-open')
-
             elButton.querySelector('.btn').innerText = wrapper.classList.contains('is-open') ? 'Cвернуть' : elButtonText
         })
 
