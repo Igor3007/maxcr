@@ -3,56 +3,56 @@ mixin single-order
     -
         const log = [
             {
-                'icon':'/img/icons/icon-advantage/07-list.svg',
+                'icon':'../../../../img/icons/icon-advantage/07-list.svg',
                 'title':'Финальное коммерческое предложение №1278990',
                 'desc':'Дата: 31.10.2023',
                 'status':'Готово',
                 'docs':'kp_12345678.pdf',
             },
             {
-                'icon':'/img/icons/icon-advantage/08-document.svg',
+                'icon':'../../../../img/icons/icon-advantage/08-document.svg',
                 'title':'Договор №1278990',
                 'desc':'Дата: 15.11.2023',
                 'status':'Подписано',
                 'docs':'dogovor_12345678.pdf',
             },
             {
-                'icon':'/img/icons/icon-advantage/09-payment.svg',
+                'icon':'../../../../img/icons/icon-advantage/09-payment.svg',
                 'title':'Счёт №1278990',
                 'desc':'Дата: 15.11.2023',
                 'status':'Оплачено',
                 'docs':'schet_12345678.pdf',
             },
             {
-                'icon':'/img/icons/icon-advantage/10-approval-card.svg',
+                'icon':'../../../../img/icons/icon-advantage/10-approval-card.svg',
                 'title':'Подготовка карточки согласования',
                 'desc':'Дата: 31.10.2023',
                 'status':'Готово',
                 'docs':'kartochka_12345678.pdf',
             },
             {
-                'icon':'/img/icons/icon-advantage/01-production.svg',
+                'icon':'../../../../img/icons/icon-advantage/01-production.svg',
                 'title':'Производство',
                 'desc':'Дата: 31.10.2023',
                 'status':'Готово',
                 'docs':'-',
             },
             {
-                'icon':'/img/icons/icon-advantage/11-payment-done.svg',
+                'icon':'../../../../img/icons/icon-advantage/11-payment-done.svg',
                 'title':'Оплата по уведомлению',
                 'desc':'Дата: 31.10.2023',
                 'status':'Оплачено',
                 'docs':'schet_12345679.pdf',
             },
             {
-                'icon':'/img/icons/icon-advantage/12-delivery.svg',
+                'icon':'../../../../img/icons/icon-advantage/12-delivery.svg',
                 'title':'Доставка',
                 'desc':'Дата начала: 31.10.2023 Дата окончания: 31.10.2023',
                 'status':'Готово',
                 'docs':'-',
             },
             {
-                'icon':'/img/icons/icon-advantage/02-time.svg',
+                'icon':'../../../../img/icons/icon-advantage/02-time.svg',
                 'title':'Монтаж',
                 'desc':'Дата начала: 31.10.2023 Дата окончания: 31.10.2023',
                 'status':'Готово',
@@ -125,10 +125,27 @@ mixin single-order
                                 .log-item
                                     .log-item__main
                                         .log-item__wrp
-                                            .log-item__icon: +bgimage(item.icon)
+                                            .log-item__icon
+                                                span.bgimage
+                                                    if(item.icon == '../../../../img/icons/icon-advantage/07-list.svg')
+                                                        include ../../../../img/icons/icon-advantage/07-list.svg
+                                                    if(item.icon == '../../../../img/icons/icon-advantage/08-document.svg')
+                                                        include ../../../../img/icons/icon-advantage/08-document.svg
+                                                    if(item.icon == '../../../../img/icons/icon-advantage/09-payment.svg')
+                                                        include ../../../../img/icons/icon-advantage/09-payment.svg
+                                                    if(item.icon == '../../../../img/icons/icon-advantage/10-approval-card.svg')
+                                                        include ../../../../img/icons/icon-advantage/10-approval-card.svg
+                                                    if(item.icon == '../../../../img/icons/icon-advantage/01-production.svg')
+                                                        include ../../../../img/icons/icon-advantage/01-production.svg
+                                                    if(item.icon == '../../../../img/icons/icon-advantage/11-payment-done.svg')
+                                                        include ../../../../img/icons/icon-advantage/11-payment-done.svg
+                                                    if(item.icon == '../../../../img/icons/icon-advantage/12-delivery.svg')
+                                                        include ../../../../img/icons/icon-advantage/12-delivery.svg
+                                                    if(item.icon == '../../../../img/icons/icon-advantage/02-time.svg')
+                                                        include ../../../../img/icons/icon-advantage/02-time.svg 
                                             .log-item__data
-                                                .log-item__title= item.title
-                                                .log-item__desc= item.desc
+                                                .log-item__title= item.title 
+                                                .log-item__desc= item.desc  
                                     .log-item__status= item.status
                                     .log-item__docs
                                         if item.docs != '-'

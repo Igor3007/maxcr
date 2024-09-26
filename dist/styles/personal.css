@@ -3774,6 +3774,30 @@ header {
   background-repeat: no-repeat;
   background-size: 50px auto;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log-item__icon svg {
+  width: 50px;
+  height: 50px;
+  transition: 0.3s ease;
+}
+
+.log-item__icon svg path.blue {
+  fill: var(--color-bg-2);
+  transition: 0.3s ease;
+}
+
+.log-item__icon svg path.accent {
+  stroke: var(--color-accent-1);
+  transition: 0.3s ease;
+}
+
+.log-item__icon svg path.accent-fill {
+  fill: var(--color-accent-1);
+  transition: 0.3s ease;
 }
 
 .log-item--head > div {
@@ -3825,6 +3849,18 @@ header {
 
 .log-item:hover:not(.log-item--head) > div {
   background-color: var(--color-bg-3);
+}
+
+.log-item:hover:not(.log-item--head) > div svg path.blue {
+  fill: var(--color-bg-3);
+}
+
+.log-item:hover:not(.log-item--head) > div svg path.accent {
+  stroke: var(--color-accent-2);
+}
+
+.log-item:hover:not(.log-item--head) > div svg path.accent-fill {
+  fill: var(--color-accent-2);
 }
 
 .confirm-popup {
@@ -5099,6 +5135,11 @@ header {
     width: 65px;
     height: 65px;
     background-size: 35px auto;
+  }
+
+  .log-item__icon svg {
+    width: 35px;
+    height: 35px;
   }
 }
 
