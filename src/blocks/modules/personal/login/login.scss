@@ -28,20 +28,28 @@
         }
 
         & .bgimage {
-            width: 270px;
+            width: 200px;
             height: 120px;
 
             @include bgimage-contain;
+
+            @media screen and (min-width: $w576) {
+                width: 270px;
+            }
         }
     }
 
     &__window {
         max-width: 425px;
         background-color: #fff;
-        padding: 32px 32px;
+        padding: 20px 20px;
         border-radius: 12px;
         margin-left: auto;
         margin-right: auto;
+
+        @media screen and (min-width: $w480) {
+            padding: 32px 32px;
+        }
     }
 
     &__title {

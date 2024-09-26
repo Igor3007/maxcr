@@ -3172,7 +3172,7 @@ template {
 }
 
 .login__logo .bgimage {
-  width: 270px;
+  width: 200px;
   height: 120px;
   position: relative;
   background-size: contain;
@@ -3184,7 +3184,7 @@ template {
 .login__window {
   max-width: 425px;
   background-color: #fff;
-  padding: 32px 32px;
+  padding: 20px 20px;
   border-radius: 12px;
   margin-left: auto;
   margin-right: auto;
@@ -3376,7 +3376,7 @@ header {
   overflow-y: auto;
   margin-right: -6px;
   width: auto;
-  height: calc(var(--vh, 1vh) * 100);
+  height: auto;
 }
 
 .mcr-orders__right .mcr-block__orders.is-open {
@@ -3389,7 +3389,7 @@ header {
 }
 
 .mcr-orders__right .mcr-block__scroll {
-  position: absolute;
+  position: static;
   left: 0;
   top: 0;
   width: calc(100% - 3px);
@@ -3532,6 +3532,11 @@ header {
   height: 50px;
   font-size: 16px;
   width: 100%;
+}
+
+.order-row__head,
+.order-row__col {
+  vertical-align: middle;
 }
 
 .order-row__head span,
@@ -4464,6 +4469,10 @@ header {
     padding: 24px;
   }
 
+  .login__window {
+    padding: 32px 32px;
+  }
+
   .font-h2 {
     font-size: 42px;
   }
@@ -4534,6 +4543,10 @@ header {
   .table__td {
     padding: 15px 16px 16px 16px;
     line-height: 140%;
+  }
+
+  .login__logo .bgimage {
+    width: 270px;
   }
 
   .header__logo .bgimage {
@@ -4825,8 +4838,8 @@ header {
     height: 100%;
   }
 
-  .mcr-orders__right .mcr-block__orders {
-    height: auto;
+  .mcr-orders__right .mcr-block__scroll {
+    position: absolute;
   }
 
   .mcr-orders__left {
@@ -5101,6 +5114,10 @@ header {
     font-size: 20px;
   }
 
+  .mcr-block__more {
+    display: none !important;
+  }
+
   .single-order__title {
     font-size: 28px;
   }
@@ -5235,6 +5252,13 @@ header {
   .page__title .btn {
     width: 100%;
     display: block;
+  }
+}
+
+@media screen and (min-width: 992.98px) and (max-width: 1200px) {
+  .mcr-orders__right,
+  .mcr-orders__left {
+    width: 50%;
   }
 }
 

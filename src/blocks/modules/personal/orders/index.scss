@@ -43,8 +43,11 @@
     &__left {
         padding: 12px;
         margin: -12px;
-
         flex-grow: 1;
+
+        @media screen and (min-width: $w992) and (max-width: $w1200) {
+            width: 50%;
+        }
     }
 
     &__right {
@@ -65,11 +68,7 @@
                 overflow-y: auto;
                 margin-right: -6px;
                 width: auto;
-                height: calc(var(--vh, 1vh) * 100);
-
-                @media screen and (min-width: $w992) {
-                    height: auto;
-                }
+                height: auto;
 
                 &.is-open {
 
@@ -86,10 +85,14 @@
             }
 
             &__scroll {
-                position: absolute;
+                position: static;
                 left: 0;
                 top: 0;
                 width: calc(100% - 3px);
+
+                @media screen and (min-width: $w992) {
+                    position: absolute;
+                }
 
             }
 
@@ -289,6 +292,10 @@
 
         padding-top: 24px;
 
+        @media screen and (max-width: $w992) {
+            display: none !important;
+        }
+
         &:not(.is-visible) {
             display: none;
         }
@@ -344,6 +351,9 @@
 
     &__head,
     &__col {
+
+        vertical-align: middle;
+
         @media screen and (min-width: $w576) {
             display: table-cell;
             width: 30%;
