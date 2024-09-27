@@ -202,10 +202,13 @@
                 padding: 14px 16px;
                 border-radius: 6px;
                 transition: 0.3s ease;
+                font-weight: 500;
 
 
                 &:hover {
                     background-color: var(--color-bg-3);
+
+                    color: var(--color-accent-2);
 
                     & svg {
                         fill: var(--color-accent-2);

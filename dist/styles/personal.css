@@ -3447,10 +3447,12 @@ header {
   padding: 14px 16px;
   border-radius: 6px;
   transition: 0.3s ease;
+  font-weight: 500;
 }
 
 .mcr-block__docs ul a:hover {
   background-color: var(--color-bg-3);
+  color: var(--color-accent-2);
 }
 
 .mcr-block__docs ul a:hover svg {
