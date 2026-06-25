@@ -257,7 +257,7 @@
                     </div>
                     <div class="objects__filter" v-if="defaultConfig.type != 'all'">
                       <ul>
-                        <li v-for="sub in getSubType" :key="sub" @click="changeTypeSub(sub)"><span :class="{'is-active': sub == defaultConfig.sub}">{{sub}}</span></li>
+                        <li v-for="sub in getSubType" :key="sub" @click="changeTypeSub(sub)"><span :class="{'is-active': defaultConfig.sub.includes(sub)}">{{sub}}</span></li>
                       </ul>
                     </div>
                     <div class="objects__list">

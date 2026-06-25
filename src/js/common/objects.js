@@ -220,8 +220,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 }));
                 window.map.addChild(controls);
 
-
-
                 //источник данных для маркеров
                 window.map.addChild(
                     new YMapFeatureDataSource({
@@ -299,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 uniqFields: {},
                 defaultConfig: {
                     type: 'all',
-                    sub: 'Все'
+                    sub: ['Все']
                 }
             },
 
@@ -337,11 +335,29 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
                 changeType(index) {
                     this.defaultConfig.type = index
-                    this.defaultConfig.sub = 'Все'
+                    this.defaultConfig.sub = ['Все']
                 },
 
                 changeTypeSub(index) {
-                    this.defaultConfig.sub = index
+
+                    let flag = false;
+
+                    if (this.defaultConfig.sub[0] == 'Все') {
+                        this.defaultConfig.sub.splice(0, 1)
+                    }
+
+                    this.defaultConfig.sub.forEach((el, i) => {
+                        if (el == index) {
+                            this.defaultConfig.sub.splice(i, 1)
+                            flag = true
+                        }
+                    })
+
+                    if (!this.defaultConfig.sub.length && flag) {
+                        this.defaultConfig.sub.push('Все')
+                    }
+
+                    if (!flag) this.defaultConfig.sub.push(index)
                 }
             },
 
@@ -352,8 +368,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 },
 
                 getList() {
-                    if (this.defaultConfig.sub == 'Все') return this.json;
-                    return this.json.filter(item => item[this.defaultConfig.type] == this.defaultConfig.sub)
+                    if (this.defaultConfig.sub[0] == 'Все') return this.json;
+                    return this.json.filter(item => this.defaultConfig.sub.includes(item[this.defaultConfig.type]))
                 }
             }
         })

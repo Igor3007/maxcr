@@ -1,0 +1,73 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+
+.cr-gallery {
+
+    &__thumb,
+    &__main {
+
+        & picture {
+            width: 100%;
+
+            @include picture(66.3%, cover);
+        }
+
+        & img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+
+    &__thumb {
+        padding-top: 16px;
+
+        & img {
+            border: 2px solid var(--color-borders-1);
+            border-radius: 8px;
+            opacity: 0.5;
+        }
+
+        & .splide {
+            &__slide {
+
+                &.is-active {
+                    & img {
+                        border: 2px solid var(--color-accent-2);
+                        opacity: 1;
+                    }
+
+                }
+
+                &:hover {
+                    & img {
+                        border: 2px solid var(--color-borders-3);
+                        opacity: 1;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    & .splide {
+        &__slide {
+            border: none !important;
+
+
+
+        }
+
+        &__arrow {
+            &--prev {
+                left: 24px;
+            }
+
+            &--next {
+                right: 24px;
+            }
+        }
+    }
+}

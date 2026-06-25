@@ -12,14 +12,11 @@ mixin objects
                                 span(:class="{'is-active': index == defaultConfig.type}")
                                     span.bgimage.ic_24( v-if="item.icon" :style = '{backgroundImage: `url(${item.icon})`}' )
                                     | {{item.name}}
-                                    
-                           
 
                     .objects__filter(v-if="defaultConfig.type != 'all'")
                         ul
                             li(v-for="sub in getSubType" :key="sub" @click="changeTypeSub(sub)")
-                                span(:class="{'is-active': sub == defaultConfig.sub}") {{sub}}
-                           
+                                span(:class="{'is-active': defaultConfig.sub.includes(sub)}") {{sub}}
 
                     .objects__list
                        transition-group(name="fade" tag="ul" appear)
